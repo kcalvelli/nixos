@@ -18,7 +18,7 @@
   boot = {
     # Kernel
     kernelParams = [
-      "quiet" "iommu=pt" "amdgpu.noretry=0" "amdgpu.lockup_timeout=1000" "amdgpu.gpu_recovery=1"   
+      "quiet" "iommu=pt"   
     ];
     kernelModules = [ "amdgpu" ];
 
