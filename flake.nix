@@ -64,7 +64,6 @@
           modules = [
             # > Our main nixos configuration file <
             ./hosts/office/configuration.nix
-            ./hosts/office/mounts
           ];
         };
       };
