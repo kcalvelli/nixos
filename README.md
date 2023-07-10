@@ -1,5 +1,5 @@
 # nixos
-###Personal NixOS  configuration
+### Personal NixOS  configuration
 
 You really shouldn't use this for anything for the following reasons:
 1.  I have been using Nix for about 1 week.
