@@ -8,7 +8,7 @@
     ./fish.nix
     ./starship.nix
     ./wezterm.nix
-    ./plasma.nix
+  #  ./plasma.nix
   ];
 
   nixpkgs = {
