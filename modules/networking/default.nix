@@ -18,7 +18,11 @@
       openFirewall = true;
     };
     openssh.enable = true;
-    tailscale.enable = true;
+
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "both";     
+    };
   };
 
   programs.mtr.enable = true;
