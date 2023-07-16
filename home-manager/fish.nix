@@ -6,6 +6,7 @@
     enable = true;
     interactiveShellInit = ''
     set fish_greeting # Disable greeting
+    direnv hook fish | source
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs

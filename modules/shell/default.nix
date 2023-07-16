@@ -12,5 +12,6 @@
     fishPlugins.hydro
     fzf
     fishPlugins.grc
+    direnv
   ];
 }
