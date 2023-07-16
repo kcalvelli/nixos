@@ -13,13 +13,13 @@
 
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
-    plasma-manager.url = "github:pjones/plasma-manager";
-    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs.home-manager.follows = "home-manager";
-
+    nix-your-shell = {
+      url = "github:MercuryTechnologies/nix-your-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -78,7 +78,6 @@
           modules = [
             # > Our main home-manager configuration file <
             ./home-manager/home.nix
-            inputs.plasma-manager.homeManagerModules.plasma-manager
           ];
         };
         "keith@office" = home-manager.lib.homeManagerConfiguration {
@@ -87,7 +86,6 @@
           modules = [
             # > Our main home-manager configuration file <
             ./home-manager/home.nix
-            inputs.plasma-manager.homeManagerModules.plasma-manager
           ];
         };
       };
