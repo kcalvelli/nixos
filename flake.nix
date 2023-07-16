@@ -13,10 +13,7 @@
 
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
-    nix-your-shell = {
-      url = "github:MercuryTechnologies/nix-your-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

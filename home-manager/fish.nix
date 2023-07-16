@@ -1,13 +1,6 @@
-{ pkgs, nix-your-shell, ... }:
+{ pkgs, ... }:
 
 {
-  nixpkgs.overlays = [
-    nix-your-shell.overlays.default
-  ];
-
-  environment.systemPackages = [
-    pkgs.nix-your-shell
-  ];
 
   programs.fish = {
     enable = true;
@@ -19,8 +12,5 @@
       { name = "grc"; src = pkgs.fishPlugins.grc.src; }
       # Manually packaging and enable a plugin
     ];
-    promptInit = ''
-      nix-your-shell fish | source
-    '';
   };
 }
