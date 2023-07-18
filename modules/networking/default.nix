@@ -11,8 +11,8 @@
     firewall.enable = false;
 
     # Use iwd instead of wpa_supplicant
-    networking.wireless.iwd.enable = true;
-    networking.networkmanager.wifi.backend = "iwd";
+    wireless.iwd.enable = true;
+    networkmanager.wifi.backend = "iwd";
   };
 
   services = {
