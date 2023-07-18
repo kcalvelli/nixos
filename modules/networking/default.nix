@@ -9,6 +9,10 @@
     #networking.firewall.allowedUDPPorts = [ ... ];
     #networking.firewall.allowedTCPPorts = [ ... ];
     firewall.enable = false;
+
+    # Use iwd instead of wpa_supplicant
+    networking.wireless.iwd.enable = true;
+    networking.networkmanager.wifi.backend = "iwd";
   };
 
   services = {
@@ -26,4 +30,5 @@
   };
 
   programs.mtr.enable = true;
+
 } 
