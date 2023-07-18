@@ -5,6 +5,7 @@
     brave
     nextcloud-client
     telegram-desktop
+    microsoft-edge
   ]; 
     
  }

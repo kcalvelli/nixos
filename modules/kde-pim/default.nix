@@ -16,6 +16,8 @@
     kalendar
     kdepim-addons
     kleopatra
+    kdepim-runtime
+    calendarsupport
   ] );
 
   environment.sessionVariables = {
