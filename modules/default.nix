@@ -64,6 +64,9 @@
     hplipWithPlugin
     pinentry
     home-manager
+    pciutils 
   ];
+
+  services.fwupd.enable = true;
 
  }
