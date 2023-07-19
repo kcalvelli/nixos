@@ -51,7 +51,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Packages installed on evry system
+  # Packages installed on every system
   environment.systemPackages = with pkgs; [
     git
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
@@ -67,6 +67,10 @@
     pciutils 
   ];
 
+  # Enable firmware updates
   services.fwupd.enable = true;
+
+  # Enable native Wayland support for chromium based browsers and Electron
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
  }
