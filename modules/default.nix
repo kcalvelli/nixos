@@ -73,4 +73,7 @@
   # Enable native Wayland support for chromium based browsers and Electron
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Enable flatpak
+  services.flatpak.enable = true;
+
  }
