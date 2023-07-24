@@ -11,7 +11,7 @@
       inputs.home-manager.nixosModules.home-manager 
       ../../modules
       ../../modules/kde
-      ../../modules/kde-pim
+      #../../modules/kde-pim
       ../../modules/System76
       ../../modules/shell
       ../../modules/games
