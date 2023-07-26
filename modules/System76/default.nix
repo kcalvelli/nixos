@@ -16,6 +16,8 @@
     };
   };
 
+  #services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
+
   boot = {
     # Kernel
     kernelParams = [
