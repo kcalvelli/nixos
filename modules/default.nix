@@ -67,6 +67,9 @@
     pciutils 
   ];
 
+  # Been back and forth on flatpak, but concerned about the frequency of browser updates in Nix
+  services.flatpak.enable = true;
+  
   # Enable firmware updates
   services.fwupd.enable = true;
 
