@@ -43,6 +43,16 @@
       allowUnfree = true;
     };
   };
+  
+  # Auto upgrade
+  system.autoUpgrade = {
+      enable = true;
+      flake = "github:kcalvelli/nixos#pangolin";
+      flags = [
+        "--no-write-lock-file"
+        "--update-input" "nixpkgs"
+      ];
+  };
 
   system.stateVersion = "23.05"; # Did you read the comment?
 
