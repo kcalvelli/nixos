@@ -7,7 +7,6 @@
     ./git.nix
     ./fish.nix
     ./starship.nix
-    ./wezterm.nix
   ];
 
   nixpkgs = {
