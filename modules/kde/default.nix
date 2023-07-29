@@ -27,12 +27,13 @@
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
     elisa 
     khelpcenter
+    kwrite
   ];
 
   
   environment.systemPackages = with pkgs; [
     kate
-    libreoffice-qt
+    #libreoffice-qt
     spectacle
     kcalc
     skanlite

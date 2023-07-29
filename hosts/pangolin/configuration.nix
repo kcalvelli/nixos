@@ -28,6 +28,7 @@
       ../../modules/editors
       ../../modules/crypto
       ../../modules/fonts
+      ../../modules/office
 
       # Users
       ../../users/keith
