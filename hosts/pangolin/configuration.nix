@@ -29,6 +29,7 @@
       ../../modules/crypto
       ../../modules/fonts
       ../../modules/office
+      ../../cachix.nix
 
       # Users
       ../../users/keith
