@@ -65,6 +65,7 @@
     pinentry
     home-manager
     pciutils 
+    cachix
   ];
 
   # Back and forth on flatpak
