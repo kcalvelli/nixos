@@ -2,7 +2,7 @@
 
  {
   environment.systemPackages = with pkgs; [
-    libreoffice-bin
+    #libreoffice-qt
   ]; 
     
  }
