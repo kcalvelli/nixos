@@ -66,6 +66,7 @@
     home-manager
     pciutils 
     cachix
+    xorg.xhost
   ];
 
   # Back and forth on flatpak
