@@ -20,7 +20,7 @@
       ../../modules/printing
       ../../modules/networking
       ../../modules/waydroid
-      ../../modules/virt
+      ../../modules/virtualization
       ../../modules/android
       ../../modules/internet
       ../../modules/graphics

@@ -5,4 +5,8 @@
     direnv
     ripgrep
   ];
+
+  environment.shellInit = ''
+    [ -n "$DISPLAY" ] && xhost +si:localuser:$USER || true
+  '';
 }
