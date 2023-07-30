@@ -6,6 +6,7 @@
     nextcloud-client
     telegram-desktop
     thunderbird
+    discord
   ]; 
     
  }

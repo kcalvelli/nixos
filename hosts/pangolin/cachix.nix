@@ -1,0 +1,1 @@
+/home/keith/.config/nixos/cachix.nix
