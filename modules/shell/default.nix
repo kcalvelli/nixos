@@ -4,6 +4,8 @@
     neofetch
     direnv
     ripgrep
+    fish
+    starship
   ];
 
   environment.shellInit = ''
