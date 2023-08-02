@@ -7,8 +7,4 @@
     fish
     starship
   ];
-
-  environment.shellInit = ''
-    [ -n "$DISPLAY" ] && xhost +si:localuser:$USER || true
-  '';
 }
