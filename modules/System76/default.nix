@@ -12,11 +12,11 @@
         amdvlk
       ];
       driSupport = true;
-      #driSupport32Bit = true;
+      driSupport32Bit = true;
     };
   };
 
-  #services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
+  services.xserver.videoDrivers = [ "modesetting" ];
 
   boot = {
     # Kernel
