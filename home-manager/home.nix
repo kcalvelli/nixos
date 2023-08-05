@@ -36,6 +36,9 @@
     };
   };
 
+  # Enable mpris-proxy
+  services.mpris-proxy.enable = true;
+
   # TODO: Set your username
   home = {
     username = "keith";
