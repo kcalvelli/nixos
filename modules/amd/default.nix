@@ -5,7 +5,7 @@
     #  X11
     xserver = {
       enable  = true;
-      videoDrivers = [ "amdgpu" ];
+      #videoDrivers = [ "amdgpu" ];
       layout = "us";
       xkbVariant = "";
       libinput.enable = true;
