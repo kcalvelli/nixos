@@ -7,7 +7,6 @@
     telegram-desktop
     thunderbird
     discord
-    birdtray
   ]; 
     
  }
