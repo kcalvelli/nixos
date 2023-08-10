@@ -5,10 +5,13 @@
     bluetooth.enable = true;
     pulseaudio.enable = false;
     opengl = {
+      enable = true;
       extraPackages = with pkgs; [
         rocm-opencl-icd
         rocm-opencl-runtime
         amdvlk
+        vaapiVdpau
+        libvdpau-va-gl
       ];
       driSupport = true;
       #driSupport32Bit = true;
