@@ -28,7 +28,7 @@
       ../../modules/editors
       ../../modules/crypto
       ../../modules/fonts
-      #../../modules/office
+      ../../modules/office
       ../../modules/containers
       ../../modules/remote
 
