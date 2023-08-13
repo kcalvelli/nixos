@@ -40,6 +40,12 @@
   networking = { 
     hostName = "biggaboy"; # Define your hostname.
   };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
  
   # Auto upgrade
   system.autoUpgrade = {
