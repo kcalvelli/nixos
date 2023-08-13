@@ -25,7 +25,6 @@
     kernelModules = [ "amdgpu" ];
 
     initrd = {
-    initrd = {
       systemd.enable = true;
       kernelModules = [ "amdgpu"];
     };
