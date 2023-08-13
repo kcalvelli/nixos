@@ -12,7 +12,7 @@
       ../../modules
       ../../modules/kde
       #../../modules/kde-pim
-      ../../modules/msi
+      ../../modules/hp
       ../../modules/shell
       ../../modules/games
       ../../modules/amd
@@ -38,18 +38,9 @@
     ];
 
   networking = { 
-    hostName = "office"; # Define your hostname.
+    hostName = "biggaboy"; # Define your hostname.
   };
  
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      permittedInsecurePackages = [
-        "qtwebkit-5.212.0-alpha4"
-      ];
-    };
-  };
-
   # Auto upgrade
   system.autoUpgrade = {
       enable = true;

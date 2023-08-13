@@ -25,6 +25,7 @@
     kernelModules = [ "amdgpu" ];
 
     initrd = {
+    initrd = {
       # Setup keyfile
       secrets = {
         "/crypto_keyfile.bin" = null;
