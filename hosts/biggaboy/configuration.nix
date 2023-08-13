@@ -29,7 +29,6 @@
       ../../modules/crypto
       ../../modules/fonts
       ../../modules/office
-      ../../modules/containers
       ../../modules/remote
 
       # Users
