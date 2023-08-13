@@ -29,6 +29,7 @@
       ../../modules/crypto
       ../../modules/fonts
       #../../modules/office
+      ../../modules/remote
 
       # Users
       ../../users/keith
