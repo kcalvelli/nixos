@@ -29,6 +29,10 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    trayscale
+  ];  
+
   programs.mtr.enable = true;
 
 } 
