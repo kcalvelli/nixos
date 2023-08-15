@@ -1,7 +1,7 @@
 { config, pkgs, ... }: 
 {
 
-  services.xrdp.enable = true;
+  services.xrdp.enable = false;
   services.xrdp.defaultWindowManager = "startplasma-x11";
   services.xrdp.openFirewall = true;
 
