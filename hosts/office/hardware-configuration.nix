@@ -30,6 +30,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/mnt/data" =
+    { device = "/dev/disk/by-uuid/ed69a535-afc7-45d5-be77-dc1b06282f06";
+      fsType = "ext4";
+    };
+
   fileSystems."/home/keith/Games" =
     { device = "/dev/disk/by-uuid/d0fe2c38-85eb-4dff-84ca-411de9171e80";
       fsType = "ext4";
