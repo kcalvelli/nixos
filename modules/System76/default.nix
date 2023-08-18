@@ -9,16 +9,13 @@
       extraPackages = with pkgs; [
         rocm-opencl-icd
         rocm-opencl-runtime
-        amdvlk
-        vaapiVdpau
-        libvdpau-va-gl
       ];
       driSupport = true;
       driSupport32Bit = true;
     };
   };
 
-  services.xserver.videoDrivers = [ "modesetting" ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   boot = {
     # Kernel

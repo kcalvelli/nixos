@@ -8,9 +8,6 @@
       extraPackages = with pkgs; [
         rocm-opencl-icd
         rocm-opencl-runtime
-        amdvlk
-        vaapiVdpau
-        libvdpau-va-gl
       ];
       driSupport = true;
       #driSupport32Bit = true;
@@ -22,7 +19,6 @@
     kernelParams = [
       "quiet" "iommu=pt"   
     ];
-    kernelModules = [ "amdgpu" ];
 
     initrd = {
       # Setup keyfile
