@@ -13,6 +13,15 @@
     # Use iwd instead of wpa_supplicant
     wireless.iwd.enable = true;
     networkmanager.wifi.backend = "iwd";
+
+    # Bridge network
+    interfaces.enp39s0.useDHCP = true;
+    interfaces.br0.useDHCP = true;
+    bridges = {
+      "br0" = {
+        interfaces = [ "enp39s0" ];
+      };
+    };
   };
 
   services = {

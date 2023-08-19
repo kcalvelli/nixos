@@ -17,6 +17,8 @@
     virt-manager
     qemu
     distrobox
+    quickemu
+    quickgui
   ];
 
   boot.extraModprobeConfig = ''
