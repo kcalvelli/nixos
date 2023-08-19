@@ -8,7 +8,7 @@
       extraPackages = with pkgs; [
         rocm-opencl-icd
         rocm-opencl-runtime
-        vaapi-vdpau
+        vaapiVdpau
       ];
       driSupport = true;
       #driSupport32Bit = true;
