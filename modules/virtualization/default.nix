@@ -18,6 +18,7 @@
     distrobox
     quickemu
     quickgui
+    spice-gtk
   ];
 
   boot.extraModprobeConfig = ''
@@ -25,4 +26,7 @@
     options kvm_amd emulate_invalid_guest_state=0
     options kvm ignore_msrs=1
   '';
+
+  security.wrappers.spice-client-glib-usb-acl-helper.source = "${pkgs.spice_gtk}/bin/spice-client-glib-usb-acl-helper";
+
 } 
