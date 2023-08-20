@@ -3,6 +3,7 @@
   users.extraUsers.keith.extraGroups = [ "libvirtd" ];
   virtualisation = {
     libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
     podman = {
       enable = true;
 
@@ -27,6 +28,9 @@
     options kvm ignore_msrs=1
   '';
 
-  #security.wrappers.spice-client-glib-usb-acl-helper.source = "${pkgs.spice-gtk}/bin/spice-client-glib-usb-acl-helper";
-
+ users.groups.usb = {};
+  users.users.keith.extraGroups = [ "usb" ];
+  services.udev.extraRules = ''
+    KERNEL=="*", SUBSYSTEMS=="usb", MODE="0664", GROUP="usb"
+  '';
 } 
