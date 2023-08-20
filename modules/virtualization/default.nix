@@ -27,10 +27,4 @@
     options kvm_amd emulate_invalid_guest_state=0
     options kvm ignore_msrs=1
   '';
-
- users.groups.usb = {};
-  users.users.keith.extraGroups = [ "usb" ];
-  services.udev.extraRules = ''
-    KERNEL=="*", SUBSYSTEMS=="usb", MODE="0664", GROUP="usb"
-  '';
 } 
