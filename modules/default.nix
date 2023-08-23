@@ -67,6 +67,9 @@
     pciutils 
     cachix
     xorg.xhost
+    glxinfo
+    vulkan-tools
+    wayland-utils
   ];
 
   # Back and forth on flatpak
