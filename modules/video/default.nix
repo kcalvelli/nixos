@@ -4,6 +4,8 @@
     obs-studio
     kdenlive
     vlc
+    mediainfo
+    glaxnimate
   ];
 }
 
