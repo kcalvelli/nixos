@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager 
       ../../modules
-      ../../modules/kdem
+      ../../modules/kde
       ../../modules/msi
       ../../modules/shell
       ../../modules/games
