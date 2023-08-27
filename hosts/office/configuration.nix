@@ -10,8 +10,7 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager 
       ../../modules
-      ../../modules/kde
-      #../../modules/kde-pim
+      ../../modules/kdem
       ../../modules/msi
       ../../modules/shell
       ../../modules/games
@@ -29,7 +28,6 @@
       ../../modules/crypto
       ../../modules/fonts
       ../../modules/office
-      ../../modules/containers
       ../../modules/remote
 
       # Users
