@@ -1,10 +1,10 @@
 {config, pkgs, lib,...}: 
 {
-  nixpkgs.config.packageOverrides = super: let self = super.pkgs; in {
-    # For Akonadi with postgres
-    postgresSupport = true;
-    defaultDriver = "POSTGRES";
-  };   
+  #nixpkgs.config.packageOverrides = super: let self = super.pkgs; in {
+  #  # For Akonadi with postgres
+  #  postgresSupport = true;
+  #  defaultDriver = "POSTGRES";
+  #};   
 
   environment.systemPackages = with pkgs; [
     kmail
@@ -13,7 +13,7 @@
     akonadiconsole
     akonadi-search
     kdepim-addons
-    kalendar
+    merkuro
     kdepim-addons
     kleopatra
     kdepim-runtime

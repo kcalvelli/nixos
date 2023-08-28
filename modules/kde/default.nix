@@ -44,6 +44,7 @@
     kdialog
     kdeconnect-kde
     kio-gdrive
+    accounts-qt
   ] );
 
    
