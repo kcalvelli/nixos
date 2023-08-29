@@ -21,7 +21,7 @@
       ../../modules/networking
       ../../modules/waydroid
       ../../modules/virtualization
-      ../../modules/android
+      #../../modules/android
       ../../modules/internet
       ../../modules/graphics
       ../../modules/video
@@ -29,7 +29,7 @@
       ../../modules/crypto
       ../../modules/fonts
       ../../modules/office
-      ../../modules/remote
+      #../../modules/remote
 
       # Users
       ../../users/keith

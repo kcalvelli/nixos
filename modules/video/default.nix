@@ -2,10 +2,10 @@
 {
   environment.systemPackages = with pkgs; [ 
     obs-studio
-    kdenlive
+#    kdenlive
     vlc
-    mediainfo
-    glaxnimate
+#    mediainfo
+#    glaxnimate
   ];
 }
 
