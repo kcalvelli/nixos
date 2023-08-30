@@ -10,12 +10,11 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager 
       ../../modules
-      ../../modules/kde
-      #../../modules/kde-pim
-      ../../modules/System76
+      ../../desktop/kde
+      ../../hardware/System76
+      ../../hardware/amd      
       ../../modules/shell
       ../../modules/games
-      ../../modules/amd
       ../../modules/pipewire
       ../../modules/printing
       ../../modules/networking
