@@ -11,6 +11,7 @@
       inputs.home-manager.nixosModules.home-manager 
       ../../modules
       ../../desktop/kde
+      ../../desktop/deepin
       ../../hardware/msi
       ../../hardware/amd
       ../../modules/shell
