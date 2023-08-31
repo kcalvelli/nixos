@@ -2,6 +2,11 @@
 
 { inputs, config, pkgs, ... }:
 {
+  
+  imports = [
+    ../../desktop
+  ];
+
   programs = {
     kdeconnect.enable = true;
     dconf.enable = true;

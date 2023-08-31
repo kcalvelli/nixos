@@ -12,7 +12,7 @@
       ../../modules
       ../../desktop/kde
       ../../hardware/msi
-      ../../hardware/amd
+      #../../hardware/amd
       ../../modules/shell
       ../../modules/games
       ../../modules/pipewire

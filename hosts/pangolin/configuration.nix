@@ -12,7 +12,7 @@
       ../../modules
       ../../desktop/kde
       ../../hardware/System76
-      ../../hardware/amd      
+      #../../hardware/amd      
       ../../modules/shell
       ../../modules/games
       ../../modules/pipewire
