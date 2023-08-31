@@ -1,11 +1,6 @@
  
 { inputs, config, pkgs, ... }:
 {
-
-  modules = [
-    nixos-hardware.nixosModules.system76
-  ];
-
   hardware = {
     #system76.enableAll = true;
     bluetooth.enable = true;

@@ -56,6 +56,7 @@
           modules = [
             # > Our main nixos configuration file <
             ./hosts/pangolin/configuration.nix
+            nixos-hardware.nixosModules.system76
           ];
         };
         office = nixpkgs.lib.nixosSystem {
