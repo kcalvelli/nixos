@@ -3,7 +3,7 @@
 {
 
   modules = [
-    nixos-hardware.nixosModules.system76;
+    nixos-hardware.nixosModules.system76
   ];
 
   hardware = {
