@@ -1,8 +1,13 @@
  
 { inputs, config, pkgs, ... }:
 {
+
+  modules = [
+    nixos-hardware.nixosModules.system76;
+  ];
+
   hardware = {
-    system76.enableAll = true;
+    #system76.enableAll = true;
     bluetooth.enable = true;
     pulseaudio.enable = false;
     opengl = {
