@@ -31,7 +31,6 @@
       ../../modules/office
       #../../modules/remote
 
-      # Users
       ../../users/keith
     ];
 
