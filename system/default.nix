@@ -60,16 +60,19 @@
     gnugrep
    # xdg-user-dirs 
    # libnotify
-   # clinfo
+
     hplipWithPlugin
     pinentry
    # home-manager
    # pciutils 
-    cachix
     xorg.xhost
+
+   # Uncomment below to allow viewing system info in KDE Settings 
    # glxinfo
    # vulkan-tools
    # wayland-utils
+   # clinfo
+      
   ];
   
   # Enable firmware updates
