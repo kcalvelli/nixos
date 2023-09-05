@@ -12,8 +12,6 @@
       #  Home-manager     
       ../../home 
 
-<<<<<<< HEAD
-=======
       # Piece together base system
       ../../system
       ../../system/hardware/msi      
@@ -36,7 +34,6 @@
       ../../applications/office
       
       # Define users
->>>>>>> 725dbb9 (Reorg)
       ../../users/keith
     ];
 
