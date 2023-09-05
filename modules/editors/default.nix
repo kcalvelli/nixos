@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [ 
 #    lapce
     vscode
-    neovim
+#    neovim
   ];
 
   programs.neovim.enable = true;
