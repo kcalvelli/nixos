@@ -44,6 +44,10 @@
     username = "keith";
     homeDirectory = "/home/keith";
   };
+
+
+  # Enable xdg
+  xdg.enable = true;
   
 
   # Add stuff for your user as you see fit:

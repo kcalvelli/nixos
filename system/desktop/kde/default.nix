@@ -32,6 +32,7 @@
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
     elisa 
     khelpcenter
+    oxygen
   ];
 
   
