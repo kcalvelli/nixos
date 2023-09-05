@@ -58,18 +58,18 @@
     wget
     curl
     gnugrep
-    xdg-user-dirs 
-    libnotify
-    clinfo
+   # xdg-user-dirs 
+   # libnotify
+   # clinfo
     hplipWithPlugin
     pinentry
-    home-manager
-    pciutils 
+   # home-manager
+   # pciutils 
     cachix
     xorg.xhost
-    glxinfo
-    vulkan-tools
-    wayland-utils
+   # glxinfo
+   # vulkan-tools
+   # wayland-utils
   ];
 
   # Back and forth on flatpak

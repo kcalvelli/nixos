@@ -8,29 +8,35 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #inputs.home-manager.nixosModules.home-manager
+     
+      #  Home-manager     
       ../../home 
-      ../../modules
-      ../../desktop/kde
-      ../../hardware/msi
-      #../../hardware/amd
-      ../../modules/shell
-      ../../modules/games
-      ../../modules/pipewire
-      ../../modules/printing
-      ../../modules/networking
-      ../../modules/waydroid
-      ../../modules/virtualization
-      #../../modules/android
-      ../../modules/internet
-      ../../modules/graphics
-      ../../modules/video
-      ../../modules/editors
-      ../../modules/crypto
-      ../../modules/fonts
-      ../../modules/office
-      #../../modules/remote
 
+<<<<<<< HEAD
+=======
+      # Piece together base system
+      ../../system
+      ../../system/hardware/msi      
+      ../../system/desktop/kde      
+      ../../system/crypto
+      ../../system/fonts
+      ../../system/printing
+      ../../system/networking
+      ../../system/virtualization
+      ../../system/pipewire
+
+      # Applications to be installed, similar to patterns in that other OS 
+      ../../applications/shell
+      ../../applications/games
+      ../../applications/waydroid
+      ../../applications/internet
+      ../../applications/graphics
+      ../../applications/video
+      ../../applications/editors
+      ../../applications/office
+      
+      # Define users
+>>>>>>> 725dbb9 (Reorg)
       ../../users/keith
     ];
 
