@@ -55,7 +55,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main nixos configuration file <
-            ./hosts/pangolin/configuration.nix
+            ./hosts/pangolin
             nixos-hardware.nixosModules.system76
           ];
         };
@@ -64,7 +64,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main nixos configuration file <
-            ./hosts/office/configuration.nix
+            ./hosts/office
           ];
         };
       };
