@@ -2,7 +2,7 @@
 
  {
   environment.systemPackages = with pkgs; [
-    microsoft-edge-dev
+    microsoft-edge
   ]; 
     
  }
