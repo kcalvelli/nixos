@@ -92,60 +92,6 @@
           );
         };
       },
-
-    // Gesture button (hold and move)
-    {
-      cid: 0xc3;
-      action = {
-        type: "Gestures";
-        gestures: (
-          {
-            direction: "None";
-            mode: "OnRelease";
-            action = {
-              type: "Keypress";
-              keys: [ "KEY_LEFTMETA" ]; // open activities overview
-            }
-          },
-
-          {
-            direction: "Right";
-            mode: "OnRelease";
-            action = {
-              type: "Keypress";
-              keys: [ "KEY_LEFTMETA", "KEY_RIGHT" ]; // snap window to right
-            }
-          },
-
-          {
-            direction: "Left";
-            mode: "OnRelease";
-            action = {
-              type: "Keypress";
-              keys: [ "KEY_LEFTMETA", "KEY_LEFT" ];
-            }
-		  },
-
-		  {
-            direction: "Up";
-            mode: "onRelease";
-            action = {
-              type: "Keypress";
-              keys: [ "KEY_LEFTMETA", "KEY_UP" ]; // maximize window
-            }
-		  },
-		  
-		  {
-            direction: "Down";
-            mode: "OnRelease";
-            action = {
-              type: "Keypress";
-              keys: [ "KEY_LEFTMETA", "KEY_DOWN" ]; // minimize window
-            }
-          }
-        );
-      };
-    },
 	
     // Top button
     {
