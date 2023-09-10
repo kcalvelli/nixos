@@ -16,64 +16,164 @@
   # Configuration for logiops
   environment.etc."logid.cfg".text = ''
     devices: ({
-      name: "Wireless Mouse MX Master 3";
-      smartshift: {
-        on: true;
-        threshold: 12;
-      };
-      hiresscroll: {
-        hires: true;
-        target: false;
-      };
-      dpi: 1200;
-      buttons: ({
-        cid: 0xc3;
+      name: "MX Vertical Advanced Ergonomic Mouse";
+
+      dpi: 1500;
+
+      buttons: (
+      // Forward button
+      {
+        cid: 0x56;
         action = {
           type: "Gestures";
-          gestures: ({
-            direction: "Left";
+          gestures: (
+            {
+              direction: "None";
+              mode: "OnRelease";
+              action = {
+                type: "Keypress";
+                keys: [ "KEY_FORWARD" ];
+              }
+            },
+
+            {
+              direction: "Up";
+              mode: "OnRelease";
+              action = {
+                type: "Keypress";
+                keys: [ "KEY_PLAYPAUSE" ];
+              }
+            },
+
+            {
+              direction: "Down";
+              mode: "OnRelease";
+              action = {
+                type: "Keypress";
+                keys: [ "KEY_LEFTMETA" ];
+              }
+            },
+
+            {
+              direction: "Right";
+              mode: "OnRelease";
+              action = {
+                type: "Keypress";
+                keys: [ "KEY_NEXTSONG" ];
+              }
+            },
+
+            {
+              direction: "Left";
+              mode: "OnRelease";
+              action = {
+                type: "Keypress";
+                keys: [ "KEY_PREVIOUSSONG" ];
+              }
+            }
+          );
+        };
+      },
+
+      // Back button
+      {
+        cid: 0x53;
+        action = {
+          type: "Gestures";
+          gestures: (
+            {
+              direction: "None";
+              mode: "OnRelease";
+              action = {
+                type: "Keypress";
+                keys: [ "KEY_BACK" ];
+              }
+            }
+          );
+        };
+      },
+
+    // Gesture button (hold and move)
+    {
+      cid: 0xc3;
+      action = {
+        type: "Gestures";
+        gestures: (
+          {
+            direction: "None";
             mode: "OnRelease";
             action = {
-              type = "Keypress";
-              keys: ["KEY_F15"];
-            };
-          }, {
+              type: "Keypress";
+              keys: [ "KEY_LEFTMETA" ]; // open activities overview
+            }
+          },
+
+          {
             direction: "Right";
             mode: "OnRelease";
             action = {
-              type = "Keypress";
-              keys: ["KEY_F16"];
-            };
-          }, {
+              type: "Keypress";
+              keys: [ "KEY_LEFTMETA", "KEY_RIGHT" ]; // snap window to right
+            }
+          },
+
+          {
+            direction: "Left";
+            mode: "OnRelease";
+            action = {
+              type: "Keypress";
+              keys: [ "KEY_LEFTMETA", "KEY_LEFT" ];
+            }
+		  },
+
+		  {
+            direction: "Up";
+            mode: "onRelease";
+            action = {
+              type: "Keypress";
+              keys: [ "KEY_LEFTMETA", "KEY_UP" ]; // maximize window
+            }
+		  },
+		  
+		  {
             direction: "Down";
             mode: "OnRelease";
             action = {
               type: "Keypress";
-              keys: ["KEY_F17"];
-            };
-          }, {
+              keys: [ "KEY_LEFTMETA", "KEY_DOWN" ]; // minimize window
+            }
+          }
+        );
+      };
+    },
+	
+    // Top button
+    {
+      cid: 0xfd;
+      action = {
+        type: "Gestures";
+        gestures: (
+          {
             direction: "Up";
             mode: "OnRelease";
             action = {
-              type: "Keypress";
-              keys: ["KEY_F18"];
-            };
-          }, {
-            direction: "None";
+              type: "ChangeDPI";
+              inc: 1000,
+            }
+          },
+
+          {
+            direction: "Down";
             mode: "OnRelease";
             action = {
-              type = "Keypress";
-              keys: ["KEY_PLAYPAUSE"];
-            };
-          });
-        };
-      }, {
-        cid: 0xc4;
-        action = {
-          type: "Keypress";
-          keys: ["KEY_F19"];
-        };
-      });
+              type: "ChangeDPI";
+              inc: -1000,
+            }
+          }
+        );
+      };
+    }
+  );      
     });
   '';
 }
