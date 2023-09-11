@@ -13,6 +13,8 @@
       driSupport = true;
       #driSupport32Bit = true;
     };
+    logitech.enable = true;
+    logitech.enableGraphical = true;
   };
 
   boot = {

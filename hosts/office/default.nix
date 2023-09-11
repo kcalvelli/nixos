@@ -22,7 +22,6 @@
       ../../system/networking
       ../../system/virtualization
       ../../system/pipewire
-      ../../system/input
 
       # Applications to be installed, similar to patterns in that other OS 
       ../../applications/shell
