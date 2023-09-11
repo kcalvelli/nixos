@@ -2,7 +2,10 @@
 
 {
   # Install logiops package
-  environment.systemPackages = [ pkgs.logiops ];
+  environment.systemPackages = [ 
+    pkgs.logiops 
+    pkgs.solaar
+  ];
 
   # Create systemd service
   systemd.services.logiops = {
@@ -12,10 +15,6 @@
       ExecStart = "${pkgs.logiops}/bin/logid";
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    solaar
-  ];
 
   # Configuration for logiops
   environment.etc."logid.cfg".text = ''
