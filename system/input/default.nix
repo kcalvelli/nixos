@@ -11,10 +11,11 @@
   systemd.services.logiops = {
     enable = true;
     description = "An unofficial userspace driver for HID++ Logitech devices";
+    wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "simple";
       ExecStart = "${pkgs.logiops}/bin/logid";
-      wantedBy = [ "multi-user.target" ];
+      Restart = "always";
     };
   };
 
