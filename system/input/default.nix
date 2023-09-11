@@ -48,7 +48,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTMETA", "KEY_LEFTSHIFT", "KEY_UP"];
+                            keys: ["KEY_LEFTMETA","KEY_UP"];
                         };
                     },
                     {
@@ -57,7 +57,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTMETA", "KEY_LEFTSHIFT", "KEY_DOWN"];
+                            keys: ["KEY_LEFTMETA","KEY_DOWN"];
                         };
                     },
                     {
@@ -66,7 +66,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTMETA", "KEY_LEFTSHIFT", "KEY_LEFT"];
+                            keys: ["KEY_LEFTMETA","KEY_LEFT"];
                         };
                     },
                     {
@@ -75,7 +75,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys = ["KEY_LEFTMETA", "KEY_LEFTSHIFT", "KEY_RIGHT"];
+                            keys = ["KEY_LEFTMETA","KEY_RIGHT"];
                         }
                     },
                     {
@@ -84,7 +84,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTMETA", "KEY_ENTER"];
+                            keys: ["KEY_LEFTMETA"];
                         }
                     }
                 );
