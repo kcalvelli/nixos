@@ -13,6 +13,10 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    solaar
+  ];
+
   # Configuration for logiops
   environment.etc."logid.cfg".text = ''
 devices: ({
