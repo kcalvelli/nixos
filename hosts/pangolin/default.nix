@@ -32,7 +32,6 @@
       ../../applications/video
       ../../applications/editors
       ../../applications/office
-      ../../applications/work
       
       # Define users
       ../../users/keith
