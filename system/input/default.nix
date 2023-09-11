@@ -16,7 +16,7 @@
   # Configuration for logiops
   environment.etc."logid.cfg".text = ''
 devices: ({
-  name: "Wireless Mouse MX Master 3";
+  name: "Wireless Mouse MX Master 3s";
 
   smartshift: {
     on: true;
