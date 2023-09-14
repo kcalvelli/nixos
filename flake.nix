@@ -17,7 +17,7 @@
     fenix = {
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
+    };
 
   };
 
@@ -33,10 +33,11 @@
     rec {
       # Your custom packages
       # Acessible through 'nix build', 'nix shell', etc
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./pkgs { inherit pkgs; }
-      );
+      #packages = forAllSystems (system:
+      #  let pkgs = nixpkgs.legacyPackages.${system};
+      #  in import ./pkgs { inherit pkgs; }
+      #);
+      packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
 
       # Devshell for bootstrapping
       # Acessible through 'nix develop' or 'nix-shell' (legacy)
@@ -48,9 +49,6 @@
       # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };
       homeManagerModules = import ./modules/home-manager;
-
-      # Fenix for Rust development
-      packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
 
       # NixOS configurations 
       # Available through 'nixos-rebuild --flake .#your-hostname'
@@ -70,6 +68,7 @@
           modules = [
             # > Our main nixos configuration file <
             ./hosts/office
+            ./development/rust
           ];
         };
       };
