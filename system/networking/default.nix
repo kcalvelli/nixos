@@ -67,6 +67,9 @@
     extraConfig = ''
       browseable = yes
       smb encrypt = required
+      wins support = no
+      domain master = no
+      local master = no
     '';
 
     shares = {
