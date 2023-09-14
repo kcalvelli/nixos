@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 {
     nixpkgs.overlays = [ fenix.overlays.default ];
     environment.systemPackages = with pkgs; [
@@ -10,5 +10,5 @@
             "rustfmt"
         ])
         rust-analyzer-nightly
-    ];
+    ]
 }
