@@ -13,12 +13,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, fenix, ... }@inputs:
@@ -33,11 +27,10 @@
     rec {
       # Your custom packages
       # Acessible through 'nix build', 'nix shell', etc
-      #packages = forAllSystems (system:
-      #  let pkgs = nixpkgs.legacyPackages.${system};
-      #  in import ./pkgs { inherit pkgs; }
-      #);
-      packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
+      packages = forAllSystems (system:
+        let pkgs = nixpkgs.legacyPackages.${system};
+        in import ./pkgs { inherit pkgs; }
+      );
 
       # Devshell for bootstrapping
       # Acessible through 'nix develop' or 'nix-shell' (legacy)
@@ -68,7 +61,6 @@
           modules = [
             # > Our main nixos configuration file <
             ./hosts/office
-            ./development/rust
           ];
         };
       };
