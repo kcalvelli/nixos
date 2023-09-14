@@ -14,17 +14,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
 
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, fenix, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
-        "aarch64-linux"
-        "i686-linux"
+        #"aarch64-linux"
+        #"i686-linux"
         "x86_64-linux"
       ];
     in
@@ -46,6 +48,9 @@
       # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };
       homeManagerModules = import ./modules/home-manager;
+
+      # Fenix for Rust development
+      packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
 
       # NixOS configurations 
       # Available through 'nixos-rebuild --flake .#your-hostname'
