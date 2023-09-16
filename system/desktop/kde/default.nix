@@ -43,7 +43,7 @@
     kcalc
     skanlite
     filelight
-    lspci
+    pciutils
     clinfo
     glxinfo
     libva-tools
