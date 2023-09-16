@@ -47,6 +47,8 @@
     clinfo
     glxinfo
     libva-utils
+    wayland-utils
+    vulkan-tools
     ] ++ ( with pkgs.libsForQt5; [
     plasma-browser-integration
     kaccounts-integration
