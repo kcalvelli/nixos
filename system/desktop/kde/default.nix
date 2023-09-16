@@ -46,7 +46,7 @@
     pciutils
     clinfo
     glxinfo
-    libva-tools
+    libva-utils
     ] ++ ( with pkgs.libsForQt5; [
     plasma-browser-integration
     kaccounts-integration
