@@ -39,11 +39,14 @@
   
   environment.systemPackages = with pkgs; [
     kate
-    #libreoffice-qt
     spectacle
     kcalc
     skanlite
     filelight
+    lspci
+    clinfo
+    glxinfo
+    libva-tools
     ] ++ ( with pkgs.libsForQt5; [
     plasma-browser-integration
     kaccounts-integration
