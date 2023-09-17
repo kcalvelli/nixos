@@ -29,7 +29,7 @@
       ../../applications/waydroid
       ../../applications/internet
       ../../applications/graphics
-      ../../applications/video
+      ../../applications/multimedia
       ../../applications/editors
       ../../applications/office
       

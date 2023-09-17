@@ -6,6 +6,7 @@
     vlc
 #    mediainfo
 #    glaxnimate
+    spotify
   ];
 }
 
