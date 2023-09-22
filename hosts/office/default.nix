@@ -56,6 +56,8 @@
         "--update-input" "nixpkgs"
       ];
   };
+
+  programs.captive-browser.interface = "wlp41s0";
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

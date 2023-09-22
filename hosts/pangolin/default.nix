@@ -47,6 +47,8 @@
       allowUnfree = true;
     };
   };
+
+   programs.captive-browser.interface = "wlp2s0";
   
   # Auto upgrade
   system.autoUpgrade = {
