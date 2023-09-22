@@ -17,7 +17,6 @@
     qemu
 #    distrobox
     quickemu
-    quickgui
     virt-viewer
   ];
 
