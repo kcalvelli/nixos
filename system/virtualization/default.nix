@@ -18,7 +18,7 @@
 #    distrobox
     quickemu
     quickgui
-    spice-gtk
+    virt-viewer
   ];
 
   boot.extraModprobeConfig = ''
