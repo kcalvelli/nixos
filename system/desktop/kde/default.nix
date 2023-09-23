@@ -50,6 +50,7 @@
     wayland-utils
     vulkan-tools
     ] ++ ( with pkgs.libsForQt5; [
+    plasma-integration
     plasma-browser-integration
     kaccounts-integration
     kaccounts-providers
