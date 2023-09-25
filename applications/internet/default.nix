@@ -10,6 +10,7 @@
     telegram-desktop
     thunderbird
     discord
+    google-chrome
   ]; 
     
  }
