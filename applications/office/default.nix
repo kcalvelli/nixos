@@ -3,8 +3,8 @@
  {
   
   environment.systemPackages = with pkgs; [
-    libreoffice-qt
-    hunspell
+   # libreoffice-qt
+   # hunspell
   ]; 
     
  }
