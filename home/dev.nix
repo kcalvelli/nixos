@@ -1,5 +1,5 @@
 { pkgs, ... }:
 {
-   home.packages = [ pkgs.direnv, pkgs.lorri ];
-   
+   home.packages = [ pkgs.direnv pkgs.lorri ];
+
 }

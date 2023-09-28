@@ -7,6 +7,8 @@
     ./git.nix
     ./fish.nix
     ./starship.nix
+    ./dev.nix
+    ./utils.nix
   ];
 
   nixpkgs = {
