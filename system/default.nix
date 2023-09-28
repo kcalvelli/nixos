@@ -53,7 +53,7 @@
 
   # Packages installed on every system
   environment.systemPackages = with pkgs; [
-    git
+   # git
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     curl
@@ -66,13 +66,6 @@
    # home-manager
    # pciutils 
     xorg.xhost
-
-   # Uncomment below to allow viewing system info in KDE Settings 
-   # glxinfo
-   # vulkan-tools
-   # wayland-utils
-   # clinfo
-      
   ];
   
   # Enable firmware updates

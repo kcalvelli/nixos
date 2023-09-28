@@ -24,7 +24,7 @@
       ../../system/pipewire
 
       # Applications to be installed, similar to patterns in that other OS 
-      ../../applications/shell
+     # ../../applications/shell
       ../../applications/games
       ../../applications/waydroid
       ../../applications/internet
