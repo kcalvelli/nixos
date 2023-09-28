@@ -1,11 +1,8 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-    obs-studio
-#    kdenlive
+  #  obs-studio
     vlc
-#    mediainfo
-#    glaxnimate
     spotify
   ];
 }
