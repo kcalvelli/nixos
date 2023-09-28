@@ -28,10 +28,10 @@
       ../../applications/games
       ../../applications/waydroid
       ../../applications/internet
-      ../../applications/graphics
+     # ../../applications/graphics
       ../../applications/multimedia
       ../../applications/editors
-      ../../applications/office
+     # ../../applications/office
       
       # Define users
       ../../users/keith
