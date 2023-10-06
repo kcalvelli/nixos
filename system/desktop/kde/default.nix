@@ -20,7 +20,7 @@
         lightdm.enable = true;
         defaultSession = "plasmawayland";
         # Disable autologin due to wayland SDDM bug, should be resolved in v.20
-        autoLogin.enable = false; 
+        autoLogin.enable = true; 
         autoLogin.user = "keith";
       };
       
