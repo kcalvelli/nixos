@@ -15,8 +15,9 @@
       # Piece together base system
       ../../system
       ../../system/hardware/msi      
-      ../../system/desktop/kde     
-      ../../system/desktop/budgie
+      #../../system/desktop/kde     
+      #../../system/desktop/budgie
+      ../../system/desktop/gnome
       ../../system/crypto
       ../../system/fonts
       ../../system/printing
