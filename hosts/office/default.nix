@@ -16,6 +16,7 @@
       ../../system
       ../../system/hardware/msi      
       ../../system/desktop/kde     
+      ../../system/desktop/budgie
       ../../system/crypto
       ../../system/fonts
       ../../system/printing
@@ -31,7 +32,6 @@
       ../../applications/multimedia
       ../../applications/editors
      # ../../applications/office
-      
       # Define users
       ../../users/keith
     ];
