@@ -9,7 +9,7 @@
     nextcloud-client
     telegram-desktop
     thunderbird
-    discord
+   # discord
     google-chrome
   ]; 
     
