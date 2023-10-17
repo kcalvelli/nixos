@@ -27,19 +27,19 @@
       desktopManager.plasma5.enable = true;
     };
     dbus.enable = true;
+    colord.enable = true;
   };
 
   # Excluded KDE packages go here
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    elisa 
-    khelpcenter
-    oxygen
-  ];
+  #environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  #  elisa 
+  #  khelpcenter
+  #  oxygen
+  #];
 
   
   environment.systemPackages = with pkgs; [
     kate
-    spectacle
     kcalc
     skanlite
     filelight
@@ -50,12 +50,9 @@
     wayland-utils
     vulkan-tools
     ] ++ ( with pkgs.libsForQt5; [
-    plasma-integration
-    plasma-browser-integration
     kaccounts-integration
     kaccounts-providers
     kdialog
-    kdeconnect-kde
     kio-gdrive
     accounts-qt
   ] );
