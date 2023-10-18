@@ -36,6 +36,10 @@
       ../../users/keith
     ];
 
+  # Test displaylink for work
+  environment.systemPackages = [
+    pkgs.displaylink
+  ];
 
   networking = { 
     hostName = "pangolin"; # Define your hostname.
