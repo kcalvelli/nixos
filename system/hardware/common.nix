@@ -5,8 +5,8 @@
     pulseaudio.enable = false;
     opengl = {
       extraPackages = with pkgs; [
-        rocm-opencl-icd
-        rocm-opencl-runtime
+        rocmPackages.clr.icd
+        rocmPackages.clr.icd
         vaapiVdpau
       ];
       driSupport = true;
