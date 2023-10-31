@@ -8,7 +8,7 @@
     brave
     nextcloud-client
     telegram-desktop
-    thunderbird
+   # thunderbird
    # discord
     google-chrome
   ]; 
