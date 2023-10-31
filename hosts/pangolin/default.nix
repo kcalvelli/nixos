@@ -31,6 +31,7 @@
       ../../applications/multimedia
       ../../applications/editors
     #  ../../applications/office
+      ../../applications/kde-pim
       
       # Define users
       ../../users/keith
