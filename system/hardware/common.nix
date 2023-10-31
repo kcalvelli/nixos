@@ -18,7 +18,7 @@
   
   boot = {
     # Kernel
-    kernelParams = [op
+    kernelParams = [
       "quiet" "iommu=pt" "loglevel=2"   
     ];
 
