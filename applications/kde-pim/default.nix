@@ -15,6 +15,7 @@
     akonadi-calendar-tools
     kdepim-addons
     kdepim-runtime
+    kleopatra
   ]);
   
 }
