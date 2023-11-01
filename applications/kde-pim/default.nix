@@ -16,6 +16,7 @@
     kdepim-addons
     kdepim-runtime
     kleopatra
+    korganizer
   ]);
   
 }
