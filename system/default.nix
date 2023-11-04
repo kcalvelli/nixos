@@ -14,9 +14,10 @@
     };
   };
 
-  #Use latest kernel and systemd-boot
+  #Use systemd-boot
+  #Kernel 6.6 causes office to not boot
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    #kernelPackages = pkgs.linuxPackages_latest;
     #  Bootloader
     loader = {
       systemd-boot.enable = true;
