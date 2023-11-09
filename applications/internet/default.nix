@@ -1,9 +1,8 @@
- { config, pkgs, ... }:
+ { pkgs, ... }:
 
  {
 
   #programs.captive-browser.enable = true;
-  
   environment.systemPackages = with pkgs; [
     brave
     nextcloud-client

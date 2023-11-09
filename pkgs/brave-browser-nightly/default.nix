@@ -42,8 +42,7 @@
 , xdg-utils
 , snappy
 , libavif
-, qt5
-, libsForQt5
+
 
 
 # command line arguments which are always set e.g "--disable-gpu"
@@ -90,16 +89,18 @@ let
 
     # The feature disable is needed for VAAPI to work correctly: https://github.com/brave/brave-browser/issues/20935
   disableFeatures = optional enableVideoAcceleration "UseChromeOSDirectVideoDecoder";
+
+  pname = "brave-browser-nightly";
 in
 
 with import <nixpkgs>{};
 stdenv.mkDerivation rec {
-  pname = "brave-browser-nightly";
-  version = "1.58.2";
+  inherit pname;
+  version = "1.62.35";
 
   src = fetchurl {
     url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser-nightly_${version}_amd64.deb";
-    sha256 = "fefff9b8ca05c557c10c94948431cf5e517d74b2ff82ada9b8989ecd13ccc59f";
+    sha256 = "17h19m9y7bqj8m0lgf3d23dsrsmaxjw3i9f5accdmrypfi6fxf37";
   };
 
   dontConfigure = true;

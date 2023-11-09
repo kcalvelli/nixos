@@ -34,6 +34,7 @@
       ../../applications/kde-pim
       # Define users
       ../../users/keith
+
     ];
 
   networking = { 
