@@ -3,10 +3,6 @@
 {
   home.packages = [ pkgs.fish ];
 
-  environment.systemPackages = [
-    pkgs.fishPlugins.github-copilot-cli-fish
-  ];
-
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -15,7 +11,9 @@
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
-      #{ name = "grc"; src = pkgs.fishPlugins.grc.src; }
+      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
+      { name = "github-copilot-cli-fish"; src = pkgs.fishPlugins.github-copilot-cli-fish.src; }
+
       # Manually packaging and enable a plugin
     ];
   };
