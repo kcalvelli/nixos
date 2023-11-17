@@ -3,6 +3,10 @@
 {
   home.packages = [ pkgs.fish ];
 
+  environment.systemPackages = [
+    pkgs.fishPlugins.github-copilot-cli-fish
+  ];
+
   programs.fish = {
     enable = true;
     interactiveShellInit = ''

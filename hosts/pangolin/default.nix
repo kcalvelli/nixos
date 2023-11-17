@@ -29,7 +29,7 @@
       ../../applications/internet
     #  ../../applications/graphics
       ../../applications/multimedia
-      ../../applications/editors
+      ../../applications/development
     #  ../../applications/office
       ../../applications/kde-pim
       
