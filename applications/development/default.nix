@@ -7,6 +7,7 @@
     neovim
     github-desktop
     github-copilot-cli
+    grc
   ];
 
   programs.neovim.enable = true;
