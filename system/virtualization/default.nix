@@ -18,6 +18,7 @@
     #distrobox
     quickemu
     virt-viewer
+    distrobox
   ];
 
   boot.extraModprobeConfig = ''
