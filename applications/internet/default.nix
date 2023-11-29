@@ -9,7 +9,7 @@
     telegram-desktop
    # thunderbird
    # discord
-    google-chrome
+   # google-chrome
     neochat
   ]; 
  }

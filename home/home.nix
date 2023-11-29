@@ -38,8 +38,8 @@
     };
   };
 
-  # Custom package for brave nightly
-  home.packages = [ pkgs.brave-browser-nightly pkgs.brave];
+  # Custom packages
+  home.packages = [ pkgs.brave-browser-nightly pkgs.brave ];
 
   # Enable mpris-proxy
   services.mpris-proxy.enable = true;
