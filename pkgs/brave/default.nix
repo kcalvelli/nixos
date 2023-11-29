@@ -28,10 +28,10 @@
 , libXtst
 , libdrm
 , libkrb5
-, libsForQt5
 , libuuid
 , libxkbcommon
 , libxshmfence
+, libsForQt5
 , mesa
 , nspr
 , nss
@@ -44,8 +44,6 @@
 , coreutils
 , xorg
 , zlib
-
-
 
 # command line arguments which are always set e.g "--disable-gpu"
 , commandLineArgs ? ""
@@ -86,23 +84,20 @@ let
   rpath = makeLibraryPath deps + ":" + makeSearchPathOutput "lib" "lib64" deps;
   binpath = makeBinPath deps;
 
-  enableFeatures = optionals enableVideoAcceleration [ "VaapiVideoDecoder" "VaapiVideoEncoder" "AllowQt" ]
+  enableFeatures = optionals enableVideoAcceleration [ "VaapiVideoDecoder" "VaapiVideoEncoder" ]
     ++ optional enableVulkan "Vulkan";
 
     # The feature disable is needed for VAAPI to work correctly: https://github.com/brave/brave-browser/issues/20935
   disableFeatures = optional enableVideoAcceleration "UseChromeOSDirectVideoDecoder";
-
-  pname = "brave-browser-nightly";
 in
 
-with import <nixpkgs>{};
 stdenv.mkDerivation rec {
-  inherit pname;
-  version = "1.62.89";
+  pname = "brave";
+  version = "1.60.125";
 
   src = fetchurl {
-    url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser-nightly_${version}_amd64.deb";
-    sha256 = "17izr58m94amc7v3p00gncv7n17s0h6dr500yc3f360ss7vaizv4";
+    url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb";
+    sha256 = "1an4hb0dy51gzg73bvqy9p3j8gb9pg1a8sf05g8yqs19n424kjv5";
   };
 
   dontConfigure = true;
@@ -133,42 +128,42 @@ stdenv.mkDerivation rec {
       cp -R usr/share $out
       cp -R opt/ $out/opt
 
-      export BINARYWRAPPER=$out/opt/brave.com/brave-nightly/brave-browser-nightly
+      export BINARYWRAPPER=$out/opt/brave.com/brave/brave-browser
 
       # Fix path to bash in $BINARYWRAPPER
       substituteInPlace $BINARYWRAPPER \
           --replace /bin/bash ${stdenv.shell}
 
-      ln -sf $BINARYWRAPPER $out/bin/brave-browser-nightly
+      ln -sf $BINARYWRAPPER $out/bin/brave
 
-      for exe in $out/opt/brave.com/brave-nightly/{brave,chrome_crashpad_handler}; do
+      for exe in $out/opt/brave.com/brave/{brave,chrome_crashpad_handler}; do
           patchelf \
               --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
               --set-rpath "${rpath}" $exe
       done
 
       # Fix paths
-      substituteInPlace $out/share/applications/brave-browser-nightly.desktop \
-          --replace /usr/bin/brave $out/bin/brave
-      substituteInPlace $out/share/gnome-control-center/default-apps/brave-browser-nightly.xml \
+      substituteInPlace $out/share/applications/brave-browser.desktop \
+          --replace /usr/bin/brave-browser-stable $out/bin/brave
+      substituteInPlace $out/share/gnome-control-center/default-apps/brave-browser.xml \
           --replace /opt/brave.com $out/opt/brave.com
-      substituteInPlace $out/share/menu/brave-browser-nightly.menu \
+      substituteInPlace $out/share/menu/brave-browser.menu \
           --replace /opt/brave.com $out/opt/brave.com
-      substituteInPlace $out/opt/brave.com/brave-nightly/default-app-block \
+      substituteInPlace $out/opt/brave.com/brave/default-app-block \
           --replace /opt/brave.com $out/opt/brave.com
 
       # Correct icons location
-      icon_sizes=("128")
+      icon_sizes=("16" "24" "32" "48" "64" "128" "256")
 
       for icon in ''${icon_sizes[*]}
       do
           mkdir -p $out/share/icons/hicolor/$icon\x$icon/apps
-          ln -s $out/opt/brave.com/brave-nightly/product_logo_$icon.png $out/share/icons/hicolor/$icon\x$icon/apps/brave-browser-nightly.png
+          ln -s $out/opt/brave.com/brave/product_logo_$icon.png $out/share/icons/hicolor/$icon\x$icon/apps/brave-browser.png
       done
 
       # Replace xdg-settings and xdg-mime
-      ln -sf ${xdg-utils}/bin/xdg-settings $out/opt/brave.com/brave-nightly/xdg-settings
-      ln -sf ${xdg-utils}/bin/xdg-mime $out/opt/brave.com/brave-nightly/xdg-mime
+      ln -sf ${xdg-utils}/bin/xdg-settings $out/opt/brave.com/brave/xdg-settings
+      ln -sf ${xdg-utils}/bin/xdg-mime $out/opt/brave.com/brave/xdg-mime
 
       runHook postInstall
   '';
@@ -178,7 +173,7 @@ stdenv.mkDerivation rec {
     gappsWrapperArgs+=(
       --prefix LD_LIBRARY_PATH : ${rpath}
       --prefix PATH : ${binpath}
-      --suffix PATH : ${lib.makeBinPath [ xdg-utils ]}
+      --suffix PATH : ${lib.makeBinPath [ xdg-utils coreutils ]}
       ${optionalString (enableFeatures != []) ''
       --add-flags "--enable-features=${strings.concatStringsSep "," enableFeatures}"
       ''}
@@ -195,7 +190,7 @@ stdenv.mkDerivation rec {
 
   installCheckPhase = ''
     # Bypass upstream wrapper which suppresses errors
-    $out/opt/brave.com/brave-nightly/brave --version
+    $out/opt/brave.com/brave/brave --version
   '';
 
   passthru.updateScript = ./update.sh;

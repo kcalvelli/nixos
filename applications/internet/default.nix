@@ -4,7 +4,7 @@
 
   #programs.captive-browser.enable = true;
   environment.systemPackages = with pkgs; [
-    brave
+    #brave
     nextcloud-client
     telegram-desktop
    # thunderbird

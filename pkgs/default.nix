@@ -6,6 +6,6 @@
   # Brave Nightly
     brave-browser-nightly = pkgs.callPackage ./brave-browser-nightly { };
   # Brave
-  #  brave = pkgs.callPackage ./brave { };
+    brave = pkgs.callPackage ./brave { };
 }
 
