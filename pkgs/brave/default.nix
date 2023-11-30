@@ -31,7 +31,6 @@
 , libuuid
 , libxkbcommon
 , libxshmfence
-, libsForQt5
 , mesa
 , nspr
 , nss
