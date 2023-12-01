@@ -1,5 +1,5 @@
 { pkgs, ... }:
 {
-   home.packages = [ pkgs.ripgrep pkgs.neofetch ];
+   home.packages = [ pkgs.ripgrep pkgs.neofetch pkgs.helix ];
    
 }
