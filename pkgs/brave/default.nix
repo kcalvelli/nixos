@@ -28,6 +28,7 @@
 , libXtst
 , libdrm
 , libkrb5
+, libsForQt5
 , libuuid
 , libxkbcommon
 , libxshmfence
