@@ -3,8 +3,7 @@
  {
 
   #programs.captive-browser.enable = true;
-  # Chrome
-  programs.chro
+
   environment.systemPackages = with pkgs; [
     #brave
     nextcloud-client
