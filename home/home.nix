@@ -9,6 +9,7 @@
     ./starship.nix
     ./dev.nix
     ./utils.nix
+    ./browsers.nix
   ];
 
   nixpkgs = {
@@ -37,9 +38,6 @@
       allowUnfreePredicate = (_: true);
     };
   };
-
-  # Custom packages
-  home.packages = [ pkgs.brave-browser-nightly pkgs.brave ];
 
   # Enable mpris-proxy
   services.mpris-proxy.enable = true;
