@@ -30,7 +30,7 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/keith/VM" =
+  fileSystems."/home/keith/VMQs" =
     { device = "/dev/disk/by-uuid/ed69a535-afc7-45d5-be77-dc1b06282f06";
       fsType = "ext4";
     };
