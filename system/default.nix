@@ -67,6 +67,7 @@
    # home-manager
    # pciutils 
     xorg.xhost
+    desktop-file-utils
   ];
   
   # Enable firmware updates
