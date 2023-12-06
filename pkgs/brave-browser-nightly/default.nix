@@ -12,9 +12,6 @@
 , freetype
 , gdk-pixbuf
 , glib
-, gnome
-, gsettings-desktop-schemas
-, gtk3
 , libX11
 , libXScrnSaver
 , libXcomposite
@@ -74,7 +71,7 @@ let
 
   deps = [
     alsa-lib at-spi2-atk at-spi2-core atk cairo cups dbus expat
-    fontconfig freetype gdk-pixbuf glib gtk3 libdrm libX11 libGL
+    fontconfig freetype gdk-pixbuf glib libdrm libX11 libGL
     libxkbcommon libXScrnSaver libXcomposite libXcursor libXdamage
     libXext libXfixes libXi libXrandr libXrender libxshmfence
     libXtst libuuid mesa nspr nss pango pipewire udev wayland
@@ -116,11 +113,8 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    # needed for GSETTINGS_SCHEMAS_PATH
-    glib gsettings-desktop-schemas gtk3
-
     # needed for XDG_ICON_DIRS
-    gnome.adwaita-icon-theme
+    libsForQt5.breeze-icons
   ];
 
   unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";
