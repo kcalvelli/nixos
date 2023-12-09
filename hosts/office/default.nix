@@ -15,7 +15,7 @@
       # Piece together base system
       ../../system
       ../../system/hardware/msi      
-      ../../system/desktop/kde     
+      ../../system/desktop/kde   
       ../../system/crypto
       ../../system/fonts
       ../../system/printing

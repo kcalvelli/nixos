@@ -16,8 +16,9 @@
   services = {
     xserver = {
       displayManager = {
-        #sddm.enable = true;
-        lightdm.enable = true;
+        sddm.enable = true;
+        sddm.wayland.enable = true;
+        #lightdm.enable = true;
         defaultSession = "plasmawayland";
         # Disable autologin due to wayland SDDM bug, should be resolved in v.20
         autoLogin.enable = true; 
@@ -25,6 +26,7 @@
       };
       
       desktopManager.plasma5.enable = true;
+      desktopManager.plasma5.useQtScaling = true;
     };
     dbus.enable = true;
     colord.enable = true;
