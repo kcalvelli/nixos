@@ -95,11 +95,11 @@ in
 with import <nixpkgs>{};
 stdenv.mkDerivation rec {
   inherit pname;
-  version = "1.63.6";
+  version = "1.63.38";
 
   src = fetchurl {
     url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser-nightly_${version}_amd64.deb";
-    sha256 = "0mm44v511a71xjrp8pxzi6ffpy92g35lf5ahxncmv6wgm7nzc0w7";
+    sha256 = "1f7lz9b3rwkc8r4nddw3abmz60g68ka4nl3c4ykbvk52yj28w3vd";
   };
 
   dontConfigure = true;
