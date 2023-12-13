@@ -51,7 +51,7 @@
   
   # Auto upgrade
   system.autoUpgrade = {
-      enable = true;
+      enable = false;
       flake = "github:kcalvelli/nixos#pangolin";
       flags = [
         "--no-write-lock-file"

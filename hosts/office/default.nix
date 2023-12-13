@@ -49,7 +49,7 @@
 
   # Auto upgrade
   system.autoUpgrade = {
-      enable = true;
+      enable = false;
       flake = "github:kcalvelli/nixos#office";
       flags = [
         "--no-write-lock-file"
