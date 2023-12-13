@@ -5,6 +5,9 @@
             enable = true;
             gamescopeSession.enable = true;    
         };
+        gamescope = {
+            enable = true;
+        };
     };
 
     environment.systemPackages = with pkgs; [

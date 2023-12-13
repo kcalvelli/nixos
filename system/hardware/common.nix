@@ -19,7 +19,7 @@
   boot = {
     # Kernel
     kernelParams = [
-      "quiet" "iommu=pt" "loglevel=2"   
+      "quiet" "iommu=pt" "loglevel=2" "psi=1"   
     ];
 
     initrd = {
