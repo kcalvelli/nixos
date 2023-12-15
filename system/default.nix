@@ -69,6 +69,7 @@
    # pciutils 
     xorg.xhost
     desktop-file-utils
+    qt6.qtwayland
   ];
   
   # Enable firmware updates
