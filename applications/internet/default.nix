@@ -10,6 +10,6 @@
    # thunderbird
    # discord
    # google-chrome
-   # neochat
+    neochat
   ]; 
  }
