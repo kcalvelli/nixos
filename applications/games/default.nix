@@ -1,6 +1,6 @@
 { inputs, config, pkgs, ... }:
 {
   imports = [
-    ./steam.nix
+    #./steam.nix
   ];
 } 

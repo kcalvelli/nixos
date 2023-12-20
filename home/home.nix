@@ -10,6 +10,7 @@
     ./dev.nix
     ./utils.nix
     ./browsers.nix
+    ./steam.nix
   ];
 
   nixpkgs = {
