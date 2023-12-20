@@ -17,11 +17,10 @@ let
     ];
   };
 
-  monitor = lib.head (lib.filter (m: m.primary) config.monitors);
   steam-session = pkgs.writeTextDir "share/wayland-sessions/steam-sesson.desktop" /* ini */ ''
     [Desktop Entry]
     Name=Steam Session
-    Exec=${pkgs.gamescope}/bin/gamescope -W ${toString monitor.width} -H ${toString monitor.height} -O ${monitor.name} -e -- steam -gamepadui
+    Exec=${pkgs.gamescope}/bin/gamescope -e -- steam -gamepadui
     Type=Application
   '';
 in
