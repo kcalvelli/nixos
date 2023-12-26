@@ -17,17 +17,10 @@ let
     ];
   };
 
-  steam-session = pkgs.writeTextDir "share/wayland-sessions/steam-sesson.desktop" /* ini */ ''
-    [Desktop Entry]
-    Name=Steam Session
-    Exec=${pkgs.gamescope}/bin/gamescope -e -- steam -gamepadui
-    Type=Application
-  '';
 in
 {
   home.packages = with pkgs; [
     steam-with-pkgs
-    steam-session
     gamescope
     mangohud
     protontricks
