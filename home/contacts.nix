@@ -1,6 +1,8 @@
-{config, pkgs, lib,...}: 
+{ pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [ 
+    neochat
+    telegram-desktop
     kmail
   ] ++ (with pkgs.libsForQt5; [
     kdepim-runtime
@@ -18,5 +20,4 @@
     kleopatra
     korganizer
   ]);
-  
 }

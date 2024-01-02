@@ -9,6 +9,7 @@
     ./games.nix
     ./shells.nix
     ./media.nix
+    ./contacts.nix
   ];
 
   nixpkgs = {

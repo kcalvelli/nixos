@@ -11,6 +11,7 @@
         dns_enabled = true;
       };
     };
+    waydroid.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -19,6 +20,7 @@
     quickemu
     virt-viewer
     distrobox
+    wl-clipboard
   ];
 
   boot.extraModprobeConfig = ''
