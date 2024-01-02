@@ -58,7 +58,6 @@
     kio-gdrive
     accounts-qt
     utterly-round-plasma-style
-    kde-rounded-corners
   ] );
 
    
