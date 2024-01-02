@@ -1,4 +1,8 @@
 { pkgs, ... }:
 {
-  home.packages = [ pkgs.brave-browser-nightly pkgs.brave pkgs.libsForQt5.plasma-browser-integration];
+  home.packages = with pkgs; [ 
+    brave-browser-nightly 
+    brave 
+    libsForQt5.plasma-browser-integration
+  ];
 }

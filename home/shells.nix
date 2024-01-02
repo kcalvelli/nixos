@@ -1,9 +1,29 @@
 { pkgs, ... }:
-
 {
-  home.packages = [ pkgs.fish ];
 
-  programs.fish = {
+  home.packages = with pkgs; 
+  [ 
+    #starship
+    #fish 
+    ripgrep
+    neofetch
+    helix
+  ];
+
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+    settings = {
+        add_newline = false;
+
+        character = {
+          success_symbol = "[➜](bold green)";
+          error_symbol = "[➜](bold red)";
+        };
+    };
+  };
+
+    programs.fish = {
     enable = true;
     interactiveShellInit = ''
     set fish_greeting # Disable greeting
@@ -17,4 +37,8 @@
       # Manually packaging and enable a plugin
     ];
   };
+
+    programs.neovim = {
+      enable = true;
+    };
 }

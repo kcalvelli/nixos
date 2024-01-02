@@ -4,13 +4,11 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   # You can import other home-manager modules here
   imports = [
-    ./git.nix
-    ./fish.nix
-    ./starship.nix
     ./dev.nix
-    ./utils.nix
     ./browsers.nix
-    ./steam.nix
+    ./games.nix
+    ./shells.nix
+    ./media.nix
   ];
 
   nixpkgs = {

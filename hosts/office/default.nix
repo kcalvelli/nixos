@@ -26,11 +26,7 @@
       # Applications to be installed, similar to patterns in that other OS 
       #../../applications/games
       ../../applications/waydroid
-      ../../applications/internet
-      ../../applications/graphics
-      ../../applications/multimedia
-      ../../applications/development
-     # ../../applications/office
+  
       ../../applications/kde-pim
       # Define users
       ../../users/keith

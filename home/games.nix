@@ -24,5 +24,6 @@ in
     gamescope
     mangohud
     protontricks
+    superTuxKart
   ];
 }
