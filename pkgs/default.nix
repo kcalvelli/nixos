@@ -7,6 +7,7 @@
     brave-browser-nightly = pkgs.callPackage ./brave-browser-nightly { };
   # Brave
     brave = pkgs.callPackage ./brave { };
-    
+  # Bluemail
+    bluemail = pkgs.callPackage ./bluemail { };  
 }
 
