@@ -17,7 +17,6 @@
       ../../system/hardware/System76      
       ../../system/desktop/kde      
       ../../system/crypto
-      ../../system/fonts
       ../../system/printing
       ../../system/networking
       ../../system/virtualization

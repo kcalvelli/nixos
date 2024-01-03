@@ -17,7 +17,6 @@
       ../../system/hardware/msi      
       ../../system/desktop/kde   
       ../../system/crypto
-      ../../system/fonts
       ../../system/printing
       ../../system/networking
       ../../system/virtualization
