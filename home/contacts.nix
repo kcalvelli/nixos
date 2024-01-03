@@ -4,7 +4,6 @@
     neochat
     telegram-desktop
     kmail
-    bluemail
   ] ++ (with pkgs.libsForQt5; [
     kdepim-runtime
     merkuro
