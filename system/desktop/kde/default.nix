@@ -51,6 +51,7 @@
     libva-utils
     wayland-utils
     vulkan-tools
+    qt6.qtwayland
     ] ++ ( with pkgs.libsForQt5; [
     kaccounts-integration
     kaccounts-providers

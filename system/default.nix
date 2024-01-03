@@ -55,21 +55,12 @@
 
   # Packages installed on every system
   environment.systemPackages = with pkgs; [
-   # git
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     curl
     gnugrep
-   # xdg-user-dirs 
-   # libnotify
-
-    hplipWithPlugin
-    pinentry
-   # home-manager
-   # pciutils 
-    xorg.xhost
+    xdg-user-dirs 
     desktop-file-utils
-    qt6.qtwayland
   ];
   
   # Enable firmware updates

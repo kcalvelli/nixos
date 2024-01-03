@@ -7,4 +7,8 @@
       pinentryFlavor = "qt";
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    pinentry
+  ];
 } 
