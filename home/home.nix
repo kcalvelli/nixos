@@ -10,6 +10,7 @@
     ./shells.nix
     ./media.nix
     ./contacts.nix
+    ./hyprland.nix
   ];
 
   nixpkgs = {
