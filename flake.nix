@@ -8,9 +8,6 @@
 
     # Nixos hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-   
-    #For Hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
 
     # Home manager
     home-manager = {

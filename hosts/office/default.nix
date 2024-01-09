@@ -21,7 +21,6 @@
       ../../system/networking
       ../../system/virtualization
       ../../system/pipewire
-      ../../system/desktop/hyprland
 
       # Define users
       ../../users/keith
