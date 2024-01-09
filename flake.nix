@@ -9,6 +9,9 @@
     # Nixos hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
    
+    #For Hyprland
+    hyprland.url = "github:hyprwm/Hyprland";
+
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -16,7 +19,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, hyprland, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
