@@ -61,7 +61,6 @@
     gnugrep
     xdg-user-dirs 
     desktop-file-utils
-    incron
   ];
   
   # Enable firmware updates
