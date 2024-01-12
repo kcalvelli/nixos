@@ -8,6 +8,7 @@
     ripgrep
     neofetch
     helix
+    cosmic-term
   ];
 
   programs.starship = {
