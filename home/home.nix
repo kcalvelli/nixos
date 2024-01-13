@@ -10,6 +10,7 @@
     ./shells.nix
     ./media.nix
     ./contacts.nix
+    ./browsers.nix
   ];
 
   nixpkgs = {

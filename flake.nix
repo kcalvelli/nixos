@@ -67,6 +67,7 @@
           modules = [
             # > Our main nixos configuration file <
             ./hosts/office
+            nix-flatpak.nixosModules.nix-flatpak
           ];
         };
       };

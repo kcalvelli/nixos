@@ -1,7 +1,6 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, outputs, lib, config, pkgs, ... }:
 {
   imports = [
     ./flatpak.nix
-    ./browsers.nix
   ];
 }
