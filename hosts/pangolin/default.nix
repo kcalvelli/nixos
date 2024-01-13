@@ -26,7 +26,7 @@
       ../../users/keith
  
       # Apps
-      ../../system/apps/flatpak.nix
+      ../../system/apps
       
     ];
 

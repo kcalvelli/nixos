@@ -7,4 +7,9 @@
   services.flatpak.packages = [
     "com.spotify.Client"
   ];
+
+  services.flatpak.update.auto = {
+    enable = true;
+    onCalendar = "weekly"; # Default value
+  };
 }
