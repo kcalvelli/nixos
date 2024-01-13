@@ -25,6 +25,9 @@
       # Define users
       ../../users/keith
 
+      # Add apps
+      ../../system/apps/flatpak.nix
+
     ];
 
   nix.settings = {
