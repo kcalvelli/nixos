@@ -7,7 +7,8 @@
       neovim
       github-desktop
       github-copilot-cli
-      grc      
+      grc  
+      cosmic-edit    
    ];
 
   programs.git = {
