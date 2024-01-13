@@ -58,6 +58,7 @@
             # > Our main nixos configuration file <
             ./hosts/pangolin
             nixos-hardware.nixosModules.system76
+            nix-flatpak.nixosModules.nix-flatpak
           ];
         };
         office = nixpkgs.lib.nixosSystem {
