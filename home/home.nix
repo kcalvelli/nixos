@@ -5,7 +5,7 @@
   # You can import other home-manager modules here
   imports = [
     ./dev.nix
-    ./browsers.nix
+    ./fonts.nix
     ./games.nix
     ./shells.nix
     ./media.nix

@@ -1,7 +1,7 @@
 { inputs, config, pkgs, ... }:
 {
   imports = [
-    flatpak.nix
-    browsers.nix
+    ./flatpak.nix
+    ./browsers.nix
   ];
 }
