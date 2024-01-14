@@ -31,4 +31,5 @@
   #   gtkUsePortal = true;
      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
+  programs.partition-manager.enable = true;
 }

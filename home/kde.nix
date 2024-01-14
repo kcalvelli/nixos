@@ -16,9 +16,11 @@
     utterly-round-plasma-style
   ] );
 
-  programs = {
-    kdeconnect.enable = true;
-    dconf.enable = true;
-    partition-manager.enable = true;
+
+  services.kdeconnect = 
+  {
+    enable = true;  
+    indicator = true;
   };
+  dconf.enable = true;
 }
