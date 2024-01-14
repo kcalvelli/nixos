@@ -6,7 +6,6 @@
     opengl = {
       extraPackages = with pkgs; [
         rocmPackages.clr.icd
-        rocmPackages.clr.icd
         vaapiVdpau
       ];
       driSupport = true;
@@ -31,4 +30,7 @@
       kernelModules = [ "amdgpu"];
     };
   };
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
 }
