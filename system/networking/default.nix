@@ -47,6 +47,10 @@
       enable = true;
       useRoutingFeatures = "both";     
     };
+    
+    onedrive = {
+      enable = true;
+    };
   };
 
   programs.mtr.enable = true;
