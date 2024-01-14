@@ -11,6 +11,7 @@
     ./media.nix
     ./contacts.nix
     ./browsers.nix
+    ./virt.nix
   ];
 
   nixpkgs = {

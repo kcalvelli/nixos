@@ -14,15 +14,6 @@
     waydroid.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    qemu
-    #distrobox
-    quickemu
-    virt-viewer
-    distrobox
-    wl-clipboard
-  ];
-
   boot.extraModprobeConfig = ''
     options kvm_amd nested=1
     options kvm_amd emulate_invalid_guest_state=0
