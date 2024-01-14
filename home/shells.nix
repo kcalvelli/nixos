@@ -9,6 +9,12 @@
     neofetch
     helix
     cosmic-term
+    vim 
+    wget
+    curl
+    gnugrep
+    xdg-user-dirs 
+    desktop-file-utils
   ];
 
   programs.starship = {

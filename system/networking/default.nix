@@ -49,11 +49,6 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    trayscale
-    cifs-utils
-  ];  
-
   programs.mtr.enable = true;
 
   #Samba

@@ -52,16 +52,6 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-
-  # Packages installed on every system
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    curl
-    gnugrep
-    xdg-user-dirs 
-    desktop-file-utils
-  ];
   
   # Enable firmware updates
   services.fwupd.enable = true;
