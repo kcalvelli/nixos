@@ -12,6 +12,10 @@
     ./contacts.nix
     ./browsers.nix
     ./virt.nix
+    ./cloud.nix
+    ./kde.nix
+    ./cli.nix
+    ./graphics.nix
   ];
 
   nixpkgs = {

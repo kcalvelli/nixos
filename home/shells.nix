@@ -3,18 +3,7 @@
 
   home.packages = with pkgs; 
   [ 
-    #starship
-    #fish 
-    ripgrep
-    neofetch
-    helix
     cosmic-term
-    vim 
-    wget
-    curl
-    gnugrep
-    xdg-user-dirs 
-    desktop-file-utils
   ];
 
   programs.starship = {
@@ -44,8 +33,4 @@
       # Manually packaging and enable a plugin
     ];
   };
-
-#    programs.neovim = {
-#      enable = true;
-#    };
 }
