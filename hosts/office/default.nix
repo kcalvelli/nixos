@@ -24,9 +24,6 @@
 
       # Define users
       ../../users/keith
-      
-      # Apps
-      ../../system/apps 
 
     ];
 

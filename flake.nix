@@ -9,9 +9,6 @@
     # Nixos hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    # Nix-flatpak
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
-
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -19,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -58,7 +55,6 @@
             # > Our main nixos configuration file <
             ./hosts/pangolin
             nixos-hardware.nixosModules.system76
-            nix-flatpak.nixosModules.nix-flatpak
           ];
         };
         office = nixpkgs.lib.nixosSystem {
@@ -67,7 +63,6 @@
           modules = [
             # > Our main nixos configuration file <
             ./hosts/office
-            nix-flatpak.nixosModules.nix-flatpak
           ];
         };
       };

@@ -19,5 +19,6 @@
     kdepim-runtime
     kleopatra
     korganizer
+    bogofilter
   ]);
 }
