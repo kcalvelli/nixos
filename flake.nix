@@ -43,7 +43,7 @@
 
       # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };
-      homeManagerModules = import ./modules/home-manager;
+      #homeManagerModules = import ./modules/home-manager;
 
       # NixOS configurations 
       # Available through 'nixos-rebuild --flake .#your-hostname'
