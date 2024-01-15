@@ -21,7 +21,7 @@
   services.kdeconnect = 
   {
     enable = true;  
+    indicator = true;
   };
-  
   dconf.enable = true;
 }
