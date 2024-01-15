@@ -16,6 +16,7 @@
     ./kde.nix
     ./cli.nix
     ./graphics.nix
+    ./cosmic.nix
   ];
 
   nixpkgs = {
