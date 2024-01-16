@@ -9,7 +9,7 @@
     # Nixos hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    kde2nix.url = "github:nix-community/kde2nix/main";
+    #kde2nix.url = "github:nix-community/kde2nix/main";
 
     # Home manager
     home-manager = {
@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, kde2nix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -57,8 +57,7 @@
             # > Our main nixos configuration file <
             ./hosts/pangolin 
             nixos-hardware.nixosModules.system76
-            kde2nix.nixosModules.default
-
+           # kde2nix.nixosModules.default
           ];
         };
 

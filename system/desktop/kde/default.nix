@@ -26,9 +26,9 @@
           enable = true;
           useQtScaling = true;        
         };
-        plasma6 = {
-          enable = false;
-        };
+        #plasma6 = {
+        #  enable = false;
+        #};
       };
     };
     dbus.enable = true;
