@@ -5,7 +5,7 @@
   
   imports = [
     ../../desktop
-    ./gear.nix
+    #./gear.nix
   ];
 
   services = {
@@ -13,9 +13,9 @@
       displayManager = {
         sddm.enable = true;
         sddm.wayland.enable = true;
-        #defaultSession = "plasmawayland";
+        defaultSession = "plasmawayland";
         #Uncomment above for plasma5 andcomment below
-        defaultSession = "plasma";
+        #defaultSession = "plasma";
         # Disable autologin due to wayland SDDM bug, should be resolved in v.20
         autoLogin.enable = true; 
         autoLogin.user = "keith";
@@ -23,11 +23,11 @@
       
       desktopManager = {
         plasma5 = {
-          enable = false;
+          enable = true;
           useQtScaling = true;        
         };
         plasma6 = {
-          enable = true;
+          enable = false;
         };
       };
     };
