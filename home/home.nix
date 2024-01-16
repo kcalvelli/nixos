@@ -13,7 +13,7 @@
     ./browsers.nix
     ./virt.nix
     ./cloud.nix
-    ./kde.nix
+    #./kde.nix
     ./cli.nix
     ./graphics.nix
     ./cosmic.nix
