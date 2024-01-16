@@ -21,54 +21,32 @@
   outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
       inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        #"aarch64-linux"
-        #"i686-linux"
-        "x86_64-linux"
-      ];
+      lib = nixpkgs.lib // home-manager.lib;
+      systems = [ "x86_64-linux" "aarch64-linux" ];
+      forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+      pkgsFor = lib.genAttrs systems (system: import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      });  
+
     in
-    rec {
-      # Your custom packages
-      # Acessible through 'nix build', 'nix shell', etc
-      #packages = forAllSystems (system:
-      #  let pkgs = nixpkgs.legacyPackages.${system};
-      #  in import ./pkgs { inherit pkgs; }
-      #);
-      packages = forAllSystems (pkgs: import ./pkgs { inherit pkgs; });
+    {
+      inherit lib;
 
-      # Devshell for bootstrapping
-      # Acessible through 'nix develop' or 'nix-shell' (legacy)
-      devShells = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; }
-      );
+      packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
+      devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
+      overlays = import ./overlays { inherit inputs outputs; };
 
-      # Your custom packages and modifications, exported as overlays
-      overlays = import ./overlays { inherit inputs; };
-      #homeManagerModules = import ./modules/home-manager;
-
-      # NixOS configurations 
-      # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations = {
-        pangolin = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+        pangolin = lib.nixosSystem {
+          modules = [ ./hosts/pangolin nixos-hardware.nixosModules.system76 ];
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main nixos configuration file <
-            ./hosts/pangolin 
-            nixos-hardware.nixosModules.system76
-           # kde2nix.nixosModules.default
-          ];
         };
-
-        office = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+        office = lib.nixosSystem {
+          modules = [ ./hosts/office ];
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main nixos configuration file <
-            ./hosts/office
-          ];
         };
       };
     };
+
 }
