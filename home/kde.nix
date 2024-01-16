@@ -16,12 +16,4 @@
     utterly-round-plasma-style
     signond
   ] );
-
-
-  services.kdeconnect = 
-  {
-    enable = true;  
-  };
-  
-  dconf.enable = true;
 }

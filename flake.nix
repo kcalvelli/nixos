@@ -9,7 +9,7 @@
     # Nixos hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    #kde2nix.url = "github:nix-community/kde2nix/main";
+    kde2nix.url = "github:nix-community/kde2nix/main";
 
     # Home manager
     home-manager = {
@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, kde2nix, ... }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;
@@ -39,11 +39,11 @@
 
       nixosConfigurations = {
         pangolin = lib.nixosSystem {
-          modules = [ ./hosts/pangolin nixos-hardware.nixosModules.system76 ];
+          modules = [ ./hosts/pangolin nixos-hardware.nixosModules.system76 inputs.kde2nix.nixosModules.default ];
           specialArgs = { inherit inputs outputs; };
         };
         office = lib.nixosSystem {
-          modules = [ ./hosts/office ];
+          modules = [ ./hosts/office inputs.kde2nix.nixosModules.default ];
           specialArgs = { inherit inputs outputs; };
         };
       };
