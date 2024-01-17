@@ -10,6 +10,5 @@
     ./fonts.nix
     ./games.nix
     ./media.nix
-    ./virt.nix
   ];
 }
