@@ -24,6 +24,7 @@
       ../../system/networking
       ../../system/virtualization
       ../../system/pipewire
+      ../../system/apps
       
       # Define users
       ../../users/keith
