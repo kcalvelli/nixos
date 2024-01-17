@@ -1,11 +1,11 @@
 # Configure a KDE Plasma Desktop
 
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ... }:
 {
   
   imports = [
     ../../desktop
-    #./gear.nix
+    ./gear.nix
   ];
 
   services = {

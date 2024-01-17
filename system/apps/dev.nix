@@ -1,14 +1,13 @@
 { pkgs, ... }:
 {
-   home.packages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [ 
       direnv 
       lorri 
       vscode
       neovim
       github-desktop
       github-copilot-cli
-      grc  
-      cosmic-edit    
+      grc     
    ];
 
   programs.git = {

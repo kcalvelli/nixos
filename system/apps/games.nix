@@ -19,7 +19,7 @@ let
 
 in
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [ 
     steam-with-pkgs
     gamescope
     mangohud

@@ -3,21 +3,20 @@
 
 { inputs, outputs, lib, config, pkgs, ... }: {
   # You can import other home-manager modules here
-  imports = [
-    ./dev.nix
-    ./fonts.nix
-    ./games.nix
-    ./shells.nix
-    ./media.nix
-    ./contacts.nix
-    ./browsers.nix
-    ./virt.nix
-    ./cloud.nix
-    ./kde.nix
-    ./cli.nix
-    ./graphics.nix
-    ./cosmic.nix
-  ];
+  #imports = [
+  #  ./dev.nix
+  #  ./fonts.nix
+  #  ./games.nix
+  #  ./shells.nix
+  #  ./media.nix
+  #  ./contacts.nix
+  #  ./browsers.nix
+  #  ./virt.nix
+  #  ./cloud.nix
+  #  ./cli.nix
+  #  ./graphics.nix
+  #  ./cosmic.nix
+  #];
 
   nixpkgs = {
     # You can add overlays here

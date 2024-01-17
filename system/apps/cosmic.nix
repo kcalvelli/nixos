@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [ 
     cosmic-bg
     cosmic-osd
     cosmic-term

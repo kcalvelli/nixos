@@ -19,4 +19,13 @@
     options kvm_amd emulate_invalid_guest_state=0
     options kvm ignore_msrs=1
   '';
+
+  environment.systemPackages = with pkgs; [ 
+    qemu
+    #distrobox
+    quickemu
+    virt-viewer
+    distrobox
+    wl-clipboard
+  ];  
 } 

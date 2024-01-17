@@ -11,4 +11,10 @@
       libinput.enable = true;
     };
   };
+
+  environment.systemPackages = with pkgs; [ 
+    libva-utils
+    wayland-utils
+    vulkan-tools
+  ];   
 }
