@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
 
       # Include common stuff
-      ../../common
+      ../../common.nix
       
       #  Home-manager     
       ../../home 
