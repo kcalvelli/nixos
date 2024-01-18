@@ -13,7 +13,7 @@
       ../common.nix
       
       #  Home-manager     
-      ../../home 
+      #../../home 
 
       # Piece together base system
       ../../system

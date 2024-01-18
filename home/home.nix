@@ -2,21 +2,6 @@
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 
 { inputs, outputs, lib, config, pkgs, ... }: {
-  # You can import other home-manager modules here
-  #imports = [
-  #  ./dev.nix
-  #  ./fonts.nix
-  #  ./games.nix
-  #  ./shells.nix
-  #  ./media.nix
-  #  ./contacts.nix
-  #  ./browsers.nix
-  #  ./virt.nix
-  #  ./cloud.nix
-  #  ./cli.nix
-  #  ./graphics.nix
-  #  ./cosmic.nix
-  #];
 
   nixpkgs = {
     # You can add overlays here
@@ -25,16 +10,6 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
-
-      # You can also add overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
     ];
     # Configure your nixpkgs instance
     config = {
