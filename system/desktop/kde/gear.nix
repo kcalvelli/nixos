@@ -17,6 +17,7 @@
      pkgs.kdePackages.merkuro
      pkgs.kdePackages.kleopatra
      bogofilter
+     mariadb
 
      pkgs.kdePackages.calendarsupport
      pkgs.kdePackages.akonadi-calendar
