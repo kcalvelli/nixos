@@ -6,6 +6,7 @@
   imports = [
     ../../desktop
     ./gear.nix
+    ./kdepim.nix
   ];
 
   services = {
