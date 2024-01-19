@@ -8,29 +8,6 @@
      pkgs.kdePackages.filelight
      pkgs.kdePackages.kwalletmanager
      pkgs.kdePackages.neochat
-     
-     #kde-pim
-     pkgs.kdePackages.kmail
-     pkgs.kdePackages.kmail-account-wizard
-     pkgs.kdePackages.kmailtransport
-
-     pkgs.kdePackages.merkuro
-     pkgs.kdePackages.kleopatra
-     bogofilter
-
-     pkgs.kdePackages.calendarsupport
-     pkgs.kdePackages.akonadi-calendar
-     pkgs.kdePackages.akonadi-calendar-tools
-     pkgs.kdePackages.akonadi-contacts
-     pkgs.kdePackages.akonadi-import-wizard
-     pkgs.kdePackages.akonadi-mime
-     pkgs.kdePackages.akonadiconsole
-     pkgs.kdePackages.akonadi-notes
-     pkgs.kdePackages.akonadi-search
-     pkgs.kdePackages.akonadi
-     pkgs.kdePackages.kdepim-addons
-     pkgs.kdePackages.kdepim-runtime
-
 
      #Kaccounts
      pkgs.kdePackages.kaccounts-integration

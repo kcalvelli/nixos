@@ -43,7 +43,7 @@
           specialArgs = { inherit inputs outputs; };
         };
         office = lib.nixosSystem {
-          modules = [ ./hosts/office inputs.kde2nix.nixosModules.default ];
+          modules = [ ./hosts/office inputs.kde2nix.nixosModules.default ./modules/programs/kdepim.nix ];
           specialArgs = { inherit inputs outputs; };
         };
       };

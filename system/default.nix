@@ -57,8 +57,9 @@
   services.fwupd.enable = true;
 
   # Enable native Wayland support for chromium based browsers and Electron
+  # Temp disable Wayland for Electron due to bug
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    #NIXOS_OZONE_WL = "1";
     GTK_USE_PORTAL = "1";
   };
  }
