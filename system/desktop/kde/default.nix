@@ -42,4 +42,6 @@
   };
   programs.partition-manager.enable = true;
   programs.kdeconnect.enable = true;
+
+  environment.plasma6.excludePackages = [ pkgs.kdePackages.elisa ];
 }
