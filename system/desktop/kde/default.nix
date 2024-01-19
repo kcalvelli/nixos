@@ -1,6 +1,6 @@
 # Configure a KDE Plasma Desktop
 
-{ inputs, config, pkgs, lib, ... }:
+{ inputs, outputs, config, pkgs, lib, ... }:
 {
   
   imports = [
@@ -44,6 +44,6 @@
   programs.kdeconnect.enable = true;
 
   programs.kdepim.enable = true;
-  
+
   environment.plasma6.excludePackages = [ pkgs.kdePackages.elisa ];
 }

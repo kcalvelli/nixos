@@ -33,6 +33,7 @@
     {
       inherit lib;
 
+      #nixosModules = import ./modules;
       packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
       devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
       overlays = import ./overlays { inherit inputs outputs; };
@@ -43,7 +44,7 @@
           specialArgs = { inherit inputs outputs; };
         };
         office = lib.nixosSystem {
-          modules = [ ./hosts/office inputs.kde2nix.nixosModules.default ];
+          modules = [ ./hosts/office inputs.kde2nix.nixosModules.default ./modules ];
           specialArgs = { inherit inputs outputs; };
         };
       };
