@@ -38,6 +38,10 @@
      pkgs.kdeApplications.akonadi
      pkgs.kdeApplications.kdepim-addons
      pkgs.kdeApplications.kdepim-runtime
+
+     #For spam
+     bogofilter
+     
     ] ++ ( with pkgs.libsForQt5; [
     utterly-round-plasma-style
     #signond
