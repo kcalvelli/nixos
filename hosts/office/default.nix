@@ -11,9 +11,6 @@
 
       # Common stuff
       ../common.nix
-     
-      #  Home-manager     
-      ../../home 
 
       # Piece together base system
       ../../system
