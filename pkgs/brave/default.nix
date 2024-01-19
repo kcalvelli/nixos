@@ -62,7 +62,7 @@
 , enableVideoAcceleration ? libvaSupport
 
 # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-, vulkanSupport ? true
+, vulkanSupport ? false
 , addOpenGLRunpath
 , enableVulkan ? vulkanSupport
 }:
@@ -94,11 +94,11 @@ in
 
 stdenv.mkDerivation rec {
   pname = "brave";
-  version = "1.61.114";
+  version = "1.61.120";
 
   src = fetchurl {
     url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb";
-    sha256 = "19kknynlgxpplqh0pffgp6h5w9mcnsqdxpcs2jpppmk0vbqg8lh1";
+    sha256 = "16p6lvxanb87g75kr1l7x72lvxd32g5q2wcg82lcc23m99kgfbd6";
   };
 
   dontConfigure = true;
