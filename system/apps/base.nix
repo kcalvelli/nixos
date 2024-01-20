@@ -6,6 +6,6 @@
     glxinfo
     xdg-user-dirs 
     desktop-file-utils
-    usbtools
+    usbutils
   ]; 
 }
