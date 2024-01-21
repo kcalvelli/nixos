@@ -82,5 +82,9 @@
   # the needed ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 445 139 ];
   networking.firewall.allowedUDPPorts = [ 137 138 ];
+
+  environment.systemPackages = with pkgs; [
+    sshfs
+  ];
   
 } 
