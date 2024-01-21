@@ -55,8 +55,8 @@
   services.samba = {
     enable = true;
 
-    services.samba.enableNmbd = false;
-        
+    enableNmbd = false;
+
     # You will still need to set up the user accounts to begin with:
     # $ sudo smbpasswd -a yourusername
 
