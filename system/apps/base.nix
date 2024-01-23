@@ -7,5 +7,6 @@
     xdg-user-dirs 
     desktop-file-utils
     usbutils
+    aha
   ]; 
 }
