@@ -14,7 +14,8 @@
 
       # Piece together base system
       ../../system
-      ../../system/hardware/System76      
+      ../../system/hardware/System76  
+      ../../system/hardware/sdr    
       ../../system/desktop/kde      
       ../../system/crypto
       ../../system/printing
