@@ -11,6 +11,7 @@
       driSupport = true;
       driSupport32Bit = true;
     };
+    rtl-sdr.enable = true;
   };
 
   services.xserver.videoDrivers = [ "amdgpu" ];
