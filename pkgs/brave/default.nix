@@ -1,3 +1,5 @@
+# This derivation of Brave Browser disables GTK backend and enables QT6 backend
+
 { lib, stdenv, fetchurl, wrapGAppsHook, makeWrapper
 , alsa-lib
 , at-spi2-atk
