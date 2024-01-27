@@ -15,7 +15,7 @@
   };
 
   services.xserver.videoDrivers = [ "amdgpu" ];
-  
+
   boot = {
     # Kernel
     kernelParams = [
@@ -30,8 +30,17 @@
       systemd.enable = true;
       kernelModules = [ "amdgpu"];
     };
+
+    loader = {
+      # Quiet boot
+      timeout = 1;
+      systemd-boot.enable = true;
+      systemd-boot.editor = false;
+      grub.enable = false;
+    };
   };
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
+
 }
