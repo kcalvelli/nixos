@@ -1,3 +1,5 @@
+# This derivation of Brave Browser disables GTK backend and enables QT6 backend
+
 { lib, stdenv, fetchurl, wrapGAppsHook, makeWrapper
 , alsa-lib
 , at-spi2-atk
@@ -12,9 +14,9 @@
 , freetype
 , gdk-pixbuf
 , glib
-, gnome
-, gsettings-desktop-schemas
-, gtk3
+#, gnome
+#, gsettings-desktop-schemas
+#, gtk3
 , libX11
 , libXScrnSaver
 , libXcomposite
@@ -28,7 +30,7 @@
 , libXtst
 , libdrm
 , libkrb5
-, libsForQt5
+#, libsForQt5
 , libuuid
 , libxkbcommon
 , libxshmfence
@@ -45,6 +47,7 @@
 , coreutils
 , xorg
 , zlib
+, pkgs
 
 # command line arguments which are always set e.g "--disable-gpu"
 , commandLineArgs ? ""
@@ -62,7 +65,7 @@
 , enableVideoAcceleration ? libvaSupport
 
 # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-, vulkanSupport ? false
+, vulkanSupport ? true
 , addOpenGLRunpath
 , enableVulkan ? vulkanSupport
 }:
@@ -73,11 +76,17 @@ let
 
   deps = [
     alsa-lib at-spi2-atk at-spi2-core atk cairo cups dbus expat
-    fontconfig freetype gdk-pixbuf glib gtk3 libdrm libX11 libGL
+    fontconfig freetype gdk-pixbuf 
+    glib 
+    #gtk3 
+    libdrm libX11 libGL
     libxkbcommon libXScrnSaver libXcomposite libXcursor libXdamage
     libXext libXfixes libXi libXrandr libXrender libxshmfence
     libXtst libuuid mesa nspr nss pango pipewire udev wayland
-    xorg.libxcb zlib snappy libkrb5 libsForQt5.qt5.qtbase libsForQt5.qt5.qtwayland qt6.qtbase qt6.qtwayland
+    xorg.libxcb zlib snappy libkrb5 
+    #libsForQt5.qt5.qtbase 
+    #libsForQt5.qt5.qtwayland 
+    qt6.qtbase qt6.qtwayland
   ]
     ++ optional pulseSupport libpulseaudio
     ++ optional libvaSupport libva;
@@ -94,11 +103,11 @@ in
 
 stdenv.mkDerivation rec {
   pname = "brave";
-  version = "1.61.120";
+  version = "1.62.153";
 
   src = fetchurl {
     url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb";
-    sha256 = "16p6lvxanb87g75kr1l7x72lvxd32g5q2wcg82lcc23m99kgfbd6";
+    sha256 = "1f6i5z7p56488py8b1dkvl2sh8h6nq1map9hsgg0aymcc8aw29zf";
   };
 
   dontConfigure = true;
@@ -113,13 +122,15 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     # needed for XDG_ICON_DIRS
-    libsForQt5.breeze-icons
+    #libsForQt5.breeze-icons
+    pkgs.kdePackages.breeze-icons
 
     # needed for GSETTINGS_SCHEMAS_PATH
-    glib gsettings-desktop-schemas gtk3
+    glib 
+    #gsettings-desktop-schemas gtk3
 
     # needed for XDG_ICON_DIRS
-    gnome.adwaita-icon-theme    
+    #gnome.adwaita-icon-theme    
   ];
 
   unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";
