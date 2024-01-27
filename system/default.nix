@@ -16,9 +16,9 @@
 
   #Use systemd-boot
   boot = {
-    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
     # Trying xanmod
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    #kernelPackages = pkgs.linuxPackages_xanmod_latest;
     #  Bootloader
     loader = {
       systemd-boot.enable = true;

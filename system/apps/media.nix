@@ -4,5 +4,6 @@
      digikam
      vlc
      cubicsdr
+     spotify
     ];  
 }
