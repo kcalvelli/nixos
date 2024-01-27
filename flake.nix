@@ -35,7 +35,7 @@
 
       nixosConfigurations = {
         pangolin = lib.nixosSystem {
-          modules = [ ./hosts/pangolin nixos-hardware.nixosModules.system76 inputs.kde2nix.nixosModules.default ];
+          modules = [ ./hosts/pangolin inputs.kde2nix.nixosModules.default ];
           specialArgs = { inherit inputs outputs; };
         };
         office = lib.nixosSystem {
