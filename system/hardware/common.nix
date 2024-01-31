@@ -17,10 +17,6 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   boot = {
-    # Kernel
-    kernelParams = [
-      "quiet" "iommu=pt" "loglevel=2" "psi=1"   
-    ];
 
     initrd = {
       # Setup keyfile
@@ -32,7 +28,6 @@
     };
 
     loader = {
-      # Quiet boot
       timeout = 1;
       systemd-boot.enable = true;
       systemd-boot.editor = false;

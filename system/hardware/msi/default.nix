@@ -13,7 +13,7 @@
   boot = {
     # Kernel
     kernelParams = [
-      "quiet" "iommu=pt"   
+      "loglevel=3" "iommu=pt" "psi=1"   
     ];
   };
 }
