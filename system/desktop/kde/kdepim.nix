@@ -18,12 +18,12 @@ in {
   # by setting "services.hello.enable = true;".
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      bogofilter
+      #bogofilter
       ] ++ ( with pkgs.kdePackages; [
       #kdepim
-      pkgs.kdePackages.kmail
-      pkgs.kdePackages.kmail-account-wizard
-      pkgs.kdePackages.kmailtransport
+      #pkgs.kdePackages.kmail
+      #pkgs.kdePackages.kmail-account-wizard
+      #pkgs.kdePackages.kmailtransport
  
       pkgs.kdePackages.merkuro
       pkgs.kdePackages.kleopatra

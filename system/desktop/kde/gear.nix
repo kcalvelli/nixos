@@ -20,4 +20,6 @@
     utterly-round-plasma-style
     #signond
   ] );
+
+  programs.kdepim.enable = true;
 }
