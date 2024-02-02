@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     #pkgs.brave-browser-nightly 
-    pkgs.brave 
+    #pkgs.brave 
+    inputs.self.packages.${pkgs.system}.brave-qt
   ];
 }
