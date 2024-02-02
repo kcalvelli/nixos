@@ -16,5 +16,6 @@
     terminal = ./terminal.nix;
     development = ./development.nix;  
     apps = ./apps.nix;
+    internet = ./internet.nix;
   };
 }
