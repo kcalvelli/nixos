@@ -123,7 +123,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     # needed for XDG_ICON_DIRS
     #libsForQt5.breeze-icons
-    pkgs.kdePackages.breeze-icons
+    #pkgs.kdePackages.breeze-icons
 
     # needed for GSETTINGS_SCHEMAS_PATH
     glib 

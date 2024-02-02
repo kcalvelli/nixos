@@ -33,6 +33,8 @@
     libva-utils
     wayland-utils
     vulkan-tools
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+    pkgs.ibm-plex    
   ];   
 
   services= {
@@ -52,4 +54,7 @@
 
   sound.enable = true;
   security.rtkit.enable = true; 
+
+  fonts.fontconfig.enable = true;
+
 }

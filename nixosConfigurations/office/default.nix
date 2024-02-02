@@ -8,19 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-
-      # Common stuff
-      #../common.nix
-
-      # Piece together base system
-      #../../system
-      #../../system/hardware/msi      
-      #../../system/desktop/kde   
-      #../../system/crypto
-      #../../system/printing
-      #../../system/networking
-      #../../system/virtualization
-      #../../system/pipewire
       ../../system/apps
 
       # Define users
@@ -30,6 +17,8 @@
       inputs.self.nixosModules.plasma
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.virtualization
+      inputs.self.nixosModules.apps
+      inputs.kde2nix.nixosModules.default       
 
     ];
 

@@ -8,27 +8,21 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-
-      # Include common stuff
-      ../common.nix
-
-      # Piece together base system
-      ../../system
-      ../../system/hardware/System76    
-      ../../system/desktop/kde      
-      ../../system/crypto
-      ../../system/printing
-      ../../system/networking
-      ../../system/virtualization
-      ../../system/pipewire
       ../../system/apps
-      
+
       # Define users
       ../../users/keith
-      
+
+      inputs.self.nixosModules.desktop
+      inputs.self.nixosModules.plasma
+      inputs.self.nixosModules.system76
+      inputs.self.nixosModules.virtualization
+      inputs.self.nixosModules.apps
+      inputs.kde2nix.nixosModules.default       
+
     ];
 
   networking = { 
     hostName = "pangolin"; # Define your hostname.
-  };  
+  };
 }
