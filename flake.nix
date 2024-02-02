@@ -20,9 +20,15 @@
 
     kde2nix.url = "github:nix-community/kde2nix/main";
 
+   # home-manager = {
+   #   url = "github:nix-community/home-manager/master";
+   #   inputs.nixpkgs.follows =
+   #     "nixpkgs"; # Use system packages list where available
+   # };    
+
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, kde2nix, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-hardware, kde2nix, home-manager, ... }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib;
@@ -53,5 +59,12 @@
         };
       };
     };
+
+    #homeConfigurations = {
+    #  "keith" = home-manager.lib.homeManagerConfiguration {
+    #    pkgs = import nixpkgs { system = "x86_64-darwin"; };
+    #    modules = [ ./home.nix ]; # Defined later
+    #  };
+    #};  
 
 }
