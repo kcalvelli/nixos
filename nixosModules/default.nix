@@ -10,7 +10,7 @@
     gear = ./gear.nix;
     kdepim = ./kdepim.nix;
     games = ./games.nix;
-    graphics = ./graphics.nix;
+    #graphics = ./graphics.nix;
     multimedia = ./multimedia.nix;
     system = ./system.nix;
     terminal = ./terminal.nix;
