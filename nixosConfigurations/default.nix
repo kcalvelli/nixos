@@ -14,6 +14,13 @@ in
       modules = [ ./pangolin inputs.kde2nix.nixosModules.default ];
     };
   };
+  
+  flake.cachix-deploy-spec = cachix-deploy-lib.spec {
+    agents = {
+      "pangolin"= self.nixosConfigurations.pangolin.config.system.build.toplevel;
+      "office"= self.nixosConfigurations.office.config.system.build.toplevel;
+    };
+  };
 
   perSystem = { pkgs, lib, system, ...}:
     let
