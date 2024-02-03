@@ -9,9 +9,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      # Define users
-      ../../users/keith
-
       inputs.self.nixosModules.desktop
       inputs.self.nixosModules.plasma
       inputs.self.nixosModules.system76

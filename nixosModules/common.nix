@@ -2,6 +2,11 @@
 
  {
   #Config common to all hosts
+
+  imports = [
+    ./keith.nix
+  ];
+  
   #Nix config
   nix = {
     package = pkgs.nixFlakes;
