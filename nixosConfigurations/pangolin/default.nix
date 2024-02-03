@@ -15,7 +15,6 @@
       inputs.self.nixosModules.virtualization
       inputs.self.nixosModules.apps
       inputs.kde2nix.nixosModules.default       
-
     ];
 
   networking = { 
