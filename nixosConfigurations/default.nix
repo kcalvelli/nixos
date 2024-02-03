@@ -1,6 +1,7 @@
 { self, inputs, ...}:
 let nixosSystem = args:
   inputs.nixpkgs.lib.nixosSystem ({ specialArgs = { inherit inputs; }; } // args);
+  cachix-deploy-lib = inputs.cachix-deploy-flake.lib;
 in
 {
   flake.nixosConfigurations = {
