@@ -17,8 +17,8 @@ in
   
   flake.cachix-deploy-spec = cachix-deploy-lib.spec {
     agents = {
-      "pangolin"= self.nixosConfigurations.pangolin.config.system.build.toplevel;
-      "office"= self.nixosConfigurations.office.config.system.build.toplevel;
+      "pangolin"= self.nixosConfigurations."pangolin".config.system.build.toplevel;
+      "office"= self.nixosConfigurations."office".config.system.build.toplevel;
     };
   };
 
