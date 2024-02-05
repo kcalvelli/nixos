@@ -34,7 +34,8 @@
     wayland-utils
     vulkan-tools
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-    pkgs.ibm-plex    
+    pkgs.ibm-plex   
+    cachix 
   ];   
 
   services= {
