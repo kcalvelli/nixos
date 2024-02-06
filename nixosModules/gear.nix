@@ -9,7 +9,6 @@
      pkgs.kdePackages.kcalc
      pkgs.kdePackages.skanlite
      pkgs.kdePackages.filelight
-     pkgs.kdePackages.neochat
 
      #Kaccounts
      pkgs.kdePackages.kaccounts-integration
