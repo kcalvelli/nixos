@@ -5,6 +5,5 @@
     nextcloud-client
     telegram-desktop
     mailspring   
-    microsoft-edge 
   ];
 }
