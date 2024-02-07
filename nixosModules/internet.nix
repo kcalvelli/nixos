@@ -4,6 +4,7 @@
     inputs.self.packages.${pkgs.system}.brave-qt
     nextcloud-client
     telegram-desktop
-    mailspring    
+    mailspring   
+    microsoft-edge 
   ];
 }
