@@ -1,7 +1,7 @@
 { self, inputs, ...}:
 let nixosSystem = args:
   inputs.nixpkgs.lib.nixosSystem ({ specialArgs = { inherit inputs; }; } // args);
-  cachix-deploy-lib = inputs.cachix-deploy-flake.lib;
+  #cachix-deploy-lib = inputs.cachix-deploy-flake.lib;
 in
 {
   flake.nixosConfigurations = {
@@ -15,12 +15,12 @@ in
     };
   };
   
-  flake.cachix-deploy-spec = cachix-deploy-lib.spec {
-    agents = {
-      "pangolin"= self.nixosConfigurations."pangolin".config.system.build.toplevel;
-      "office"= self.nixosConfigurations."office".config.system.build.toplevel;
-    };
-  };
+  #flake.cachix-deploy-spec = cachix-deploy-lib.spec {
+  #  agents = {
+  #    "pangolin"= self.nixosConfigurations."pangolin".config.system.build.toplevel;
+  #    "office"= self.nixosConfigurations."office".config.system.build.toplevel;
+  #  };
+  #};
 
   perSystem = { pkgs, lib, system, ...}:
     let

@@ -14,11 +14,11 @@
     home-manager.url = "github:nix-community/home-manager";       
     devshell.inputs.nixpkgs.follows = "nixpkgs";
     devshell.url = "github:numtide/devshell";  
-    cachix-deploy-flake.url = "github:cachix/cachix-deploy-flake";
+    #cachix-deploy-flake.url = "github:cachix/cachix-deploy-flake";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = inputs @ { flake-parts, systems, cachix-deploy-flake, ... }:
+  outputs = inputs @ { flake-parts, systems, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
       imports = [

@@ -19,7 +19,7 @@
     };
   };
 
-  services.cachix-agent.enable = true;
+  #services.cachix-agent.enable = true;
 
   # Allow unfree
   nixpkgs = {

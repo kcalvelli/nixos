@@ -14,9 +14,6 @@
 , freetype
 , gdk-pixbuf
 , glib
-#, gnome
-#, gsettings-desktop-schemas
-#, gtk3
 , libX11
 , libXScrnSaver
 , libXcomposite
@@ -30,7 +27,6 @@
 , libXtst
 , libdrm
 , libkrb5
-#, libsForQt5
 , libuuid
 , libxkbcommon
 , libxshmfence
@@ -65,7 +61,7 @@
 , enableVideoAcceleration ? libvaSupport
 
 # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-, vulkanSupport ? false
+, vulkanSupport ? true
 , addOpenGLRunpath
 , enableVulkan ? vulkanSupport
 }:
@@ -75,17 +71,14 @@ let
     optionalString strings escapeShellArg;
 
   deps = [
-    alsa-lib at-spi2-atk at-spi2-core atk cairo cups dbus expat
+    alsa-lib at-spi2-atk at-spi2-core atk cups dbus expat
     fontconfig freetype gdk-pixbuf 
-    glib 
-    #gtk3 
+    glib cairo
     libdrm libX11 libGL
     libxkbcommon libXScrnSaver libXcomposite libXcursor libXdamage
     libXext libXfixes libXi libXrandr libXrender libxshmfence
     libXtst libuuid mesa nspr nss pango pipewire udev wayland
     xorg.libxcb zlib snappy libkrb5 
-    #libsForQt5.qt5.qtbase 
-    #libsForQt5.qt5.qtwayland 
     qt6.qtbase qt6.qtwayland
   ]
     ++ optional pulseSupport libpulseaudio
