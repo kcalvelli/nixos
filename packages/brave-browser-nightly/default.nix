@@ -25,7 +25,6 @@
 , libXtst
 , libdrm
 , libkrb5
-, libsForQt5
 , libuuid
 , libxkbcommon
 , libxshmfence
@@ -34,6 +33,7 @@
 , nss
 , pango
 , pipewire
+, qt6
 , snappy
 , udev
 , wayland
@@ -60,7 +60,7 @@
 , enableVideoAcceleration ? libvaSupport
 
 # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-, vulkanSupport ? false
+, vulkanSupport ? true
 , addOpenGLRunpath
 , enableVulkan ? vulkanSupport
 }:
@@ -75,7 +75,7 @@ let
     libxkbcommon libXScrnSaver libXcomposite libXcursor libXdamage
     libXext libXfixes libXi libXrandr libXrender libxshmfence
     libXtst libuuid mesa nspr nss pango pipewire udev wayland
-    xorg.libxcb zlib snappy libkrb5 libsForQt5.qt5.qtbase
+    xorg.libxcb zlib snappy libkrb5 qt6.qtbase qt6.qtwayland
   ]
     ++ optional pulseSupport libpulseaudio
     ++ optional libvaSupport libva;
@@ -95,11 +95,11 @@ in
 with import <nixpkgs>{};
 stdenv.mkDerivation rec {
   inherit pname;
-  version = "1.63.114";
+  version = "1.64.56";
 
   src = fetchurl {
     url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser-nightly_${version}_amd64.deb";
-    sha256 = "1ng6s7rxzan172hy3b9zvvclv4h76kb1g0dzqja8r27z185irxw2";
+    sha256 = "1py7x2rwsjg98sl9ppl70gpfi92vg78vkday8vkr2qyf2g4dbjsr";
   };
 
   dontConfigure = true;

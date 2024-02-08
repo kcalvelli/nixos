@@ -13,6 +13,7 @@
    packages = {
     inherit (pkgs)
       brave-qt
+      brave-browser-nightly
       ;
    };
 
@@ -29,6 +30,7 @@
 
   flake.overlays.default = _final: prev: {
     brave-qt = prev.callPackage ./brave-qt { };
+    brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
   };
 }
 
