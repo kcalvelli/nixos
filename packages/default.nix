@@ -10,11 +10,12 @@
 #}
 { self, inputs, ... }: {
   perSystem = { system, pkgs, ... }: {
+
    packages = {
     inherit (pkgs)
       brave-qt
       brave-browser-nightly
-      ;
+      ;      
    };
 
    _module.args.pkgs = import inputs.nixpkgs {
@@ -29,8 +30,10 @@
   };
 
   flake.overlays.default = _final: prev: {
+    # Custom packages
     brave-qt = prev.callPackage ./brave-qt { };
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
   };
+
 }
 

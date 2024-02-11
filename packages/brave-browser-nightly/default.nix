@@ -41,6 +41,7 @@
 , coreutils
 , xorg
 , zlib
+, pkgs
 
 
 
@@ -71,7 +72,9 @@ let
 
   deps = [
     alsa-lib at-spi2-atk at-spi2-core atk cairo cups dbus expat
-    fontconfig freetype gdk-pixbuf glib libdrm libX11 libGL
+    fontconfig freetype gdk-pixbuf 
+    glib 
+    libdrm libX11 libGL
     libxkbcommon libXScrnSaver libXcomposite libXcursor libXdamage
     libXext libXfixes libXi libXrandr libXrender libxshmfence
     libXtst libuuid mesa nspr nss pango pipewire udev wayland
@@ -92,7 +95,6 @@ let
   pname = "brave-browser-nightly";
 in
 
-with import <nixpkgs>{};
 stdenv.mkDerivation rec {
   inherit pname;
   version = "1.64.56";
@@ -112,10 +114,10 @@ stdenv.mkDerivation rec {
     (wrapGAppsHook.override { inherit makeWrapper; })
   ];
 
-  buildInputs = [
-    # needed for XDG_ICON_DIRS
-    libsForQt5.breeze-icons
-  ];
+  #buildInputs = [
+  #  # needed for XDG_ICON_DIRS
+  #  libsForQt5.breeze-icons
+  #];
 
   unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";
 

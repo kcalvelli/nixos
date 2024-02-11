@@ -73,7 +73,8 @@ let
   deps = [
     alsa-lib at-spi2-atk at-spi2-core atk cups dbus expat
     fontconfig freetype gdk-pixbuf 
-    glib cairo
+    glib 
+    cairo
     libdrm libX11 libGL
     libxkbcommon libXScrnSaver libXcomposite libXcursor libXdamage
     libXext libXfixes libXi libXrandr libXrender libxshmfence
@@ -119,7 +120,7 @@ stdenv.mkDerivation rec {
     #pkgs.kdePackages.breeze-icons
 
     # needed for GSETTINGS_SCHEMAS_PATH
-    glib 
+    #glib 
     #gsettings-desktop-schemas gtk3
 
     # needed for XDG_ICON_DIRS

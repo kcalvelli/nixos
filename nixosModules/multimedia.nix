@@ -5,5 +5,6 @@
      vlc
      cubicsdr
      spotify
+     obs-studio
     ];  
 }
