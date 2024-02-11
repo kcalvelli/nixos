@@ -5,9 +5,16 @@
      vlc
      cubicsdr
      spotify
-     obs-studio
-     obs-studio-plugins.obs-vaapi
-     obs-studio-plugins.obs-gstreamer
-     obs-studio-plugins.obs-pipewire-audio-capture 
-    ];  
+     
+     # OBS with plugins
+     (pkgs.wrapOBS {
+        plugins = with pkgs.obs-studio-plugins; [
+          obs-vaapi
+          obs-backgroundremoval
+          obs-gstreamer
+          obs-pipewire-audio-capture
+        ]; 
+      })
+  ];  
 }
+
