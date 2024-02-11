@@ -43,14 +43,15 @@
   #Use systemd-boot
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
+    bootspec.enable = true;
     # Trying xanmod
     #kernelPackages = pkgs.linuxPackages_xanmod_latest;
     #  Bootloader
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      timeout = 1;
-      grub.enable = false;
+      #timeout = 1;
+      #grub.enable = false;
     };
     initrd = {
       # Setup keyfile

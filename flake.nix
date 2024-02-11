@@ -16,9 +16,10 @@
     devshell.url = "github:numtide/devshell";  
     #cachix-deploy-flake.url = "github:cachix/cachix-deploy-flake";
     flake-utils.url = "github:numtide/flake-utils";
+    lanzaboote.url = "github:nix-community/lanzaboote";
   };
 
-  outputs = inputs @ { flake-parts, systems, ... }:
+  outputs = inputs @ { flake-parts, systems, lanzaboote, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
       imports = [

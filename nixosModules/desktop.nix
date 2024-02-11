@@ -36,6 +36,8 @@
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
     pkgs.ibm-plex   
     cachix 
+    fuse
+    ntfs3g
   ];   
 
   services= {

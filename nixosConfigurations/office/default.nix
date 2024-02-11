@@ -14,11 +14,21 @@
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.virtualization
       inputs.self.nixosModules.apps
-      inputs.kde2nix.nixosModules.default       
+      inputs.kde2nix.nixosModules.default   
+      inputs.lanzaboote.nixosModules.lanzaboote    
 
     ];
 
   networking = { 
     hostName = "office"; # Define your hostname.
   };
+
+  boot = {
+    loader.systemd-boot.enable = lib.mkForce false;
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/etc/secureboot";
+    };
+  };
+
 }
