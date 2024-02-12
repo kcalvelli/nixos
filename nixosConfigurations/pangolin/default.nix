@@ -20,4 +20,9 @@
   networking = { 
     hostName = "pangolin"; # Define your hostname.
   };
+  
+  home-manager.users.keith = {
+    imports = [ inputs.self.homeModules.desktop ];
+    home.stateVersion = "24.05";
+  };  
 }
