@@ -26,7 +26,7 @@
         ./packages
         ./nixosConfigurations
         ./nixosModules
-        ./homeConfigurations
+        ./homeManagerConfigurations
       ];
     };
 }

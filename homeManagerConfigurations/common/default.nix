@@ -2,6 +2,10 @@
 {
     # Enable home manager
     programs.home-manager.enable = true;
+    home-manager = {
+      useGlobalPkgs = true;
+      useUserPackages = true;
+    };
 
     home.homeDirectory = "/home/keith";
     home.stateVersion = "24.05";
