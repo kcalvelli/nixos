@@ -5,6 +5,7 @@
 
   imports = [
     ./keith.nix
+    inputs.home-manager.nixosModules.default
   ];
 
   #Nix config
@@ -197,13 +198,16 @@
     };
   };
   
-  
-  
   # Curiously, `services.samba` does not automatically open
   # the needed ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 445 139 ];
   networking.firewall.allowedUDPPorts = [ 137 138 ];
 
+  # Configure home-manager
+  home-manager.extraSpecialArgs.inputs = inputs; # forward the inputs
+  home-manager.useGlobalPkgs = true; # don't create another instance of nixpkgs
+  home-manager.useUserPackages = true; # install user packages directly to the user's profile
+  
   environment.systemPackages = with pkgs; [
     sshfs
   ];  
