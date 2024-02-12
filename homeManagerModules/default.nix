@@ -1,0 +1,6 @@
+{ ... }:
+{
+  flake.homeManagerModules = {
+    common = ./common;
+  };
+}

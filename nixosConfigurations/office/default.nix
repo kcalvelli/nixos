@@ -16,7 +16,6 @@
       inputs.self.nixosModules.apps
       inputs.kde2nix.nixosModules.default   
       inputs.lanzaboote.nixosModules.lanzaboote    
-      inputs.self.homeManagerConfigurations
     ];
 
   networking = { 
