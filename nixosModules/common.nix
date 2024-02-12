@@ -5,7 +5,13 @@
 
   imports = [
     ./keith.nix
+    inputs.home-manager.nixosModules.default
   ];
+
+  #Home-manager config
+  home-manager.extraSpecialArgs.inputs = inputs;
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
 
   #Nix config
   nix = {
