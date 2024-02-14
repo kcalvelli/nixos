@@ -210,5 +210,6 @@
   
   environment.systemPackages = with pkgs; [
     sshfs
+    kio-fuse
   ];  
  }
