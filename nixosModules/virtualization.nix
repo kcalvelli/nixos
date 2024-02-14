@@ -20,6 +20,13 @@
     options kvm ignore_msrs=1
   '';
 
+  virtualisation.vmVariant = {
+    virtualisation = {
+      memorySize = 8192;
+      cores = 4;
+    };
+  };
+  
   environment.systemPackages = with pkgs; [ 
     qemu
     #distrobox

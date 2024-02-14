@@ -56,9 +56,9 @@
     };
     initrd = {
       # Setup keyfile
-      secrets = {
-        "/crypto_keyfile.bin" = null;
-      };
+#      secrets = {
+#        "/crypto_keyfile.bin" = null;
+#      };
       systemd.enable = true;
       kernelModules = [ "amdgpu"];    
     };
