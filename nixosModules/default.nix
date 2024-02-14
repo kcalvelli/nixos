@@ -17,5 +17,6 @@
     development = ./development.nix;  
     apps = ./apps.nix;
     internet = ./internet.nix;
+    office = ./office.nix;
   };
 }

@@ -38,6 +38,9 @@
     cachix 
     fuse
     ntfs3g
+    sshfs
+    kio-fuse    
+    inputs.self.packages.${pkgs.system}.vulkan-hdr-layer
   ];   
 
   services= {
