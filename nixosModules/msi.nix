@@ -8,7 +8,12 @@
   boot = {
     # Kernel
     kernelParams = [
-      "quiet" "loglevel=0" "splash" "systemd.show_status=false" "iommu=pt" "psi=1"   
+      "quiet" 
+      "loglevel=0" 
+      "splash" 
+      "systemd.show_status=false" 
+      "psi=1"   
+      ""
     ];
   };
 }

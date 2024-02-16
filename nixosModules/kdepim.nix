@@ -13,9 +13,7 @@ in {
     };
   };
 
-  # Define what other settings, services and resources should be active IF
-  # a user of this "hello.nix" module ENABLED this module 
-  # by setting "services.hello.enable = true;".
+
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       #bogofilter

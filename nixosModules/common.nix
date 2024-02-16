@@ -66,7 +66,6 @@
     plymouth.enable = true;
   };
 
-  #Who uses Swap?
   zramSwap = {
     enable = true;
     algorithm = "zstd";
