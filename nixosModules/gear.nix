@@ -18,11 +18,13 @@
      #Kio
      pkgs.kdePackages.kio-gdrive
      pkgs.kdePackages.kio-zeroconf
+
+     pkgs.kdePackages.signon-kwallet-extension
      
     ] ++ ( with pkgs.libsForQt5; [
     #I like this theme  
     utterly-round-plasma-style
-    #signond
+
   ] );
 
   programs.kdepim.enable = true;
