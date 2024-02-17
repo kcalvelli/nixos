@@ -97,11 +97,11 @@ in
 
 stdenv.mkDerivation rec {
   inherit pname;
-  version = "1.64.56";
+  version = "1.65.8";
 
   src = fetchurl {
     url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser-nightly_${version}_amd64.deb";
-    sha256 = "1py7x2rwsjg98sl9ppl70gpfi92vg78vkday8vkr2qyf2g4dbjsr";
+    sha256 = "16c8v3pd8a6cpn34lyvb74qz4ix7kzay28pmv1mb8b2pk321y22c";
   };
 
   dontConfigure = true;
