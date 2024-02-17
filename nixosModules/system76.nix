@@ -11,7 +11,10 @@
   };
 
   # Enable all the system76 stuff
-  hardware.system76.enableAll = true;
-  powerManagement.enable = true;
-  
+  hardware = {
+    system76 = {
+      enableAll = true;
+      kernel-modules.enable = true;
+    };
+  };
 }
