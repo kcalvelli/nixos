@@ -6,11 +6,15 @@ in
   flake.nixosConfigurations = {
     office = nixosSystem {
       system = "x86_64-linux";
-      modules = [ ./office inputs.kde2nix.nixosModules.default ];
+      modules = [ ./office 
+      #inputs.kde2nix.nixosModules.default 
+      ];
     };
     pangolin = nixosSystem {
       system = "x86_64-linux";
-      modules = [ ./pangolin inputs.kde2nix.nixosModules.default ];
+      modules = [ ./pangolin 
+      #inputs.kde2nix.nixosModules.default 
+      ];
     };
   };
 

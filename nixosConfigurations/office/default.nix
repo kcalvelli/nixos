@@ -10,11 +10,11 @@
       ./hardware-configuration.nix
 
       inputs.self.nixosModules.desktop
-      inputs.self.nixosModules.plasma
+      #inputs.self.nixosModules.plasma
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.virtualization
       inputs.self.nixosModules.apps
-      inputs.kde2nix.nixosModules.default   
+      #inputs.kde2nix.nixosModules.default   
       inputs.lanzaboote.nixosModules.lanzaboote    
     ];
 
