@@ -31,7 +31,7 @@
   };
 
   home-manager.users.keith = {
-    imports = [ inputs.self.homeModules.desktop ];
+    imports = [ inputs.self.homeModules.desktop inputs.self.homeModules.terminal ];
     home.stateVersion = "24.05";
   };
 }

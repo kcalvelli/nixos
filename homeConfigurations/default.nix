@@ -18,5 +18,6 @@ let
 in
 {
   flake.homeModules.desktop = ./desktop;
-#  flake.homeModules.terminal = ./terminal;
+  flake.homeModules.terminal = ./terminal;
+
 }

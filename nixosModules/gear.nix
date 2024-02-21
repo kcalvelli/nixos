@@ -14,6 +14,8 @@
      #Kaccounts
      pkgs.kdePackages.kaccounts-integration
      pkgs.kdePackages.kaccounts-providers
+     pkgs.kdePackages.signond
+     pkgs.kdePackages.kdbusaddons
 
      #Kio
      pkgs.kdePackages.kio-gdrive
