@@ -2,7 +2,7 @@
 {
 
   programs.starship = {
- #   enable = true;
+    enable = true;
  #   enableFishIntegration = true;
  #   settings = {
  #       add_newline = false;
