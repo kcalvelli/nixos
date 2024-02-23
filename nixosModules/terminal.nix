@@ -37,7 +37,6 @@
     wget
     curl
     gnugrep
-    warp-terminal
     cosmic-term
   ];   
 }
