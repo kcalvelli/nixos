@@ -18,6 +18,7 @@
      pkgs.kdePackages.kdbusaddons
 
      #Kio
+     pkgs.kdePackages.kio-fuse
      pkgs.kdePackages.kio-gdrive
      pkgs.kdePackages.kio-zeroconf
 

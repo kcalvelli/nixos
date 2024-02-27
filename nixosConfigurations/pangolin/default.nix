@@ -24,4 +24,10 @@
     imports = [ inputs.self.homeModules.desktop ];
     home.stateVersion = "24.05";
   };  
+
+  home-manager.users.calvelli = {
+    imports = [ inputs.self.homeModules.desktop ];
+    home.stateVersion = "24.05";
+  };
+
 }

@@ -10,8 +10,8 @@
         #Uncomment above for plasma5 andcomment below
         defaultSession = "plasma";
         # Disable autologin due to wayland SDDM bug, should be resolved in v.20
-        autoLogin.enable = true; 
-        autoLogin.user = "keith";
+        #autoLogin.enable = true; 
+        #autoLogin.user = "keith";
       };
       
       desktopManager = {

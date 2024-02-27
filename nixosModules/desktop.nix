@@ -3,15 +3,15 @@
 {
   imports = [
     ./plasma.nix #For Plasma Desktop
+    ./gear.nix #For KDE Apps    
     ./common.nix
-    ./gear.nix #For KDE Apps
   ];
 
   services = {
     #  X11
     xserver = {
       enable  = true;
-      #videoDrivers = [ "amdgpu" ];
+      videoDrivers = [ "amdgpu" ];
       xkb = {
         layout = "us";
         variant = "";
@@ -38,8 +38,7 @@
     cachix 
     fuse
     ntfs3g
-    sshfs
-    kio-fuse    
+    sshfs 
     inputs.self.packages.${pkgs.system}.vulkan-hdr-layer
   ];   
 
