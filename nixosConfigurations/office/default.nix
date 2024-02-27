@@ -10,11 +10,9 @@
       ./hardware-configuration.nix
 
       inputs.self.nixosModules.desktop
-      #inputs.self.nixosModules.plasma
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.virtualization
-      inputs.self.nixosModules.apps
-      #inputs.kde2nix.nixosModules.default   
+      inputs.self.nixosModules.apps 
       inputs.lanzaboote.nixosModules.lanzaboote    
     ];
 
@@ -34,10 +32,4 @@
     imports = [ inputs.self.homeModules.desktop ];
     home.stateVersion = "24.05";
   };
-  
-  home-manager.users.calvelli = {
-    imports = [ inputs.self.homeModules.desktop ];
-    home.stateVersion = "24.05";
-  };
-  
 }

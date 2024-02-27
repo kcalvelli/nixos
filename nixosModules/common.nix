@@ -5,7 +5,6 @@
 
   imports = [
     ./keith.nix
-    ./calvelli.nix
     inputs.home-manager.nixosModules.default
   ];
 
