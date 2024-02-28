@@ -23,6 +23,9 @@
      pkgs.kdePackages.kio-zeroconf
 
      pkgs.kdePackages.signon-kwallet-extension
+
+     # QT6
+     qt6.qtwebsockets
      
     ] ++ ( with pkgs.libsForQt5; [
     #I like this theme  
