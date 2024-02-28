@@ -14,13 +14,10 @@
      #Kaccounts
      pkgs.kdePackages.kaccounts-integration
      pkgs.kdePackages.kaccounts-providers
-     pkgs.kdePackages.signond
-     pkgs.kdePackages.kdbusaddons
 
      #Kio
      pkgs.kdePackages.kio-fuse
      pkgs.kdePackages.kio-gdrive
-     pkgs.kdePackages.kio-zeroconf
 
      pkgs.kdePackages.signon-kwallet-extension
 
