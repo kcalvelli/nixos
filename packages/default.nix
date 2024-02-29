@@ -16,6 +16,7 @@
       brave-qt
       brave-browser-nightly
       vulkan-hdr-layer
+      vivaldi
       ;      
    };
 
