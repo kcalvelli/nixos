@@ -6,6 +6,6 @@
     inputs.self.packages.${pkgs.system}.vivaldi
     nextcloud-client
     telegram-desktop
-    mailspring   
+    #mailspring   
   ];
 }
