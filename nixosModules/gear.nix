@@ -30,5 +30,5 @@
 
   ] );
 
-  programs.kdepim.enable = true;
+  #programs.kdepim.enable = true;
 }
