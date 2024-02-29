@@ -25,12 +25,12 @@
       fsType = "vfat";
     };
 
-  fileSystems."/home/keith/Pictures" =
+  fileSystems."/mnt/media/Pictures" =
     { device = "/dev/disk/by-uuid/0806889f-a4b5-4f10-99e9-777cffb4c807";
       fsType = "ext4";
     };
 
-  fileSystems."/home/keith/VM" =
+  fileSystems."/mnt/VM" =
     { device = "/dev/disk/by-uuid/ed69a535-afc7-45d5-be77-dc1b06282f06";
       fsType = "ext4";
     };

@@ -35,6 +35,7 @@
     brave-qt = prev.callPackage ./brave-qt { };
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     vulkan-hdr-layer = prev.callPackage ./vulkan-hdr-layer { };
+    vivaldi = prev.callPackage ./vivaldi { };
   };
 
 }
