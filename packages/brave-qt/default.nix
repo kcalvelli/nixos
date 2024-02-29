@@ -1,5 +1,3 @@
-# This derivation of Brave Browser disables GTK backend and enables QT6 backend
-
 { lib, stdenv, fetchurl, wrapGAppsHook, makeWrapper
 , alsa-lib
 , at-spi2-atk
@@ -14,6 +12,10 @@
 , freetype
 , gdk-pixbuf
 , glib
+, gnome
+, gsettings-desktop-schemas
+, gtk3
+, gtk4
 , libX11
 , libXScrnSaver
 , libXcomposite
@@ -61,7 +63,7 @@
 , enableVideoAcceleration ? libvaSupport
 
 # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-, vulkanSupport ? true
+, vulkanSupport ? false
 , addOpenGLRunpath
 , enableVulkan ? vulkanSupport
 }:
@@ -71,10 +73,9 @@ let
     optionalString strings escapeShellArg;
 
   deps = [
-    alsa-lib at-spi2-atk at-spi2-core atk cups dbus expat
+    alsa-lib at-spi2-atk at-spi2-core atk cairo cups dbus expat
     fontconfig freetype gdk-pixbuf 
-    glib 
-    cairo
+    glib gtk3 gtk4
     libdrm libX11 libGL
     libxkbcommon libXScrnSaver libXcomposite libXcursor libXdamage
     libXext libXfixes libXi libXrandr libXrender libxshmfence
@@ -97,11 +98,11 @@ in
 
 stdenv.mkDerivation rec {
   pname = "brave";
-  version = "1.62.165";
+  version = "1.63.162";
 
   src = fetchurl {
     url = "https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb";
-    sha256 = "12dzxz05r1sfmfj3jcx3z0ylp8g5rhcq1svv2x0yxqnghcbcf90p";
+    sha256 = "sha256-kRIYdSBAjBVX3EZQv0OWifD+XIpGAqAVTcrdxGAifEI=";
   };
 
   dontConfigure = true;
@@ -115,16 +116,11 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    # needed for XDG_ICON_DIRS
-    #libsForQt5.breeze-icons
-    #pkgs.kdePackages.breeze-icons
-
     # needed for GSETTINGS_SCHEMAS_PATH
-    #glib 
-    #gsettings-desktop-schemas gtk3
+    glib gsettings-desktop-schemas gtk3 gtk4
 
     # needed for XDG_ICON_DIRS
-    #gnome.adwaita-icon-theme    
+    gnome.adwaita-icon-theme
   ];
 
   unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";
@@ -215,7 +211,8 @@ stdenv.mkDerivation rec {
     '';
     sourceProvenance = with sourceTypes; [ binaryNativeCode ];
     license = licenses.mpl20;
-    maintainers = with maintainers; [ uskudnik rht jefflabonte nasirhm ];
+    maintainers = with maintainers; [ uskudnik rht jefflabonte nasirhm buckley310 ];
     platforms = [ "x86_64-linux" ];
+    mainProgram = "brave";
   };
 }
