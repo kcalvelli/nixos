@@ -41,6 +41,7 @@
     ntfs3g
     sshfs 
     inputs.self.packages.${pkgs.system}.vulkan-hdr-layer
+    gpgme
   ];   
 
   services= {
@@ -60,7 +61,6 @@
 
   sound.enable = true;
   security.rtkit.enable = true; 
-  programs.gnupg.agent.enable = true;
   fonts.fontconfig.enable = true;
 
 }
