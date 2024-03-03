@@ -60,7 +60,7 @@
 
   sound.enable = true;
   security.rtkit.enable = true; 
-
+  programs.gnupg.agent.enable
   fonts.fontconfig.enable = true;
 
 }
