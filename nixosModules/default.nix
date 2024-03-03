@@ -18,5 +18,6 @@
     apps = ./apps.nix;
     internet = ./internet.nix;
     office = ./office.nix;
+    cosmic = ./cosmic.nix;
   };
 }

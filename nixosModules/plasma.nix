@@ -4,11 +4,11 @@
   services = {
     xserver = {
       displayManager = {
-        sddm.enable = true;
-        sddm.wayland.enable = true;
-        defaultSession = "plasma";
-        autoLogin.enable = true; 
-        autoLogin.user = "keith";
+        #sddm.enable = true;
+        #sddm.wayland.enable = true;
+        #defaultSession = "plasma";
+        #autoLogin.enable = true; 
+        #autoLogin.user = "keith";
       };
       
       desktopManager = {
