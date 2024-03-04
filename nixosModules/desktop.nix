@@ -42,6 +42,8 @@
     sshfs 
     inputs.self.packages.${pkgs.system}.vulkan-hdr-layer
     gpgme
+    adw-gtk3
+    adwaita-qt6
   ];   
 
   services= {
