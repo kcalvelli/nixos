@@ -7,5 +7,6 @@
     brave
     nextcloud-client
     telegram-desktop   
+    fractal
   ];
 }
