@@ -63,6 +63,7 @@
 
   sound.enable = true;
   security.rtkit.enable = true; 
+  security.polkit.enable = true;
   fonts.fontconfig.enable = true;
 
 }
