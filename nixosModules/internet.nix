@@ -8,6 +8,6 @@
     nextcloud-client
     telegram-desktop   
     fractal
-    geary
+    gnome.geary
   ];
 }
