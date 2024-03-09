@@ -18,6 +18,7 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+    
   };
 
   #services.cachix-agent.enable = true;
