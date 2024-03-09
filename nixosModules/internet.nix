@@ -7,7 +7,7 @@
     #brave
     nextcloud-client
     telegram-desktop   
-    fractal
     thunderbird
+    element-desktop-wayland
   ];
 }
