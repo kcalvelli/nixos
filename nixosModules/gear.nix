@@ -9,10 +9,13 @@
      pkgs.kdePackages.kcalc
      pkgs.kdePackages.skanlite
      pkgs.kdePackages.filelight
+     pkgs.kdePackages.partitionmanager
      
      #Kaccounts
      pkgs.kdePackages.kaccounts-integration
      pkgs.kdePackages.kaccounts-providers
+
+
      
     ];
 
