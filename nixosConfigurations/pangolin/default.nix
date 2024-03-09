@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
 
       inputs.self.nixosModules.desktop
-      #inputs.self.nixosModules.plasma
       inputs.self.nixosModules.system76
       inputs.self.nixosModules.virtualization
       inputs.self.nixosModules.apps

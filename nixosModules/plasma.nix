@@ -14,6 +14,7 @@
       desktopManager = {
         plasma6 = {
           enable = true;
+          enableQt5Integration = false;
         };
       };
     };
@@ -29,5 +30,5 @@
   programs.partition-manager.enable = true;
   programs.kdeconnect.enable = true;
 
-  environment.plasma6.excludePackages = [ pkgs.kdePackages.elisa ];
+  environment.plasma6.excludePackages = [ pkgs.kdePackages.elisa pkgs.kdePackages.oxygen pkgs.kdePackages.oxygen-icons ];
 }
