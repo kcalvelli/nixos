@@ -8,6 +8,5 @@
     inputs.self.nixosModules.multimedia
     inputs.self.nixosModules.terminal
     inputs.self.nixosModules.internet
-    inputs.self.nixosModules.office
   ];
 }

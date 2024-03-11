@@ -34,6 +34,7 @@
     virt-viewer
     distrobox
     wl-clipboard
+    wyoming-openwakeword
   ];  
 
   virtualisation.oci-containers = {
