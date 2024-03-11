@@ -31,7 +31,7 @@
 
   environment.systemPackages = with pkgs; [
     ripgrep
-    neofetch
+    fastfetch
     helix
     vim 
     wget
