@@ -8,6 +8,6 @@
     nextcloud-client
     telegram-desktop   
     thunderbird
-    element-desktop-wayland
+    element-desktop
   ];
 }

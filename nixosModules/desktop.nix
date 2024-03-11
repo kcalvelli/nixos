@@ -40,10 +40,10 @@
     fuse
     ntfs3g
     sshfs 
-    inputs.self.packages.${pkgs.system}.vulkan-hdr-layer
     gpgme
     adw-gtk3
     adwaita-qt6
+    htop
   ];   
 
   services= {

@@ -28,7 +28,5 @@
      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  programs.kdeconnect.enable = true;
-
   environment.plasma6.excludePackages = [ pkgs.kdePackages.elisa pkgs.kdePackages.oxygen pkgs.kdePackages.oxygen-icons ];
 }

@@ -15,9 +15,14 @@
      pkgs.kdePackages.kaccounts-integration
      pkgs.kdePackages.kaccounts-providers
 
-
-     
+     pkgs.kdePackages.kdeconnect-kde
+     pkgs.sshfs 
     ];
+
+    #For KDEConnect
+    networking.firewall.allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+    networking.firewall.allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
+
 
   #programs.kdepim.enable = true;
 }
