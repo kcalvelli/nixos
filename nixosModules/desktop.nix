@@ -26,7 +26,6 @@
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
-      pinentryFlavor = "qt";
     };
   };
 
@@ -36,7 +35,6 @@
     vulkan-tools
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
     pkgs.ibm-plex   
-    cachix 
     fuse
     ntfs3g
     sshfs 
