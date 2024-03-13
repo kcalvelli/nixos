@@ -1,23 +1,14 @@
 # Configure a KDE Plasma Desktop
 { inputs, outputs, config, pkgs, lib, ... }:
 {
-  services = {
-    xserver = {
-      displayManager = {
-        #sddm.enable = true;
-        #sddm.wayland.enable = true;
-        #defaultSession = "plasma";
-        #autoLogin.enable = true; 
-        #autoLogin.user = "keith";
-      };
-      
+  services = {  
       desktopManager = {
         plasma6 = {
           enable = true;
           enableQt5Integration = false;
         };
       };
-    };
+
     dbus.enable = true;
     colord.enable = true;
   };
