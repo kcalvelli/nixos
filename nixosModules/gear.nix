@@ -10,5 +10,15 @@
      pkgs.kdePackages.skanlite
      pkgs.kdePackages.filelight
      pkgs.kdePackages.partitionmanager
+     
+     #Kaccounts
+     pkgs.kdePackages.kaccounts-integration
+     pkgs.kdePackages.kaccounts-providers
+
+     pkgs.kdePackages.kdeconnect-kde
+     pkgs.sshfs 
+
+     #Klassy
+     inputs.self.packages.${pkgs.system}.klassy
     ];
 }

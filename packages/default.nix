@@ -15,6 +15,7 @@
     inherit (pkgs)
       brave-qt
       brave-browser-nightly
+      klassy
       ;      
    };
 
@@ -33,6 +34,7 @@
     # Custom packages
     brave-qt = prev.callPackage ./brave-qt { };
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
+    klassy = prev.callPackage ./klassy { };
   };
 
 }
