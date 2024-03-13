@@ -32,18 +32,6 @@
 
   system.stateVersion = "23.11"; # Did you read the comment?
 
-  # Configure all the machines with binary cache
-  nix.settings.trusted-public-keys = [
-    "calvelli-nix-cache.cachix.org-1:wmpkUk58/e+QQybGe2EQvkb0S2H8Xs4gu3I3zmGcf0U="
-    "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="   
-    "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" 
-  ];
-  nix.settings.substituters = [
-    "https://calvelli-nix-cache.cachix.org"
-    "https://nix-community.cachix.org"
-    "https://cosmic.cachix.org/"
-  ];
-
   #Use systemd-boot
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
