@@ -1,13 +1,8 @@
 { lib
 , stdenv
 , fetchFromGitHub
-, kdePackages.wrapQtAppsHook
+, kdePackages
 , cmake
-, extra-cmake-modules
-, kdePackages.frameworkintegration
-, kdePackages.kdecoration
-, kdePackages.kirigami
-, kdePackages.kcmutils
 , qt6
 }:
 
@@ -26,14 +21,14 @@ stdenv.mkDerivation rec {
     kdePackages.frameworkintegration
     kdePackages.kcmutils
     kdePackages.kdecoration
-    kdePackages.kirigami2
+    kdePackages.kirigami
     kdePackages.qtwayland
-    #qt5.qtx11extras
+    qt6.full
   ];
 
   nativeBuildInputs = [
     cmake
-    extra-cmake-modules
+    kdePackages.extra-cmake-modules
     kdePackages.wrapQtAppsHook
   ];
 
@@ -42,6 +37,7 @@ stdenv.mkDerivation rec {
     "-DCMAKE_BUILD_TYPE=Release"
     "-DBUILD_TESTING=OFF"
     "-DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
+    "-DBUILD_QT5=OFF"
   ];
 
   meta = {
