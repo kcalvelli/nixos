@@ -18,5 +18,6 @@
     apps = ./apps.nix;
     internet = ./internet.nix;
     cosmic = ./cosmic.nix;
+    cache = ./cache.nix;
   };
 }
