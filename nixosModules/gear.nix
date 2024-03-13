@@ -17,6 +17,9 @@
 
      pkgs.kdePackages.kdeconnect-kde
      pkgs.sshfs 
+
+     #Klassy
+     inputs.self.packages.${pkgs.system}.klassy
     ];
 
     #For KDEConnect
