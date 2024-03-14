@@ -19,5 +19,6 @@
     internet = ./internet.nix;
     cosmic = ./cosmic.nix;
     cache = ./cache.nix;
+    hosting = ./hosting.nix;
   };
 }
