@@ -13,6 +13,7 @@
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.virtualization
       inputs.self.nixosModules.apps 
+      inputs.self.nixosModules.hosting
       inputs.lanzaboote.nixosModules.lanzaboote    
     ];
 
