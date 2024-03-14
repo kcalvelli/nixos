@@ -8,6 +8,15 @@
           enableQt5Integration = false;
         };
       };
+      xserver = {
+        displayManager = {
+          sddm.enable = true;
+          sddm.wayland.enable = true;
+          autoLogin.enable = true;
+          autoLogin.user = "keith";
+          defaultSession = "plasma";
+        };
+      };
 
     dbus.enable = true;
     colord.enable = true;
