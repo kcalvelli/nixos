@@ -7,14 +7,14 @@ in
     office = nixosSystem {
       system = "x86_64-linux";
       modules = [  
-        inputs.self.nixosModules.cache
+        inputs.self.modules.cache
         ./office
       ];
     };
     pangolin = nixosSystem {
       system = "x86_64-linux";
       modules = [ 
-        inputs.self.nixosModules.cache
+        inputs.self.modules.cache
         ./pangolin 
       ];
     };
