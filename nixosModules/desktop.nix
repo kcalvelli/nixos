@@ -2,8 +2,8 @@
 
 {
   imports = [
-    #./plasma.nix #For Plasma Desktop
-    #./gear.nix #For KDE Apps
+    ./plasma.nix #For Plasma Desktop
+    ./gear.nix #For KDE Apps
     ./cosmic.nix #For Cosmic Desktop   
     ./common.nix
   ];
