@@ -63,7 +63,4 @@
   security.rtkit.enable = true; 
   security.polkit.enable = true;
   fonts.fontconfig.enable = true;
-
-  programs.kdeconnect.enable = true;
-
 }

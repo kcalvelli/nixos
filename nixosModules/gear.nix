@@ -15,9 +15,6 @@
      pkgs.kdePackages.kaccounts-integration
      pkgs.kdePackages.kaccounts-providers
 
-     pkgs.kdePackages.kdeconnect-kde
-     pkgs.sshfs 
-
      #Klassy
      inputs.self.packages.${pkgs.system}.klassy
     ];
