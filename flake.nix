@@ -22,9 +22,9 @@
       systems = import systems;
       imports = [
         ./packages
-        ./configurations
-        ./modules
-        ./home
+        ./nixosConfigurations
+        ./nixosModules
+        ./homeConfigurations
       ];
     };
 }
