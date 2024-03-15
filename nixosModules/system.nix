@@ -8,6 +8,5 @@
     desktop-file-utils
     usbutils
     aha
-    wineWowPackages.waylandFull
   ]; 
 }
