@@ -5,5 +5,6 @@
       vscode
       git
       jetbrains.rust-rover
+      direnv
    ];
 }
