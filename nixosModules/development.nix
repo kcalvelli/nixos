@@ -1,14 +1,9 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-      direnv 
-      lorri 
+      lorri
       vscode
-      neovim
-      grc
-      git  
-      lapce
-      nil
+      git
       jetbrains.rust-rover
    ];
 }

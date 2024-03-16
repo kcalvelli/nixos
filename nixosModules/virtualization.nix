@@ -11,7 +11,7 @@
         dns_enabled = true;
       };
     };
-  waydroid.enable = true;    
+  #waydroid.enable = true;
   };
 
   boot.extraModprobeConfig = ''
@@ -29,10 +29,8 @@
   
   environment.systemPackages = with pkgs; [ 
     qemu
-    #distrobox
     quickemu
     virt-viewer
     distrobox
-    wl-clipboard
-  ];    
+  ];
 } 

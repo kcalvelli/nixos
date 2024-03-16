@@ -43,6 +43,14 @@
     adwaita-qt6
     htop
     bottles
+    pciutils
+    clinfo
+    glxinfo
+    xdg-user-dirs
+    desktop-file-utils
+    usbutils
+    aha
+    wl-clipboard
   ];   
 
   services= {
