@@ -9,5 +9,6 @@
       git  
       lapce
       nil
+      jetbrains.rust-rover
    ];
 }
