@@ -42,6 +42,7 @@
     adw-gtk3
     adwaita-qt6
     htop
+    bottles
   ];   
 
   services= {
