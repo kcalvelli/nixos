@@ -2,7 +2,6 @@
 
 {
   imports = [
-    inputs.self.nixosModules.system
     inputs.self.nixosModules.development
     inputs.self.nixosModules.games
     inputs.self.nixosModules.multimedia

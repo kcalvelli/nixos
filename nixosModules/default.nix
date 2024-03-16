@@ -12,7 +12,6 @@
     games = ./games.nix;
     #graphics = ./graphics.nix;
     multimedia = ./multimedia.nix;
-    system = ./system.nix;
     terminal = ./terminal.nix;
     development = ./development.nix;  
     apps = ./apps.nix;
