@@ -18,7 +18,5 @@
      #Klassy
      inputs.self.packages.${pkgs.system}.klassy
 
-     #Qt6 on other DE theming
-     pkgs.kdePackages.qt6ct
     ];
 }

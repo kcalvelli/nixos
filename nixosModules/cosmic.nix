@@ -9,5 +9,4 @@
   services.displayManager.cosmic-greeter.enable = true;
 
   environment.pathsToLink = [ "/share/pixmaps" ];
-  
 }
