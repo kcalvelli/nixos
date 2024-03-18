@@ -4,8 +4,7 @@
      digikam
      vlc
      cubicsdr
-     spotify
-     
+
      # OBS with plugins
      (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [

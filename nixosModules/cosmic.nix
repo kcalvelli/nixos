@@ -5,6 +5,9 @@
     inputs.nixos-cosmic.nixosModules.default
   ];
 
-  services.xserver.desktopManager.cosmic.enable = true;
-  services.xserver.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
+
+  environment.pathsToLink = [ "/share/pixmaps" ];
+  
 }

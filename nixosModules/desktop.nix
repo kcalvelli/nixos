@@ -2,8 +2,8 @@
 
 {
   imports = [
-    #./plasma.nix #For Plasma Desktop
-    #./gear.nix #For KDE Apps
+    ./plasma.nix #For Plasma Desktop
+    ./gear.nix #For KDE Apps
     ./cosmic.nix #For Cosmic Desktop   
     ./common.nix
   ];
@@ -55,7 +55,7 @@
   ];   
 
   services= {
-    flatpak.enable = true;
+    #flatpak.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
