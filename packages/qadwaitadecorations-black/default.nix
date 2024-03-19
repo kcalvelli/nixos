@@ -23,9 +23,9 @@ in stdenv.mkDerivation (finalAttrs: {
 
   src = fetchFromGitHub {
     owner = "kcalvelli";
-    repo = "QAdwaitaDecorationsBlack";
+    repo = "QAdwaitaDecorations";
     rev = finalAttrs.version;
-    hash = "sha256-xa9gQuXU6JoGQF3SX18X6W1VQcmpS//nfC6OSl4ycb4=";
+    hash = "sha256-whjNQFYZQ/lN2tc/UcAyoPfHcSp5psPKQq2faWwIkOM=";
   };
 
   nativeBuildInputs = [

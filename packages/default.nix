@@ -36,7 +36,7 @@
     brave-qt = prev.callPackage ./brave-qt { };
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     klassy = prev.callPackage ./klassy { };
-    qadwaitadecorations-black ./qadwaitadecorations-black { };
+    qadwaitadecorations-black = prev.callPackage ./qadwaitadecorations-black { };
   };
 
 }

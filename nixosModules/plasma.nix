@@ -29,4 +29,5 @@
   };
 
   programs.kdeconnect.enable = true;
+
 }

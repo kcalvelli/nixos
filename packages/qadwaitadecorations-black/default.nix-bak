@@ -1,0 +1,45 @@
+{ lib
+, stdenv
+, fetchFromGitHub
+, cmake
+, qt6
+, wayland
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "qadwaitadecorations";
+  version = "main";
+
+  src = fetchFromGitHub {
+    owner = "kcalvelli";
+    repo = "QAdwaitaDecorationsBlack";
+    rev = finalAttrs.version;
+    hash = "sha256-E6+SPBOmJyoU6ZDnAsFkXAG+FUc47NYIpH7cEGQYTws=";
+  };
+
+  nativeBuildInputs = [
+    cmake
+#    kdePackages.extra-cmake-modules
+#    kdePackages.wrapQtAppsHook
+  ];
+
+  buildInputs = [
+    qt6.full
+    wayland
+    qt6.qtwayland 
+  ];
+
+  dontWrapQtApps = true;
+
+  cmakeFlags = [
+    "-DUSE_QT6=true"
+  ]; 
+
+  meta = {
+    description = "QT6 Wayland decoration plugin using libadwaita style - in black!";
+    homepage = "https://github.com/kcalvelli/QAdwaitaDecorationsBlack";
+    license = lib.licenses.lgpl21Plus;
+    maintainers = with lib.maintainers; [ kcalvelli ];
+    platforms = lib.platforms.linux;
+  };
+})
