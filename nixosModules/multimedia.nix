@@ -3,8 +3,7 @@
   environment.systemPackages = with pkgs; [ 
      digikam
      vlc
-     cubicsdr
-
+     cubicsdr     
      # OBS with plugins
      (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
