@@ -4,6 +4,8 @@
      digikam
      vlc
      cubicsdr     
+     noson
+     
      # OBS with plugins
      (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
