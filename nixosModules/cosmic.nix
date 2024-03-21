@@ -10,15 +10,11 @@
 
   environment = {
     pathsToLink = [ "/share/pixmaps" ];
-    systemPackages = with pkgs; [
-      #qt6ct
-      #qadwaitadecorations-qt6
-      inputs.self.packages.${pkgs.system}.qadwaitadecorations-black
-    ];
+  #  systemPackages = with pkgs; [
+  #
+  #  ];
     variables = {
-      #QT_QPA_PLATFORMTHEME = "qt6ct";
       QT_QPA_PLATFORMTHEME = "kde";
-      QT_WAYLAND_DECORATION = "adwaita";
     };
   };
   programs.gnupg.agent.pinentryPackage = lib.mkForce pkgs.pinentry-qt;  

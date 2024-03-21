@@ -25,7 +25,7 @@ in stdenv.mkDerivation (finalAttrs: {
     owner = "kcalvelli";
     repo = "QAdwaitaDecorations";
     rev = finalAttrs.version;
-    hash = "sha256-whjNQFYZQ/lN2tc/UcAyoPfHcSp5psPKQq2faWwIkOM=";
+    hash = "sha256-fJ8qelnyINXgeLoMVxjNgFl9+bsjIvCDSgyeeOu0FZk=";
   };
 
   nativeBuildInputs = [
