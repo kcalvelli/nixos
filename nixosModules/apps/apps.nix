@@ -1,11 +1,11 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    inputs.self.nixosModules.apps.development
-    inputs.self.nixosModules.apps.games
-    inputs.self.nixosModules.apps.multimedia
-    inputs.self.nixosModules..apps.terminal
-    inputs.self.nixosModules.apps.internet
-    inputs.self.nixosModules.apps.virtualization
+    inputs.self.nixosModules.development
+    inputs.self.nixosModules.games
+    inputs.self.nixosModules.multimedia
+    inputs.self.nixosModules.terminal
+    inputs.self.nixosModules.internet
+    inputs.self.nixosModules.virtualization
   ];
 }
