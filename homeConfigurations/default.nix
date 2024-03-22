@@ -1,4 +1,5 @@
-{ self, inputs, ... }:
+{ self, inputs, config, ... }:
+
 let
   hmConfig = pkgs: module:
     inputs.home-manager.lib.homeManagerConfiguration {
@@ -6,14 +7,9 @@ let
 
       extraSpecialArgs = { inherit inputs; };
 
-      modules = [
-        module
-        {
-          home.homeDirectory = "/home/keith";
-          home.stateVersion = "24.05";
-          home.username = "keith";
-        }
-      ];
+      #modules = [
+      #  inputs.self.nixosModules.users
+      #];
     };
 in
 {

@@ -16,7 +16,6 @@
       brave-qt
       brave-browser-nightly
       klassy
-      qadwaitadecorations-black
       ;      
    };
 
@@ -36,7 +35,6 @@
     brave-qt = prev.callPackage ./brave-qt { };
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     klassy = prev.callPackage ./klassy { };
-    qadwaitadecorations-black = prev.callPackage ./qadwaitadecorations-black { };
   };
 
 }

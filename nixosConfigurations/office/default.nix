@@ -9,11 +9,13 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      inputs.self.nixosModules.desktop
+      inputs.self.nixosModules.cosmic
+      inputs.self.nixosModules.plasma
       inputs.self.nixosModules.msi
-      inputs.self.nixosModules.virtualization
       inputs.self.nixosModules.apps 
       inputs.self.nixosModules.hosting
+      inputs.self.nixosModules.users
+      inputs.self.nixosModules.common
       inputs.lanzaboote.nixosModules.lanzaboote    
     ];
 
@@ -27,10 +29,5 @@
       enable = true;
       pkiBundle = "/etc/secureboot";
     };
-  };
-
-  home-manager.users.keith = {
-    imports = [ inputs.self.homeModules.desktop ];
-    home.stateVersion = "24.05";
   };
 }

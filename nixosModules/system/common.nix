@@ -4,7 +4,6 @@
   #Config common to all hosts
 
   imports = [
-    ./keith.nix
     inputs.home-manager.nixosModules.default
   ];
 
@@ -20,8 +19,6 @@
     };
     
   };
-
-  #services.cachix-agent.enable = true;
 
   # Allow unfree
   nixpkgs = {
@@ -193,7 +190,7 @@
   # the needed ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 445 139 ];
   networking.firewall.allowedUDPPorts = [ 137 138 ];
-
+  
   # Configure home-manager
   home-manager.extraSpecialArgs.inputs = inputs; # forward the inputs
   home-manager.useGlobalPkgs = true; # don't create another instance of nixpkgs

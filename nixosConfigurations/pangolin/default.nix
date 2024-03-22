@@ -9,18 +9,15 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      inputs.self.nixosModules.desktop
+      inputs.self.nixosModules.cosmic
+      inputs.self.nixosModules.plasma
       inputs.self.nixosModules.system76
-      inputs.self.nixosModules.virtualization
-      inputs.self.nixosModules.apps
+      inputs.self.nixosModules.full
+      inputs.self.nixosModules.users
+      inputs.self.nixosModules.common
     ];
 
   networking = { 
     hostName = "pangolin"; # Define your hostname.
   };
-  
-  home-manager.users.keith = {
-    imports = [ inputs.self.homeModules.desktop ];
-    home.stateVersion = "24.05";
-  };  
 }

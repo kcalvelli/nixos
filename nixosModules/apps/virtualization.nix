@@ -1,6 +1,5 @@
 { inputs, config, pkgs, ... }:
 {
-  users.extraUsers.keith.extraGroups = [ "libvirtd" ];
   virtualisation = {
     libvirtd.enable = true;
     spiceUSBRedirection.enable = true;
