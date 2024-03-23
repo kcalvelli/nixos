@@ -12,7 +12,7 @@
       inputs.self.nixosModules.cosmic
       inputs.self.nixosModules.plasma
       inputs.self.nixosModules.system76
-      inputs.self.nixosModules.full
+      inputs.self.nixosModules.apps
       inputs.self.nixosModules.users
       inputs.self.nixosModules.common
     ];
