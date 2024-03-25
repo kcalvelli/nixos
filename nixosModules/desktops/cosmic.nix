@@ -11,8 +11,8 @@
   services.gnome.gnome-keyring.enable = true;  
 
   qt.enable = true;
-  qt.styles = "adwaita";
-  qt.platformtheme = "gnome";
+  qt.style = "adwaita";
+  qt.platformTheme = "gnome";
 
   environment.systemPackages = with pkgs; [
     adw-gtk3    
