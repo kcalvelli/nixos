@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-    wpsoffice
-  ];  
+    evince
+    libreoffice-fresh
+  ]; 
 }

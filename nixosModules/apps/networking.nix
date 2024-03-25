@@ -8,5 +8,6 @@
     nextcloud-client
     telegram-desktop   
     thunderbird
+    localsend
   ];
 }
