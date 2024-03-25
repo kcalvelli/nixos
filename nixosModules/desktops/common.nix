@@ -22,31 +22,6 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ 
-    libva-utils
-    wayland-utils
-    vulkan-tools
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-    pkgs.ibm-plex   
-    fuse
-    ntfs3g
-    sshfs 
-    gpgme
-    adw-gtk3
-    adwaita-qt6
-    htop
-    bottles
-    pciutils
-    clinfo
-    glxinfo
-    xdg-user-dirs
-    desktop-file-utils
-    usbutils
-    aha
-    wl-clipboard
-    unzip
-  ];   
-
   services= {
     #flatpak.enable = true;
     pipewire = {

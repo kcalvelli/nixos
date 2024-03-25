@@ -4,5 +4,7 @@
     shotwell
     gimp
     loupe
+    vulkan-tools   
+    glxinfo 
   ];  
 }

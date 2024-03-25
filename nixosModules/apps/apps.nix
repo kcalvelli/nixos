@@ -10,5 +10,9 @@
     inputs.self.nixosModules.scientific
     inputs.self.nixosModules.office
     inputs.self.nixosModules.graphics
+    inputs.self.nixosModules.emulators
+    inputs.self.nixosModules.filesystems
+    inputs.self.nixosModules.fonts
+    inputs.self.nixosModules.tools
   ];
 }

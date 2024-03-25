@@ -10,17 +10,25 @@
   services.displayManager.cosmic-greeter.enable = true;
   services.gnome.gnome-keyring.enable = true;  
 
-  environment = {
-    pathsToLink = [ "/share/pixmaps" ];
-    systemPackages = with pkgs; [
-      qt5ct
-      qt6ct
-    ];
-    variables = {
-      QT_QPA_PLATFORMTHEME = "qt5ct";
-      QT_QPA_PLATFORM = "wayland";
-      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    };
-  };
+  qt.enable = true;
+  qt.styles = "adwaita";
+  qt.platformtheme = "gnome";
+
+  environment.systemPackages = with pkgs; [
+    adw-gtk3    
+  ];
+
+  #environment = {
+  #  pathsToLink = [ "/share/pixmaps" ];
+  #  systemPackages = with pkgs; [
+  #    qt5ct
+  #    qt6ct
+  #  ];
+  #  variables = {
+  #    QT_QPA_PLATFORMTHEME = "qt5ct";
+  #    QT_QPA_PLATFORM = "wayland";
+  #    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+  #    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+  #  };
+  #};
 }
