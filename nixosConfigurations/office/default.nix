@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
 
       inputs.self.nixosModules.cosmic
-      inputs.self.nixosModules.plasma
+      #inputs.self.nixosModules.plasma
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.apps 
       inputs.self.nixosModules.hosting

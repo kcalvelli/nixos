@@ -1,9 +1,7 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-     digikam
      vlc
-     cubicsdr     
      noson
      
      # OBS with plugins
