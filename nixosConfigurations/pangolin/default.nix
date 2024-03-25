@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
 
       inputs.self.nixosModules.cosmic
-      inputs.self.nixosModules.plasma
+      #inputs.self.nixosModules.plasma
       inputs.self.nixosModules.system76
       inputs.self.nixosModules.apps
       inputs.self.nixosModules.users
