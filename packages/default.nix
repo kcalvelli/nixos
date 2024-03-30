@@ -13,11 +13,14 @@
 
    packages = {
     inherit (pkgs)
-      brave-qt
-      brave-browser-nightly
-      klassy
+      #brave-qt
+      #brave-browser-nightly
+      #klassy
+      cosmic-clipboard-manager
       ;      
    };
+
+   
 
    _module.args.pkgs = import inputs.nixpkgs {
       inherit system;
@@ -32,9 +35,10 @@
 
   flake.overlays.default = _final: prev: {
     # Custom packages
-    brave-qt = prev.callPackage ./brave-qt { };
-    brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
-    klassy = prev.callPackage ./klassy { };
+   #brave-qt = prev.callPackage ./brave-qt { };
+   #brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
+   #klassy = prev.callPackage ./klassy { };
+   cosmic-clipboard-manager = prev.callPackage ./cosmic-clipboard-manager {  };
   };
 
 }

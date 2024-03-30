@@ -11,10 +11,11 @@
   services.gnome.gnome-keyring.enable = true;  
 
   qt.enable = true;
-  qt.style = "adwaita";
+  qt.style = "adwaita-dark";
   qt.platformTheme = "gnome";
 
   environment.systemPackages = with pkgs; [
     adw-gtk3   
+    inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
   ];
 }
