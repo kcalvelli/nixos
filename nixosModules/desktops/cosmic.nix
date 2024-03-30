@@ -16,6 +16,6 @@
 
   environment.systemPackages = with pkgs; [
     adw-gtk3   
-    inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
+    #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
   ];
 }

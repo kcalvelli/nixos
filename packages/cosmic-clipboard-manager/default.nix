@@ -6,10 +6,10 @@
 , just
 , libinput
 , pkg-config
-, pulseaudio
 , stdenv
 , udev
 , util-linux
+, libxkbcommon
 }:
 
 rustPlatform.buildRustPackage {
@@ -23,15 +23,20 @@ rustPlatform.buildRustPackage {
     hash = "sha256-B11znI+DJq/xRQeNdgdcavvlQICRBLU6hfBHW2k4NNo=";
   };
 
+  cargoLock = {
+    lockFile = ./Cargo.lock;
+    allowBuiltinFetchGit = true;
+  };
+
   nativeBuildInputs = [ just pkg-config util-linux ];
-  buildInputs = [ dbus glib libinput pulseaudio udev ];
+  buildInputs = [ dbus glib libinput udev libxkbcommon ];
 
   dontUseJustBuild = true;
 
-  justFlags = [
-    "--set" "prefix" (placeholder "out")
-    "--set" "target" "${stdenv.hostPlatform.rust.cargoShortTarget}/release"
-  ];
+  #justFlags = [
+  #  "--set" "prefix" (placeholder "out")
+  #  "--set" "target" "${stdenv.hostPlatform.rust.cargoShortTarget}/release"
+  #];
 
   meta = with lib; {
     homepage = "https://github.com/wiiznokes/cosmic-clipboard-manager";
