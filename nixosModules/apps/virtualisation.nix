@@ -2,7 +2,6 @@
 {
   virtualisation = {
     libvirtd.enable = true;
-    programs.virt-manager.enable = true;
     spiceUSBRedirection.enable = true;
     podman = {
       enable = true;
@@ -26,6 +25,8 @@
       cores = 4;
     };
   };
+
+  programs.virt-manager.enable = true;  
   
   environment.systemPackages = with pkgs; [ 
     qemu
