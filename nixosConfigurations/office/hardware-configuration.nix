@@ -37,6 +37,11 @@
       options = [ "noatime" ];
     };
 
+  fileSystems."/mnt/VM" =
+    { device = "/dev/disk/by-uuid/03843d29-e1e7-4542-a5fe-a530d3e57fa8";
+      fsType = "ext4";
+    };
+
   swapDevices = [  {
     device = "/swapfile";
     size = 8196;
