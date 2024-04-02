@@ -13,5 +13,6 @@
     gparted
     gnome.simple-scan
     resources
+    dmidecode
   ];
 }    
