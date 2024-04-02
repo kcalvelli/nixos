@@ -7,5 +7,7 @@
     cache = ./cache.nix;
     hosting = ./hosting.nix;
     users = ./users.nix;
+    network = ./network.nix;
+    bridge = ./bridge.nix;
   };
 }

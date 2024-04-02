@@ -15,6 +15,7 @@
       inputs.self.nixosModules.apps
       inputs.self.nixosModules.users
       inputs.self.nixosModules.common
+      inputs.self.nixosModules.network
     ];
 
   networking = { 
