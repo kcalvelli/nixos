@@ -23,9 +23,9 @@
 
     imports = [
       ./packages
-      ./nixosConfigurations
-      ./nixosModules
-      ./homeConfigurations
+      ./config
+      ./modules
+      ./home_config
     ];
   };
 }

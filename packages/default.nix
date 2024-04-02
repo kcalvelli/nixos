@@ -38,7 +38,7 @@
    #brave-qt = prev.callPackage ./brave-qt { };
    #brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
    #klassy = prev.callPackage ./klassy { };
-   cosmic-clipboard-manager = prev.callPackage ./cosmic-clipboard-manager {  };
+   #cosmic-clipboard-manager = prev.callPackage ./cosmic-clipboard-manager {  };
   };
 
 }
