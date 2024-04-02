@@ -9,5 +9,9 @@
     wl-clipboard
     zip
     unzip
+    baobab
+    gparted
+    gnome.simple-scan
+    resources
   ];
 }    

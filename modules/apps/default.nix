@@ -15,6 +15,6 @@
     emulators = ./emulators.nix;
     filesystems = ./filesystems.nix;
     fonts = ./fonts.nix;
-    tools = ./tools.nix;
+    utils = ./utils.nix;
   };
 }

@@ -9,5 +9,6 @@
     telegram-desktop   
     thunderbird
     localsend
+    remmina
   ];
 }

@@ -13,6 +13,6 @@
     inputs.self.nixosModules.emulators
     inputs.self.nixosModules.filesystems
     inputs.self.nixosModules.fonts
-    inputs.self.nixosModules.tools
+    inputs.self.nixosModules.utils
   ];
 }

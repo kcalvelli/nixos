@@ -1,8 +1,10 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-     vlc
-     noson
+     
+     clapper
+     kooha
+     
      
      # OBS with plugins
      (pkgs.wrapOBS {
