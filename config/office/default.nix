@@ -13,7 +13,7 @@
       #inputs.self.nixosModules.plasma
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.apps 
-      #inputs.self.nixosModules.hosting
+      inputs.self.nixosModules.hosting
       inputs.self.nixosModules.users
       inputs.self.nixosModules.common
       inputs.self.nixosModules.network
