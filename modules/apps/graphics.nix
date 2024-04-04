@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-    shotwell
+    gthumb
     gimp
     loupe
     vulkan-tools   
