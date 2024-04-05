@@ -55,8 +55,18 @@
   #Samba
   services.samba = {
     enable = true;
-
+    package = pkgs.samba4Full;
     enableNmbd = false;
+
+    shares.music = {
+      path = "/home/keith/Music";
+      writable = true;
+    };
+
+    shares.pictures = {
+      path = "/home/keith/Pictures";
+      writable = true;
+    }; 
 
     # You will still need to set up the user accounts to begin with:
     # $ sudo smbpasswd -a yourusername
@@ -79,8 +89,6 @@
     };
   };
   
-  # Curiously, `services.samba` does not automatically open
-  # the needed ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 445 139 ];
-  networking.firewall.allowedUDPPorts = [ 137 138 ];
+  services.samba.openFirewall = true;
+  services.avahi.openFirewall = true;
 }
