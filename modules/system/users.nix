@@ -20,6 +20,6 @@
       home.homeDirectory = "/home/keith";
       home.username = "keith";      
     };     
-    };     
-  };
+  };     
+
 }
