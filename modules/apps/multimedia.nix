@@ -4,7 +4,7 @@
      
      clapper
      kooha
-     
+     pavucontrol
      
      # OBS with plugins
      (pkgs.wrapOBS {
