@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-     
+     noson
      clapper
      kooha
      pavucontrol
