@@ -23,7 +23,6 @@
   };
 
   services= {
-    flatpak.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
