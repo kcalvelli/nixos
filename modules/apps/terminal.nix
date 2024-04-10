@@ -33,10 +33,8 @@
     ripgrep
     fastfetch
     helix
-    vim 
     wget
     curl
     gnugrep
-    cosmic-term
   ];   
 }
