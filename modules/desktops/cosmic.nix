@@ -35,7 +35,7 @@
 
     #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
   ])
-   ++ ( with pkgs.gnome [
+   ++ ( with pkgs.gnome; [
     gnome-calculator
     nautilus
     simple-scan  
