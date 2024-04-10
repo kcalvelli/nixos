@@ -6,16 +6,43 @@
     ./common.nix
   ];
 
+  #Just cosmic
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
+
+  #Keyring
+  security.pam.services.login.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;  
 
+  #Missing apps for DE experience
+  programs.evince.enable = true;
+  programs.file-roller.enable = true;
+
+  services.gnome.sushi.enable = true;
+
+  environment.systemPackages = (with pkgs; [
+    adw-gtk3   
+    baobab
+    baobab
+    gparted
+    gthumb
+    gimp
+    loupe
+    resources
+    kooha
+    pavucontrol
+    clapper
+
+    #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
+  ])
+   ++ ( with pkgs.gnome [
+    gnome-calculator
+    nautilus
+    simple-scan  
+   ]);
+
+   # Minimize how bad qt apps look here
   qt.enable = true;
   qt.style = "adwaita-dark";
   qt.platformTheme = "gnome";
-
-  environment.systemPackages = with pkgs; [
-    adw-gtk3   
-    #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
-  ];
 }

@@ -2,9 +2,6 @@
 {
   environment.systemPackages = with pkgs; [ 
      noson
-     clapper
-     kooha
-     pavucontrol
      
      # OBS with plugins
      (pkgs.wrapOBS {
