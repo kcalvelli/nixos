@@ -10,5 +10,6 @@
     thunderbird
     localsend
     remmina
+    trayscale
   ];
 }
