@@ -46,7 +46,8 @@
 
     tailscale = {
       enable = true;
-      useRoutingFeatures = "both";     
+      useRoutingFeatures = "both";  
+      openFirewall = true;   
     };
   };
 
@@ -88,6 +89,10 @@
       };
     };
   };
+  
+  environment.systemPackages = with pkgs; [ 
+    openssl
+  ];
   
   services.samba.openFirewall = true;
   services.avahi.openFirewall = true;
