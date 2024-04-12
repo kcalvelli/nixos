@@ -16,7 +16,8 @@
       #brave-qt
       #brave-browser-nightly
       #klassy
-      cosmic-clipboard-manager
+      #cosmic-clipboard-manager
+      Icedrive
       ;      
    };
 
@@ -39,6 +40,7 @@
    #brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
    #klassy = prev.callPackage ./klassy { };
    #cosmic-clipboard-manager = prev.callPackage ./cosmic-clipboard-manager {  };
+   Icedrive = prev.callPackage ./Icedrive { };
   };
 
 }

@@ -11,5 +11,6 @@
     localsend
     remmina
     trayscale
+    inputs.self.packages.${pkgs.system}.Icedrive
   ];
 }
