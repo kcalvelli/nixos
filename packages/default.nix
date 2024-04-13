@@ -13,11 +13,7 @@
 
    packages = {
     inherit (pkgs)
-      #brave-qt
-      #brave-browser-nightly
-      #klassy
-      #cosmic-clipboard-manager
-      Icedrive
+
       ;      
    };
 
@@ -36,11 +32,7 @@
 
   flake.overlays.default = _final: prev: {
     # Custom packages
-   #brave-qt = prev.callPackage ./brave-qt { };
-   #brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
-   #klassy = prev.callPackage ./klassy { };
-   #cosmic-clipboard-manager = prev.callPackage ./cosmic-clipboard-manager {  };
-   Icedrive = prev.callPackage ./Icedrive { };
+
   };
 
 }
