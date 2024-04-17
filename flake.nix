@@ -23,7 +23,7 @@
 
     imports = [
       ./packages
-      ./config
+      ./hosts
       ./modules
       ./home_config
     ];

@@ -7,5 +7,5 @@
   ];
 
   #Enable this when unstable is updated to master
-  #services.desktopManager.lomiri.enable = true;
+  services.desktopManager.lomiri.enable = true;
 }
