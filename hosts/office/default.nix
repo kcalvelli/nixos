@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
 
       inputs.self.nixosModules.cosmic
-      inputs.self.nixosModules.lomiri
       #inputs.self.nixosModules.plasma
       inputs.self.nixosModules.msi
       inputs.self.nixosModules.apps 
