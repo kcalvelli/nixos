@@ -54,11 +54,6 @@
     };
     # Plymouth is purty
     plymouth.enable = true;
-
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/etc/secureboot";
-    };
   };
 
   zramSwap = {

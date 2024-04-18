@@ -8,6 +8,7 @@
     ];
     kernelModules = [ "amdgpu" ];
     blacklistedKernelModules = [ "psmouse" ];
+    loader.systemd-boot.enable = true;
   };
 
   # Enable all the system76 stuff
