@@ -5,31 +5,20 @@
 { config, inputs, pkgs, lib, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-
-      inputs.self.nixosModules.cosmic
-      #inputs.self.nixosModules.plasma
-      inputs.self.nixosModules.msi
-      inputs.self.nixosModules.apps 
-      inputs.self.nixosModules.hosting
-      inputs.self.nixosModules.users
-      inputs.self.nixosModules.common
-      inputs.self.nixosModules.network
-      inputs.self.nixosModules.bridge
-      inputs.lanzaboote.nixosModules.lanzaboote    
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ] ++(with inputs.self.nixosModules; [
+    cosmic
+    msi
+    apps
+    hosting
+    users
+    common
+    network
+    bridge
+  ]);
 
   networking = { 
     hostName = "office"; # Define your hostname.
-  };
-
-  boot = {
-    loader.systemd-boot.enable = lib.mkForce false;
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/etc/secureboot";
-    };
   };
 }

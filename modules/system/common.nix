@@ -1,10 +1,11 @@
- { inputs, config, pkgs, ... }:
+ { lib, inputs, config, pkgs, ... }:
 
  {
   #Config common to all hosts
 
   imports = [
     inputs.home-manager.nixosModules.default
+    inputs.lanzaboote.nixosModules.lanzaboote
   ];
 
   #Nix config
@@ -36,12 +37,12 @@
     # Trying xanmod
     #kernelPackages = pkgs.linuxPackages_xanmod_latest;
     #  Bootloader
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      #timeout = 1;
-      #grub.enable = false;
-    };
+   # loader = {
+   #   systemd-boot.enable = lib.mkDefault true;
+   #   efi.canTouchEfiVariables = true;
+   #   #timeout = 1;
+   #   #grub.enable = false;
+   # };
     initrd = {
       # Setup keyfile
 #      secrets = {
@@ -53,6 +54,11 @@
     };
     # Plymouth is purty
     plymouth.enable = true;
+
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/etc/secureboot";
+    };
   };
 
   zramSwap = {
