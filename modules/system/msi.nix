@@ -3,6 +3,7 @@
   hardware = {
     logitech.wireless.enable = true;
     logitech.wireless.enableGraphical = true;
+    enableAllFirmware = true;
   };
 
   boot = {

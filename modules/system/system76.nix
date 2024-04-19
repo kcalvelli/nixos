@@ -17,5 +17,6 @@
       enableAll = true;
       kernel-modules.enable = true;
     };
+    enableAllFirmware = true;
   };
 }
