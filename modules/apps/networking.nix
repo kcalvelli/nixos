@@ -11,6 +11,5 @@
     localsend
     remmina
     trayscale
-    insync
   ];
 }
