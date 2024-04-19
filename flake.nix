@@ -14,7 +14,7 @@
     devshell.url = "github:numtide/devshell";  
     flake-utils.url = "github:numtide/flake-utils";
     lanzaboote.url = "github:nix-community/lanzaboote";
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";  
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic"; 
   };
 
   outputs = inputs @ { flake-parts, systems, lanzaboote, nixos-cosmic, nixpkgs, ... }:
