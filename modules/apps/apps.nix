@@ -10,7 +10,7 @@
     scientific
     office
     graphics
-    emulators
+   # emulators
     filesystems
     fonts
     utils
