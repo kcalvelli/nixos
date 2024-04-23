@@ -19,4 +19,13 @@
   networking = { 
     hostName = "pangolin"; # Define your hostname.
   };
+
+  services.resolved.extraConfig = ''
+    [Resolve]
+    DNS=45.90.28.0#pangolin-6854e6.dns.nextdns.io
+    DNS=2a07:a8c0::#pangolin-6854e6.dns.nextdns.io
+    DNS=45.90.30.0#pangolin-6854e6.dns.nextdns.io
+    DNS=2a07:a8c1::#pangolin-6854e6.dns.nextdns.io
+    DNSOverTLS=yes
+  '';  
 }

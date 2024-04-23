@@ -2,20 +2,12 @@
 {
  networking = { 
     networkmanager.enable = true;
-
-    #networkmanager.dns = "none";
-    #nameservers = [ "100.100.100.100" "45.90.28.215" "45.90.28.215" ];
-    #search = [ "taile0fb4.ts.net" ]; 
-    # Firewall Config
-    #networking.firewall.allowedUDPPorts = [ ... ];
-    #networking.firewall.allowedTCPPorts = [ ... ];
+    useNetworkd = true;
+    useDHCP = false;
     firewall.enable = false;
-
-    # Use iwd instead of wpa_supplicant
-    #wireless.iwd.enable = true;
-    #networkmanager.wifi.backend = "iwd";
   };
 
+  #Avahi networking
   services = {
     avahi = {
       enable = true;
@@ -42,7 +34,10 @@
       '';
       };
     };
-    openssh.enable = true;
+
+    #DNS stuff.  Override local dns broke on tailscale for some reason
+    resolved.enable = true;
+    #Extra resolved config in host configurations
 
     tailscale = {
       enable = true;
@@ -50,7 +45,7 @@
       openFirewall = true;   
     };
 
-    resolved.enable = true;
+    openssh.enable = true;
   };
 
   programs.mtr.enable = true;
