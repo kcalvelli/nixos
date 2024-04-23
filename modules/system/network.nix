@@ -3,9 +3,9 @@
  networking = { 
     networkmanager.enable = true;
 
-    networkmanager.dns = "none";
-    nameservers = [ "100.100.100.100" "45.90.28.215" "45.90.28.215" ];
-    search = [ "taile0fb4.ts.net" ]; 
+    #networkmanager.dns = "none";
+    #nameservers = [ "100.100.100.100" "45.90.28.215" "45.90.28.215" ];
+    #search = [ "taile0fb4.ts.net" ]; 
     # Firewall Config
     #networking.firewall.allowedUDPPorts = [ ... ];
     #networking.firewall.allowedTCPPorts = [ ... ];
@@ -49,6 +49,8 @@
       useRoutingFeatures = "both";  
       openFirewall = true;   
     };
+
+    resolved.enable = true;
   };
 
   programs.mtr.enable = true;
