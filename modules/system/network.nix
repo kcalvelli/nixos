@@ -40,11 +40,11 @@
     resolved.enable = true;
     #Extra resolved config in host configurations
 
-    tailscale = {
-      enable = true;
-      useRoutingFeatures = "both";  
+    #tailscale = {
+    #  enable = true;
+    #  useRoutingFeatures = "both";  
     #  openFirewall = true;   
-    };
+    #};
 
     openssh.enable = true;
   };
