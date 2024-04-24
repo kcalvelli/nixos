@@ -23,10 +23,11 @@
   };
   services.resolved.extraConfig = ''
     [Resolve]
-    DNS=45.90.28.0#office-6854e6.dns.nextdns.io
-    DNS=2a07:a8c0::#office-6854e6.dns.nextdns.io
-    DNS=45.90.30.0#office-6854e6.dns.nextdns.io
-    DNS=2a07:a8c1::#office-6854e6.dns.nextdns.io
+    #DNS=45.90.28.0#office-6854e6.dns.nextdns.io
+    #DNS=2a07:a8c0::#office-6854e6.dns.nextdns.io
+    #DNS=45.90.30.0#office-6854e6.dns.nextdns.io
+    #DNS=2a07:a8c1::#office-6854e6.dns.nextdns.io
+    DNS=76.76.2.22#y2p8p3h5on.dns.controld.com
     DNSOverTLS=yes
   '';
 }

@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ lib, inputs, config, pkgs, ... }:
 {
   hardware = {
     logitech.wireless.enable = true;
@@ -7,6 +7,7 @@
   };
 
   boot = {
+    loader.systemd-boot.enable = lib.mkForce false;
     # Kernel
     kernelParams = [
       "quiet" "loglevel=0" "splash" "systemd.show_status=false" "iommu=pt" "psi=1"   
