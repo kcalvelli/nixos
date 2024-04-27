@@ -14,6 +14,7 @@
     users
     common
     network
+    virtualisation
   ]);    
 
   networking = { 

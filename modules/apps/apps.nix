@@ -6,7 +6,6 @@
     multimedia
     terminal
     networking
-    virtualisation
     scientific
     office
     graphics

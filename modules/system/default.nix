@@ -10,5 +10,6 @@
     network = ./network.nix;
     bridge = ./bridge.nix;
     timers = ./timers.nix;
+    virtualisation = ./virtualisation.nix;
   };
 }

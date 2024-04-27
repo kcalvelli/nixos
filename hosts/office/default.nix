@@ -16,6 +16,7 @@
     common
     network
     bridge
+    virtualisation
   ]);
 
   networking = { 

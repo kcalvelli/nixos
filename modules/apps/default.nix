@@ -7,7 +7,6 @@
     multimedia = ./multimedia.nix;
     terminal = ./terminal.nix;
     networking = ./networking.nix;
-    virtualisation = ./virtualisation.nix;
     apps = ./apps.nix;
     office = ./office.nix;
     graphics = ./graphics.nix;
