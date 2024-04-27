@@ -9,5 +9,6 @@
     users = ./users.nix;
     network = ./network.nix;
     bridge = ./bridge.nix;
+    timers = ./timers.nix;
   };
 }
