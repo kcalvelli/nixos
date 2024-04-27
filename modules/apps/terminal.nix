@@ -7,5 +7,7 @@
     wget
     curl
     gnugrep
+    fish
+    starship
   ];   
 }
