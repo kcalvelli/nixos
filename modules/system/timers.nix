@@ -14,9 +14,9 @@
     script = ''
       /home/keith/.config/nixos/packages/brave-browser/update.sh
     '';
-  };
-  serviceConfig = {
-    Type = "oneshot";
-    User = "root";
+    serviceConfig = {
+      Type = "oneshot";
+      User = "keith";
+    };
   };
 }
