@@ -85,8 +85,8 @@
   # Enable native Wayland support for chromium based browsers and Electron
   # Temp disable Wayland for Electron due to bug
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    GTK_USE_PORTAL = "1";
+    NIXOS_OZONE_WL = 1;
+    #GTK_USE_PORTAL = 1;
   };
 
   hardware = {
@@ -116,5 +116,5 @@
   home-manager.useUserPackages = true; # install user packages directly to the user's profile
 
   #Flatpak
-  services.flatpak.enable = true;
+  #services.flatpak.enable = true;
  }

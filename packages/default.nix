@@ -13,7 +13,7 @@
 
    packages = {
     inherit (pkgs)
-
+      brave-browser
       ;      
    };
 
@@ -32,7 +32,7 @@
 
   flake.overlays.default = _final: prev: {
     # Custom packages
-
+    brave-browser = prev.callPackage ./brave-browser { };
   };
 
 }

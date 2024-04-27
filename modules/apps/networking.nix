@@ -4,7 +4,8 @@
     #inputs.self.packages.${pkgs.system}.brave-qt
     #inputs.self.packages.${pkgs.system}.brave-browser-nightly
     #inputs.self.packages.${pkgs.system}.vivaldi
-    brave
+    #brave
+    inputs.self.packages.${pkgs.system}.brave-browser
     nextcloud-client
     telegram-desktop   
     thunderbird
