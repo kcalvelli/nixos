@@ -36,4 +36,8 @@
       # Manually packaging and enable a plugin
     ];    
   };
+
+  home.packages = with pkgs; [
+    grc
+  ];
 }
