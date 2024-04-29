@@ -25,7 +25,7 @@
       ./packages
       ./hosts
       ./modules
-      ./home_config
+      ./home
     ];
   };
 }

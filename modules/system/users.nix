@@ -12,11 +12,11 @@
 
   home-manager.users = {
     keith = {
-      imports = [ 
-        inputs.self.homeModules.desktop
-        inputs.self.homeModules.virtualisation 
-        inputs.self.homeModules.terminal
-        inputs.self.homeModules.development
+      imports = with inputs.self.homeModules; [ 
+        desktop
+        virtualisation 
+        cli
+        development
       ];
       home.stateVersion = "24.05";
       home.homeDirectory = "/home/keith";
