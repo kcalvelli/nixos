@@ -1,5 +1,11 @@
-{ lib, inputs, config, pkgs, ... }:
+{ inputs, lib, ... }:
 {
+
+  imports = [
+    inputs.nixos-hardware.nixosModules.common-cpu-amd
+    inputs.nixos-hardware.nixosModules.common-pc-ssd
+  ];
+
   hardware = {
     logitech.wireless.enable = true;
     logitech.wireless.enableGraphical = true;
@@ -7,6 +13,7 @@
   };
 
   boot = {
+    # Disable systemd-boot for lanzaboote
     loader.systemd-boot.enable = lib.mkForce false;
     # Kernel
     kernelParams = [

@@ -84,4 +84,7 @@
   
   services.samba.openFirewall = true;
   services.avahi.openFirewall = true;
+  
+  # For RTL-SDR
+  hardware.rtl-sdr.enable = true;
 }

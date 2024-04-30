@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  # Use systemd-boot
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     bootspec.enable = true;

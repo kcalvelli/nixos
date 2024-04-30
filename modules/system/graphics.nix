@@ -1,20 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+  imports = [
+    inputs.nixos-hardware.nixosModules.common-gpu-amd
+  ];
+
   hardware = {
-    opengl = {
-      extraPackages = with pkgs; [
-        rocmPackages.clr.icd
-        vaapiVdpau
-      ];
-      driSupport = true;
-      driSupport32Bit = true;
+    amdgpu = {
+      opencl = true;
     };
-    rtl-sdr.enable = true;
-  };
-
-  services.xserver.videoDrivers = [ "amdgpu" ];
-
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  ];  
+  }; 
 }
