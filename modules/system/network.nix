@@ -1,4 +1,4 @@
- { inputs, config, pkgs, ... }:
+ { pkgs, ... }:
 {
  networking = { 
     networkmanager.enable = true;
@@ -35,17 +35,7 @@
       };
     };
 
-    #DNS stuff.  Override local dns broke on tailscale for some reason
-    #Tailscale has been a jerk lately.  Trying netbird?
     resolved.enable = true;
-    #Extra resolved config in host configurations
-
-    #tailscale = {
-    #  enable = true;
-    #  useRoutingFeatures = "both";  
-    #  openFirewall = true;   
-    #};
-
     openssh.enable = true;
   };
 
@@ -90,7 +80,6 @@
   
   environment.systemPackages = with pkgs; [ 
     openssl
-    #netbird-ui
   ];
   
   services.samba.openFirewall = true;

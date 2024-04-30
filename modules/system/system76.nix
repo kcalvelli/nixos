@@ -1,6 +1,9 @@
  
-{ inputs, config, pkgs, ... }:
+{ inputs, ... }:
 {
+  imports = [
+    inputs.nixos-hardware.nixosModules.system76
+  ];
   boot = {
     # Kernel
     kernelParams = [
@@ -13,10 +16,6 @@
 
   # Enable all the system76 stuff
   hardware = {
-    system76 = {
-      enableAll = true;
-      kernel-modules.enable = true;
-    };
     enableAllFirmware = true;
   };
 }

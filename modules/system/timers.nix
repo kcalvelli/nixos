@@ -1,4 +1,4 @@
-{ config, lib, nixpkgs, pkgs, ... }:
+{ ... }:
 {
   #Update Brave nightly - browsers should always be up to date
   systemd.timers."update_brave" = {

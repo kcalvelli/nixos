@@ -1,5 +1,5 @@
 # Configure a KDE Plasma Desktop
-{ inputs, outputs, config, pkgs, lib, ... }:
+{ inputs, pkgs, ... }:
 {
   services = {  
       desktopManager = {

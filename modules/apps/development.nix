@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
    #packages.x86_64-linux.default = fenix.packages.x86_64-linux.default.toolchain;
 

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ ... }:
 
 {
   flake.nixosModules = {
@@ -7,7 +7,6 @@
     multimedia = ./multimedia.nix;
     cli = ./cli.nix;
     networking = ./networking.nix;
-    apps = ./apps.nix;
     office = ./office.nix;
     scientific = ./scientific.nix;
     emulators = ./emulators.nix;
