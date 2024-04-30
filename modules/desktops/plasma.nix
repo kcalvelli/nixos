@@ -1,10 +1,6 @@
 # Configure a KDE Plasma Desktop
 { inputs, outputs, config, pkgs, lib, ... }:
 {
-  imports = [
-    ./common.nix
-  ];
-
   services = {  
       desktopManager = {
         plasma6 = {

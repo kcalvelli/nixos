@@ -9,19 +9,33 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
     ] ++(with inputs.self.nixosModules; [
-    cosmic
-    system76
-    apps
-    users
-    common
-    network
-    virtualisation
+    # First the system
+    boot
+    environment
     filesystems
+    graphics
+    system76
+    network
+    nix
     printing
     security
-    nix
     sound
-    graphics
+    users
+    virtualisation
+    fonts
+
+    # Then a desktop  
+    cosmic
+
+    # Then apps
+    cli
+    development
+    games
+    multimedia
+    networking
+    office
+    scientific
+    utils
   ]);    
 
   networking = { 

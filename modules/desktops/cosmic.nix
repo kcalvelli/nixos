@@ -3,7 +3,6 @@
 {
   imports = [
     inputs.nixos-cosmic.nixosModules.default
-    ./common.nix
   ];
 
   #Just cosmic

@@ -1,7 +1,6 @@
 { ... }:
 {
   flake.nixosModules = {
-    common = ./common.nix;
     system76 = ./system76.nix;
     msi = ./msi.nix;
     nix = ./nix.nix;
@@ -16,5 +15,6 @@
     security = ./security.nix;
     graphics = ./graphics.nix;
     sound = ./sound.nix;
+    fonts = ./fonts.nix;
   };
 }

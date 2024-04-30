@@ -10,21 +10,37 @@
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.home-manager.nixosModules.default
     ] ++(with inputs.self.nixosModules; [
-    cosmic
-    msi
-    apps
-    hosting
-    users
-    common
-    network
+
+    # First the system
+    boot
     bridge
-    virtualisation
+    environment
     filesystems
+    graphics
+    hosting
+    msi
+    network
+    nix
     printing
     security
-    nix
     sound
-    graphics
+    timers
+    users
+    virtualisation
+    fonts
+
+    # Then a desktop  
+    cosmic
+
+    # Then apps
+    cli
+    development
+    games
+    multimedia
+    networking
+    office
+    scientific
+    utils
   ]);
 
   networking = { 
