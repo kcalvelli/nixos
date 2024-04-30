@@ -4,10 +4,10 @@
 
 
    environment.systemPackages = with pkgs; [   
-     lorri
+     zed-editor
      vscode
-     git
      jetbrains.rust-rover
-     direnv
    ];
+   programs.direnv.enable = true;
+   services.lorri.enable = true;
 }

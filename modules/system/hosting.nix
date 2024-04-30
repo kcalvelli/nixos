@@ -5,6 +5,4 @@
     enable = true;
     user = "keith";
   };
-
-  
 }  

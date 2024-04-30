@@ -7,6 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
     ] ++(with inputs.self.nixosModules; [
     cosmic
     system76
@@ -15,6 +16,12 @@
     common
     network
     virtualisation
+    filesystems
+    printing
+    security
+    nix
+    sound
+    graphics
   ]);    
 
   networking = { 

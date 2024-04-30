@@ -1,34 +1,6 @@
  { lib, inputs, config, pkgs, ... }:
 
  {
-  #Config common to all hosts
-
-  imports = [
-    inputs.home-manager.nixosModules.default
-    inputs.lanzaboote.nixosModules.lanzaboote
-  ];
-
-  #Nix config
-  nix = {
-    package = pkgs.nixFlakes;
-    settings.experimental-features = [ "nix-command" "flakes" ];
-    settings.auto-optimise-store = true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-    
-  };
-
-  # Allow unfree
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };    
-  };
-
-  system.stateVersion = "23.11"; # Did you read the comment?
 
   #Use systemd-boot
   boot = {
@@ -89,25 +61,7 @@
     #GTK_USE_PORTAL = 1;
   };
 
-  hardware = {
-    bluetooth.enable = true;
-    pulseaudio.enable = false;
-    opengl = {
-      extraPackages = with pkgs; [
-        rocmPackages.clr.icd
-        vaapiVdpau
-      ];
-      driSupport = true;
-      driSupport32Bit = true;
-    };
-    rtl-sdr.enable = true;
-  };
 
-  services.xserver.videoDrivers = [ "amdgpu" ];
-
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  ];  
 
   
   # Configure home-manager

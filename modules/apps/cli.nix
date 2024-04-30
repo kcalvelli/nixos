@@ -7,5 +7,16 @@
     wget
     curl
     gnugrep
+    vulkan-tools   
+    glxinfo 
+    htop
+    pciutils
+    clinfo
+    usbutils
+    aha
+    wl-clipboard
+    zip
+    unzip
+    dmidecode
   ];   
 }

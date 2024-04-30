@@ -8,9 +8,7 @@
     networking
     scientific
     office
-    graphics
    # emulators
-    filesystems
     fonts
     utils
   ]);

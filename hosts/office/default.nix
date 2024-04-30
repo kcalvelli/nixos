@@ -7,6 +7,8 @@
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.lanzaboote.nixosModules.lanzaboote
+    inputs.home-manager.nixosModules.default
     ] ++(with inputs.self.nixosModules; [
     cosmic
     msi
@@ -17,6 +19,12 @@
     network
     bridge
     virtualisation
+    filesystems
+    printing
+    security
+    nix
+    sound
+    graphics
   ]);
 
   networking = { 
