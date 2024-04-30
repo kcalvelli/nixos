@@ -5,7 +5,7 @@
     development = ./development.nix;
     games = ./games.nix;
     multimedia = ./multimedia.nix;
-    terminal = ./terminal.nix;
+    cli = ./cli.nix;
     networking = ./networking.nix;
     apps = ./apps.nix;
     office = ./office.nix;

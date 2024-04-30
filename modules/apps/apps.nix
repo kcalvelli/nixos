@@ -4,7 +4,7 @@
     development
     games
     multimedia
-    terminal
+    cli
     networking
     scientific
     office
