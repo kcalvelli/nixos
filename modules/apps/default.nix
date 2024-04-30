@@ -11,7 +11,6 @@
     office = ./office.nix;
     scientific = ./scientific.nix;
     emulators = ./emulators.nix;
-    fonts = ./fonts.nix;
     utils = ./utils.nix;
   };
 }

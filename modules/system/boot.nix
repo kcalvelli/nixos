@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   # Use systemd-boot
   boot = {

@@ -9,7 +9,6 @@
     scientific
     office
    # emulators
-    fonts
     utils
   ]);
 }

@@ -16,5 +16,7 @@
     graphics = ./graphics.nix;
     sound = ./sound.nix;
     fonts = ./fonts.nix;
+    boot = ./boot.nix;
+    environment = ./environment.nix;
   };
 }

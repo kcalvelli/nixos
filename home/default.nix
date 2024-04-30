@@ -1,4 +1,4 @@
-{ self, inputs, config, ... }:
+{ inputs, config, ... }:
 
 let
   hmConfig = pkgs: module:

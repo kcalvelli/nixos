@@ -2,11 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, inputs, pkgs, lib, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
-    ./hardware-configuration.nix
+    ./hardware.nix
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.home-manager.nixosModules.default
     ] ++(with inputs.self.nixosModules; [
