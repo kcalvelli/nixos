@@ -3,7 +3,7 @@
   services.zerotierone = {
     enable = true;
     joinNetworks = [
-      "calvelli_zero"
+      "363c67c55a9358eb"
     ];
   };
 }
