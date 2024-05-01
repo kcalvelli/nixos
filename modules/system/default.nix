@@ -1,22 +1,32 @@
 { ... }:
 {
   flake.nixosModules = {
-    system76 = ./system76.nix;
-    msi = ./msi.nix;
-    nix = ./nix.nix;
-    hosting = ./hosting.nix;
-    users = ./users.nix;
-    network = ./network.nix;
-    bridge = ./bridge.nix;
-    timers = ./timers.nix;
-    virtualisation = ./virtualisation.nix;
-    filesystems = ./filesystems.nix;
-    printing= ./printing.nix;
-    security = ./security.nix;
-    graphics = ./graphics.nix;
-    sound = ./sound.nix;
-    fonts = ./fonts.nix;
-    boot = ./boot.nix;
-    environment = ./environment.nix;
+
+    # Core
+    nix = ./core/nix.nix;
+    users = ./core/users.nix;
+    filesystems = ./core/filesystems.nix;
+    security = ./core/security.nix;
+    fonts = ./core/fonts.nix;
+    environment = ./core/environment.nix;
+
+    # Hardware
+    boot = ./hardware/boot.nix;    
+    system76 = ./hardware/system76.nix;
+    msi = ./hardware/msi.nix;
+    graphics = ./hardware/graphics.nix;
+    sound = ./hardware/sound.nix;
+
+    # Networking
+    network = ./network/network.nix;
+    bridge = ./network/bridge.nix;
+    avahi = ./network/avahi.nix;
+    samba = ./network/samba.nix;
+
+    # Services
+    hosting = ./services/hosting.nix;
+    printing= ./services/printing.nix;   
+    virtualisation = ./services/virtualisation.nix;     
+    timers = ./services/timers.nix;    
   };
 }

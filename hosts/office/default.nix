@@ -12,14 +12,20 @@
     ] ++(with inputs.self.nixosModules; [
 
     # First the system
-    boot
+    # Hardware
+    # Network
+    network
     bridge
+    avahi
+    samba
+
+    boot
     environment
     filesystems
     graphics
     hosting
     msi
-    network
+    
     nix
     printing
     security
@@ -48,10 +54,6 @@
   };
   services.resolved.extraConfig = ''
     [Resolve]
-    #DNS=45.90.28.0#office-6854e6.dns.nextdns.io
-    #DNS=2a07:a8c0::#office-6854e6.dns.nextdns.io
-    #DNS=45.90.30.0#office-6854e6.dns.nextdns.io
-    #DNS=2a07:a8c1::#office-6854e6.dns.nextdns.io
     DNS=76.76.2.22#y2p8p3h5on.dns.controld.com
     DNSOverTLS=yes
   '';
