@@ -15,6 +15,7 @@
     network
     avahi
     samba
+    zerotier
 
     boot
     environment

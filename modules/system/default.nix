@@ -22,6 +22,7 @@
     bridge = ./network/bridge.nix;
     avahi = ./network/avahi.nix;
     samba = ./network/samba.nix;
+    zerotier = ./network/zerotier.nix;
 
     # Services
     hosting = ./services/hosting.nix;

@@ -18,6 +18,7 @@
     bridge
     avahi
     samba
+    zerotier
 
     boot
     environment
