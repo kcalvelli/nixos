@@ -7,9 +7,6 @@
     firewall.enable = false;
   };
 
-  
-
-  #Avahi networking
   services = {
     resolved.enable = true;
     openssh.enable = true;

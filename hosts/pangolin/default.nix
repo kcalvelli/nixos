@@ -10,12 +10,17 @@
     inputs.home-manager.nixosModules.default
     ] ++(with inputs.self.nixosModules; [
     # First the system
+    # Hardware
+    # Network
+    network
+    avahi
+    samba
+
     boot
     environment
     filesystems
     graphics
     system76
-    network
     nix
     printing
     security
