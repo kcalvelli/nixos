@@ -13,6 +13,19 @@
 
     # First the system
     # Hardware
+    boot
+    graphics
+    msi
+    sound
+
+    # Core
+    nix
+    environment
+    filesystems
+    fonts
+    security
+    users
+
     # Network
     network
     bridge
@@ -20,21 +33,12 @@
     samba
     zerotier
 
-    boot
-    environment
-    filesystems
-    graphics
+    # Services
     hosting
-    msi
-    
-    nix
     printing
-    security
-    sound
     timers
-    users
     virtualisation
-    fonts
+    remote
 
     # Then a desktop  
     cosmic

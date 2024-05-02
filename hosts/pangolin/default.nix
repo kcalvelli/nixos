@@ -11,25 +11,31 @@
     ] ++(with inputs.self.nixosModules; [
     # First the system
     # Hardware
+    boot
+    graphics
+    system76
+    sound
+
+    # Core
+    nix
+    environment
+    filesystems
+    fonts
+    security
+    users
+
     # Network
     network
     avahi
     samba
     zerotier
 
-    boot
-    environment
-    filesystems
-    graphics
-    system76
-    nix
+    # Services
+    hosting
     printing
-    security
-    sound
-    users
+    timers
     virtualisation
-    fonts
-
+    
     # Then a desktop  
     cosmic
 
