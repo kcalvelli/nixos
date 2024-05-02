@@ -1,9 +1,9 @@
 { ... }:
 {
-  services = {
-    xrdp = {
-      enable = true;
-      defaultWindowManager = "cosmic-session";
-    };
-  };
+ # services = {
+ #   xrdp = {
+ #     enable = true;
+ #     defaultWindowManager = "cosmic-session";
+ #   };
+ # };
 }
