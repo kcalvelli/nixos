@@ -5,6 +5,6 @@
     nextcloud-client
     telegram-desktop   
     thunderbird
-    remmina
+    moonlight-qt
   ];
 }

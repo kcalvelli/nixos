@@ -1,9 +1,11 @@
 { ... }:
 {
- # services = {
- #   xrdp = {
- #     enable = true;
- #     defaultWindowManager = "cosmic-session";
- #   };
- # };
+  services = {
+    sunshine = {
+      enable = true;
+        openFirewall = true;
+        capSysAdmin = true;
+        autoStart = true;
+    };
+  };
 }
