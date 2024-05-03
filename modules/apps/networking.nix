@@ -5,6 +5,5 @@
     nextcloud-client
     telegram-desktop   
     thunderbird
-    rustdesk
   ];
 }
