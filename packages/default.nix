@@ -4,6 +4,7 @@
    packages = {
     inherit (pkgs)
       brave-browser
+      valent
       ;      
    };
 
@@ -23,6 +24,7 @@
   flake.overlays.default = _final: prev: {
     # Custom packages
     brave-browser = prev.callPackage ./brave-browser { };
+    valent = prev.callPackage ./valent { };
   };
 
 }
