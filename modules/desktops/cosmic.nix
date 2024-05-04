@@ -39,7 +39,7 @@
     simple-scan  
    ]);
    services.gvfs.enable = true;
-
+   
    # Minimize how bad qt apps look here
   qt.enable = true;
   qt.style = "adwaita-dark";
