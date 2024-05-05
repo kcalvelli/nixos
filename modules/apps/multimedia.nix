@@ -2,7 +2,8 @@
 {
   environment.systemPackages = with pkgs; [ 
      noson
-     
+     gimp
+     celluloid
      # OBS with plugins
      (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [

@@ -19,27 +19,13 @@
 
   services.gnome.sushi.enable = true;
 
-  environment.systemPackages = (with pkgs; [
+  environment.systemPackages = with pkgs; [
     adw-gtk3   
-    #baobab
-    gparted
-    #gthumb
-    #gimp
-    loupe
-    resources
-    kooha
-    pavucontrol
-    clapper
     cosmic-tasks
     cosmic-emoji-picker
-
     #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
-  ])
-   ++ ( with pkgs.gnome; [
-    #gnome-calculator
-    #nautilus
-    #simple-scan  
-   ]);
+  ];
+
    services.gvfs.enable = true;
    
    # Minimize how bad qt apps look here
