@@ -42,6 +42,7 @@
 
     # Then a desktop  
     cosmic
+    budgie
 
     # Then apps
     cli

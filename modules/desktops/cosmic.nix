@@ -21,22 +21,24 @@
 
   environment.systemPackages = (with pkgs; [
     adw-gtk3   
-    baobab
+    #baobab
     gparted
-    gthumb
-    gimp
+    #gthumb
+    #gimp
     loupe
     resources
     kooha
     pavucontrol
     clapper
+    cosmic-tasks
+    cosmic-emoji-picker
 
     #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
   ])
    ++ ( with pkgs.gnome; [
-    gnome-calculator
-    nautilus
-    simple-scan  
+    #gnome-calculator
+    #nautilus
+    #simple-scan  
    ]);
    services.gvfs.enable = true;
    
