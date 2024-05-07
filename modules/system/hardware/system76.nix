@@ -6,6 +6,7 @@
     inputs.nixos-hardware.nixosModules.common-pc-ssd
     inputs.nixos-hardware.nixosModules.common-cpu-amd
   ];
+
   boot = {
     # Kernel
     kernelParams = [
@@ -13,6 +14,13 @@
     ];
     blacklistedKernelModules = [ "psmouse" ];
     loader.systemd-boot.enable = true;
+    initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" "system76-io" ];
+    initrd.kernelModules = [  ];
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ];
+    extraModprobeConfig = ''
+    options mt7921_common disable_clc=1
+    '';
   };
 
   # Enable all the system76 stuff
