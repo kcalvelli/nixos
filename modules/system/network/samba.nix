@@ -3,7 +3,7 @@
 #Samba
   services.samba = {
     enable = true;
-    package = pkgs.samba4Full;
+    package = pkgs.samba;
     enableNmbd = false;
 
     shares.music = {
