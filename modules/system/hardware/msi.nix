@@ -13,6 +13,7 @@
   };
 
   boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
     # Disable systemd-boot for lanzaboote
     loader.systemd-boot.enable = lib.mkForce false;
     # Kernel

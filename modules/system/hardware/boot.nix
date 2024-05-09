@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
     bootspec.enable = true;
 
     initrd = {

@@ -1,5 +1,5 @@
  
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     inputs.nixos-hardware.nixosModules.system76
@@ -9,6 +9,7 @@
 
   boot = {
     # Kernel
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
     kernelParams = [
      "ro" "quiet" "loglevel=0" "splash" "systemd.show_status=false"   
     ];
@@ -25,6 +26,7 @@
 
   # Enable all the system76 stuff
   hardware = {
+    system76.enableAll = true;
     enableAllFirmware = true;
   };
 }
