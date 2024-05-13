@@ -243,11 +243,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1715391030,
-        "narHash": "sha256-2uxhOqQ+yLP9GTq56Y8YAluNT3K4oamGdftYrY4VphE=",
+        "lastModified": 1715539967,
+        "narHash": "sha256-QscgeQKKidJF+U7rOCKoF/dnQiytGIf2nyWwxGNh8hU=",
         "owner": "lilyinstarlight",
         "repo": "nixos-cosmic",
-        "rev": "c3fb9f80210fcfbac11fc0a4148320cf428c10e8",
+        "rev": "962ce6c057a674bb552f910ed53c568904827f64",
         "type": "github"
       },
       "original": {
