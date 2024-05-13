@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [ 
-    stacer
+    resources
     pavucontrol
     gparted
     mate.caja-with-extensions
