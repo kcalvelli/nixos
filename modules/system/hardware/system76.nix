@@ -9,7 +9,7 @@
 
   boot = {
     # Kernel
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    #kernelPackages = pkgs.linuxPackages_xanmod_latest;
     kernelParams = [
      "ro" "quiet" "loglevel=0" "splash" "systemd.show_status=false"   
     ];
@@ -19,9 +19,9 @@
     initrd.kernelModules = [  ];
     kernelModules = [ "kvm-amd" ];
     extraModulePackages = [ ];
-    extraModprobeConfig = ''
-    options mt7921_common disable_clc=1
-    '';
+    #extraModprobeConfig = ''
+    #options mt7921_common disable_clc=1
+    #'';
   };
 
   # Enable all the system76 stuff
