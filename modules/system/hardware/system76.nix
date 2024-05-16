@@ -26,7 +26,10 @@
 
   # Enable all the system76 stuff
   hardware = {
-    system76.enableAll = true;
+    system76 = {
+      enableAll = true;
+      kernel-modules.enable = true;
+    };
     enableAllFirmware = true;
   };
 }
