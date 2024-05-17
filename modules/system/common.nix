@@ -29,7 +29,7 @@
   # Temp disable Wayland for Electron due to bug
   environment.sessionVariables = {
     NIXOS_OZONE_WL = 1;
-    #GTK_USE_PORTAL = 1;
+    GTK_USE_PORTAL = 1;
   };
 
 
