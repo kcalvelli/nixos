@@ -10,7 +10,6 @@
     logitech.wireless.enable = true;
     logitech.wireless.enableGraphical = true;
     enableAllFirmware = true;
-    video.hidpi.enable = true;
   };
 
   boot = {
