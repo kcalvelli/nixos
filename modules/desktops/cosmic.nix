@@ -27,9 +27,6 @@
   ];
 
    services.gvfs.enable = true;
-
-   # Enable flatpak
-   services.flatpak.enable = true;
    
    # Minimize how bad qt apps look here
   qt.enable = true;

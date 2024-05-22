@@ -34,7 +34,7 @@
     zerotier
 
     # Services
-    hosting
+    #hosting
     printing
     timers
     virtualisation
