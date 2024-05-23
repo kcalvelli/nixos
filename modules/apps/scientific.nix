@@ -2,6 +2,6 @@
 {
   environment.systemPackages = with pkgs; [ 
     cubicsdr  
-    qalculate-gtk
+    gnome.gnome-calculator
   ];     
 }

@@ -6,6 +6,9 @@
     gparted
     mate.caja-with-extensions
     mate.eom
-    mate.engrampa    
+    mate.engrampa  
+    mission-center
+    wlogout  
+    overskride
   ];
 }    

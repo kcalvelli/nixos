@@ -4,6 +4,7 @@
      noson
      gimp
      celluloid
+     loupe
      # OBS with plugins
      (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
