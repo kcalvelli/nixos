@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, config, ... }:
 
 {
   imports = [
@@ -9,29 +9,45 @@
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
 
-  #Missing apps for DE experience
-  programs.evince.enable = true;
-  programs.file-roller.enable = true;
-
-
-  environment.systemPackages = with pkgs; [
-    adw-gtk3   
-    cosmic-tasks
-    cosmic-emoji-picker
-    #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
-  ];
-
   services = {
     gvfs.enable = true;
-    gnome.core-utilities.enable = true;
     acpid.enable = true;
     gnome.sushi.enable = true;
     gnome.gnome-keyring.enable = true; 
     gnome.tracker.enable = true;
     gnome.tracker-miners.enable = true;
-    gnome.core-shell.enable = true;
+    gnome.gnome-online-accounts.enable = true;
+    gnome.gnome-settings-daemon.enable = true;
+    gnome.gnome-user-share.enable = true;
+    gnome.rygel.enable = true;
+    gnome.glib-networking.enable = true;
+    udisks2.enable = true;
   };
 
+  programs = {
+    evince.enable = true;
+    file-roller.enable = true;
+    gnome-disks.enable = true;
+    seahorse.enable = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    gnome.baobab
+    gnome.gnome-calculator
+    gnome.gnome-logs
+    gnome.nautilus
+    gnome.simple-scan
+    gnome-connections
+    snapshot
+    adw-gtk3   
+    cosmic-tasks
+    cosmic-emoji-picker
+  ];
+
+  environment.sessionVariables.NAUTILUS_4_EXTENSION_DIR = "${config.system.path}/lib/nautilus/extensions-4";
+  environment.pathsToLink = [
+    "/share/nautilus-python/extensions"
+  ];
   security.pam.services.login.enableGnomeKeyring = true;
    
    # Minimize how bad qt apps look here
