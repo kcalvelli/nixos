@@ -4,6 +4,7 @@
    packages = {
     inherit (pkgs)
       brave-browser
+      cosmic-webapps
       ;      
    };
 
@@ -23,6 +24,7 @@
   flake.overlays.default = _final: prev: {
     # Custom packages
     brave-browser = prev.callPackage ./brave-browser { };
+    cosmic-webapps = prev.callPackage ./cosmic-webapps { };
   };
 
 }
