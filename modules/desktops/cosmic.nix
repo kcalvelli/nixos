@@ -23,6 +23,7 @@
     gnome.gnome-settings-daemon.enable = true;
     gnome.gnome-user-share.enable = true;
     gnome.glib-networking.enable = true;
+    flatpak.enable = true;
   };
 
   programs = {
@@ -53,6 +54,7 @@
     adw-gtk3   
     cosmic-tasks
     cosmic-emoji-picker
+    inputs.self.packages.${pkgs.system}.cosmic-webapps
   ];
 
   environment.sessionVariables.NAUTILUS_4_EXTENSION_DIR = "${config.system.path}/lib/nautilus/extensions-4";

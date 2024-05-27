@@ -2,19 +2,13 @@
 , rustPlatform
 , fetchFromGitHub
 , pkg-config
-, wrapGAppsHook3
-, atk
-, cairo
-, gdk-pixbuf
-, git
+, cosmic-icons
 , glib
 , gtk3
-, libsecret
+, just
 , libxkbcommon
+, makeBinaryWrapper
 , openssl
-, pango
-, sqlite
-, vulkan-loader
 , stdenv
 , darwin
 , wayland
@@ -22,16 +16,16 @@
 
 
 let 
-  commitDate="2024-05-24";
+  commitDate="2024-05-27";
 in 
 rustPlatform.buildRustPackage rec {
-  pname = "WebApps";
+  pname = "cosmic-webapps";
   version = "0.4.5";
   src = fetchFromGitHub {
     owner = "elevenhsoft";
     repo = "WebApps";
-    rev = "b83a6429acc67039ddcadbccbee0e5bd6cc7c831";
-    hash = "sha256-1gyDXuuVt/eKAfA7QsVNhNqQytSlGwq0flxG1mG7GDU=";
+    rev = "a079b0685c7c414b67064e19763dba002675abb5";
+    hash = "sha256-xNi+fBX2rfR/FXU/qc7XpG+8HJ9qhpikZZuuLxCQXH8=";
   };
 
   cargoLock = {
@@ -59,23 +53,16 @@ rustPlatform.buildRustPackage rec {
   env.VERGEN_GIT_SHA = src.rev;
 
   nativeBuildInputs = [
+    just
     pkg-config
-    wrapGAppsHook3
+    makeBinaryWrapper
   ];
 
   buildInputs = [
-    atk
-    cairo
-    gdk-pixbuf
-    git
     glib
     gtk3
-    libsecret
     libxkbcommon
     openssl
-    pango
-    sqlite
-    vulkan-loader
   ] ++ lib.optionals stdenv.isDarwin [
     darwin.apple_sdk.frameworks.AppKit
     darwin.apple_sdk.frameworks.CoreFoundation
@@ -89,8 +76,26 @@ rustPlatform.buildRustPackage rec {
     wayland
   ];
 
+  postPatch = ''
+    substituteInPlace justfile --replace '#!/usr/bin/env' "#!$(command -v env)"
+  '';
+
+  dontUseJustBuild = true;
+
+  justFlags = [
+    "--set"
+    "prefix"
+    (placeholder "out")
+    "--set"
+    "bin-src"
+    "target/${stdenv.hostPlatform.rust.cargoShortTarget}/release/cosmic-webapps"
+  ];
+
+
+
   postFixup = lib.optionalString stdenv.isLinux ''
-    wrapProgram $out/bin/cosmic-webapps \
+    wrapProgram $out/bin/${pname} \
+      --suffix XDG_DATA_DIRS : "${cosmic-icons}/share" \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ libxkbcommon wayland ]}"
   '';
 
