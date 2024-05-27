@@ -9,15 +9,10 @@
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
 
-  #Keyring
-  security.pam.services.login.enableGnomeKeyring = true;
-  services.gnome.gnome-keyring.enable = true;  
-
   #Missing apps for DE experience
   programs.evince.enable = true;
   programs.file-roller.enable = true;
 
-  services.gnome.sushi.enable = true;
 
   environment.systemPackages = with pkgs; [
     adw-gtk3   
@@ -26,7 +21,18 @@
     #inputs.self.packages.${pkgs.system}.cosmic-clipboard-manager
   ];
 
-   services.gvfs.enable = true;
+  services = {
+    gvfs.enable = true;
+    gnome.core-utilities.enable = true;
+    acpid.enable = true;
+    gnome.sushi.enable = true;
+    gnome.gnome-keyring.enable = true; 
+    gnome.tracker.enable = true;
+    gnome.tracker-miners.enable = true;
+    gnome.core-shell.enable = true;
+  };
+
+  security.pam.services.login.enableGnomeKeyring = true;
    
    # Minimize how bad qt apps look here
   qt.enable = true;
