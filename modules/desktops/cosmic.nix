@@ -11,7 +11,6 @@
 
   services = {
     gnome.core-utilities.enable = true;
-    gnome.core-shell.enable = true;
     tumbler.enable = true;
     gvfs.enable = true;
     acpid.enable = true;
@@ -48,6 +47,10 @@
     gnome.gnome-weather
     gnome.totem
     gnome.yelp
+    gnome.geary
+    gnome.gnome-color-manager
+    gnome.gnome-software
+
   ];
 
   environment.systemPackages = with pkgs; [
