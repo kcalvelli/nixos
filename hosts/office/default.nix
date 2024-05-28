@@ -31,7 +31,7 @@
     bridge
     avahi
     samba
-    zerotier
+    #zerotier
 
     # Services
     #hosting

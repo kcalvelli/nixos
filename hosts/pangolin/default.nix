@@ -28,7 +28,7 @@
     network
     avahi
     samba
-    zerotier
+    #zerotier
 
     # Services
     printing
