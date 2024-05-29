@@ -6,7 +6,7 @@
 
   hardware = {
     amdgpu = {
-      opencl = true;
+      amdvlk = true;
     };
   }; 
 }
