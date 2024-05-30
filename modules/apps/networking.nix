@@ -5,5 +5,7 @@
     nextcloud-client
     telegram-desktop   
     thunderbird
+    teams-for-linux
+    google-chrome
   ];
 }

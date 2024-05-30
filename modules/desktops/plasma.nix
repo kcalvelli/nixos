@@ -11,18 +11,18 @@
       displayManager = {
         sddm = {
           enable = true;
-          settings = {
-            Autologin = {
-              Session = "plasma";
-              User = "keith";
-            };
-          };
+#          settings = {
+#            Autologin = {
+#              Session = "plasma";
+#              User = "keith";
+#            };
+#          };
           wayland = {
             enable = true;
           };
         };
       };
-    xserver.enable = true;  
+#    xserver.enable = true;  
     dbus.enable = true;
     colord.enable = true;
   };
@@ -44,5 +44,6 @@
     #Kaccounts
     pkgs.kdePackages.kaccounts-integration
     pkgs.kdePackages.kaccounts-providers
+    utterly-nord-plasma
   ];  
 }

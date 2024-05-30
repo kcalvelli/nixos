@@ -36,8 +36,8 @@
     virtualisation
     
     # Then a desktop  
-    #cosmic
-    plasma
+    cosmic
+    #plasma
 
     # Then apps
     cli
