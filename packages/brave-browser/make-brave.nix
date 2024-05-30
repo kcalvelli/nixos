@@ -37,6 +37,7 @@
 , nss
 , pango
 , pipewire
+, qt6
 , snappy
 , udev
 , wayland
@@ -113,6 +114,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [
     dpkg
     (wrapGAppsHook.override { inherit makeWrapper; })
+    qt6.wrapQtAppsHook
   ];
 
   buildInputs = [
@@ -121,6 +123,14 @@ stdenv.mkDerivation {
 
     # needed for XDG_ICON_DIRS
     gnome.adwaita-icon-theme
+
+    qt6.qtbase
+  ];
+
+  autoPatchelfIgnoreMissingDeps = [
+    "libQt5Widgets.so.5"
+    "libQt5Gui.so.5"
+    "libQt5Core.so.5"
   ];
 
   unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";

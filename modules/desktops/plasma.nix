@@ -6,9 +6,23 @@
         plasma6 = {
           enable = true;
           enableQt5Integration = true;
+        };       
+      };
+      displayManager = {
+        sddm = {
+          enable = true;
+          settings = {
+            Autologin = {
+              Session = "plasma";
+              User = "keith";
+            };
+          };
+          wayland = {
+            enable = true;
+          };
         };
       };
-
+    xserver.enable = true;  
     dbus.enable = true;
     colord.enable = true;
   };
@@ -19,21 +33,16 @@
   };
 
   programs.kdeconnect.enable = true;
+  programs.partition-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
     #Need these 
     pkgs.kdePackages.kcalc
     pkgs.kdePackages.skanlite
     pkgs.kdePackages.filelight
-    pkgs.kdePackages.partitionmanager
     
     #Kaccounts
     pkgs.kdePackages.kaccounts-integration
     pkgs.kdePackages.kaccounts-providers
-
-    #Klassy
-    inputs.self.packages.${pkgs.system}.klassy
-
   ];  
-
 }

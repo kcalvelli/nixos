@@ -41,7 +41,8 @@
     remote
 
     # Then a desktop  
-    cosmic
+#    cosmic
+    plasma
 
     # Then apps
     cli
