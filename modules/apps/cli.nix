@@ -1,23 +1,47 @@
 { pkgs, ... }:
 {
+
+  # Needed to enable fish completions
+  programs.fish.enable = true;
+  
   environment.systemPackages = with pkgs; [
-    ripgrep
-    fastfetch
+    # Rust replacement for gnu coreutils
+    uutils-coreutils-noprefix
+
+    # Very Rusty
+    atuin
+    bandwhich
+    bat
+    bottom
+    broot
+    dua
+    dust 
+    eza
+    fd
     helix
+    lfs
+    lsd
+    macchina
+    ouch
+    procs
+    rm-improved
+    ripgrep
+    skim
+    tokei
+    xcp
+    zoxide
+    
+    
     wget
     curl
-    gnugrep
     #vulkan-tools   
     #glxinfo 
-    htop
+    #htop
     #pciutils
     #clinfo
     #usbutils
-    aha
-    wl-clipboard
-    zip
-    unzip
+    #zip
+    #unzip
     #dmidecode
-    gdu
   ];   
 }
