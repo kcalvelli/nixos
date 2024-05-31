@@ -9,7 +9,7 @@
 
   boot = {
     # Kernel
-    kernelPackages = pkgs.linuxPackages_6_8;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
      "ro" "quiet" "loglevel=0" "splash" "systemd.show_status=false"   
     ];
