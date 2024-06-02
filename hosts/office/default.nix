@@ -43,11 +43,12 @@
     # Then a desktop  
     cosmic
 #    plasma
+    gnome
 
     # Then apps
     cli
     development
-    #games
+    games
     multimedia
     networking
     office

@@ -37,7 +37,6 @@
 , nss
 , pango
 , pipewire
-, qt6
 , snappy
 , udev
 , wayland
@@ -62,7 +61,7 @@
 , enableVideoAcceleration ? libvaSupport
 
 # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-, vulkanSupport ? false
+, vulkanSupport ? false 
 , addOpenGLRunpath
 , enableVulkan ? vulkanSupport
 }:
@@ -92,7 +91,7 @@ let
   rpath = makeLibraryPath deps + ":" + makeSearchPathOutput "lib" "lib64" deps;
   binpath = makeBinPath deps;
 
-  enableFeatures = optionals enableVideoAcceleration [ "VaapiVideoDecoder" "VaapiVideoEncoder" ]
+  enableFeatures = optionals enableVideoAcceleration [ "VaapiVideoDecodeLinuxGL" "VaapiVideoEncoder" ]
     ++ optional enableVulkan "Vulkan";
 
   disableFeatures = [ "OutdatedBuildDetector" ] # disable automatic updates
@@ -114,7 +113,6 @@ stdenv.mkDerivation {
   nativeBuildInputs = [
     dpkg
     (wrapGAppsHook.override { inherit makeWrapper; })
-    qt6.wrapQtAppsHook
   ];
 
   buildInputs = [
@@ -124,14 +122,8 @@ stdenv.mkDerivation {
     # needed for XDG_ICON_DIRS
     gnome.adwaita-icon-theme
 
-    qt6.qtbase
   ];
 
-  autoPatchelfIgnoreMissingDeps = [
-    "libQt5Widgets.so.5"
-    "libQt5Gui.so.5"
-    "libQt5Core.so.5"
-  ];
 
   unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";
 
@@ -190,7 +182,7 @@ stdenv.mkDerivation {
       --prefix PATH : ${binpath}
       --suffix PATH : ${lib.makeBinPath [ xdg-utils coreutils ]}
       ${optionalString (enableFeatures != []) ''
-      --add-flags "--enable-features=${strings.concatStringsSep "," enableFeatures}\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+,WaylandWindowDecorations}}"
+      --add-flags "--gtk-version=4 --enable-features=${strings.concatStringsSep "," enableFeatures}\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+,WaylandWindowDecorations}}"
       ''}
       ${optionalString (disableFeatures != []) ''
       --add-flags "--disable-features=${strings.concatStringsSep "," disableFeatures}"
