@@ -7,5 +7,6 @@
     thunderbird
     teams-for-linux
     google-chrome
+    networkmanagerapplet
   ];
 }
