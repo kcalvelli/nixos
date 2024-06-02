@@ -1,13 +1,17 @@
 { inputs, pkgs, config, ... }:
 
 {
-  #Just gnome DE
   services = {
     xserver = {
       enable = true;
-      excludePackages = [ xterm ];
+      excludePackages = [ pkgs.xterm ];
       desktopManager = {
         gnome = {
+          enable = true;
+        };
+      };
+      displayManager = {
+        gdm = {
           enable = true;
         };
       };
@@ -17,22 +21,26 @@
   environment = {
     gnome.excludePackages = with pkgs; [
       epiphany
-      evince
-      gnome-connections
       gnome.geary
-      gnome.gnome-calendar
-      gnome.gnome-characters
-      gnome.gnome-clocks
-      gnome.gnome-contacts
-      gnome.gnome-font-viewer
-      gnome.gnome-maps
-      gnome.gnome-music
-      gnome.simple-scan
       gnome-tour
       gnome.yelp
-      snapshot
+      gnome.gnome-music
+      gnome-console   
+      gnome-text-editor
     ];
   };
+
+  environment.systemPackages = with pkgs.gnomeExtensions; [
+    wallpaper-slideshow
+    gsconnect
+    just-perfection
+    appindicator
+    blur-my-shell
+    clipboard-indicator
+    forge
+    media-controls
+    dash-to-dock
+  ];
     
    # Minimize how bad qt apps look here
   qt.enable = true;
