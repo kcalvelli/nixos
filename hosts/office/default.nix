@@ -47,7 +47,7 @@
     # Then apps
     cli
     development
-    #games
+    games
     multimedia
     networking
     office
