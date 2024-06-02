@@ -6,7 +6,10 @@
   };
   programs.gamemode.enable = true;
   programs.gamescope.enable = true;
-
+  hardware = {
+    steam-hardware.enable = true;
+  };
+  
   environment.systemPackages = with pkgs; [ 
     gamescope
     mangohud

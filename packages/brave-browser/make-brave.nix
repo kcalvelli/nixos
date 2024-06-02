@@ -61,7 +61,7 @@
 , enableVideoAcceleration ? libvaSupport
 
 # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-, vulkanSupport ? true
+, vulkanSupport ? false 
 , addOpenGLRunpath
 , enableVulkan ? vulkanSupport
 }:
