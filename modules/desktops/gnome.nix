@@ -1,4 +1,4 @@
-{ inputs, pkgs, config, ... }:
+{ lib, inputs, pkgs, config, ... }:
 
 {
   services = {
@@ -16,6 +16,7 @@
         };
       };
     };
+    power-profiles-daemon.enable = lib.mkForce false;
   };
 
   environment = {

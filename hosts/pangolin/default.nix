@@ -38,6 +38,7 @@
     # Then a desktop  
     cosmic
     #plasma
+    gnome
 
     # Then apps
     cli
