@@ -37,7 +37,7 @@
     #hosting
     printing
     timers
-    virtualisation
+    virtualisationww
     remote
 
     # Then a desktop  
