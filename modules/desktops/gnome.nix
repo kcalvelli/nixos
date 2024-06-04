@@ -34,11 +34,8 @@
   environment.systemPackages = with pkgs.gnomeExtensions; [
     wallpaper-slideshow
     gsconnect
-    just-perfection
     appindicator
-    blur-my-shell
     clipboard-indicator
-    forge
     media-controls
     dash-to-dock
   ];
