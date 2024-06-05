@@ -31,14 +31,16 @@
     ];
   };
 
-  environment.systemPackages = with pkgs.gnomeExtensions; [
+  environment.systemPackages = with pkgs; [
+    gnomecast
+    qgnomeplatform-qt6
+  ] ++ ( with pkgs.gnomeExtensions; [
     wallpaper-slideshow
     gsconnect
     appindicator
     clipboard-indicator
     media-controls
-    dash-to-dock
-  ];
+  ]);
     
    # Minimize how bad qt apps look here
   qt.enable = true;

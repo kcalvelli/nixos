@@ -4,7 +4,6 @@
     inputs.self.packages.${pkgs.system}.brave-browser
     nextcloud-client
     thunderbird
-    google-chrome
     networkmanagerapplet
   ];
 }
