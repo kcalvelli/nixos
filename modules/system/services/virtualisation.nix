@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   virtualisation = {
     libvirtd.enable = true;
@@ -30,7 +30,7 @@
   
   environment.systemPackages = with pkgs; [ 
     qemu
-    quickemu
+    inputs.self.packages.${pkgs.system}.quickemu
     virt-viewer
     distrobox
   ];
