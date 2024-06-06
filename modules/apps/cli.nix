@@ -31,17 +31,14 @@
     xcp
     zoxide
     
-    
+    # Get stuff
     wget
     curl
-    #vulkan-tools   
-    #glxinfo 
-    #htop
-    #pciutils
-    #clinfo
-    #usbutils
-    #zip
-    #unzip
-    #dmidecode
+
+    # Info stuff
+    pciutils
+    wirelesstools
+    amdgpu_top
+    gtop
   ];   
 }
