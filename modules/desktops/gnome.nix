@@ -21,7 +21,6 @@
   environment = {
     gnome.excludePackages = with pkgs; [
       epiphany
-      gnome.geary
       gnome-tour
       gnome.yelp
       gnome.gnome-music
