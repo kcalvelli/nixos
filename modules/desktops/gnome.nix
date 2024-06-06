@@ -40,6 +40,7 @@
     appindicator
     clipboard-indicator
     media-controls
+    astra-monitor
   ]);
     
    # Minimize how bad qt apps look here

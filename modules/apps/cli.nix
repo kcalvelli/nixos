@@ -37,7 +37,7 @@
     #vulkan-tools   
     #glxinfo 
     #htop
-    #pciutils
+    pciutils
     #clinfo
     #usbutils
     #zip
