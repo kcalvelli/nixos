@@ -29,6 +29,7 @@
     system76 = {
       enableAll = true;
       kernel-modules.enable = true;
+      power-daemon.enable = false;
     };
     enableAllFirmware = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

@@ -16,7 +16,6 @@
         };
       };
     };
-    power-profiles-daemon.enable = lib.mkForce false;
   };
 
   environment = {
