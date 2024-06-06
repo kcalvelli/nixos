@@ -32,7 +32,6 @@
 
     # Services
     printing
-    timers
     virtualisation
     
     # Then a desktop  

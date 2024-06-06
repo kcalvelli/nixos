@@ -28,7 +28,5 @@
     hosting = ./services/hosting.nix;
     printing= ./services/printing.nix;   
     virtualisation = ./services/virtualisation.nix;     
-    timers = ./services/timers.nix;   
-    remote = ./services/remote.nix; 
   };
 }
