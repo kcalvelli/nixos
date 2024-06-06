@@ -30,7 +30,8 @@
   
   environment.systemPackages = with pkgs; [ 
     qemu
-    inputs.self.packages.${pkgs.system}.quickemu
+    #inputs.self.packages.${pkgs.system}.quickemu
+    (quickemu.override { qemu = qemu_full; })
     virt-viewer
     distrobox
   ];
