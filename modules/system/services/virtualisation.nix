@@ -29,9 +29,8 @@
   programs.virt-manager.enable = true;  
   
   environment.systemPackages = with pkgs; [ 
-    qemu
-    #inputs.self.packages.${pkgs.system}.quickemu
-    (quickemu.override { qemu = qemu_full; })
+    qemu_full
+    inputs.self.packages.${pkgs.system}.quickemu
     virt-viewer
     distrobox
   ];

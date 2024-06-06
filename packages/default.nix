@@ -5,6 +5,7 @@
     inherit (pkgs)
       brave-browser
       cosmic-webapps
+      quickemu
       ;      
    };
 
@@ -25,6 +26,7 @@
     # Custom packages
     brave-browser = prev.callPackage ./brave-browser { };
     cosmic-webapps = prev.callPackage ./cosmic-webapps { };
+    quickemu = prev.callPackage ./quickemu { };
   };
 
 }
