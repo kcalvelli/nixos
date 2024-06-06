@@ -36,9 +36,7 @@
     # Services
     #hosting
     printing
-    timers
     virtualisation
-    remote
 
     # Then a desktop  
     cosmic
