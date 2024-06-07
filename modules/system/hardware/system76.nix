@@ -34,4 +34,7 @@
     enableAllFirmware = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
+
+  services.xserver.synaptics.enable = false;
+  services.libinput.enable = true;
 }
