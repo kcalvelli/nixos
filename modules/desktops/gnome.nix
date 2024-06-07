@@ -39,6 +39,10 @@
     clipboard-indicator
     media-controls
     astra-monitor
+    just-perfection
+    blur-my-shell
+    space-bar
+    dash-to-dock
   ]);
     
    # Minimize how bad qt apps look here
