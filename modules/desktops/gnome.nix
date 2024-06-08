@@ -43,6 +43,7 @@
     blur-my-shell
     space-bar
     dash-to-dock
+    forge
   ]);
     
    # Minimize how bad qt apps look here
