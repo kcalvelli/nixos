@@ -34,10 +34,8 @@
     qgnomeplatform-qt6
   ] ++ ( with pkgs.gnomeExtensions; [
     wallpaper-slideshow
-    gsconnect
     appindicator
     clipboard-indicator
-    media-controls
     astra-monitor
     just-perfection
     blur-my-shell

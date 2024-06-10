@@ -5,5 +5,6 @@
     nextcloud-client
     microsoft-edge-dev
     networkmanagerapplet
+    valent
   ];
 }
