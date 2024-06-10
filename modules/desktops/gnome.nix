@@ -36,11 +36,7 @@
     wallpaper-slideshow
     appindicator
     clipboard-indicator
-    astra-monitor
-    just-perfection
     blur-my-shell
-    space-bar
-    dash-to-dock
     forge
   ]);
     
