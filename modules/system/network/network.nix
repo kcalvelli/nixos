@@ -2,6 +2,7 @@
 {
  networking = { 
     networkmanager.enable = true;
+    networkmanager.wifi.backend = "iwd";
     useNetworkd = true;
     useDHCP = false;
     firewall.enable = false;
