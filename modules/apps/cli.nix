@@ -40,5 +40,6 @@
     wirelesstools
     amdgpu_top
     gtop
+    iw
   ];   
 }
