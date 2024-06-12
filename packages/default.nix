@@ -4,7 +4,7 @@
    packages = {
     inherit (pkgs)
       brave-browser
-      cosmic-webapps
+      quick-webapps
       quickemu
       ;      
    };
