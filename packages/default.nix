@@ -25,7 +25,7 @@
   flake.overlays.default = _final: prev: {
     # Custom packages
     brave-browser = prev.callPackage ./brave-browser { };
-    cosmic-webapps = prev.callPackage ./cosmic-webapps { };
+    quick-webapps = prev.callPackage ./quick-webapps { };
     quickemu = prev.callPackage ./quickemu { };
   };
 
