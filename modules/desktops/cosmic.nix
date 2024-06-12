@@ -8,9 +8,9 @@
   #Just cosmic
   services.desktopManager.cosmic.enable = true;
 
-  environment.systemPackages = with pkgs; {
+  environment.systemPackages = with pkgs; [
     adw-gtk3
-  };
+  ];
   #services.displayManager.cosmic-greeter.enable = true;
 
   #services = {
