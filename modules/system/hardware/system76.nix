@@ -8,8 +8,8 @@
   ];
 
   boot = {
-    # Kernel
-    kernelPackages = pkgs.linuxPackages_latest;
+    # Kernel - currently 6.7+ disables 6GHz on MT7921K
+    kernelPackages = pkgs.linuxPackages_6_6;
     kernelParams = [
      "ro" "quiet" "loglevel=0" "splash" "systemd.show_status=false"   
     ];
