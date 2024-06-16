@@ -23,7 +23,7 @@
 
   hardware = {
     amdgpu = {
-      amdvlk = true;
+      amdvlk.enable = true;
       loadInInitrd = true;
       opencl = true;
     };
