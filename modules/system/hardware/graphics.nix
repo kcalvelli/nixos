@@ -24,6 +24,7 @@
   hardware = {
     amdgpu = {
       amdvlk.enable = true;
+      amdvlk.support32Bit.enable = true;
       loadInInitrd = true;
       opencl = true;
     };
