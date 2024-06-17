@@ -15,34 +15,12 @@
     ];
     blacklistedKernelModules = [ "psmouse" ];
     loader.systemd-boot.enable = true;
-    initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
-    #initrd.kernelModules = [  ];
-    initrd.kernelModules = [ 
+    initrd.availableKernelModules = [ "nvme" "xhci_pci" ];
+    kernelModules = [ 
       "kvm-amd"
-      "tls"
-      "zstd"
-      "binfmt_misc"
-      "irqbypass"
-      "bfq"
-      "kyber_iosched"
-      "msr"
-      "parport"
-      "parport_pc"
-      "ppdev"
-      "lp"
-      "async_memcpy"
-      "async_pq"
-      "async_xor"
-      "async_tx"
-      "xor"
-      "libcrc32c"
       "system76-acpi" 
       "system76-io"
     ];
-    extraModulePackages = [ ];
-    #extraModprobeConfig = ''
-    #options mt7921_common disable_clc=1
-    #'';
   };
 
   # Enable all the system76 stuff
