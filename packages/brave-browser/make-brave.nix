@@ -46,7 +46,7 @@
 , zlib
 
 # command line arguments which are always set e.g "--disable-gpu"
-, commandLineArgs ? ""
+, commandLineArgs ? "--gtk-version=4"
 
 # Necessary for USB audio devices.
 , pulseSupport ? stdenv.isLinux
@@ -182,7 +182,7 @@ stdenv.mkDerivation {
       --prefix PATH : ${binpath}
       --suffix PATH : ${lib.makeBinPath [ xdg-utils coreutils ]}
       ${optionalString (enableFeatures != []) ''
-      --add-flags "--gtk-version=4 --enable-features=${strings.concatStringsSep "," enableFeatures}\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+,WaylandWindowDecorations}}"
+      --add-flags "--enable-features=${strings.concatStringsSep "," enableFeatures}\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+,WaylandWindowDecorations}}"
       ''}
       ${optionalString (disableFeatures != []) ''
       --add-flags "--disable-features=${strings.concatStringsSep "," disableFeatures}"
