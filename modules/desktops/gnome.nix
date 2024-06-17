@@ -12,7 +12,7 @@
       };
       displayManager = {
         gdm = {
-          enable = false;
+          enable = true;
         };
       };
     };
