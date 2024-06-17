@@ -17,7 +17,26 @@
     loader.systemd-boot.enable = true;
     initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" "system76-io" "system76-acpi" ];
     initrd.kernelModules = [ "system76-acpi" ];
-    kernelModules = [ "kvm-amd" ];
+    kernelModules = [ 
+      "kvm-amd"
+      "tls"
+      "zstd"
+      "binfmt_misc"
+      "irqbypass"
+      "bfq"
+      "kyber_iosched"
+      "msr"
+      "parport"
+      "parport_pc"
+      "ppdev"
+      "lp"
+      "async_memcpy"
+      "async_pq"
+      "async_xor"
+      "async_tx"
+      "xor"
+      "libcrc32c"
+    ];
     extraModulePackages = [ ];
     #extraModprobeConfig = ''
     #options mt7921_common disable_clc=1
