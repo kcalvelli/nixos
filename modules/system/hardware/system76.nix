@@ -15,9 +15,9 @@
     ];
     blacklistedKernelModules = [ "psmouse" ];
     loader.systemd-boot.enable = true;
-    initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" "system76-io" "system76-acpi" ];
-    initrd.kernelModules = [ "system76-acpi" ];
-    kernelModules = [ 
+    initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
+    #initrd.kernelModules = [  ];
+    initrd.kernelModules = [ 
       "kvm-amd"
       "tls"
       "zstd"
@@ -36,6 +36,8 @@
       "async_tx"
       "xor"
       "libcrc32c"
+      "system76-acpi" 
+      "system76-io"
     ];
     extraModulePackages = [ ];
     #extraModprobeConfig = ''
