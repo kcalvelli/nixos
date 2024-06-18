@@ -5,7 +5,7 @@
 
    environment.systemPackages = with pkgs; [   
      #This is not ready for prime time
-     #zed-editor
+     zed-editor
      vscode
      jetbrains.rust-rover
    ];

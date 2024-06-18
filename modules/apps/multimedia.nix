@@ -6,7 +6,6 @@
   '';  
 
   environment.systemPackages = with pkgs; [ 
-     noson
      gimp
      celluloid
      loupe
