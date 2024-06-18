@@ -28,7 +28,7 @@
 
     # Network
     network
-    bridge
+    #bridge
     avahi
     samba
     #zerotier

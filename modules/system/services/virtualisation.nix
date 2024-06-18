@@ -1,7 +1,14 @@
 { inputs, pkgs, ... }:
 {
   virtualisation = {
-    libvirtd.enable = true;
+    libvirtd = {
+      enable = true;
+      qemu = {
+        ovmf.enable = true;
+        ovmf.packages = [ pkgs.OVMFFull.fd ];
+        swtpm.enable = true;
+      };
+    };
     spiceUSBRedirection.enable = true;
     podman = {
       enable = true;
@@ -31,6 +38,7 @@
   environment.systemPackages = with pkgs; [ 
     qemu_full
     inputs.self.packages.${pkgs.system}.quickemu
+    quickgui
     virt-viewer
     distrobox
   ];

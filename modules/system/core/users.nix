@@ -6,7 +6,7 @@
     keith = {
       isNormalUser = true;
       description = "Keith Calvelli";
-      extraGroups = [ "networkmanager" "wheel" "kvm" "input" "disk""libvirtd" "plugdev" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" "kvm" "input" "disk" "libvirtd" "plugdev" "qemu-libvirtd"  ];
     };       
   };
 
