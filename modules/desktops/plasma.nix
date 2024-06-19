@@ -42,8 +42,8 @@
     pkgs.kdePackages.filelight
     
     #Kaccounts
-    pkgs.kdePackages.kaccounts-integration
-    pkgs.kdePackages.kaccounts-providers
-    utterly-nord-plasma
+    #pkgs.kdePackages.kaccounts-integration
+    #pkgs.kdePackages.kaccounts-providers
+    #utterly-nord-plasma
   ];  
 }
