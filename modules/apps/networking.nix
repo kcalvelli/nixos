@@ -6,6 +6,5 @@
     inputs.self.packages.${pkgs.system}.quick-webapps
     nextcloud-client
     valent
-    google-chrome
   ];
 }

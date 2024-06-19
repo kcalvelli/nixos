@@ -26,20 +26,14 @@
     options kvm ignore_msrs=1
   '';
 
-  virtualisation.vmVariant = {
-    virtualisation = {
-      memorySize = 8192;
-      cores = 4;
-    };
-  };
+  programs.virt-manager.enable = true;
 
-  programs.virt-manager.enable = true;  
-  
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     qemu_full
     inputs.self.packages.${pkgs.system}.quickemu
-    quickgui
     virt-viewer
     distrobox
+    gnome.gnome-boxes
+    swtpm
   ];
-} 
+}
