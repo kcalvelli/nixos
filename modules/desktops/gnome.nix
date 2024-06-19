@@ -12,7 +12,8 @@
       };
       displayManager = {
         gdm = {
-          enable = true;
+          #enable = true;
+          enable = false;
         };
       };
     };
@@ -24,7 +25,7 @@
       gnome-tour
       gnome.yelp
       gnome.gnome-music
-      gnome-console   
+      gnome-console
       gnome-text-editor
     ];
   };
@@ -39,7 +40,7 @@
     blur-my-shell
     forge
   ]);
-    
+
    # Minimize how bad qt apps look here
   qt.enable = true;
   qt.style = "adwaita-dark";
