@@ -13,16 +13,16 @@
 
     flake-utils.inputs.systems.follows = "systems";
 
-    systems.url = "github:nix-systems/x86_64-linux";   
+    systems.url = "github:nix-systems/x86_64-linux";
 
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/home-manager";   
+      url = "github:nix-community/home-manager";
     };
 
     devshell = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:numtide/devshell";  
+      url = "github:numtide/devshell";
     };
 
     flake-utils.url = "github:numtide/flake-utils";
@@ -41,7 +41,7 @@
       systems = import systems;
 
     imports = [
-      ./packages
+      ./pkgs
       ./hosts
       ./modules
       ./home

@@ -6,10 +6,11 @@
       brave-browser
       quick-webapps
       quickemu
-      ;      
+      cosmic-player
+      ;
    };
 
-   
+
 
    _module.args.pkgs = import inputs.nixpkgs {
       inherit system;
@@ -27,7 +28,7 @@
     brave-browser = prev.callPackage ./brave-browser { };
     quick-webapps = prev.callPackage ./quick-webapps { };
     quickemu = prev.callPackage ./quickemu { };
+    cosmic-player = prev.callPackage ./cosmic-player { };
   };
 
 }
-
