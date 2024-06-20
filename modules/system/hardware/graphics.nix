@@ -26,18 +26,13 @@
       #amdvlk.support32Bit.enable = true;
       loadInInitrd = true;
     };
-    graphics = {
-      extraPackages = [
-        rocmPackages.clr.icd
-        #pkgs.amdvlk
-      ];
-      #extraPackages32 = [
-      #  pkgs.driversi686Linux.amdvlk
-      #];
-    };
     opengl = {
       enable = true;
       driSupport = true;
+      extraPackages = with pkgs; [
+        rocmPackages.clr.icd
+        #pkgs.amdvlk
+      ];
     };
   };
 
