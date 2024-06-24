@@ -6,6 +6,8 @@
      #vscode
      #jetbrains.rust-rover
      inputs.self.packages.${pkgs.system}.cursor
+     nil
+     lapce
    ];
    programs.direnv.enable = true;
    services.lorri.enable = true;
