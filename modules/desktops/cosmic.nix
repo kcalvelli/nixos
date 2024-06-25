@@ -9,6 +9,9 @@
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
 
+  #Disable geoclue
+  services.geoclue2.enable = lib.mkForce false;
+
   environment.systemPackages = with pkgs; [
     adw-gtk3
   ];
