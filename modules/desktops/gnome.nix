@@ -27,18 +27,20 @@
       gnome.gnome-music
       gnome-console
       gnome-text-editor
+      gnome.gnome-maps
+      gnome.rygel
+      gnome.gnome-system-monitor
     ];
   };
 
   environment.systemPackages = with pkgs; [
-    gnomecast
     qgnomeplatform-qt6
   ] ++ ( with pkgs.gnomeExtensions; [
-    wallpaper-slideshow
-    appindicator
-    clipboard-indicator
-    blur-my-shell
-    forge
+  #  wallpaper-slideshow
+  #  appindicator
+  #  clipboard-indicator
+  #  blur-my-shell
+  #  forge
   ]);
 
    # Minimize how bad qt apps look here

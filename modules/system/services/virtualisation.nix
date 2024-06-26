@@ -33,7 +33,5 @@
     inputs.self.packages.${pkgs.system}.quickemu
     virt-viewer
     distrobox
-    gnome.gnome-boxes
-    swtpm
   ];
 }
