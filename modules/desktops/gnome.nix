@@ -28,10 +28,14 @@
       gnome-console
       gnome-text-editor
       gnome.gnome-maps
-      gnome.rygel
       gnome.gnome-system-monitor
+      gnome.totem
+      gnome.gnome-weather
+      
     ];
   };
+
+  services.gnome.rygel.enable = lib.mkForce false;
 
   environment.systemPackages = with pkgs; [
     qgnomeplatform-qt6
