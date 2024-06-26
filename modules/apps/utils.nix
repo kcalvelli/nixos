@@ -3,5 +3,6 @@
   environment.systemPackages = with pkgs; [ 
     mission-center
     wlogout  
+    gnome-firmware
   ];
 }    
