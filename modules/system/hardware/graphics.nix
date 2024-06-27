@@ -22,8 +22,6 @@
 
   hardware = {
     amdgpu = {
-      #amdvlk.enable = true;
-      #amdvlk.support32Bit.enable = true;
       loadInInitrd = true;
     };
     graphics = {
@@ -31,13 +29,7 @@
       enable32Bit = true;
       extraPackages = with pkgs; [
         rocmPackages.clr.icd
-        #pkgs.amdvlk
       ];
     };
   };
-
-  ## HIP
-  #systemd.tmpfiles.rules = [
-  #  "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  #];
 }
