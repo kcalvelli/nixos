@@ -1,5 +1,10 @@
- 
-{ inputs, pkgs, config, lib, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 {
   imports = [
     inputs.nixos-hardware.nixosModules.system76
@@ -11,14 +16,22 @@
     # Kernel - currently 6.7+ disables 6GHz on MT7921K, but doesn't work anyway so who gives a 
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
-     "ro" "quiet" "loglevel=0" "splash" "systemd.show_status=false" "i8042.noaux"  
+      "ro"
+      "quiet"
+      "loglevel=0"
+      "splash"
+      "systemd.show_status=false"
+      "i8042.noaux"
     ];
     blacklistedKernelModules = [ "psmouse" ];
     loader.systemd-boot.enable = true;
-    initrd.availableKernelModules = [ "nvme" "xhci_pci" ];
-    kernelModules = [ 
+    initrd.availableKernelModules = [
+      "nvme"
+      "xhci_pci"
+    ];
+    kernelModules = [
       "kvm-amd"
-      "system76-acpi" 
+      "system76-acpi"
       "system76-io"
     ];
   };

@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-#Samba
+  #Samba
   services.samba = {
     enable = true;
     package = pkgs.samba;
@@ -14,7 +14,7 @@
     shares.pictures = {
       path = "/home/keith/Pictures";
       writable = true;
-    }; 
+    };
 
     # You will still need to set up the user accounts to begin with:
     # $ sudo smbpasswd -a yourusername
@@ -30,7 +30,7 @@
 
     shares = {
       homes = {
-        browseable = "no";  # note: each home will be browseable; the "homes" share will not.
+        browseable = "no"; # note: each home will be browseable; the "homes" share will not.
         "read only" = "no";
         "guest ok" = "no";
       };

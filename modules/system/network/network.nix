@@ -1,6 +1,6 @@
- { pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 {
- networking = { 
+  networking = {
     networkmanager.enable = true;
     useNetworkd = true;
     useDHCP = false;
@@ -14,11 +14,9 @@
 
   programs.mtr.enable = true;
   programs.ssh.startAgent = true;
-  
-  environment.systemPackages = with pkgs; [ 
-    openssl
-  ];
-  
+
+  environment.systemPackages = with pkgs; [ openssl ];
+
   # For RTL-SDR
   hardware.rtl-sdr.enable = true;
 }

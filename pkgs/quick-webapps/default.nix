@@ -1,23 +1,23 @@
-{ lib
-, rustPlatform
-, fetchFromGitHub
-, pkg-config
-, cosmic-icons
-, glib
-, gtk3
-, just
-, libxkbcommon
-, makeBinaryWrapper
-, openssl
-, stdenv
-, darwin
-, wayland
+{
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+  pkg-config,
+  cosmic-icons,
+  glib,
+  gtk3,
+  just,
+  libxkbcommon,
+  makeBinaryWrapper,
+  openssl,
+  stdenv,
+  darwin,
+  wayland,
 }:
 
-
-let 
-  commitDate="2024-06-05";
-in 
+let
+  commitDate = "2024-06-05";
+in
 rustPlatform.buildRustPackage rec {
   pname = "quick-webapps";
   version = "0.4.6";
@@ -57,23 +57,24 @@ rustPlatform.buildRustPackage rec {
     makeBinaryWrapper
   ];
 
-  buildInputs = [
-    glib
-    gtk3
-    libxkbcommon
-    openssl
-  ] ++ lib.optionals stdenv.isDarwin [
-    darwin.apple_sdk.frameworks.AppKit
-    darwin.apple_sdk.frameworks.CoreFoundation
-    darwin.apple_sdk.frameworks.CoreGraphics
-    darwin.apple_sdk.frameworks.CoreServices
-    darwin.apple_sdk.frameworks.Foundation
-    darwin.apple_sdk.frameworks.Metal
-    darwin.apple_sdk.frameworks.QuartzCore
-    darwin.apple_sdk.frameworks.Security
-  ] ++ lib.optionals stdenv.isLinux [
-    wayland
-  ];
+  buildInputs =
+    [
+      glib
+      gtk3
+      libxkbcommon
+      openssl
+    ]
+    ++ lib.optionals stdenv.isDarwin [
+      darwin.apple_sdk.frameworks.AppKit
+      darwin.apple_sdk.frameworks.CoreFoundation
+      darwin.apple_sdk.frameworks.CoreGraphics
+      darwin.apple_sdk.frameworks.CoreServices
+      darwin.apple_sdk.frameworks.Foundation
+      darwin.apple_sdk.frameworks.Metal
+      darwin.apple_sdk.frameworks.QuartzCore
+      darwin.apple_sdk.frameworks.Security
+    ]
+    ++ lib.optionals stdenv.isLinux [ wayland ];
 
   postPatch = ''
     substituteInPlace justfile --replace '#!/usr/bin/env' "#!$(command -v env)"
@@ -90,12 +91,15 @@ rustPlatform.buildRustPackage rec {
     "target/${stdenv.hostPlatform.rust.cargoShortTarget}/release/quick-webapps"
   ];
 
-
-
   postFixup = lib.optionalString stdenv.isLinux ''
     wrapProgram $out/bin/${pname} \
       --suffix XDG_DATA_DIRS : "${cosmic-icons}/share" \
-      --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ libxkbcommon wayland ]}"
+      --prefix LD_LIBRARY_PATH : "${
+        lib.makeLibraryPath [
+          libxkbcommon
+          wayland
+        ]
+      }"
   '';
 
   meta = with lib; {

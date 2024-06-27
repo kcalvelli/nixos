@@ -3,7 +3,7 @@
 
   # Needed to enable fish completions
   programs.fish.enable = true;
-  
+
   environment.systemPackages = with pkgs; [
     # Rust replacement for gnu coreutils
     uutils-coreutils-noprefix
@@ -15,7 +15,7 @@
     bottom
     broot
     dua
-    dust 
+    dust
     eza
     fd
     helix
@@ -30,7 +30,7 @@
     tokei
     xcp
     zoxide
-    
+
     # Get stuff
     wget
     curl
@@ -41,5 +41,5 @@
     amdgpu_top
     gtop
     iw
-  ];   
+  ];
 }

@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     mission-center
-    wlogout  
+    wlogout
     gnome-firmware
   ];
-}    
+}

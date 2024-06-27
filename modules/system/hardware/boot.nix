@@ -4,8 +4,8 @@
     bootspec.enable = true;
 
     initrd = {
-      systemd.enable = true; 
-      verbose = false;  
+      systemd.enable = true;
+      verbose = false;
     };
     # Plymouth is purty
     plymouth.enable = true;

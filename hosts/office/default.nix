@@ -5,56 +5,58 @@
 { inputs, pkgs, ... }:
 
 {
-  imports = [
-    ./hardware.nix
-    inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.home-manager.nixosModules.default
-    ] ++(with inputs.self.nixosModules; [
+  imports =
+    [
+      ./hardware.nix
+      inputs.lanzaboote.nixosModules.lanzaboote
+      inputs.home-manager.nixosModules.default
+    ]
+    ++ (with inputs.self.nixosModules; [
 
-    # First the system
-    # Hardware
-    boot
-    graphics
-    msi
-    sound
+      # First the system
+      # Hardware
+      boot
+      graphics
+      msi
+      sound
 
-    # Core
-    nix
-    environment
-    filesystems
-    fonts
-    security
-    users
+      # Core
+      nix
+      environment
+      filesystems
+      fonts
+      security
+      users
 
-    # Network
-    network
-    #bridge
-    avahi
-    samba
-    #zerotier
+      # Network
+      network
+      #bridge
+      avahi
+      samba
+      #zerotier
 
-    # Services
-    #hosting
-    printing
-    virtualisation
+      # Services
+      #hosting
+      printing
+      virtualisation
 
-    # Then a desktop  
-    cosmic
-#    plasma
-    gnome
+      # Then a desktop  
+      cosmic
+      #    plasma
+      gnome
 
-    # Then apps
-    cli
-    development
-    games
-    multimedia
-    networking
-    office
-    scientific
-    utils
-  ]);
+      # Then apps
+      cli
+      development
+      games
+      multimedia
+      networking
+      office
+      scientific
+      utils
+    ]);
 
-  networking = { 
+  networking = {
     hostName = "office"; # Define your hostname.
   };
   services.resolved.extraConfig = ''

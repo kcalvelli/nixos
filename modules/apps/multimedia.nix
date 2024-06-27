@@ -1,4 +1,9 @@
-{ pkgs, config, inputs, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 {
   boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
   boot.extraModprobeConfig = ''
@@ -6,27 +11,27 @@
   '';
 
   environment.systemPackages = with pkgs; [
-     gimp
-     celluloid
-     loupe
-     #inputs.self.packages.${pkgs.system}.cosmic-player
-     # OBS with plugins
-     (pkgs.wrapOBS {
-        plugins = with pkgs.obs-studio-plugins; [
-          obs-backgroundremoval
-          obs-gstreamer
-          obs-vaapi
-        ];
-      })
+    gimp
+    celluloid
+    loupe
+    #inputs.self.packages.${pkgs.system}.cosmic-player
+    # OBS with plugins
+    (pkgs.wrapOBS {
+      plugins = with pkgs.obs-studio-plugins; [
+        obs-backgroundremoval
+        obs-gstreamer
+        obs-vaapi
+      ];
+    })
 
-      # codecs
-      mpg123
-      gst_all_1.gstreamer
-      gst_all_1.gst-plugins-bad
-      gst_all_1.gst-plugins-ugly
-      gst_all_1.gst-plugins-good
-      gst_all_1.gst-plugins-base
+    # codecs
+    mpg123
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-base
 
-      ffmpeg-full
+    ffmpeg-full
   ];
 }

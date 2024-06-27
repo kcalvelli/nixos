@@ -5,52 +5,54 @@
 { inputs, pkgs, ... }:
 
 {
-  imports = [
-    ./hardware.nix
-    inputs.home-manager.nixosModules.default
-    ] ++(with inputs.self.nixosModules; [
-    # First the system
-    # Hardware
-    boot
-    graphics
-    system76
-    sound
+  imports =
+    [
+      ./hardware.nix
+      inputs.home-manager.nixosModules.default
+    ]
+    ++ (with inputs.self.nixosModules; [
+      # First the system
+      # Hardware
+      boot
+      graphics
+      system76
+      sound
 
-    # Core
-    nix
-    environment
-    filesystems
-    fonts
-    security
-    users
+      # Core
+      nix
+      environment
+      filesystems
+      fonts
+      security
+      users
 
-    # Network
-    network
-    avahi
-    samba
-    #zerotier
+      # Network
+      network
+      avahi
+      samba
+      #zerotier
 
-    # Services
-    printing
-    virtualisation
-    
-    # Then a desktop  
-    cosmic
-    #plasma
-    gnome
+      # Services
+      printing
+      virtualisation
 
-    # Then apps
-    cli
-    development
-    #games
-    multimedia
-    networking
-    office
-    scientific
-    utils
-  ]);    
+      # Then a desktop  
+      cosmic
+      #plasma
+      gnome
 
-  networking = { 
+      # Then apps
+      cli
+      development
+      #games
+      multimedia
+      networking
+      office
+      scientific
+      utils
+    ]);
+
+  networking = {
     hostName = "pangolin"; # Define your hostname.
   };
 
@@ -58,5 +60,5 @@
     [Resolve]
     DNS=76.76.2.22#1vcddi9p25b.dns.controld.com
     DNSOverTLS=yes
-  '';  
+  '';
 }

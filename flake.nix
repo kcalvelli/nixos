@@ -36,15 +36,23 @@
     };
   };
 
-  outputs = inputs @ { flake-parts, systems, lanzaboote, nixos-cosmic, nixpkgs, ... }:
+  outputs =
+    inputs@{
+      flake-parts,
+      systems,
+      lanzaboote,
+      nixos-cosmic,
+      nixpkgs,
+      ...
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
 
-    imports = [
-      ./pkgs
-      ./hosts
-      ./modules
-      ./home
-    ];
-  };
+      imports = [
+        ./pkgs
+        ./hosts
+        ./modules
+        ./home
+      ];
+    };
 }

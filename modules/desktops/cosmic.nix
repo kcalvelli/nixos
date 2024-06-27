@@ -1,9 +1,14 @@
-{ inputs, pkgs, config, utils, lib, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  utils,
+  lib,
+  ...
+}:
 
 {
-  imports = [
-    inputs.nixos-cosmic.nixosModules.default
-  ];
+  imports = [ inputs.nixos-cosmic.nixosModules.default ];
 
   #Just cosmic
   services.desktopManager.cosmic.enable = true;
@@ -12,7 +17,5 @@
   #Disable geoclue
   services.geoclue2.enable = lib.mkForce false;
 
-  environment.systemPackages = with pkgs; [
-    adw-gtk3
-  ];
+  environment.systemPackages = with pkgs; [ adw-gtk3 ];
 }

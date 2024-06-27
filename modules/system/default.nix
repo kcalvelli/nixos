@@ -11,7 +11,7 @@
     environment = ./core/environment.nix;
 
     # Hardware
-    boot = ./hardware/boot.nix;    
+    boot = ./hardware/boot.nix;
     system76 = ./hardware/system76.nix;
     msi = ./hardware/msi.nix;
     graphics = ./hardware/graphics.nix;
@@ -26,7 +26,7 @@
 
     # Services
     hosting = ./services/hosting.nix;
-    printing= ./services/printing.nix;   
-    virtualisation = ./services/virtualisation.nix;     
+    printing = ./services/printing.nix;
+    virtualisation = ./services/virtualisation.nix;
   };
 }
