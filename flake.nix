@@ -34,6 +34,8 @@
       #url = "github:drakon64/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs =
@@ -43,6 +45,7 @@
       lanzaboote,
       nixos-cosmic,
       nixpkgs,
+      nur,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {

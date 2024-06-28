@@ -14,8 +14,13 @@
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
 
-  #Disable geoclue
-  services.geoclue2.enable = lib.mkForce false;
+  # Minimize how bad qt apps look here
+  qt.enable = true;
+  qt.style = "adwaita-dark";
+  qt.platformTheme = "gnome";
 
-  environment.systemPackages = with pkgs; [ adw-gtk3 ];
+  environment.systemPackages = with pkgs; [ 
+    adw-gtk3
+    qgnomeplatform-qt6
+  ];
 }

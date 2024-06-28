@@ -4,8 +4,8 @@
     enable = true;
     remotePlay.openFirewall = true;
   };
-  programs.gamemode.enable = true;
-  programs.gamescope.enable = true;
+  #programs.gamemode.enable = true;
+  #programs.gamescope.enable = true;
   hardware = {
     steam-hardware.enable = true;
   };
