@@ -43,7 +43,7 @@
       # Then a desktop  
       cosmic
       #    plasma
-      gnome
+      #gnome
 
       # Then apps
       cli

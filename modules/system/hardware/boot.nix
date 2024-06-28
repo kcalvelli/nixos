@@ -19,4 +19,7 @@
   # Wasn't sure where to put this so here it is
   # Enable firmware updates
   services.fwupd.enable = true;
+
+  # Enable power profiles
+   services.power-profiles-daemon.enable = true;
 }
