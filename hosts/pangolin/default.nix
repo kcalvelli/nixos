@@ -12,13 +12,13 @@
     ]
     ++ (with inputs.self.nixosModules; [
       config
+      core
       development
       gaming
       multimedia
       networking
       printing
       productivity
-      system
       system76
       utils
       virtualisation
