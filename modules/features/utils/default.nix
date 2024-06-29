@@ -10,6 +10,7 @@
     gnome.gnome-logs
     gnome.simple-scan
     snapshot  
+    ptyxis
 
     # Rust replacement for gnu coreutils
     uutils-coreutils-noprefix
