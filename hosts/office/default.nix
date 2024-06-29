@@ -27,7 +27,6 @@
       fonts
       security
       users
-      flatpak
 
       # Network
       network

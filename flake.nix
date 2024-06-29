@@ -34,9 +34,6 @@
       #url = "github:drakon64/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
-
   };
 
   outputs =
@@ -46,7 +43,6 @@
       lanzaboote,
       nixos-cosmic,
       nixpkgs,
-      nix-flatpak,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {

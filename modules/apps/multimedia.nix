@@ -14,7 +14,6 @@
     gimp
     celluloid
     loupe
-    #inputs.self.packages.${pkgs.system}.cosmic-player
     # OBS with plugins
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [

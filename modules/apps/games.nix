@@ -13,7 +13,6 @@
   environment.systemPackages = with pkgs; [
     gamescope
     mangohud
-    protontricks
     superTuxKart
   ];
 }
