@@ -27,9 +27,8 @@
   home-manager.users = {
     keith = {
       imports = with inputs.self.homeModules; [
-        desktop
         virtualisation
-        cli
+        utils
         development
       ];
       home.stateVersion = "24.05";

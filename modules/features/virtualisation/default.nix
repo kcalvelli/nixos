@@ -33,5 +33,6 @@
     inputs.self.packages.${pkgs.system}.quickemu
     virt-viewer
     distrobox
+    boxbuddy
   ];
 }

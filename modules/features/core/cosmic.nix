@@ -19,7 +19,7 @@
   qt.style = "adwaita-dark";
   qt.platformTheme = "gnome";
 
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     adw-gtk3
     qgnomeplatform-qt6
   ];

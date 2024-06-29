@@ -12,48 +12,18 @@
       inputs.home-manager.nixosModules.default
     ]
     ++ (with inputs.self.nixosModules; [
-
-      # First the system
-      # Hardware
-      boot
-      graphics
-      msi
-      sound
-
-      # Core
-      nix
-      environment
-      filesystems
-      fonts
-      security
-      users
-
-      # Network
-      network
-      #bridge
-      avahi
-      samba
-      #zerotier
-
-      # Services
-      #hosting
+      config
+      development
+      gaming
+      graphics-multimedia
+      networking
       printing
+      productivity
+      system
+      msi
+      utils
       virtualisation
 
-      # Then a desktop  
-      cosmic
-      #    plasma
-      #gnome
-
-      # Then apps
-      cli
-      development
-      games
-      multimedia
-      networking
-      office
-      scientific
-      utils
     ]);
 
   networking = {

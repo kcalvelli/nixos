@@ -11,9 +11,8 @@ let
     };
 in
 {
-  flake.homeModules.desktop = ./desktop;
-  flake.homeModules.cli = ./cli;
+
+  flake.homeModules.utils = ./utils;
   flake.homeModules.virtualisation = ./virtualisation;
   flake.homeModules.development = ./development;
-
 }

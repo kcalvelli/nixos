@@ -21,5 +21,5 @@
   services.fwupd.enable = true;
 
   # Enable power profiles
-   services.power-profiles-daemon.enable = true;
+  services.power-profiles-daemon.enable = true;
 }
