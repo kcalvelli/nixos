@@ -35,7 +35,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nur.url = "github:nix-community/NUR";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
+
   };
 
   outputs =
@@ -45,7 +46,7 @@
       lanzaboote,
       nixos-cosmic,
       nixpkgs,
-      nur,
+      nix-flatpak,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {

@@ -9,6 +9,7 @@
     security = ./core/security.nix;
     fonts = ./core/fonts.nix;
     environment = ./core/environment.nix;
+    flatpak = ./core/flatpak.nix;
 
     # Hardware
     boot = ./hardware/boot.nix;
