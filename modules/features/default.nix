@@ -6,7 +6,7 @@
     core = ./core;
     development = ./development;
     gaming = ./gaming;
-    graphics-multimedia = ./graphics-multimedia;
+    multimedia = ./multimedia;
     networking = ./networking;
     printing = ./printing;
     productivity = ./productivity;

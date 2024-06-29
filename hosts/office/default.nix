@@ -15,7 +15,7 @@
       config
       development
       gaming
-      graphics-multimedia
+      multimedia
       networking
       printing
       productivity
