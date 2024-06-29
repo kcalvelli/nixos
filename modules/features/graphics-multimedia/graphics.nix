@@ -10,6 +10,7 @@
     radeontop
     rocmPackages.rocm-smi
     umr
+    gimp
   ];
 
   boot.kernel.sysctl = {
