@@ -29,10 +29,10 @@
     fsType = "ext4";
   };
 
-  fileSystems."/mnt/games" = {
-    device = "/dev/disk/by-uuid/22d680fd-da6a-49fa-a2e6-3194a925f7ed";
-    fsType = "ext4";
-  };
+  #fileSystems."/mnt/games" = {
+  #  device = "/dev/disk/by-uuid/22d680fd-da6a-49fa-a2e6-3194a925f7ed";
+  #  fsType = "ext4";
+  #};
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/8371-0372";
