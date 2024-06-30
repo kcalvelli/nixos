@@ -6,10 +6,8 @@
 
       packages = {
         inherit (pkgs)
-          brave-browser
-          quick-webapps
+          #brave-browse  
           quickemu
-          cursor
           ;
       };
 
@@ -24,9 +22,7 @@
 
   flake.overlays.default = _final: prev: {
     # Custom packages
-    brave-browser = prev.callPackage ./brave-browser { };
-    quick-webapps = prev.callPackage ./quick-webapps { };
+    #brave-browser = prev.callPackage ./brave-browser { };
     quickemu = prev.callPackage ./quickemu { };
-    cursor = prev.callPackage ./cursor { };
   };
 }
