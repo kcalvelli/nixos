@@ -23,7 +23,6 @@
       msi
       utils
       virtualisation
-
     ]);
 
   networking = {

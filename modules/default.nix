@@ -1,6 +1,4 @@
 { ... }:
 {
-  imports = [
-    ./features
-  ];
+  imports = [ ./features ];
 }
