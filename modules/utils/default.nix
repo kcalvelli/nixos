@@ -6,7 +6,6 @@
     mission-center
     wlogout
     gnome-firmware
-    gnome.nautilus
     gnome.gnome-logs
     gnome.simple-scan
     snapshot
@@ -48,7 +47,6 @@
     amdgpu_top
     gtop
     iw
-
   ];
 
   # Needed to enable fish completions

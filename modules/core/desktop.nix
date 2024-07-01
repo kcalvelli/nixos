@@ -25,5 +25,6 @@
   environment.systemPackages = with pkgs; [
     adw-gtk3
     qgnomeplatform-qt6
+    gnome-extension-manager
   ];
 }

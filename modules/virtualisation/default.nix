@@ -17,7 +17,7 @@
         dns_enabled = true;
       };
     };
-    #waydroid.enable = true;
+    waydroid.enable = true;
   };
 
   boot.extraModprobeConfig = ''

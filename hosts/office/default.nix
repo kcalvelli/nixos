@@ -15,7 +15,7 @@
       config
       core
       development
-     # gaming
+      gaming
       multimedia
       networking
       printing

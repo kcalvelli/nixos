@@ -15,6 +15,11 @@
       jack.enable = true;
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    clapper
+    gnomecast
+  ];
   sound.enable = true;
   security.rtkit.enable = true;
   hardware.pulseaudio.enable = false;
