@@ -20,11 +20,12 @@
     valent
   ];
 
+  # Uncomment if removing GNOME
   # Email
-  programs.geary.enable = true;
-  services.gnome.evolution-data-server.enable = true;
+  #programs.geary.enable = true;
+  #services.gnome.evolution-data-server.enable = true;
 
   # Online accounts
-  services.gnome.gnome-online-accounts.enable = true;
-  services.accounts-daemon.enable = true;
+  #services.gnome.gnome-online-accounts.enable = true;
+  #services.accounts-daemon.enable = true;
 }
