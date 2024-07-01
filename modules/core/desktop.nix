@@ -10,9 +10,12 @@
 {
   imports = [ inputs.nixos-cosmic.nixosModules.default ];
 
-  #Just cosmic
+  #Cosmic
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
+
+  #Gnome
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Minimize how bad qt apps look here
   qt.enable = true;

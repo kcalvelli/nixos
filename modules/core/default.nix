@@ -2,7 +2,7 @@
 {
   imports = [
     ./fonts.nix
-    ./cosmic.nix
+    ./desktop.nix
     ./filesystems.nix
     ./boot.nix
     ./users.nix
