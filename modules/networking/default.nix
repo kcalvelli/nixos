@@ -11,7 +11,11 @@
 
   environment.systemPackages = with pkgs; [
     #inputs.self.packages.${pkgs.system}.brave-browser
-    brave
+    (brave.override {
+      commandLineArgs = [
+        "--gtk-version=4"           
+      ];
+     })
     nextcloud-client
     gnome.gnome-calendar
   ];
