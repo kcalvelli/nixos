@@ -12,10 +12,11 @@
 
   #Cosmic
   services.desktopManager.cosmic.enable = true;
-  services.displayManager.cosmic-greeter.enable = true;
+  #services.displayManager.cosmic-greeter.enable = true;
 
-  #Gnome
+  #GNOME
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
 
   # Minimize how bad qt apps look here
   qt.enable = true;
