@@ -15,9 +15,12 @@
   #services.displayManager.cosmic-greeter.enable = true;
 
   #GNOME
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-
+  services.xserver = {
+    enable = true;
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+  };
+  
   # Minimize how bad qt apps look here
   qt.enable = true;
   qt.style = "adwaita-dark";
