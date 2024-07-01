@@ -2,7 +2,7 @@
 {
   imports = [
     ./avahi.nix
-    ./bridge.nix
+    #./bridge.nix
     ./network.nix
     ./samba.nix
     #./zerotier.nix  
