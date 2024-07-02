@@ -11,11 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     #inputs.self.packages.${pkgs.system}.brave-browser
-    (brave.override {
-      commandLineArgs = [
-        "--gtk-version=4"           
-      ];
-     })
+    brave
     nextcloud-client
     valent
   ];
