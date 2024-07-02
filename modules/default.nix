@@ -4,6 +4,7 @@
 
     config = ./config;
     core = ./core;
+    desktop = ./desktop;
     development = ./development;
     gaming = ./gaming;
     multimedia = ./multimedia;

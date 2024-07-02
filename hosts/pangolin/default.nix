@@ -13,6 +13,7 @@
     ++ (with inputs.self.nixosModules; [
       config
       core
+      desktop
       development
       gaming
       multimedia
