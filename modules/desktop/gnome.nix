@@ -11,6 +11,7 @@
         cosmic-term
         cosmic-edit
         cosmic-icons
+        adw-gtk3
       ];
 
       gnome.excludePackages = 
