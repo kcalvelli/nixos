@@ -10,6 +10,7 @@
         gnome-extension-manager
         cosmic-term
         cosmic-edit
+        cosmic-icons
       ];
 
       gnome.excludePackages = 
