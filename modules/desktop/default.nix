@@ -1,5 +1,10 @@
 { inputs, lib, ... }:
 {
+  imports = [
+    ./gnome.nix
+    ./cosmic.nix
+  ];
+
   # Until Cosmic is more stable, default to Gnome but keep a specialisation for cosmic
   gnome.enable = true;
   specialisation = {
@@ -8,7 +13,6 @@
         "Cosmic"
       ];
       gnome.enable = lib.mkForce false;
-      cosmic-greeter = true;
       cosmic.enable = true;
     };
   };    
