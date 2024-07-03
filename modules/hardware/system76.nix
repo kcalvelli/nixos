@@ -10,11 +10,10 @@
     inputs.nixos-hardware.nixosModules.system76
     inputs.nixos-hardware.nixosModules.common-pc-ssd
     inputs.nixos-hardware.nixosModules.common-cpu-amd
+    ./kernel.nix
   ];
 
   boot = {
-    # Kernel - currently 6.7+ disables 6GHz on MT7921K, but doesn't work anyway so who gives a 
-    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "ro"
       "quiet"

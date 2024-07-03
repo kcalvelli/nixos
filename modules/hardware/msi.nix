@@ -9,6 +9,7 @@
   imports = [
     inputs.nixos-hardware.nixosModules.common-cpu-amd
     inputs.nixos-hardware.nixosModules.common-pc-ssd
+    ./kernel.nix
   ];
 
   hardware = {
@@ -18,7 +19,6 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
     # Disable systemd-boot for lanzaboote
     loader.systemd-boot.enable = lib.mkForce false;
     # Kernel
