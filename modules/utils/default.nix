@@ -40,7 +40,6 @@
     # Info stuff
     pciutils
     wirelesstools
-    amdgpu_top
     gtop
     iw
   ];
