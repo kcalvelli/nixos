@@ -14,5 +14,6 @@
     brave
     nextcloud-client
     valent
+    telegram-desktop
   ];
 }
