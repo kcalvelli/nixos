@@ -46,7 +46,6 @@
       ls = "${eza}/bin/eza";
       top = "${bottom}/bin/bottom";
       du = "${du-dust}/bin/dust";
-      fin
     };
   };
 

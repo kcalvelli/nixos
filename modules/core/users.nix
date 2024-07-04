@@ -28,7 +28,7 @@
     keith = {
       imports = with inputs.self.homeModules; [
         virtualisation
-        utils
+        shell
         development
       ];
       home.stateVersion = "24.05";
