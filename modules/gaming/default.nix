@@ -2,7 +2,6 @@
 {
   imports = [
     inputs.nix-gaming.nixosModules.platformOptimizations
-    inputs.Jovian-NixOS.nixosModules.default
   ];
 
   programs.steam = {
@@ -14,7 +13,10 @@
 
   programs.gamemode = {
     enable = true;
-    capSysNice = true;
+  };
+
+  programs.gamescope = {
+    enable = true;
   };
 
   environment.systemPackages = with pkgs; [
