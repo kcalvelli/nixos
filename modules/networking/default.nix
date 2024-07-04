@@ -15,6 +15,5 @@
     nextcloud-client
     valent
     paper-plane
-    floorp
   ];
 }
