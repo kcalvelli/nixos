@@ -11,7 +11,6 @@
     uutils-coreutils-noprefix
 
     # Very Rusty
-    atuin
     bandwhich
     bat
     bottom
@@ -21,9 +20,6 @@
     eza
     fd
     helix
-    lfs
-    lsd
-    macchina
     ouch
     procs
     rm-improved

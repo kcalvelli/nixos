@@ -12,7 +12,7 @@ let
 in
 {
 
-  flake.homeModules.utils = ./utils;
+  flake.homeModules.shell = ./shell;
   flake.homeModules.virtualisation = ./virtualisation;
   flake.homeModules.development = ./development;
 }
