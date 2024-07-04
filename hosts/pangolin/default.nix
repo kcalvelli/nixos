@@ -15,7 +15,7 @@
       core
       desktop
       development
-      gaming
+      #gaming
       multimedia
       networking
       printing

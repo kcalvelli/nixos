@@ -24,13 +24,14 @@
 
   hardware = {
     graphics = {
+      #enable32Bit = true;
       extraPackages = with pkgs; [ 
         rocmPackages.clr.icd
+        rocm-opencl-icd
         rocm-opencl-runtime
-        #amdvlk        
-      ];
-      extraPackages32 = with pkgs; [
-        #driversi686Linux.amdvlk
+        vulkan-loader
+        vulkan-validation-layers
+        vulkan-extension-layer      
       ];
     };
   };

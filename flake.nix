@@ -34,9 +34,6 @@
       #url = "github:drakon64/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nix-gaming.url = "github:fufexan/nix-gaming";
-    
   };
 
   outputs =
