@@ -21,11 +21,11 @@
           gnome-photos
           gnome-tour
           gedit
+          epiphany
+          totem          
         ])
         ++ (with pkgs.gnome; [
           gnome-music
-          epiphany
-          totem
           gnome-initial-setup
         ]);
     };

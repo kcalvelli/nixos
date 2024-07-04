@@ -20,10 +20,10 @@
       adw-gtk3
       qgnomeplatform-qt6
       gnome.gnome-logs
-      gnome.simple-scan   
+      simple-scan   
       snapshot   
-      gnome.gnome-calculator
-      gnome.nautilus
+      gnome-calculator
+      nautilus
     ];
 
 

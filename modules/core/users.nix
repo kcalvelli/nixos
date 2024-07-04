@@ -30,6 +30,7 @@
         virtualisation
         shell
         development
+        desktop
       ];
       home.stateVersion = "24.05";
       home.homeDirectory = "/home/keith";
