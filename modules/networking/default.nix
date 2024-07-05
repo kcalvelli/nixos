@@ -13,7 +13,7 @@
     #inputs.self.packages.${pkgs.system}.brave-browser
     brave
     nextcloud-client
-    valent
+    #valent
     paper-plane
   ];
 }
