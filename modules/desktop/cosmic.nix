@@ -34,15 +34,13 @@
   
     # Online accounts
     services.gnome.gnome-online-accounts.enable = true;
-    services.accounts-daemon.enable = true;
     
     # Enable GNOME Disks
     programs.gnome-disks.enable = true;
   
     # Keyring support
     programs.seahorse.enable = true;
-    services.gnome.gnome-keyring.enable = true;
-  
+
     # Enable GNOME file stuff
     programs.file-roller.enable = true;
     services.gnome.sushi.enable = true;

@@ -12,7 +12,10 @@
     umr
     gimp
     amdgpu_top
+    clapper
+    gnomecast    
   ];
+
 
   boot.kernel.sysctl = {
     "kernel.split_lock_mitigate" = 0;

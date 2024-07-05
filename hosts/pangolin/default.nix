@@ -11,16 +11,17 @@
       inputs.home-manager.nixosModules.default
     ]
     ++ (with inputs.self.nixosModules; [
+      common
       config
-      core
       desktop
       development
-      #gaming
+      fonts
       multimedia
       networking
       printing
       productivity
       system76
+      users
       utils
       virtualisation
     ]);

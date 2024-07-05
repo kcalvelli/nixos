@@ -2,9 +2,9 @@
 {
   networking = {
     networkmanager.enable = true;
-    useNetworkd = true;
+    #useNetworkd = true;
     useDHCP = false;
-    firewall.enable = false;
+    firewall.enable = true;
   };
 
   services = {
