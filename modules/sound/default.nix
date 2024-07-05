@@ -4,5 +4,7 @@
 
   # Make pipewire realtime capable
   security.rtkit.enable = true;
-  hardware.pulseaudio.enable = false;
+
+  # Can't have pulse and pipewire 
+  hardware.pulseaudio.enable = lib.mkForce false; 
 }

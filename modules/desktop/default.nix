@@ -4,6 +4,8 @@
     ./gnome.nix
     ./cosmic.nix
   ];
+  cosmic.enable = true;
+  gnome.enable = true;
 
   # Until Cosmic is more stable, default to Gnome but keep a specialisation for cosmic
   #gnome.enable = true;
@@ -18,14 +20,14 @@
   #};    
 
   # Cosmic as default, keep Gnome for backup
-  cosmic.enable = true;
-  specialisation = {
-    gnome.configuration = {
-      system.nixos.tags = [
-        "Gnome"
-      ];
-      cosmic.enable = lib.mkForce false;
-      gnome.enable = true;
-    };
-  };  
+  #cosmic.enable = true;
+  #specialisation = {
+  #  gnome.configuration = {
+  #    system.nixos.tags = [
+  #      "Gnome"
+  #    ];
+  #    cosmic.enable = lib.mkForce false;
+  #    gnome.enable = true;
+  #  };
+  #};  
 }
