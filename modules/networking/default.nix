@@ -15,5 +15,6 @@
     nextcloud-client
     #valent
     paper-plane
+    blueman
   ];
 }
