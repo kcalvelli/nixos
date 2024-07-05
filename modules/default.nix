@@ -8,8 +8,7 @@
     development = ./development;
     fonts = ./fonts;
     gaming = ./gaming;
-    graphics = graphics;
-    multimedia = ./multimedia;
+    graphics = ./graphics;
     networking = ./networking;
     printing = ./printing;
     productivity = ./productivity;

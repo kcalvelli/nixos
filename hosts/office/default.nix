@@ -19,7 +19,6 @@
       fonts
       gaming
       graphics
-      multimedia
       networking
       printing
       productivity

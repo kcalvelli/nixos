@@ -16,7 +16,6 @@
       desktop
       development
       fonts
-      multimedia
       networking
       printing
       productivity
