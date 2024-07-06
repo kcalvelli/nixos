@@ -16,9 +16,11 @@
       desktop
       development
       fonts
+      graphics
       networking
       printing
       productivity
+      sound
       system76
       users
       utils
