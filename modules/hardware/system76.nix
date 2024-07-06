@@ -1,10 +1,4 @@
-{
-  inputs,
-  pkgs,
-  config,
-  lib,
-  ...
-}:
+{ config, inputs, lib, pkgs, ... }:
 {
   imports = [
     inputs.nixos-hardware.nixosModules.system76
