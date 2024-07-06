@@ -48,4 +48,6 @@
 
   services.xserver.synaptics.enable = false;
   services.libinput.enable = true;
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }

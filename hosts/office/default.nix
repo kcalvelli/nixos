@@ -7,7 +7,7 @@
 {
   imports =
     [
-      ./hardware.nix
+      ./disks.nix
       inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.default
     ]

@@ -7,7 +7,7 @@
 {
   imports =
     [
-      ./hardware.nix
+      ./disks.nix
       inputs.home-manager.nixosModules.default
     ]
     ++ (with inputs.self.nixosModules; [
