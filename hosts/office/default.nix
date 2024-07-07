@@ -37,4 +37,5 @@
     DNS=76.76.2.22#y2p8p3h5on.dns.controld.com
     DNSOverTLS=yes
   '';
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 }

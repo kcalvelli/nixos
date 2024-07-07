@@ -14,6 +14,6 @@
     brave
     nextcloud-client
     #valent
-    paper-plane
+    telegram-desktop  
   ];
 }

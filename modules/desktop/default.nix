@@ -15,5 +15,11 @@
   environment.systemPackages = with pkgs; [
     adw-gtk3
     qgnomeplatform-qt6
+    qadwaitadecorations
+    qadwaitadecorations-qt6
   ];  
+
+  environment.sessionVariables = {
+    QT_WAYLAND_DECORATION = "adwaita";
+  };
 }
