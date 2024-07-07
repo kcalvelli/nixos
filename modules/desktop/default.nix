@@ -7,27 +7,13 @@
   cosmic.enable = true;
   gnome.enable = true;
 
-  # Until Cosmic is more stable, default to Gnome but keep a specialisation for cosmic
-  #gnome.enable = true;
-  #specialisation = {
-  #  cosmic.configuration = {
-  #    system.nixos.tags = [
-  #      "Cosmic"
-  #    ];
-  #    gnome.enable = lib.mkForce false;
-  #    cosmic.enable = true;
-  #  };
-  #};    
+  # Minimize how bad qt apps look
+  qt.enable = true;
+  qt.style = "adwaita-dark";
+  qt.platformTheme = "gnome";
 
-  # Cosmic as default, keep Gnome for backup
-  #cosmic.enable = true;
-  #specialisation = {
-  #  gnome.configuration = {
-  #    system.nixos.tags = [
-  #      "Gnome"
-  #    ];
-  #    cosmic.enable = lib.mkForce false;
-  #    gnome.enable = true;
-  #  };
-  #};  
+  environment.systemPackages = with pkgs; [
+    adw-gtk3
+    qgnomeplatform-qt6
+  ];  
 }

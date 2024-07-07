@@ -8,10 +8,6 @@
     environment = {
       systemPackages = with pkgs; [
         gnome-extension-manager
-        cosmic-term
-        cosmic-edit
-        cosmic-icons
-        adw-gtk3
       ];
 
       gnome.excludePackages = 
@@ -33,7 +29,7 @@
     services.xserver = {
       enable = true;
       desktopManager.gnome.enable = true;
-      #displayManager.gdm.enable = true;
+      displayManager.gdm.enable = true;
     };
   };
 }
