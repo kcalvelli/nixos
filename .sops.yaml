@@ -1,8 +1,0 @@
-keys:
-  - &office age105sxvpz4hze0su62ht22whyg3z8gy6adpk5kaj5yeymr0vagxpqs36vtnw
-  - &pangolin age1sfgtr9v6qcfjjpn9fm80y8q3wgejv2dvgzzg3z3uss4dypfuffwslen470
-creation_rules:
-  - path_regex: secrets/office_secrets.yaml$
-    key_groups:
-    - age:
-      - *office
