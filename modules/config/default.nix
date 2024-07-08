@@ -1,9 +1,5 @@
 { pkgs, inputs, ... }:
 {
-  imports = [
-    inputs.agenix.nixosModules.default
-  ];
-
   nix = {
     package = pkgs.nixFlakes;
     gc = {

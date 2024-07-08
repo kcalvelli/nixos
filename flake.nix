@@ -36,11 +36,6 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
-
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.darwin.follows = "";
-    };
   };
 
   outputs =

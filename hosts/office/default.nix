@@ -31,9 +31,6 @@
 
   networking = {
     hostName = "office"; # Define your hostname.
-    nameservers = [
-      "76.76.2.22#y2p8p3h5on.dns.controld.com"
-    ];
   };
   boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 }
