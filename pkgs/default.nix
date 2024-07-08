@@ -8,6 +8,7 @@
         inherit (pkgs)
           #brave-browse  
           quickemu
+          valent
           ;
       };
 
@@ -24,5 +25,6 @@
     # Custom packages
     #brave-browser = prev.callPackage ./brave-browser { };
     quickemu = prev.callPackage ./quickemu { };
+    valent = prev.callPackage ./valent { };
   };
 }

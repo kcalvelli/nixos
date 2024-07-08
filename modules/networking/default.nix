@@ -12,6 +12,7 @@
     #valent
     telegram-desktop 
     openssl 
+    inputs.self.packages.${pkgs.system}.valent
   ];
 
   networking = {
