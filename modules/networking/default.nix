@@ -2,10 +2,7 @@
 {
   imports = [
     ./avahi.nix
-    #./bridge.nix
     ./samba.nix
-    #./zerotier.nix  
-    #./hosting.nix
   ];
 
   environment.systemPackages = with pkgs; [
