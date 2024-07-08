@@ -2,8 +2,10 @@
 {
   # PWA Desktop entries
   # If you are not me, do not use this 
-  home.file = {
-    ".local/share/applications/brave-aghbiahbpaijignceidepookljebhfak-Default.desktop".text =
+  home.file.".local/share/applications/brave-aghbiahbpaijignceidepookljebhfak-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -17,8 +19,10 @@
     '';
   };
 
-  home.file = {
-   ".local/share/applications/brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop".text =
+  home.file.".local/share/applications/brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -38,11 +42,13 @@
     [Desktop Action Subscriptions]
     Name=Subscriptions
     Exec=/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions?feature=app_shortcuts"    
-    '';
+    '';   
   };
 
-  home.file = {
-   ".local/share/applications/brave-ejhkdoiecgkmdpomoahkdihbcldkgjci-Default.desktop".text =
+  home.file.".local/share/applications/brave-ejhkdoiecgkmdpomoahkdihbcldkgjci-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -56,8 +62,10 @@
     '';  
   };  
   
-  home.file = {
-   ".local/share/applications/brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default.desktop".text =
+  home.file.".local/share/applications/brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default.desktop" = {
+    enable = true;
+    force = true; 
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -85,8 +93,10 @@
     '';  
   };  
 
-  home.file = {
-   ".local/share/applications/brave-hpfldicfbfomlpcikngkocigghgafkph-Default.desktop".text =
+  home.file.".local/share/applications/brave-hpfldicfbfomlpcikngkocigghgafkph-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -100,8 +110,10 @@
     '';  
   }; 
 
-  home.file = {
-   ".local/share/applications/brave-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default.desktop".text =
+  home.file.".local/share/applications/brave-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -115,8 +127,10 @@
     '';  
   };    
 
-  home.file = {
-   ".local/share/applications/brave-mdpkiolbdkhdjpekfbkbmhigcaggjagi-Default.desktop".text =
+  home.file.".local/share/applications/brave-mdpkiolbdkhdjpekfbkbmhigcaggjagi-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -130,8 +144,10 @@
     '';  
   };   
 
-  home.file = {
-   ".local/share/applications/brave-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default.desktop".text =
+  home.file.".local/share/applications/brave-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -145,8 +161,10 @@
     '';  
   };    
 
-  home.file = {
-   ".local/share/applications/brave-ncmjhecbjeaamljdfahankockkkdmedg-Default.desktop".text =
+  home.file.".local/share/applications/brave-ncmjhecbjeaamljdfahankockkkdmedg-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -160,8 +178,10 @@
     '';  
   };  
 
-  home.file = {
-   ".local/share/applications/brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default.desktop".text =
+  home.file.".local/share/applications/brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default.desktop" = {
+    enable = true;
+    force = true;
+    text =
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -175,8 +195,10 @@
     '';  
   };      
 
-  home.file = {
-    ".local/share/applications/code.desktop".text = 
+  home.file.".local/share/applications/code.desktop" = {
+    enable = true;
+    force = true;
+    text = 
     ''
     #!/usr/bin/env xdg-open
     [Desktop Entry]
@@ -199,5 +221,11 @@
     Icon=vscode
     Name=New Empty Window
     '';
+  };
+
+  home.file.".local/share/icons/vscode.png" = {
+    enable = true;
+    force = true;
+    source = ../resources/vscode.png;
   };  
 }
