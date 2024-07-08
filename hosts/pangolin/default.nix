@@ -29,13 +29,10 @@
 
   networking = {
     hostName = "pangolin"; # Define your hostname.
+    nameservers = [
+      "76.76.2.22#1vcddi9p25b.dns.controld.com"
+    ];
   };
-
-  services.resolved.extraConfig = ''
-    [Resolve]
-    DNS=76.76.2.22#1vcddi9p25b.dns.controld.com
-    DNSOverTLS=yes
-  '';
 
   #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 }

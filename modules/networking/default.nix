@@ -3,7 +3,6 @@
   imports = [
     ./avahi.nix
     #./bridge.nix
-    ./network.nix
     ./samba.nix
     #./zerotier.nix  
     #./hosting.nix
@@ -14,6 +13,34 @@
     brave
     nextcloud-client
     #valent
-    telegram-desktop  
+    telegram-desktop 
+    openssl 
   ];
+
+  networking = {
+    networkmanager.enable = true;
+    useNetworkd = true;
+    useDHCP = false;
+    firewall.enable = true;
+  };
+
+  services = {
+    resolved = {
+      enable = true;
+      dnssec = "true";
+      domains = [ "~." ];
+      extraConfig = ''
+        DNSOverTLS=opportunistic
+        MulticastDNS=resolve
+      '';
+      llmnr = true;
+    };
+    openssh.enable = true;
+  };
+
+  programs.mtr.enable = true;
+  programs.ssh.startAgent = true;
+
+  # For RTL-SDR
+  hardware.rtl-sdr.enable = true;
 }

@@ -74,7 +74,7 @@
     Type=Application
     Name=Outlook (PWA)
     MimeType=x-scheme-handler/mailto
-    Exec=/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
+    Exec=brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
     Icon=brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default
     StartupWMClass=crx_faolnafnngnfdaknnbpnkhgohbobgegn
     Actions=New-event;New-message;Open-calendar
