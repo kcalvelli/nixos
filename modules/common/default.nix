@@ -23,6 +23,7 @@
     sshfs
     fuse
     ntfs3g
+    sops
   ];
 
   services.udisks2.enable = true;
