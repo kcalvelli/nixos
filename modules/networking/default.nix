@@ -33,7 +33,7 @@
         DNSOverTLS=opportunistic
         MulticastDNS=resolve
       '';
-      llmnr = true;
+      llmnr = "true";
     };
     openssh.enable = true;
   };
