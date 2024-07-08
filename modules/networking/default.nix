@@ -21,19 +21,28 @@
     networkmanager.enable = true;
     useNetworkd = true;
     useDHCP = false;
-    firewall.enable = true;
+    firewall = {
+      enable = true;
+      trustedInterfaces = [
+        "tailscale0"
+      ];
+    };
   };
 
   services = {
     resolved = {
       enable = true;
-      dnssec = "true";
-      domains = [ "~." ];
-      extraConfig = ''
-        DNSOverTLS=opportunistic
-        MulticastDNS=resolve
-      '';
-      llmnr = "true";
+      #dnssec = "true";
+      #domains = [ "~." ];
+      #extraConfig = ''
+      #  DNSOverTLS=opportunistic
+      #  MulticastDNS=resolve
+      #'';
+      #llmnr = "true";
+    };
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "both";
     };
     openssh.enable = true;
   };

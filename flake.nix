@@ -45,7 +45,6 @@
       lanzaboote,
       nixos-cosmic,
       nixpkgs,
-      agenix,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
