@@ -15,20 +15,20 @@
 , libadwaita
 , libpeas2
 , libportal-gtk4
-, pulseaudio
+, pipewire
 , sqlite
 }:
 
 stdenv.mkDerivation rec {
   pname = "valent";
-  version = "0-unstable-2024-02-12";
+  version = "0-unstable-2024-07-08";
 
   src = fetchFromGitHub {
     owner = "andyholmes";
     repo = "valent";
-    rev = "70ef1aa42eb2df5e9c3aa4faa014c8d539450018";
+    rev = "0e960cc8245b695d66952f70a0b6288aa84a120b";
     fetchSubmodules = true;
-    hash = "sha256-JdrkAtn21NoX+SI6PNWMdE8HLKhLc3HKFhwKydENkvg=";
+    hash = "sha256-wDa1BU2G51SmViTMHSuqCXfSwJa7eGTI8E87kFClqzQ=";
   };
 
   nativeBuildInputs = [
@@ -50,7 +50,7 @@ stdenv.mkDerivation rec {
     libadwaita
     libpeas2
     libportal-gtk4
-    pulseaudio
+    pipewire
     sqlite
   ];
 
@@ -58,6 +58,8 @@ stdenv.mkDerivation rec {
     "-Dplugin_bluez=true"
     # FIXME: libpeas2 (and libpeas) not compiled with -Dvapi=true
     "-Dvapi=false"
+    # Pulseaudio plugin tries to use empty subproject
+    "-Dplugin_pulseaudio=false"
   ];
 
   meta = {

@@ -27,6 +27,12 @@
     };
   };
 
+  # For KDEConnect protocol
+  programs.kdeconnect = {
+    enable = true;
+    package = inputs.self.packages.${pkgs.system}.valent;
+  };
+
   services = {
     resolved = {
       enable = true;
