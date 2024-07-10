@@ -6,7 +6,6 @@
     common = ./common;
     desktop = ./desktop;
     development = ./development;
-    flatpak = ./flatpak;
     fonts = ./fonts;
     gaming = ./gaming;
     graphics = ./graphics;

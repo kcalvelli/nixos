@@ -16,7 +16,6 @@
       config
       desktop
       development
-      flatpak
       fonts
       gaming
       graphics
