@@ -8,8 +8,7 @@
   environment.systemPackages = with pkgs; [
     #inputs.self.packages.${pkgs.system}.brave-browser
     brave
-    nextcloud-client
-    #valent
+    inputs.self.packages.${pkgs.system}.nextcloud-client
     telegram-desktop 
     openssl 
     inputs.self.packages.${pkgs.system}.valent
@@ -36,13 +35,6 @@
   services = {
     resolved = {
       enable = true;
-      #dnssec = "true";
-      #domains = [ "~." ];
-      #extraConfig = ''
-      #  DNSOverTLS=opportunistic
-      #  MulticastDNS=resolve
-      #'';
-      #llmnr = "true";
     };
     tailscale = {
       enable = true;
@@ -51,6 +43,7 @@
     openssh.enable = true;
   };
 
+  systemd.services.NetworkManager-wait-online.enable = false;
   programs.mtr.enable = true;
   programs.ssh.startAgent = true;
 

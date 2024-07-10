@@ -9,6 +9,7 @@
           #brave-browse  
           quickemu
           valent
+          nextcloud-client
           ;
       };
 
@@ -26,5 +27,6 @@
     #brave-browser = prev.callPackage ./brave-browser { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
+    nextcloud-client = prev.callPackage ./nextcloud-client { };
   };
 }
