@@ -8,7 +8,6 @@
   environment.systemPackages = with pkgs; [
     #inputs.self.packages.${pkgs.system}.brave-browser
     brave
-    inputs.self.packages.${pkgs.system}.nextcloud-client
     telegram-desktop 
     openssl 
     inputs.self.packages.${pkgs.system}.valent

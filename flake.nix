@@ -2,8 +2,8 @@
   description = "Keith Calvelli's NixOS config";
 
   inputs = {
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
@@ -37,6 +37,8 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";  
   };
 
   outputs =
