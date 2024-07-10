@@ -29,13 +29,13 @@
   programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
-    qemu_full
-    inputs.self.packages.${pkgs.system}.quickemu
-    virt-viewer
-    spice-gtk
-    gnome.gnome-boxes
+    #qemu_full
+    #inputs.self.packages.${pkgs.system}.quickemu
+    #virt-viewer
+    #spice-gtk
+    #gnome.gnome-boxes
     distrobox
     boxbuddy
-    swtpm
+    #swtpm
   ];
 }

@@ -58,5 +58,11 @@
     #GTK_USE_PORTAL = 1;
   };
       
+  nixpkgs.overlays = [
+      (_: prev: {
+          python312 = prev.python312.override { packageOverrides = _: pysuper: { nose = pysuper.pynose; }; };
+      })
+  ];
+        
   services.flatpak.enable = true;     
 }

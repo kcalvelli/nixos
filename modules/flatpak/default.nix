@@ -2,20 +2,13 @@
 {
   imports = [
     inputs.nix-flatpak.nixosModules.nix-flatpak
+    ./apps.nix
   ];
 
   services.flatpak.remotes = lib.mkOptionDefault [{
     name = "flathub-beta";
     location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
   }];
-
-  services.flatpak.packages = [
-    #{ appId = "com.brave.Browser"; origin = "flathub";  }
-    { appId = "com.obsproject.Studio"; origin = "flathub"; }
-    { appID = "com.nextcloud.desktopclient.nextcloud"; origin = "flathub"; }
-    { appID = "com.github.IsmaelMartinez.teams_for_linux"; origin = "flathub"; }    
-    { appID = "com.github.GradienceTeam.Gradience"; origin = "flathub"; }      
-  ];  
 
   services.flatpak.update.onActivation = true;  
 
