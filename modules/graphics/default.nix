@@ -8,7 +8,7 @@
   environment.systemPackages = with pkgs; [
     lact
     radeontop
-    rocmPackages.rocm-smi
+    #rocmPackages.rocm-smi
     umr
     gimp
     amdgpu_top
@@ -29,9 +29,9 @@
     graphics = {
       enable32Bit = true;
       extraPackages = with pkgs; [ 
-        rocmPackages.clr.icd
-        rocm-opencl-icd
-        rocm-opencl-runtime
+        #rocmPackages.clr.icd
+        #rocm-opencl-icd
+        #rocm-opencl-runtime
         vulkan-loader
         vulkan-validation-layers
         vulkan-extension-layer      
