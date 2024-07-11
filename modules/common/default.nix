@@ -56,11 +56,5 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     #GTK_USE_PORTAL = 1;
-  };
-      
-  nixpkgs.overlays = [
-      (_: prev: {
-          python312 = prev.python312.override { packageOverrides = _: pysuper: { nose = pysuper.pynose; }; };
-      })
-  ];  
+  }; 
 }

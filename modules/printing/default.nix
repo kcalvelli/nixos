@@ -4,8 +4,8 @@
     printing = {
       enable = true;
       drivers = [
-        #pkgs.hplip
-        #pkgs.hplipWithPlugin
+        pkgs.hplip
+        pkgs.hplipWithPlugin
       ];
     };
   };
