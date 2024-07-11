@@ -10,7 +10,7 @@
     brave
     telegram-desktop 
     openssl 
-    nextcloud-client
+    #nextcloud-client
     inputs.self.packages.${pkgs.system}.valent
   ];
 
