@@ -42,6 +42,6 @@
   services.xserver.synaptics.enable = false;
   services.libinput.enable = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
