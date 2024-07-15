@@ -4,6 +4,7 @@
     inputs.nixos-hardware.nixosModules.system76
     inputs.nixos-hardware.nixosModules.common-pc-ssd
     inputs.nixos-hardware.nixosModules.common-cpu-amd
+    inputs.chaotic.nixosModules.default
   ];
 
   boot = {
@@ -43,5 +44,6 @@
   services.libinput.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  chaotic.scx.enable = true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }

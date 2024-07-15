@@ -4,6 +4,7 @@
   imports = [
     inputs.nixos-hardware.nixosModules.common-cpu-amd
     inputs.nixos-hardware.nixosModules.common-pc-ssd
+    inputs.chaotic.nixosModules.default
   ];
 
   hardware = {
@@ -54,5 +55,6 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  chaotic.scx.enable = true;
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;  
 }

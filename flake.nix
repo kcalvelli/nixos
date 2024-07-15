@@ -37,7 +37,8 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
-  
+
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs =
@@ -46,6 +47,7 @@
       systems,
       lanzaboote,
       nixos-cosmic,
+      chaotic,
       nixpkgs,
       ...
     }:
