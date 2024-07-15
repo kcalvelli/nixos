@@ -20,9 +20,7 @@
       gaming
       graphics
       networking
-      printing
       productivity
-      sound
       msi
       users
       utils

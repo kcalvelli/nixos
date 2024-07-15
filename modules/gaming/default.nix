@@ -46,6 +46,5 @@
 
   environment.systemPackages = with pkgs; [
     superTuxKart
-    piper
   ];
 }
