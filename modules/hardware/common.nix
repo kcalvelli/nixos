@@ -1,4 +1,4 @@
-{ lib, pkgs, w... }:
+{ lib, pkgs, ... }:
 {
   ### Sound
   # Make pipewire realtime capable
