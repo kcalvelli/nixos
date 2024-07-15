@@ -30,7 +30,7 @@
     ]);
 
   networking = {
-    hostName = "office"; # Define your hostname.
+    hostName = "edge"; # Define your hostname.
   };
 
 }

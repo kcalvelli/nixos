@@ -13,9 +13,9 @@ let
 in
 {
   flake.nixosConfigurations = {
-    office = nixosSystem {
+    edge = nixosSystem {
       system = "x86_64-linux";
-      modules = [ ./office ];
+      modules = [ ./edge ];
     };
     pangolin = nixosSystem {
       system = "x86_64-linux";
