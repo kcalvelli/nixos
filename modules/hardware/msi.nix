@@ -55,8 +55,8 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  chaotic.scx.enable = true;
-  chaotic.scx.scheduler = "scx_rusty";
+  #chaotic.scx.enable = true;
+  #chaotic.scx.scheduler = "scx_rusty";
   
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;  
 }

@@ -44,8 +44,8 @@
   services.libinput.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  chaotic.scx.enable = true;
-  chaotic.scx.scheduler = "scx_rusty";
+  #chaotic.scx.enable = true;
+  #chaotic.scx.scheduler = "scx_rusty";
   
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
