@@ -1,17 +1,15 @@
 { ... }:
 {
   flake.nixosModules = {
-
+    apps = ./apps;
     config = ./config;
     common = ./common;
-    desktop = ./desktop;
+    desktopEnvironment = ./desktopEnvironment;
     development = ./development;
     fonts = ./fonts;
     gaming = ./gaming;
     graphics = ./graphics;
     networking = ./networking;
-    productivity = ./productivity;
-    utils = ./utils;
     system76 = ./hardware/system76.nix;
     msi = ./hardware/msi.nix;
     users = ./users;

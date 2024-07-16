@@ -11,19 +11,18 @@
       inputs.home-manager.nixosModules.default
     ]
     ++ (with inputs.self.nixosModules; [
+      apps
       common
       config
-      desktop
+      desktopEnvironment
       development
       fonts
       graphics
       networking
       printing
-      productivity
       sound
       system76
       users
-      utils
       virtualisation
     ]);
 

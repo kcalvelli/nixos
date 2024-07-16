@@ -18,13 +18,6 @@
     algorithm = "zstd";
   };  
 
-  # Filesystem config
-  environment.systemPackages = with pkgs; [
-    sshfs
-    fuse
-    ntfs3g
-  ];
-
   services.udisks2.enable = true;
 
   # Privacy
@@ -35,7 +28,7 @@
   };
     
   # Environment setup
-  # Set your time zone.
+  # Time Zone.
   time.timeZone = "America/New_York";
 
   # Select internationalisation properties.
@@ -57,4 +50,7 @@
     NIXOS_OZONE_WL = "1";
     #GTK_USE_PORTAL = 1;
   }; 
+
+  # Needed to enable fish completions
+  programs.fish.enable = true;  
 }

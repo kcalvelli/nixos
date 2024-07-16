@@ -5,15 +5,6 @@
     ./samba.nix
   ];
 
-  environment.systemPackages = with pkgs; [
-    #inputs.self.packages.${pkgs.system}.brave-browser
-    brave
-    telegram-desktop 
-    openssl 
-    nextcloud-client
-    inputs.self.packages.${pkgs.system}.valent
-  ];
-
   networking = {
     networkmanager.enable = true;
     useNetworkd = true;

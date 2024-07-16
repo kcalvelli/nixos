@@ -13,18 +13,17 @@
       #inputs.self.homeModules.desktop
     ]
     ++ (with inputs.self.nixosModules; [
+      apps
       common
       config
-      desktop
+      desktopEnvironment
       development
       fonts
       gaming
       graphics
       networking
-      productivity
       msi
       users
-      utils
       virtualisation
     ]);
 
