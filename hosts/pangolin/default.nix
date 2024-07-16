@@ -19,8 +19,6 @@
       fonts
       graphics
       networking
-      printing
-      sound
       system76
       users
       virtualisation
