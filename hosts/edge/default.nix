@@ -10,6 +10,7 @@
       ./disks.nix
       inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.default
+      #inputs.self.homeModules.desktop
     ]
     ++ (with inputs.self.nixosModules; [
       common
@@ -27,8 +28,15 @@
       virtualisation
     ]);
 
+  home-manager.users = {
+    keith = {
+      imports = with inputs.self.homeModules; [
+        desktop
+      ];
+    };
+  }; 
+
   networking = {
     hostName = "edge"; # Define your hostname.
   };
-
 }

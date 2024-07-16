@@ -27,6 +27,13 @@
       virtualisation
     ]);
 
+  home-manager.users = {
+    keith = {
+      imports = with inputs.self.homeModules; [
+        laptop
+      ];
+    };
+  }; 
   networking = {
     hostName = "pangolin"; # Define your hostname.
   };
