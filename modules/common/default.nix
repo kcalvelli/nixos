@@ -51,6 +51,9 @@
     #GTK_USE_PORTAL = 1;
   }; 
 
+  # Firmware
+  services.fwupd.enable
+
   # Needed to enable fish completions
   programs.fish.enable = true;  
 }
