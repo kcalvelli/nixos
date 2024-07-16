@@ -52,7 +52,7 @@
   }; 
 
   # Firmware
-  services.fwupd.enable
+  services.fwupd.enable;
 
   # Needed to enable fish completions
   programs.fish.enable = true;  
