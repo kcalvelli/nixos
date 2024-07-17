@@ -24,6 +24,8 @@
       virtualisation
     ]);
 
+  apps.all.enable = true;
+  
   home-manager.users = {
     keith = {
       imports = with inputs.self.homeModules; [
@@ -31,6 +33,7 @@
       ];
     };
   }; 
+
   networking = {
     hostName = "pangolin"; # Define your hostname.
   };

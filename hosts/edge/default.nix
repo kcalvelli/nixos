@@ -10,7 +10,6 @@
       ./disks.nix
       inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.default
-      #inputs.self.homeModules.desktop
     ]
     ++ (with inputs.self.nixosModules; [
       apps
@@ -26,6 +25,8 @@
       users
       virtualisation
     ]);
+
+  apps.all.enable = true;
 
   home-manager.users = {
     keith = {
