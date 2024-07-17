@@ -18,6 +18,7 @@
       development
       fonts
       graphics
+      hardware
       networking
       system76
       users
@@ -25,7 +26,8 @@
     ]);
 
   apps.all.enable = true;
-  
+  hardware.system76.enable = true;
+
   home-manager.users = {
     keith = {
       imports = with inputs.self.homeModules; [

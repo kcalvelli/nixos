@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ lib, pkgs, inputs, ... }:
 {
   nix = {
     package = pkgs.nixFlakes;
@@ -40,6 +40,7 @@
     config = {
       allowUnfree = true;
     };
+    hostPlatform = lib.mkDefault "x86_64-linux";
   };
 
   system.stateVersion = "23.11"; # Did you read the comment?

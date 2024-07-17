@@ -8,7 +8,6 @@
   imports =
     [
       ./disks.nix
-      inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.default
     ]
     ++ (with inputs.self.nixosModules; [
@@ -20,13 +19,14 @@
       fonts
       gaming
       graphics
+      hardware
       networking
-      msi
       users
       virtualisation
     ]);
 
   apps.all.enable = true;
+  hardware.msi.enable = true;
 
   home-manager.users = {
     keith = {
