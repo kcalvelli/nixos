@@ -74,7 +74,6 @@
     superTuxKart
 
   ### Graphics
-    lact
     radeontop
     umr
     gimp
