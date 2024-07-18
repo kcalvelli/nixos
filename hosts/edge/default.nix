@@ -12,7 +12,6 @@
     ]
     ++ (with inputs.self.nixosModules; [
       apps
-      common
       config
       desktopEnvironment
       development

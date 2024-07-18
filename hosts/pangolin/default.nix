@@ -12,7 +12,6 @@
     ]
     ++ (with inputs.self.nixosModules; [
       apps
-      common
       config
       desktopEnvironment
       development
@@ -20,7 +19,6 @@
       graphics
       hardware
       networking
-      system76
       users
       virtualisation
     ]);

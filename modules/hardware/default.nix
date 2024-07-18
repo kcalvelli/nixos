@@ -23,9 +23,35 @@ in
     };
   };
 
-  ### MSI motherboard system
+
   config = lib.mkMerge [
     (lib.mkIf cfg.common.enable {
+      # Boot config
+      boot = {
+        bootspec.enable = true;
+    
+        initrd = {
+          systemd.enable = true;
+          verbose = false;
+        };
+        # Plymouth is purty
+        plymouth.enable = true;
+
+        #Chaotic kernel 
+        kernelPackages = pkgs.linuxPackages_cachyos;
+      };
+
+      #chaotic.scx.enable = true;
+      #chaotic.scx.scheduler = "scx_rusty";
+    
+      # Swap config
+      zramSwap = {
+        enable = true;
+        algorithm = "zstd";
+      };  
+
+      services.udisks2.enable = true;     
+
       ### Sound
       # Make pipewire realtime capable
       security.rtkit.enable = true;
@@ -33,7 +59,6 @@ in
       # Can't have pulse and pipewire 
       hardware.pulseaudio.enable = lib.mkForce false;
     
-
       services = {
       ### Printing
         printing = {
@@ -54,15 +79,9 @@ in
         cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;  
         enableAllFirmware = true;
       };  
-    
-      
-  
-      ### Kernel and scheduler
-      boot.kernelPackages = pkgs.linuxPackages_cachyos;
-      #chaotic.scx.enable = true;
-      #chaotic.scx.scheduler = "scx_rusty";
     })
 
+    ### MSI motherboard system
     (lib.mkIf cfg.msi.enable {
 
        hardware.common.enable = true;

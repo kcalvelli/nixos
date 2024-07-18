@@ -49,6 +49,14 @@ in
 
     ### Utilities  
     (lib.mkIf cfg.utils.enable {
+
+      # Privacy
+      programs = {
+        gnupg.agent = {
+          enable = true;
+        };
+      };
+      
       environment.systemPackages = with pkgs; [ 
         cubicsdr
         mission-center

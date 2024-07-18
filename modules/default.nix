@@ -3,7 +3,6 @@
   flake.nixosModules = {
     apps = ./apps;
     config = ./config;
-    common = ./common;
     desktopEnvironment = ./desktopEnvironment;
     development = ./development;
     fonts = ./fonts;
