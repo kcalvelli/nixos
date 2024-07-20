@@ -70,5 +70,8 @@
   # Firmware
   services.fwupd.enable = true;
   
+  # Causes switch to fail if this is not set
+  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
+  
   system.stateVersion = "23.11"; # Did you read the comment?
 }

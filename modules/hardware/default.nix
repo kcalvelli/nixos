@@ -158,6 +158,9 @@ in
           "system76-acpi"
           "system76-io"
         ];
+        extraModprobeConfig = ''
+          options mt7921_common disable_clc=1
+        '';
       };
     
       # Enable all the system76 stuff
