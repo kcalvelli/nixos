@@ -34,9 +34,8 @@
 
     services.gnome = {
       rygel.enable = false;
-      gnome-browser-connecter.enable = false;
       gnome-initial-setup.enable = false;  
-      at-spi2-core.enable = false;
+      at-spi2-core.enable = lib.mkDefault false;
     };
     services.dleyna-renderer.enable = false;
     services.dleyna-server.enable = false;
