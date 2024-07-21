@@ -31,5 +31,15 @@
       desktopManager.gnome.enable = true;
       displayManager.gdm.enable = true;
     };
+
+    services.gnome = {
+      rygel.enable = false;
+      gnome-browser-connecter.enable = false;
+      gnome-initial-setup.enable = false;  
+      at-spi2-core.enable = false;
+    };
+    services.dleyna-renderer.enable = false;
+    services.dleyna-server.enable = false;
+
   };
 }
