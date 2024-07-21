@@ -14,7 +14,7 @@ in
 
   flake.homeModules.shell = ./shell;
   flake.homeModules.virtualisation = ./virtualisation;
-  flake.homeModules.development = ./development;
+  flake.homeModules.git = ./git;
   flake.homeModules.desktop = ./desktop;
   flake.homeModules.laptop = ./laptop;
 }

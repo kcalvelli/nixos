@@ -9,7 +9,6 @@
           #brave-browse  
           quickemu
           valent
-          zig
           ;
       };
 
@@ -29,6 +28,5 @@
     #brave-browser = prev.callPackage ./brave-browser { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
-    zig = prev.callPackage ./zig { };
   };
 }

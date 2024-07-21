@@ -124,7 +124,6 @@ in
         nil
         zed-editor
         nixfmt-rfc-style
-        inputs.self.packages.${pkgs.system}.zigup
         (vscode.override {
           commandLineArgs = [
             "--ozone-platform-hint=auto"

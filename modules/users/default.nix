@@ -30,7 +30,7 @@
       imports = with inputs.self.homeModules; [
         virtualisation
         shell
-        development
+        git
       ];
       home.stateVersion = "24.05";
       home.homeDirectory = "/home/keith";
