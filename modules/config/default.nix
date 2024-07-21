@@ -2,23 +2,22 @@
 {
   nix = {
     package = pkgs.nixFlakes;
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 5d";
-    };
+    #gc = {
+    #  automatic = true;
+    #  dates = "daily";
+    #  options = "--delete-older-than 5d";
+    #};
     settings = {
       experimental-features = [
         "nix-command"
         "flakes"
       ];
-      auto-optimise-store = true;
+    #  auto-optimise-store = true;
       substituters = [
         "https://cosmic.cachix.org"
         "https://devenv.cachix.org"
         "https://nix-gaming.cachix.org"
         "https://drakon64-nixos-cosmic.cachix.org"
-
       ];
       trusted-public-keys = [
         "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
@@ -70,6 +69,6 @@
   
   # Causes switch to fail if this is not set
   systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false;
-  
+
   system.stateVersion = "23.11"; # Did you read the comment?
 }

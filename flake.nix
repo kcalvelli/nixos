@@ -51,6 +51,9 @@
       nixpkgs,
       ...
     }:
+    let
+      zigpkgs = inputs.zig.packages;
+    in
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
 
@@ -59,6 +62,6 @@
         ./hosts
         ./modules
         ./home
-      ];
+      ];     
     };
 }

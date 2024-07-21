@@ -1,4 +1,4 @@
-{ self, inputs, ... }:
+{ self, inputs, zigpkgs, ... }:
 {
   perSystem =
     { system, pkgs, ... }:
@@ -9,6 +9,7 @@
           #brave-browse  
           quickemu
           valent
+          zig
           ;
       };
 
@@ -17,7 +18,9 @@
         config = {
           allowUnfree = true;
         };
-        overlays = [ self.overlays.default ];
+        overlays = [ 
+          self.overlays.default 
+        ];
       };
     };
 
@@ -26,5 +29,6 @@
     #brave-browser = prev.callPackage ./brave-browser { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
+    zig = prev.callPackage ./zig { };
   };
 }
