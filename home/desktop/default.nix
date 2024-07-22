@@ -41,7 +41,7 @@
     
     [Desktop Action Subscriptions]
     Name=Subscriptions
-    Exec=/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions?feature=app_shortcuts"    
+    Exec=brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions?feature=app_shortcuts"    
     '';   
   };
 
@@ -56,7 +56,7 @@
     Terminal=false
     Type=Application
     Name=Element
-    Exec=/brave --profile-directory=Default --app-id=ejhkdoiecgkmdpomoahkdihbcldkgjci
+    Exec=brave --profile-directory=Default --app-id=ejhkdoiecgkmdpomoahkdihbcldkgjci
     Icon=brave-ejhkdoiecgkmdpomoahkdihbcldkgjci-Default
     StartupWMClass=crx_ejhkdoiecgkmdpomoahkdihbcldkgjci    
     '';  
