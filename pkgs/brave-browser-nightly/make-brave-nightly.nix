@@ -51,7 +51,7 @@
   zlib,
 
   # command line arguments which are always set e.g "--disable-gpu"
-  commandLineArgs ? "--gtk-version=4",
+  commandLineArgs ? "",
 
   # Necessary for USB audio devices.
   pulseSupport ? stdenv.isLinux,
@@ -186,42 +186,50 @@ stdenv.mkDerivation {
     cp -R usr/share $out
     cp -R opt/ $out/opt
 
-    export BINARYWRAPPER=$out/opt/brave.com/brave/brave-browser
+    export BINARYWRAPPER=$out/opt/brave.com/brave-nightly/brave-browser-nightly
 
     # Fix path to bash in $BINARYWRAPPER
     substituteInPlace $BINARYWRAPPER \
         --replace /bin/bash ${stdenv.shell}
 
-    ln -sf $BINARYWRAPPER $out/bin/brave
+    ln -sf $BINARYWRAPPER $out/bin/brave-browser-nightly
 
-    for exe in $out/opt/brave.com/brave/{brave,chrome_crashpad_handler}; do
+    for exe in $out/opt/brave.com/brave-nightly/{brave,chrome_crashpad_handler}; do
         patchelf \
             --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
             --set-rpath "${rpath}" $exe
     done
 
     # Fix paths
-    substituteInPlace $out/share/applications/brave-browser.desktop \
-        --replace /usr/bin/brave-browser-stable $out/bin/brave
-    substituteInPlace $out/share/gnome-control-center/default-apps/brave-browser.xml \
+    substituteInPlace $out/share/applications/brave-browser-nightly.desktop \
+        --replace /usr/bin/brave-browser-nightly $out/bin/brave-browser-nightly
+    substituteInPlace $out/share/gnome-control-center/default-apps/brave-browser-nightly.xml \
         --replace /opt/brave.com $out/opt/brave.com
-    substituteInPlace $out/share/menu/brave-browser.menu \
+    substituteInPlace $out/share/menu/brave-browser-nightly.menu \
         --replace /opt/brave.com $out/opt/brave.com
-    substituteInPlace $out/opt/brave.com/brave/default-app-block \
+    substituteInPlace $out/opt/brave.com/brave-nightly/default-app-block \
         --replace /opt/brave.com $out/opt/brave.com
 
     # Correct icons location
-    icon_sizes=("16" "24" "32" "48" "64" "128" "256")
+    #icon_sizes=("128")
+    #for icon in ''${icon_sizes[*]}
+    #do
+    #    mkdir -p $out/share/icons/hicolor/$icon\x$icon/apps
+    #    
+    #    ln -s $out/opt/brave.com/brave-nightly/product_logo_128_nightly.png $out/share/icons/hicolor/$icon\x$icon/apps/brave-browser-nightly.png
+    #done
+    # Only the 128 is provided in nightly
+    rm -rf $out/share/icons/hicolor/128x128/apps
+    mkdir -p $out/share/icons/hicolor/128x128/apps
+    ln -s $out/opt/brave.com/brave-nightly/product_logo_128_nightly.png $out/share/icons/hicolor/128x128/apps/brave-browser-nightly.png
 
-    for icon in ''${icon_sizes[*]}
-    do
-        mkdir -p $out/share/icons/hicolor/$icon\x$icon/apps
-        ln -s $out/opt/brave.com/brave/product_logo_$icon.png $out/share/icons/hicolor/$icon\x$icon/apps/brave-browser.png
-    done
+    # Not entirely sure what the purpose is here, but I don't like bad links
+    rm -f $out/opt/brave.com/brave-nightly/brave-browser
+    ln -s $out/opt/brave.com/brave-nightly/brave-browser-nightly $out/opt/brave.com/brave-nightly/brave-browser
 
     # Replace xdg-settings and xdg-mime
-    ln -sf ${xdg-utils}/bin/xdg-settings $out/opt/brave.com/brave/xdg-settings
-    ln -sf ${xdg-utils}/bin/xdg-mime $out/opt/brave.com/brave/xdg-mime
+    ln -sf ${xdg-utils}/bin/xdg-settings $out/opt/brave.com/brave-nightly/xdg-settings
+    ln -sf ${xdg-utils}/bin/xdg-mime $out/opt/brave.com/brave-nightly/xdg-mime
 
     runHook postInstall
   '';
@@ -257,7 +265,7 @@ stdenv.mkDerivation {
 
   installCheckPhase = ''
     # Bypass upstream wrapper which suppresses errors
-    $out/opt/brave.com/brave/brave --version
+    $out/opt/brave.com/brave-nightly/brave-browser-nightly --version
   '';
 
   passthru.updateScript = ./update.sh;
