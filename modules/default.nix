@@ -4,12 +4,12 @@
     apps = ./apps;
     config = ./config;
     desktopEnvironment = ./desktopEnvironment;
-    features = ./features;
     fonts = ./fonts;
     gaming = ./gaming;
     hardware = ./hardware;
     graphics = ./graphics;
     networking = ./networking;
+    services = ./services;
     users = ./users;
     virtualisation = ./virtualisation;
   };

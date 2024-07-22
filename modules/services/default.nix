@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./llm.nix
+    ./chatbot.nix
   ];
 }

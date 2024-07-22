@@ -14,7 +14,7 @@
       apps
       config
       desktopEnvironment
-      features
+      services
       fonts
       graphics
       hardware
@@ -25,7 +25,7 @@
 
   apps.all.enable = true;
   hardware.system76.enable = true;
-  features.llm.enable = true;
+  services.chatbot.enable = true;
 
   home-manager.users = {
     keith = {

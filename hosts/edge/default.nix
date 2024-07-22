@@ -14,7 +14,7 @@
       apps
       config
       desktopEnvironment
-      features
+      services
       fonts
       gaming
       graphics
@@ -26,7 +26,7 @@
 
   apps.all.enable = true;
   hardware.msi.enable = true;
-  features.llm.enable = true;
+  services.chatbot.enable = true;
 
   home-manager.users = {
     keith = {
