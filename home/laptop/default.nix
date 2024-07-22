@@ -2,5 +2,8 @@
 {
   imports = [
     ../pwa
+    ../virtualisation
+    ../shell
+    ../development
   ];
 }

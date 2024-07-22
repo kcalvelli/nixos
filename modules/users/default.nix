@@ -27,11 +27,6 @@
   #  To do - don't hardcode for a specific user.  How?
   home-manager.users = {
     keith = {
-      imports = with inputs.self.homeModules; [
-        virtualisation
-        shell
-        git
-      ];
       home.stateVersion = "24.05";
       home.homeDirectory = "/home/keith";
       home.username = "keith";

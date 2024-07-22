@@ -14,7 +14,6 @@
       apps
       config
       desktopEnvironment
-      development
       fonts
       gaming
       graphics

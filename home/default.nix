@@ -11,10 +11,6 @@ let
     };
 in
 {
-
-  flake.homeModules.shell = ./shell;
-  flake.homeModules.virtualisation = ./virtualisation;
-  flake.homeModules.git = ./git;
   flake.homeModules.desktop = ./desktop;
   flake.homeModules.laptop = ./laptop;
 }
