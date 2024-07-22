@@ -6,7 +6,7 @@
 
       packages = {
         inherit (pkgs)
-          #brave-browse  
+          brave-browser-nightly  
           quickemu
           valent
           ;
@@ -25,7 +25,7 @@
 
   flake.overlays.default = _final: prev: {
     # Custom packages
-    #brave-browser = prev.callPackage ./brave-browser { };
+    brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
   };
