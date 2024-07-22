@@ -4,6 +4,7 @@
     apps = ./apps;
     config = ./config;
     desktopEnvironment = ./desktopEnvironment;
+    features = ./features;
     fonts = ./fonts;
     gaming = ./gaming;
     hardware = ./hardware;

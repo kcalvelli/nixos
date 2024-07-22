@@ -14,6 +14,7 @@
       apps
       config
       desktopEnvironment
+      features
       fonts
       graphics
       hardware
@@ -24,6 +25,7 @@
 
   apps.all.enable = true;
   hardware.system76.enable = true;
+  features.llm.enable = true;
 
   home-manager.users = {
     keith = {

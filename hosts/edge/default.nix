@@ -14,6 +14,7 @@
       apps
       config
       desktopEnvironment
+      features
       fonts
       gaming
       graphics
@@ -25,6 +26,7 @@
 
   apps.all.enable = true;
   hardware.msi.enable = true;
+  features.llm.enable = true;
 
   home-manager.users = {
     keith = {
