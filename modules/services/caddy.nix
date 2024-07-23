@@ -2,6 +2,7 @@
 let 
   cfg = config.services;
   domain = config.networking.hostName;
+  tailnet = "taile0fb4.ts.net";
 in 
 {
   options = {
@@ -18,16 +19,6 @@ in
          servers {
            metrics
          }
-      '';
-      virtualHosts."hello.${domain}".extraConfig = ''
-        encode gzip
-        file_server
-          root * ${
-            pkgs.runCommand "testdir" {} ''
-              mkdir "$out"
-              echo hello world > "$out/example.html"
-           ''
-          }
       '';
      };
      networking.firewall.allowedTCPPorts = [

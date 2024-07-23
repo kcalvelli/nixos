@@ -1,8 +1,4 @@
 { config, inputs, pkgs, ... }:
-let
-  tailscaleDns = "100.100.100.100";
-  tailnetName = config.services.tailscale.baseDomain;
-in
 {
   networking = {
     firewall = {

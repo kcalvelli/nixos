@@ -12,9 +12,6 @@
     useDHCP = false;
     firewall = {
       enable = true;
-      trustedInterfaces = [
-        "tailscale0"
-      ];
     };
   };
 
@@ -27,12 +24,6 @@
   services = {
     resolved = {
       enable = true;
-    };
-    tailscale = {
-      enable = true;
-      useRoutingFeatures = "both";
-      permitCertUid = "caddy";
-      baseDomain = "taile0fb4.ts.net";
     };
     openssh.enable = true;
   };

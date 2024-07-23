@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 let 
   cfg = config.services;
+  domain = config.networking.hostName;
+  tailnet = "taile0fb4.ts.net";  
 in 
 {
   options = {
@@ -28,14 +30,15 @@ in
           port = 8080;
           openFirewall = true;
           environment = {
-          #  ANONYMIZED_TELEMETRY = "True";
-          #  DO_NOT_TRACK = "True";
-          #  SCARF_NO_ANALYTICS = "True";
-            OLLAMA_API_BASE_URL = "http://127.0.0.1:11434";
-
-            #WEBUI_URL = "http://edge:8080";      
+            OLLAMA_API_BASE_URL = "http://127.0.0.1:11434";    
           };
         };  
+        services.caddy.virtualHosts."${domain}.${tailnet}" = {
+          extraConfig = ''
+            reverse_proxy http://localhost:8080
+            encode gzip
+          '';
+        };
       })
   ];    
 }
