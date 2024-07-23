@@ -26,13 +26,13 @@ in
           host = "127.0.0.1";
           port = 8080;
           openFirewall = true;
-          environment = {
-            ANONYMIZED_TELEMETRY = "False";
-            DO_NOT_TRACK = "True";
-            SCARF_NO_ANALYTICS = "True";
+          #environment = {
+          #  ANONYMIZED_TELEMETRY = "True";
+          #  DO_NOT_TRACK = "True";
+          #  SCARF_NO_ANALYTICS = "True";
             OLLAMA_API_BASE_URL = "http://127.0.0.1:11434";
 
-            WEBUI_URL = "http://localhost:8080";      
+            #WEBUI_URL = "http://edge:8080";      
           };
         };  
       })
