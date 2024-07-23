@@ -2,5 +2,6 @@
 {
   imports = [
     ./chatbot.nix
+    ./caddy.nix
   ];
 }

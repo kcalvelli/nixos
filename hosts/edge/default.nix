@@ -26,6 +26,9 @@
 
   apps.all.enable = true;
   hardware.msi.enable = true;
+
+  # Services
+  services.caddy-proxy.enable = true;
   services.chatbot.enable = true;
 
   home-manager.users = {

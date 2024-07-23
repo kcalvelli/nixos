@@ -3,6 +3,7 @@
   imports = [
     ./avahi.nix
     ./samba.nix
+    ./tailscale.nix
   ];
 
   networking = {
@@ -30,6 +31,8 @@
     tailscale = {
       enable = true;
       useRoutingFeatures = "both";
+      permitCertUid = "caddy";
+      baseDomain = "taile0fb4.ts.net";
     };
     openssh.enable = true;
   };
