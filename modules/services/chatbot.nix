@@ -26,7 +26,7 @@ in
           host = "127.0.0.1";
           port = 8080;
           openFirewall = true;
-          #environment = {
+          environment = {
           #  ANONYMIZED_TELEMETRY = "True";
           #  DO_NOT_TRACK = "True";
           #  SCARF_NO_ANALYTICS = "True";
