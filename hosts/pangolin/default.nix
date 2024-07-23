@@ -25,7 +25,6 @@
 
   apps.all.enable = true;
   hardware.system76.enable = true;
-  services.chatbot.enable = true;
 
   home-manager.users = {
     keith = {
