@@ -3,6 +3,7 @@
   imports = [
     ./avahi.nix
     ./samba.nix
+    ./tailscale.nix
   ];
 
   networking = {
@@ -11,9 +12,6 @@
     useDHCP = false;
     firewall = {
       enable = true;
-      trustedInterfaces = [
-        "tailscale0"
-      ];
     };
   };
 
@@ -26,10 +24,6 @@
   services = {
     resolved = {
       enable = true;
-    };
-    tailscale = {
-      enable = true;
-      useRoutingFeatures = "both";
     };
     openssh.enable = true;
   };
