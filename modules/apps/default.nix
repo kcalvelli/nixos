@@ -122,7 +122,7 @@ in
     (lib.mkIf cfg.development.enable {
       environment.systemPackages = with pkgs; [ 
         nil
-        zed-editor
+        #zed-editor
         nixfmt-rfc-style
         (vscode.override {
           commandLineArgs = [
@@ -164,7 +164,7 @@ in
     ### Network
     (lib.mkIf cfg.games.enable {
       environment.systemPackages = with pkgs; [ 
-        inputs.self.packages.${pkgs.system}.brave-browser-nightly
+        #inputs.self.packages.${pkgs.system}.brave-browser-nightly
         brave
         telegram-desktop 
         openssl 
