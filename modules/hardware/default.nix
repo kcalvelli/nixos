@@ -6,7 +6,6 @@ in
   imports = [
      inputs.nixos-hardware.nixosModules.common-cpu-amd
      inputs.nixos-hardware.nixosModules.common-pc-ssd
-     inputs.chaotic.nixosModules.default
      inputs.lanzaboote.nixosModules.lanzaboote    
      inputs.nixos-hardware.nixosModules.system76      
   ];
@@ -37,12 +36,8 @@ in
         # Plymouth is purty
         plymouth.enable = true;
 
-        #Chaotic kernel 
-        kernelPackages = pkgs.linuxPackages_cachyos;
+        kernelPackages = pkgs.linuxPackages_latest;
       };
-
-      #chaotic.scx.enable = true;
-      #chaotic.scx.scheduler = "scx_rusty";
     
       # Swap config
       zramSwap = {
