@@ -8,6 +8,10 @@
     environment = {
       systemPackages = with pkgs; [
         gnome-extension-manager
+        adw-gtk3
+        qgnomeplatform-qt6
+        qadwaitadecorations
+        qadwaitadecorations-qt6        
       ];
 
       gnome.excludePackages = 
@@ -24,6 +28,10 @@
           gnome-music
           gnome-initial-setup
         ]);
+
+      sessionVariables = {
+        QT_WAYLAND_DECORATION = "adwaita";
+      };          
     };
 
     services.xserver = {
@@ -40,21 +48,11 @@
     services.dleyna-renderer.enable = false;
     services.dleyna-server.enable = false;
 
+    # Minimize how bad qt apps look
+    qt.enable = true;
+    qt.style = "adwaita-dark";
+    qt.platformTheme = "gnome";
   };
 
-  # Minimize how bad qt apps look
-  qt.enable = true;
-  qt.style = "adwaita-dark";
-  qt.platformTheme = "gnome";
 
-  environment.systemPackages = with pkgs; [
-    adw-gtk3
-    qgnomeplatform-qt6
-    qadwaitadecorations
-    qadwaitadecorations-qt6
-  ];  
-
-  environment.sessionVariables = {
-    QT_WAYLAND_DECORATION = "adwaita";
-  };  
 }
