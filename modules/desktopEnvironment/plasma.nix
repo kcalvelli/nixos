@@ -31,7 +31,7 @@
       networking.networkmanager.enable = true;
       hardware.pulseaudio.enable = true;
       services.colord.enable = true;
-      services.power-profiles.enable = lib.mkForce true;
+      services.power-profiles-daemon.enable = lib.mkForce true;
 
 
       programs.kdeconnect = {
@@ -46,11 +46,15 @@
         platformTheme = "kde";
       };
 
-      systemPackages = with pkgs; with kdePackages; [
+      environment.systemPackages = with pkgs; with kdePackages; [
         kaccounts-providers
         kaccounts-integration
-        merkuro
       ];  
+
+      programs.kde-pim = {
+        merkuro = true;
+        kmail = true;
+      };
     };
   };
 }
