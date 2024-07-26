@@ -6,16 +6,6 @@
     package = pkgs.samba;
     enableNmbd = false;
 
-    shares.music = {
-      path = "/home/keith/Music";
-      writable = true;
-    };
-
-    shares.pictures = {
-      path = "/home/keith/Pictures";
-      writable = true;
-    };
-
     # You will still need to set up the user accounts to begin with:
     # $ sudo smbpasswd -a yourusername
 

@@ -31,13 +31,9 @@
   services.caddy-proxy.enable = true;
   services.chatbot.enable = true;
 
-  home-manager.users = {
-    keith = {
-      imports = with inputs.self.homeModules; [
-        desktop
-      ];
-    };
-  }; 
+  home-manager.sharedModules = with inputs.self.homeModules; [
+    desktop
+  ];   
 
   networking = {
     hostName = "edge"; # Define your hostname.

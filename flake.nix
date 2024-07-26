@@ -1,5 +1,5 @@
 {
-  description = "Keith Calvelli's NixOS config";
+  description = "AxiOS";
 
   inputs = {
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -44,14 +44,9 @@
     inputs@{
       flake-parts,
       systems,
-      lanzaboote,
-      nixos-cosmic,
-      nixpkgs,
       ...
     }:
-    let
-      zigpkgs = inputs.zig.packages;
-    in
+
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
 

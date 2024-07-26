@@ -27,7 +27,6 @@
       ];
       trusted-users = [
         "root"
-        "keith"
       ];
     };
   };

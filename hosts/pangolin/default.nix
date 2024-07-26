@@ -26,17 +26,11 @@
   apps.all.enable = true;
   hardware.system76.enable = true;
 
-  home-manager.users = {
-    keith = {
-      imports = with inputs.self.homeModules; [
-        laptop
-      ];
-    };
-  }; 
+  home-manager.sharedModules = with inputs.self.homeModules; [
+    laptop
+  ]; 
 
   networking = {
     hostName = "pangolin"; # Define your hostname.
   };
-
-  #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 }

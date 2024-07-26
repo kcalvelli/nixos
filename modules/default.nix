@@ -12,5 +12,6 @@
     services = ./services;
     users = ./users;
     virtualisation = ./virtualisation;
+    system = ./system;
   };
 }
