@@ -3,9 +3,9 @@
   imports = [
     ./gnome.nix
     ./cosmic.nix
-    ./plasma.nix
+  #  ./plasma.nix
   ];
   cosmic.enable = true;
   gnome.enable = true;
-  plasma.enable = true; #Specialisation
+  #plasma.enable = true; #Specialisation
 }
