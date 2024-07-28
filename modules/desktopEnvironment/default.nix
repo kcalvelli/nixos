@@ -2,11 +2,11 @@
 {
   imports = [
     ./gnome.nix
-   # ./cosmic.nix
+    ./cosmic.nix
     ./hyprland.nix
   #  ./plasma.nix
   ];
-  #cosmic.enable = true;
+  cosmic.enable = true;
   gnome.enable = true;
   hyprland.enable = true;
   #plasma.enable = true; #Specialisation
