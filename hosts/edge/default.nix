@@ -29,7 +29,7 @@
 
   # Services
   services.caddy-proxy.enable = true;
-  services.chatbot.enable = true;
+  #services.chatbot.enable = true;
 
   home-manager.sharedModules = with inputs.self.homeModules; [
     desktop

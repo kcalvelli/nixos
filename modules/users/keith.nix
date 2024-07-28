@@ -15,6 +15,7 @@
         "libvirtd"
         "plugdev"
         "qemu-libvirtd"
+        "video"
       ];
     };
   };

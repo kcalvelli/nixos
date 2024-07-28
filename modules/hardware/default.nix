@@ -58,10 +58,10 @@ in
       ### Printing
         printing = {
           enable = true;
-          drivers = [
-            pkgs.hplip
-            pkgs.hplipWithPlugin
-          ];
+          #drivers = [
+          #  pkgs.hplip
+          #  pkgs.hplipWithPlugin
+          #];
         };
       ### Force power profiles daemon
         power-profiles-daemon = {

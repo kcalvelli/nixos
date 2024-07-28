@@ -58,6 +58,7 @@ in
       };
       
       environment.systemPackages = with pkgs; [ 
+        killall
         cubicsdr
         mission-center
         wlogout

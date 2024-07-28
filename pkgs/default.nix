@@ -9,6 +9,7 @@
           brave-browser-nightly  
           quickemu
           valent
+          hyprpaper-slideshow
           ;
       };
 
@@ -28,5 +29,6 @@
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
+    hyprpaper-slideshow = prev.callPackage ./hyprpaper-slideshow { };
   };
 }
