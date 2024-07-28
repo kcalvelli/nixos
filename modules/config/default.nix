@@ -12,7 +12,8 @@
         "nix-command"
         "flakes"
       ];
-      maxJobs = 2;
+    # Need swap, until then  
+      max-jobs = 2;
     #  auto-optimise-store = true;
       substituters = [
         "https://devenv.cachix.org"
