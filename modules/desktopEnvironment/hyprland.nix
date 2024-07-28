@@ -45,7 +45,7 @@ in
       #    ${asztal}/bin/greeter
       #  '';
       #};      
-    };
+
 
     #systemd.tmpfiles.rules = [
     #  "d '/var/cache/greeter' - greeter greeter - -"
@@ -88,30 +88,36 @@ in
     qt.style = "adwaita-dark";
     qt.platformTheme = "gnome";
   
-    environment.systemPackages = with pkgs;
-    with gnome; [
-      morewaita-icon-theme
- #     adwaita-icon-theme
-      qogir-icon-theme
- #     loupe
- #     nautilus
- #     baobab
- #     gnome-text-editor
- #     gnome-calendar
- #     gnome-boxes
- #     gnome-system-monitor
- #     gnome-control-center
- #     gnome-weather
- #     gnome-calculator
- #     gnome-clocks
- #     gnome-software # for flatpak
-      wl-gammactl
-      wl-clipboard
-      wayshot
-      pavucontrol
-      brightnessctl
-      swww
+    environment = { 
+      systemPackages = with pkgs;
+        with gnome; [
+          morewaita-icon-theme
+    #     adwaita-icon-theme
+          qogir-icon-theme
+    #     loupe
+    #     nautilus
+    #     baobab
+    #     gnome-text-editor
+    #     gnome-calendar
+    #     gnome-boxes
+    #     gnome-system-monitor
+    #     gnome-control-center
+    #     gnome-weather
+    #     gnome-calculator
+    #     gnome-clocks
+    #     gnome-software # for flatpak
+         wl-gammactl
+         wl-clipboard
+         wayshot
+         pavucontrol
+         brightnessctl
+         swww
     ];
+
+    sessionVariables = {
+      QT_WAYLAND_DECORATION = "adwaita";
+    };
+    };
 
     systemd = {
       user.services.polkit-gnome-authentication-agent-1 = {
@@ -127,10 +133,6 @@ in
           TimeoutStopSec = 10;
         };
       };
-    };    
-  
-    environment.sessionVariables = {
-      QT_WAYLAND_DECORATION = "adwaita";
-    };     
-  }; 
+    }; 
+  };       
 }

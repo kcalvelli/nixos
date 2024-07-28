@@ -2,16 +2,17 @@
 {
   nix = {
     package = pkgs.nixFlakes;
-    #gc = {
-    #  automatic = true;
-    #  dates = "daily";
-    #  options = "--delete-older-than 5d";
-    #};
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 5d";
+    };
     settings = {
       experimental-features = [
         "nix-command"
         "flakes"
       ];
+      maxJobs = 2;
     #  auto-optimise-store = true;
       substituters = [
         "https://devenv.cachix.org"
