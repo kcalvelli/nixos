@@ -7,5 +7,5 @@
   ];
   cosmic.enable = true;
   gnome.enable = true;
-  hyprland.enable = true;a
+  hyprland.enable = true;
 }
