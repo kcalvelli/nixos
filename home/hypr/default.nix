@@ -179,6 +179,10 @@ in {
         "SUPER, mouse:272, movewindow"
       ];
 
+      bindr = [
+        "SUPER, SUPER_L,exec, nwg-drawer"
+      ];
+
       decoration = {
         drop_shadow = "yes";
         shadow_range = 8;
