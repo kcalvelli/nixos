@@ -5,5 +5,7 @@
     ../virtualisation
     ../shell
     ../development
+    ../ags
+    ../hyper
   ];
 }
