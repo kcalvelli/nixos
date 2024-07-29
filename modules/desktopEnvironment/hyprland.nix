@@ -23,59 +23,25 @@ in
       hypridle.enable = true;
       xserver.displayManager.startx.enable = true;
 
-#      gvfs.enable = true;
+      gvfs.enable = true;
       devmon.enable = true;
-#      udisks2.enable = true;
-#      upower.enable = true;
-#      power-profiles-daemon.enable = true;
-#      accounts-daemon.enable = true;
-#      gnome = {
-#        evolution-data-server.enable = true;
-#        glib-networking.enable = true;
-#        gnome-keyring.enable = true;
-#        gnome-online-accounts.enable = true;
-#        tracker-miners.enable = true;
-#        tracker.enable = true;
+      udisks2.enable = true;
+      upower.enable = true;
+      power-profiles-daemon.enable = true;
+      accounts-daemon.enable = true;
+      gnome = {
+        evolution-data-server.enable = true;
+        glib-networking.enable = true;
+        gnome-keyring.enable = true;
+        gnome-online-accounts.enable = true;
+        tracker-miners.enable = true;
+        tracker.enable = true;
       };      
-      #greetd = {
-      #  enable = true;
-      #  settings.default_session.command = pkgs.writeShellScript "greeter" ''
-      #    export XKB_DEFAULT_LAYOUT=${config.services.xserver.xkb.layout}
-      #    export XCURSOR_THEME=Qogir
-      #    ${asztal}/bin/greeter
-      #  '';
-      #};      
 
-
-    #systemd.tmpfiles.rules = [
-    #  "d '/var/cache/greeter' - greeter greeter - -"
-    #];    
-
- #   system.activationScripts.wallpaper = let
- #     wp = pkgs.writeShellScript "wp" ''
- #       CACHE="/var/cache/greeter"
- #       OPTS="$CACHE/options.json"
- #       HOME="/home/$(find /home -maxdepth 1 -printf '%f\n' | tail -n 1)"
-#
-#        mkdir -p "$CACHE"
-#        chown greeter:greeter $CACHE
-#
-#        if [[ -f "$HOME/.cache/ags/options.json" ]]; then
-#          cp $HOME/.cache/ags/options.json $OPTS
-#          chown greeter:greeter $OPTS
-#        fi
-#
-#        if [[ -f "$HOME/.config/background" ]]; then
-#          cp "$HOME/.config/background" $CACHE/background
-#          chown greeter:greeter "$CACHE/background"
-#        fi
-#      '';
-#    in
-#      builtins.readFile wp;
+    };
 
     xdg.portal = {
       enable = true;
-
     };
 
     security = {
@@ -90,34 +56,33 @@ in
   
     environment = { 
       systemPackages = with pkgs;
-        with gnome; [
-          morewaita-icon-theme
-    #     adwaita-icon-theme
-          qogir-icon-theme
-    #     loupe
-    #     nautilus
-    #     baobab
-    #     gnome-text-editor
-    #     gnome-calendar
-    #     gnome-boxes
-    #     gnome-system-monitor
-    #     gnome-control-center
-    #     gnome-weather
-    #     gnome-calculator
-    #     gnome-clocks
-    #     gnome-software # for flatpak
-         wl-gammactl
-         wl-clipboard
-         wayshot
-         pavucontrol
-         brightnessctl
-         swww
-         nwg-drawer
-    ];
-
-    sessionVariables = {
-      QT_WAYLAND_DECORATION = "adwaita";
-    };
+      [
+        morewaita-icon-theme
+        gnome-calendar
+        gnome.gnome-boxes
+        gnome.gnome-control-center
+        gnome.gnome-weather
+        gnome-calculator
+        gnome.gnome-clocks
+        seahorse
+        nautilus
+        baobab
+        wl-gammactl
+        wl-clipboard
+        brightnessctl
+        swww
+        adw-gtk3
+        qgnomeplatform-qt6
+        qadwaitadecorations
+        qadwaitadecorations-qt6    
+        nwg-dock-hyprland
+        nwg-drawer     
+        blueberry   
+        networkmanagerapplet
+    ];    
+      sessionVariables = {
+        QT_WAYLAND_DECORATION = "adwaita";
+      };
     };
 
     systemd = {
@@ -135,5 +100,5 @@ in
         };
       };
     }; 
-  };       
+  };        
 }

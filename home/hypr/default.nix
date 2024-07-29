@@ -4,7 +4,7 @@
   ...
 }: let
   hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  # plugins = inputs.hyprland-plugins.packages.${pkgs.system};
+  plugins = inputs.hyprland-plugins.packages.${pkgs.system};
 
   playerctl = "${pkgs.playerctl}/bin/playerctl";
   brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
@@ -19,23 +19,32 @@ in {
     terminal = false;
   };
 
+  services.hypridle.settings = {
+      general = {
+          lock_cmd = "hyprlock --immediate";
+      };
+  };
+  
   wayland.windowManager.hyprland = {
     enable = true;
     package = hyprland;
     systemd.enable = true;
     xwayland.enable = true;
     plugins = [
-      # inputs.hyprland-hyprspace.packages.${pkgs.system}.default
-      # plugins.hyprexpo
-      # plugins.hyprbars
-      # plugins.borderspp
+      plugins.hyprexpo
     ];
 
     settings = {
       exec-once = [
         "ags -b hypr"
-        "hyprctl setcursor Qogir 24"
-        "fragments"
+        "hyprctl setcursor Pop 24"
+        "solaar --window=hide"
+        "nextcloud --background"
+        "valent"
+      ];
+
+      exec = [
+        "nwg-dock-hyprland -d" 
       ];
 
       monitor = [
@@ -94,9 +103,7 @@ in {
         (f "Color Picker")
         (f "xdg-desktop-portal")
         (f "xdg-desktop-portal-gnome")
-        (f "de.haeckerfelix.Fragments")
         (f "com.github.Aylur.ags")
-        "workspace 7, title:Spotify"
       ];
 
       bind = let
@@ -111,20 +118,19 @@ in {
       in
         [
           "CTRL SHIFT, R,  ${e} quit; ags -b hypr"
-          "SUPER, R,       ${e} -t launcher"
+          "SUPER, R,         ${e} -t launcher"     
           "SUPER, Tab,     ${e} -t overview"
           ",XF86PowerOff,  ${e} -r 'powermenu.shutdown()'"
           ",XF86Launch4,   ${e} -r 'recorder.start()'"
           ",Print,         ${e} -r 'recorder.screenshot()'"
           "SHIFT,Print,    ${e} -r 'recorder.screenshot(true)'"
-          "SUPER, Return, exec, xterm" # xterm is a symlink, not actually xterm
+          "SUPER, Return, exec, cosmic-term" 
           "SUPER, B, exec, brave"
-          "SUPER, T, exec, cosmic-term"
-          "SUPER, A, exec, nwg-drawer"
-
+          "SUPER, W, hyprexpo:expo, toggle"
+          "SUPER, A, exec, nwg-drawer" 
           "ALT, Tab, focuscurrentorlast"
           "CTRL ALT, Delete, exit"
-          "ALT, Q, killactive"
+          "SUPER, Q, killactive"
           "SUPER, F, togglefloating"
           "SUPER, G, fullscreen"
           "SUPER, O, fakefullscreen"
@@ -216,6 +222,19 @@ in {
           drawActiveWorkspace = true;
           reverseSwipe = true;
         };
+
+        hyprexpo = {
+          columns = 3;
+          gap_size = 5;
+          bg_col = "rgb(111111)";
+          workspace_method = "first 1"; # [center/first] [workspace] e.g. first 1 or center m+1
+  
+          enable_gesture = true; # laptop touchpad
+          gesture_fingers = 3;  # 3 or 4
+          gesture_distance = 300; # how far is the "max"
+          gesture_positive = true; # positive = swipe down. Negative = swipe up.          
+        };
+
         hyprbars = {
           bar_color = "rgb(2a2a2a)";
           bar_height = 28;

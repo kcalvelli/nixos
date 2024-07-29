@@ -9,7 +9,7 @@
   
   config = lib.mkIf config.cosmic.enable {
     services.desktopManager.cosmic.enable = true;   
-    #services.displayManager.cosmic-greeter.enable = true;
+    services.displayManager.cosmic-greeter.enable = true;
 
     # Minimize how bad qt apps look
     qt.enable = true;

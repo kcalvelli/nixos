@@ -123,7 +123,7 @@ in
     (lib.mkIf cfg.development.enable {
       environment.systemPackages = with pkgs; [ 
         nil
-        #zed-editor
+        zed-editor
         nixfmt-rfc-style
         (vscode.override {
           commandLineArgs = [
