@@ -40,7 +40,7 @@ in {
         "hyprctl setcursor Pop 24"
         "solaar --window=hide"
         "nextcloud --background"
-        "valent"
+        "valent --gapplication-service"
       ];
 
       exec = [
