@@ -6,11 +6,6 @@
   hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
   # plugins = inputs.hyprland-plugins.packages.${pkgs.system};
 
-  yt = pkgs.writeShellScript "yt" ''
-    notify-send "Opening video" "$(wl-paste)"
-    mpv "$(wl-paste)"
-  '';
-
   playerctl = "${pkgs.playerctl}/bin/playerctl";
   brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
   pactl = "${pkgs.pulseaudio}/bin/pactl";
@@ -125,9 +120,7 @@ in {
           "SUPER, Return, exec, xterm" # xterm is a symlink, not actually xterm
           "SUPER, B, exec, brave"
           "SUPER, T, exec, cosmic-term"
-
-          # youtube
-          ", XF86Launch1,  exec, ${yt}"
+          "SUPER, A, exec, nwg-drawer"
 
           "ALT, Tab, focuscurrentorlast"
           "CTRL ALT, Delete, exit"

@@ -112,6 +112,7 @@ in
          pavucontrol
          brightnessctl
          swww
+         nwg-drawer
     ];
 
     sessionVariables = {
