@@ -6,6 +6,6 @@
     ../shell
     ../development
     ../ags
-    ../hyper
+    ../hypr
   ];
 }
