@@ -43,10 +43,6 @@ in {
         "valent --gapplication-service"
       ];
 
-      exec = [
-        "nwg-dock-hyprland -d" 
-      ];
-
       monitor = [
         # "eDP-1, 1920x1080, 0x0, 1"
         # "HDMI-A-1, 2560x1440, 1920x0, 1"
@@ -180,7 +176,7 @@ in {
       ];
 
       bindr = [
-        "SUPER, SUPER_L,exec, nwg-drawer"
+        "SUPER, SUPER_L,exec, ags -b hypr -t launcher"
       ];
 
       decoration = {

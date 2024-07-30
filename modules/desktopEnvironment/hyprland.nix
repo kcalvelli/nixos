@@ -75,7 +75,6 @@ in
         qgnomeplatform-qt6
         qadwaitadecorations
         qadwaitadecorations-qt6    
-        nwg-dock-hyprland
         nwg-drawer     
         blueberry   
         networkmanagerapplet

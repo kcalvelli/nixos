@@ -10,5 +10,6 @@
       ];
     })
     pkgs.ibm-plex
+    pkgs.inter
   ];
 }

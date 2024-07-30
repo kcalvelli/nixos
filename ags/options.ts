@@ -154,14 +154,17 @@ const options = mkOptions(OPTIONS, {
         },
         apps: {
             iconSize: opt(62),
-            max: opt(6),
+            max: opt(8),
             favorites: opt([
                 [
-                    "firefox",
-                    "wezterm",
+                    "brave-browser",
+                    "cosmic-term",
+                    "org.gnome.Geary",
                     "org.gnome.Nautilus",
-                    "org.gnome.Calendar",
-                    "spotify",
+                    "dev.zed.Zed",
+                    "Code",
+                    "teams-for-linux",
+                    "faolnafnngnfdaknnbpnkhgohbobgegn",
                 ],
             ]),
         },
