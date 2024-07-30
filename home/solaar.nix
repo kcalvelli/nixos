@@ -71,13 +71,13 @@
     ---
     - MouseGesture: Mouse Up
     - KeyPress:
-      - [Super_L, w]
+      - [Super_L, Tab]
       - click
     ...
     ---
     - MouseGesture: Mouse Down
     - KeyPress:
-      - [Super_L, a]
+      - [Super_L, r]
       - click
     ...
     ---

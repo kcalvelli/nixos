@@ -11,6 +11,6 @@ let
     };
 in
 {
-  flake.homeModules.desktop = ./desktop;
-  flake.homeModules.laptop = ./laptop;
+  flake.homeModules.workstation = ./workstation.nix;
+  flake.homeModules.laptop = ./laptop.nix;
 }

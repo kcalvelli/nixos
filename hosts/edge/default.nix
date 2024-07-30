@@ -32,7 +32,7 @@
   #services.chatbot.enable = true;
 
   home-manager.sharedModules = with inputs.self.homeModules; [
-    desktop
+    workstation
   ];   
 
   networking = {

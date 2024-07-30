@@ -15,6 +15,5 @@
             "./node_modules/@girs"
         ],
         "skipLibCheck": true,
-        "outDir": "./"
     }
 }
