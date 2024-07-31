@@ -144,6 +144,7 @@ in
         gimp
         amdgpu_top
         clinfo
+        libcamera
       ];
     })
     

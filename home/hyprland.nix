@@ -41,6 +41,7 @@ in {
         "solaar --window=hide"
         "nextcloud --background"
         "valent --gapplication-service"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "${pkgs.hypridle}/bin/hypridle"
         "${pkgs.wl-clipboard}/bin/wl-copy --type image --watch ${pkgs.cliphist}/bin/cliphist store"
         "${pkgs.wl-clipboard}/bin/wl-copy --type text --watch ${pkgs.cliphist}/bin/cliphist store"        

@@ -79,6 +79,7 @@ in
         nwg-drawer     
         blueberry   
         networkmanagerapplet
+        grim
     ];    
       sessionVariables = {
         QT_WAYLAND_DECORATION = "adwaita";
