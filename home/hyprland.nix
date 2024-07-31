@@ -134,7 +134,6 @@ in {
           "SUPER, Q, killactive"
           "SUPER, F, togglefloating"
           "SUPER, G, fullscreen"
-          "SUPER, O, fakefullscreen"
           "SUPER, P, togglesplit"
           "SUPER CTRL ALT, L, exec, hyprlock --immediate"
 
