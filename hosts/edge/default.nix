@@ -21,11 +21,15 @@
       hardware
       networking
       users
-      virtualisation
+      virt
     ]);
 
   apps.all.enable = true;
   hardware.msi.enable = true;
+
+  #Virtualisation
+  virt.libvirt.enable = true;
+  virt.containers.enable = true;  
 
   # Services
   services.caddy-proxy.enable = true;

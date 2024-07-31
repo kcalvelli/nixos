@@ -1,16 +1,15 @@
-{ inputs, pkgs, ... }:
+{ config, lib, inputs, pkgs, ... }:
 let 
   cfg = config.virt;
-in 
+in  
 {
+
   options = {
     virt.containers = {
-      lib.mkEnableOption "Enable Containers"
+      enable = lib.mkEnableOption "Enable containers";
     };
-  };  
-  options = {
     virt.libvirt = {
-      lib.mkEnableOption "Enable libvirt"
+      enable = lib.mkEnableOption "Enable libvirt";
     };
   };
 
@@ -27,9 +26,7 @@ in
      };
      virtualisation.waydroid.enable = true;
     })
-  ];
 
-    config = lib.mkMerge [
     (lib.mkIf cfg.libvirt.enable {
       virtualisation = {
        libvirtd = {
@@ -48,18 +45,19 @@ in
          onShutdown = "shutdown";
         };
         spiceUSBRedirection.enable = true; 
-        programs.virt-manager.enable = true;
+      };
 
-        environment.systemPackages = with pkgs; [ 
-          #qemu_full
-          #inputs.self.packages.${pkgs.system}.quickemu
-          #virt-viewer
-          #spice-gtk
-          distrobox
-          boxbuddy
-          gnome.gnome-boxes
-        ];
-      };  
+      programs.virt-manager.enable = true;      
+      environment.systemPackages = with pkgs; [ 
+        #qemu_full
+        #inputs.self.packages.${pkgs.system}.quickemu
+        #virt-viewer
+        #spice-gtk
+        distrobox
+        boxbuddy
+        gnome.gnome-boxes
+      ];
+
       boot.extraModprobeConfig = ''
         options kvm_amd nested=1
         options kvm_amd emulate_invalid_guest_state=0

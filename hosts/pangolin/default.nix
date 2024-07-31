@@ -20,11 +20,15 @@
       hardware
       networking
       users
-      virtualisation
+      virt
     ]);
 
   apps.all.enable = true;
   hardware.system76.enable = true;
+
+  #Virtualisation
+  virt.libvirt.enable = true;
+  virt.containers.enable = true;  
 
   home-manager.sharedModules = with inputs.self.homeModules; [
     laptop
