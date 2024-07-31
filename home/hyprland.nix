@@ -41,14 +41,17 @@ in {
         "solaar --window=hide"
         "nextcloud --background"
         "valent --gapplication-service"
+        "${pkgs.hypridle}/bin/hypridle"
+        "${pkgs.wl-clipboard}/bin/wl-copy --type image --watch ${pkgs.cliphist}/bin/cliphist store"
+        "${pkgs.wl-clipboard}/bin/wl-copy --type text --watch ${pkgs.cliphist}/bin/cliphist store"        
       ];
 
       monitor = [
         # "eDP-1, 1920x1080, 0x0, 1"
         # "HDMI-A-1, 2560x1440, 1920x0, 1"
-        #",preferred,auto,1"
-        "DP-2,3840x2160,0x0,1.5"
-        "eDP-1,1920x1080,0x0,1"
+        ",preferred,auto,1"
+        #"DP-2,3840x2160,0x0,1.25"
+        #"eDP-1,1920x1080,0x0,1"
       ];
 
       general = {

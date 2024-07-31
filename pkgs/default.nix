@@ -18,7 +18,7 @@
           allowUnfree = true;
         };
         overlays = [ 
-          self.overlays.default 
+          self.overlays.default           
         ];
       };
     };
