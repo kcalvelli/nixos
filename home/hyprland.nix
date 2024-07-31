@@ -3,6 +3,11 @@
   pkgs,
   ...
 }: let
+
+  imports = [
+    ./hyprlock.nix
+  ];
+
   hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
   plugins = inputs.hyprland-plugins.packages.${pkgs.system};
 

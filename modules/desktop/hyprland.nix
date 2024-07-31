@@ -47,6 +47,7 @@ in
     security = {
       polkit.enable = true;
       pam.services.ags = {};
+      pam.services.hyprlock = {};
     };    
 
     # Minimize how bad qt apps look

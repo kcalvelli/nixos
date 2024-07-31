@@ -32,14 +32,9 @@ in
        libvirtd = {
          enable = true;
          qemu = {
-           #package  = pkgs.qemu_kvm;
            ovmf.enable = true;
            ovmf.packages = [ pkgs.OVMFFull.fd ];
-           #swtpm.enable = true;runAsRoot = false;
            swtpm.enable = true;
-           #verbatimConfig = ''
-           #  nvram = [ "/run/libvirt/nix-ovmf/AAVMF_CODE.fd:/run/libvirt/nix-ovmf/AAVMF_VARS.fd", "/run/libvirt/nix-ovmf/OVMF_CODE.fd:/run/libvirt/nix-ovmf/OVMF_VARS.fd" ]
-           #'';
          };
           onBoot = "start";
          onShutdown = "shutdown";
@@ -50,13 +45,24 @@ in
       programs.virt-manager.enable = true;      
       environment.systemPackages = with pkgs; [ 
         #qemu_full
-        #inputs.self.packages.${pkgs.system}.quickemu
-        #virt-viewer
-        #spice-gtk
+        qemu
+        quickemu
+        virt-viewer
+        spice-gtk
         distrobox
         boxbuddy
-        gnome.gnome-boxes
       ];
+
+      systemd.tmpfiles.rules =
+        let
+          firmware =
+            pkgs.runCommandLocal "qemu-firmware" { } ''
+              mkdir $out
+              cp ${pkgs.qemu}/share/qemu/firmware/*.json $out
+              substituteInPlace $out/*.json --replace ${pkgs.qemu} /run/current-system/sw
+            '';
+        in
+        [ "L+ /var/lib/qemu/firmware - - - - ${firmware}" ];
 
       boot.extraModprobeConfig = ''
         options kvm_amd nested=1
