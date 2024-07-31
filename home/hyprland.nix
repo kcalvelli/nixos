@@ -3,11 +3,6 @@
   pkgs,
   ...
 }: let
-
-  imports = [
-    ./hyprlock.nix
-  ];
-
   hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
   plugins = inputs.hyprland-plugins.packages.${pkgs.system};
 
@@ -15,6 +10,11 @@
   brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
   pactl = "${pkgs.pulseaudio}/bin/pactl";
 in {
+
+  imports = [
+    ./hyprlock.nix
+  ];
+
   xdg.desktopEntries."org.gnome.Settings" = {
     name = "Settings";
     comment = "Gnome Control Center";
@@ -51,7 +51,9 @@ in {
       monitor = [
         # "eDP-1, 1920x1080, 0x0, 1"
         # "HDMI-A-1, 2560x1440, 1920x0, 1"
-        ",preferred,auto,1"
+        #",preferred,auto,1"
+        "DP-2,3840x2160,0x0,1.5"
+        "eDP-1,1920x1080,0x0,1"
       ];
 
       general = {
@@ -136,6 +138,7 @@ in {
           "SUPER, G, fullscreen"
           "SUPER, O, fakefullscreen"
           "SUPER, P, togglesplit"
+          "SUPER CTRL ALT, L, exec, hyprlock --immediate"
 
           (mvfocus "k" "u")
           (mvfocus "j" "d")
