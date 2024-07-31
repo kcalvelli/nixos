@@ -13,7 +13,7 @@
     ++ (with inputs.self.nixosModules; [
       apps
       config
-      desktopEnvironment
+      desktop
       services
       fonts
       graphics

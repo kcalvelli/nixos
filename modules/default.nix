@@ -3,7 +3,7 @@
   flake.nixosModules = {
     apps = ./apps;
     config = ./config;
-    desktopEnvironment = ./desktopEnvironment;
+    desktop = ./desktop;
     fonts = ./fonts;
     gaming = ./gaming;
     hardware = ./hardware;
@@ -11,7 +11,7 @@
     networking = ./networking;
     services = ./services;
     users = ./users;
-    virtualisation = ./virtualisation;
+    virt = ./virtualisation;
     system = ./system;
   };
 }

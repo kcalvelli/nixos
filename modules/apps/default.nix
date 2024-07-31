@@ -100,14 +100,7 @@ in
 
     ### Virtualisation
     (lib.mkIf cfg.virtualisation.enable {
-      environment.systemPackages = with pkgs; [ 
-        qemu_full
-        inputs.self.packages.${pkgs.system}.quickemu
-        virt-viewer
-        spice-gtk
-        distrobox
-        boxbuddy
-      ];
+
     })
 
     ### Filesystem

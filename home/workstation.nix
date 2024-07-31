@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 {
   imports = [
     ./pwa.nix
@@ -8,5 +8,10 @@
     ./development.nix
     ./ags.nix
     ./hyprland.nix
+    inputs.self.nixosModules.virt.default
   ];
+
+  virt.libvirt.enable = true;
+  virt.containers.enable = true;
+  
 }
