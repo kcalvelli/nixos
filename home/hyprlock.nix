@@ -42,7 +42,7 @@
   
       label {
           monitor =
-          text = Enter your password, $USER
+          text = Locked
           color = rgba(200, 200, 200, 1.0)
           font_size = 25
           font_family = Noto Sans
