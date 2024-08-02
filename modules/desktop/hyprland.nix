@@ -80,6 +80,7 @@ in
         blueberry   
         networkmanagerapplet
         grim
+        playerctl
     ];    
       sessionVariables = {
         QT_WAYLAND_DECORATION = "adwaita";
