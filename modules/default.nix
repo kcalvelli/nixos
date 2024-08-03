@@ -12,7 +12,7 @@
     services = ./services;
     users = ./users;
     virt = ./virtualisation;
-    system76 = ./harware/system76;
+    system76 = ./hardware/system76;
     msi = ./hardware/msi.nix;
   };
 }
