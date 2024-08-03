@@ -14,6 +14,7 @@ in {
   imports = [
     ./hyprlock.nix
     ./hypridle.nix
+    ./hyprcursor.nix
   ];
 
   xdg.desktopEntries."org.gnome.Settings" = {
@@ -37,7 +38,7 @@ in {
     settings = {
       exec-once = [
         "ags -b hypr"
-        "hyprctl setcursor Pop 24"
+        #"hyprctl setcursor Pop 24"
         "solaar --window=hide"
         "nextcloud --background"
         "valent --gapplication-service"

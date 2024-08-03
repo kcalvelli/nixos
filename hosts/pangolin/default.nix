@@ -17,7 +17,7 @@
       services
       fonts
       graphics
-      hardware
+      system76
       networking
       users
       virt

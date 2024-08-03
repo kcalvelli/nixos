@@ -55,6 +55,10 @@
       url = "github:hyprwm/hypridle";
       inputs.nixpkgs.follows = "hyprland";
     };
+    hyprcursor = {
+      url = "github:hyprwm/hyprcursor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
     ags.url = "github:Aylur/ags";
 

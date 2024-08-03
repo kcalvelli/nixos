@@ -18,7 +18,7 @@
       fonts
       gaming
       graphics
-      hardware
+      msi
       networking
       users
       virt
