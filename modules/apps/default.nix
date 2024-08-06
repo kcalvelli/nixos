@@ -166,6 +166,7 @@ in
         nextcloud-client
         inputs.self.packages.${pkgs.system}.valent  
       ];
+      programs.geary.enable = true;
     })
 
     ### All apps
