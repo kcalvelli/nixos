@@ -50,6 +50,7 @@ in
         system76 = {
           enableAll = true;
           kernel-modules.enable = true;
+          power-daemon.enable = true;
         };
       };
     

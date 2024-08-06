@@ -76,8 +76,8 @@ in
         qadwaitadecorations
         qadwaitadecorations-qt6    
         nwg-drawer     
-        blueberry   
-        networkmanagerapplet
+        #blueberry   
+        #networkmanagerapplet
         grim
         playerctl
     ];    
