@@ -8,5 +8,6 @@
     #./ags.nix
     #./hyprland.nix
     ./office.nix
+    ./gnome-settings.nix
   ];
 }
