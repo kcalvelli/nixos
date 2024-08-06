@@ -209,6 +209,6 @@
   home.file.".local/share/icons/vscode.png" = {
     enable = true;
     force = true;
-    source = ../resources/vscode.png;
+    source = ./resources/vscode.png;
   };  
 }
