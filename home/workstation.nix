@@ -6,8 +6,8 @@
     ./virtualisation.nix
     ./shell.nix
     ./development.nix
-    ./ags.nix
-    ./hyprland.nix
+    #./ags.nix
+    #./hyprland.nix
     ./office.nix
   ];  
 }
