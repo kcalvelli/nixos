@@ -11,8 +11,7 @@
       inputs.home-manager.nixosModules.default
     ]
     ++ (with inputs.self.nixosModules; [
-      apps
-      config
+      system
       desktop
       services
       fonts
@@ -24,7 +23,6 @@
       virt
     ]);
 
-  apps.all.enable = true;
   hardware.msi.enable = true;
 
   #Virtualisation
@@ -33,7 +31,7 @@
 
   # Services
   services.caddy-proxy.enable = true;
-  #services.chatbot.enable = true;
+  services.chatbot.enable = true;
 
   home-manager.sharedModules = with inputs.self.homeModules; [
     workstation

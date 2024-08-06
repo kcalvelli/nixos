@@ -8,5 +8,6 @@
     ./development.nix
     ./ags.nix
     ./hyprland.nix
+    ./office.nix
   ];  
 }

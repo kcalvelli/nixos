@@ -12,7 +12,7 @@
     ]
     ++ (with inputs.self.nixosModules; [
       apps
-      config
+      system
       desktop
       services
       fonts
@@ -23,7 +23,6 @@
       virt
     ]);
 
-  apps.all.enable = true;
   hardware.system76.enable = true;
 
   #Virtualisation

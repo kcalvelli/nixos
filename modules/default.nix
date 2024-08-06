@@ -1,8 +1,7 @@
 { ... }:
 {
   flake.nixosModules = {
-    apps = ./apps;
-    config = ./config;
+    system = ./system;
     desktop = ./desktop;
     fonts = ./fonts;
     gaming = ./gaming;
