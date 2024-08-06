@@ -14,7 +14,7 @@ in {
   imports = [
     ./hyprlock.nix
     ./hypridle.nix
-    ./hyprcursor.nix
+    #./hyprcursor.nix
   ];
 
   xdg.desktopEntries."org.gnome.Settings" = {
