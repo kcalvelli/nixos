@@ -64,6 +64,7 @@ in
         wlogout
         gnome-firmware
         ptyxis
+        hwmon
         # Rust replacement for gnu coreutils
         uutils-coreutils-noprefix
     
