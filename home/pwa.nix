@@ -178,37 +178,37 @@
     '';  
   };     
 
-  #home.file.".local/share/applications/code.desktop" = {
-  #  enable = true;
-  #  force = true;
-  #  text = 
-  #  ''
-  #  #!/usr/bin/env xdg-open
-  #  [Desktop Entry]
-  #  Actions=new-empty-window
-  #  Categories=Utility;TextEditor;Development;IDE
-  #  Comment=Code Editing. Redefined.
-  #  Exec=code %F
-  #  GenericName=Text Editor
-  #  Icon=vscode
-  #  Keywords=vscode
-  #  MimeType=text/plain;inode/directory
-  #  Name=Visual Studio Code
-  #  StartupNotify=true
-  #  StartupWMClass=Code
-  #  Type=Application
-  #  Version=1.4
-  #  
-  #  [Desktop Action new-empty-window]
-  #  Exec=code --new-window %F
-  #  Icon=vscode
-  #  Name=New Empty Window
-  #  '';
-  #};
+  home.file.".local/share/applications/code.desktop" = {
+    enable = true;
+    force = true;
+    text = 
+    ''
+    #!/usr/bin/env xdg-open
+    [Desktop Entry]
+    Actions=new-empty-window
+    Categories=Utility;TextEditor;Development;IDE
+    Comment=Code Editing. Redefined.
+    Exec=code %F
+    GenericName=Text Editor
+    Icon=vscode
+    Keywords=vscode
+    MimeType=text/plain;inode/directory
+    Name=Visual Studio Code
+    StartupNotify=true
+    StartupWMClass=Code
+    Type=Application
+    Version=1.4
+    
+    [Desktop Action new-empty-window]
+    Exec=code --new-window %F
+    Icon=vscode
+    Name=New Empty Window
+    '';
+  };
 
-  #home.file.".local/share/icons/vscode.png" = {
-  #  enable = true;
-  #  force = true;
-  #  source = ../resources/vscode.png;
-  #};  
+  home.file.".local/share/icons/vscode.png" = {
+    enable = true;
+    force = true;
+    source = ../resources/vscode.png;
+  };  
 }
