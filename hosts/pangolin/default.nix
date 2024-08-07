@@ -11,7 +11,6 @@
       inputs.home-manager.nixosModules.default
     ]
     ++ (with inputs.self.nixosModules; [
-      apps
       system
       desktop
       services
