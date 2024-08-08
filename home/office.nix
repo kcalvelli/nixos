@@ -2,6 +2,6 @@
 {
   home.packages = with pkgs; [
     libreoffice-fresh
-    teams-for-linux 
+  #  teams-for-linux 
   ];
 }
