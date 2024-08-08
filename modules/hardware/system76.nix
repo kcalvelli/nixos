@@ -21,6 +21,8 @@ in
    (lib.mkIf cfg.system76.enable {      
 
       boot = {
+        # 6.10 kernel
+        kernelPackages = pkgs.linuxKernel.packages.linux_6_10;        
         kernelParams = [
           "ro"
           "quiet"
@@ -45,8 +47,6 @@ in
         '';
       };
     
-      # 6.10 kernel
-      kernelPackages = pkgs.linuxKernel.packages.linux_6_10.system76;
       # Enable all the system76 stuff
       hardware = {
         system76 = {
@@ -64,7 +64,7 @@ in
         linuxKernel.packages.linux_6_10.system76-scheduler
         linuxKernel.packages.linux_6_10.system76-power
         linuxKernel.packages.linux_6_10.system76-io
-        linuxKernel.packages.linux_6_10.system76-acpi
+        #linuxKernel.packages.linux_6_10.system76-acpi
         linuxKernel.packages.linux_6_10.system76
       ];
     })    
