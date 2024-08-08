@@ -45,6 +45,8 @@ in
         '';
       };
     
+      # 6.10 kernel
+      kernelPackages = pkgs.linuxKernel.packages.linux_6_10.system76;
       # Enable all the system76 stuff
       hardware = {
         system76 = {
@@ -57,6 +59,14 @@ in
       # Touchpad support
       services.xserver.synaptics.enable = false;
       services.libinput.enable = true;
+
+      environment.systemPackages = with pkgs; [
+        linuxKernel.packages.linux_6_10.system76-scheduler
+        linuxKernel.packages.linux_6_10.system76-power
+        linuxKernel.packages.linux_6_10.system76-io
+        linuxKernel.packages.linux_6_10.system76-acpi
+        linuxKernel.packages.linux_6_10.system76
+      ];
     })    
   ];
 }

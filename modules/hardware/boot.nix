@@ -9,7 +9,6 @@
     };
     # Plymouth is purty
     plymouth.enable = true;  
-    kernelPackages = pkgs.linuxPackages_latest;
   };  
   # Swap config
   zramSwap = {
