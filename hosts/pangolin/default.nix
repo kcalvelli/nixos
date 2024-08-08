@@ -14,7 +14,6 @@
       system
       desktop
       services
-      fonts
       graphics
       system76
       networking

@@ -14,7 +14,6 @@
       system
       desktop
       services
-      fonts
       gaming
       graphics
       msi

@@ -3,7 +3,6 @@
   flake.nixosModules = {
     system = ./system;
     desktop = ./desktop;
-    fonts = ./fonts;
     gaming = ./gaming;
     hardware = ./hardware;
     graphics = ./graphics;
