@@ -70,7 +70,7 @@ in
            kernelModules = [ ];
          };
        };
-       services.power-profiles-daemon.enable = true;
+       services.power-profiles-daemon.enable = lib.mkForce false;
     })  
   ];
 }
