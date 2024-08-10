@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   # For KDEConnect protocol
   services.kdeconnect = {
@@ -14,6 +14,6 @@
     openssl 
     nextcloud-client
     inputs.self.packages.${pkgs.system}.valent     
-    gnome.geary 
+    geary 
   ];
 }
