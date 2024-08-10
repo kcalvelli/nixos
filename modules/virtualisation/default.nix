@@ -43,15 +43,6 @@ in
       };
 
       programs.virt-manager.enable = true;      
-      environment.systemPackages = with pkgs; [ 
-        #qemu_full
-        qemu
-        quickemu
-        virt-viewer
-        spice-gtk
-        distrobox
-        boxbuddy
-      ];
 
       systemd.tmpfiles.rules =
         let

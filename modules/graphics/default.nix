@@ -16,13 +16,4 @@
       ];
     };
   };
-
-  environment.systemPackages = with pkgs; [ 
-    radeontop
-    umr
-    gimp
-    amdgpu_top
-    clinfo
-    libcamera
-  ];
 }

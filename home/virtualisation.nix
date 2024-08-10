@@ -6,4 +6,14 @@
       uris = [ "qemu:///system" ];
     };
   };
+
+  home.packages = with pkgs; [
+    #qemu_full
+    qemu
+    quickemu
+    virt-viewer
+    spice-gtk
+    distrobox
+    boxbuddy
+  ];
 }

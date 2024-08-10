@@ -14,7 +14,7 @@
       ];
     # Need swap, until then  
       max-jobs = 2;
-    #  auto-optimise-store = true;
+      auto-optimise-store = true;
       substituters = [
         "https://devenv.cachix.org"
         "https://cosmic.cachix.org/"
