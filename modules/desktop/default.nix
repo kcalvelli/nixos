@@ -24,7 +24,16 @@
       gnome-online-accounts.enable = true;
       tracker-miners.enable = true;
       tracker.enable = true;
+      sushi.enable - true;
     };      
+  };
+
+  programs = {
+    evince.enable = true;
+    file-roller.enable = true;
+    geary.enable = true;
+    gnome-disks.enable = true;
+    seahorse.enable = true;
   };
 
   xdg.portal = {

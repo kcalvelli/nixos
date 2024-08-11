@@ -9,6 +9,5 @@
     openssl 
     nextcloud-client
     inputs.self.packages.${pkgs.system}.valent     
-    geary 
   ];
 }

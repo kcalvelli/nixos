@@ -6,7 +6,6 @@
     gnome.gnome-weather
     gnome-calculator
     gnome.gnome-clocks
-    seahorse
     nautilus
     baobab
     adw-gtk3
