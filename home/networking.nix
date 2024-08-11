@@ -1,10 +1,5 @@
 { pkgs, inputs, ... }:
 {
-  # For KDEConnect protocol
-  services.kdeconnect = {
-    enable = true;
-    package = inputs.self.packages.${pkgs.system}.valent;
-  };
 
   home.packages = with pkgs; [
     # Browser, email, etc ...

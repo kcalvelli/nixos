@@ -35,6 +35,12 @@
   # For RTL-SDR
   hardware.rtl-sdr.enable = true;
   
+  # For KDEConnect protocol
+  programs.kdeconnect = {
+    enable = true;
+    package = inputs.self.packages.${pkgs.system}.valent;
+  };
+
   # Causes switch to fail if this is not set
   systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false; 
 }
