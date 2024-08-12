@@ -59,6 +59,14 @@ in
       # Touchpad support
       services.xserver.synaptics.enable = false;
       services.libinput.enable = true;
+
+      environment.systemPackages = with pkgs; [
+        system76-firmware
+        linuxKernel.packages.linux_6_10.system76
+        #linuxKernel.packages.linux_6_10.system76-acpi
+        linuxKernel.packages.linux_6_10.system76-io
+        linuxKernel.packages.linux_6_10.system76-power
+      ];
     })    
   ];
 }
