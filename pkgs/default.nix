@@ -9,8 +9,6 @@
           brave-browser-nightly  
           quickemu
           valent
-          qblackpearlgtkdecorations
-          qblackpearlgtkdecorations-qt6
           ;
       };
 
@@ -30,7 +28,5 @@
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
-    qadwaitadecorations = prev.callPackage ./qadwaitadecorations { };
-    qadwaitadecorations-qt6 = prev.callPackage ./qadwaitadecorations { };
   };
 }

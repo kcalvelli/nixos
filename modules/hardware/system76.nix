@@ -39,8 +39,6 @@ in
         ];
         kernelModules = [
           "kvm-amd"
-          "system76-acpi"
-          "system76-io"
         ];
         extraModprobeConfig = ''
           options mt7921_common disable_clc=1
@@ -51,22 +49,12 @@ in
       hardware = {
         system76 = {
           enableAll = true;
-          kernel-modules.enable = true;
-          power-daemon.enable = true;
         };
       };
     
       # Touchpad support
       services.xserver.synaptics.enable = false;
       services.libinput.enable = true;
-
-      environment.systemPackages = with pkgs; [
-        system76-firmware
-        linuxKernel.packages.linux_6_10.system76
-        #linuxKernel.packages.linux_6_10.system76-acpi
-        linuxKernel.packages.linux_6_10.system76-io
-        linuxKernel.packages.linux_6_10.system76-power
-      ];
     })    
   ];
 }

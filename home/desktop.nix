@@ -9,10 +9,7 @@
     nautilus
     baobab
     adw-gtk3
-    qgnomeplatform-qt6
-    #qadwaitadecorations
-    #qadwaitadecorations-qt6
-    inputs.self.packages.${pkgs.system}.qadwaitadecorations
-    inputs.self.packages.${pkgs.system}.qadwaitadecorations-qt6    
+    qadwaitadecorations
+    qadwaitadecorations-qt6    
   ];
 }

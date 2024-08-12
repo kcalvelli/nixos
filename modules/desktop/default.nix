@@ -47,7 +47,6 @@
   # Minimize how bad qt apps look
   qt.enable = true;
   qt.style = "adwaita-dark";
-  qt.platformTheme = "gnome";   
 
   environment = {   
     sessionVariables = {
