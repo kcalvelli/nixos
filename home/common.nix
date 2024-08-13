@@ -24,7 +24,6 @@
     mission-center
     wlogout
     gnome-firmware
-    ptyxis
     # Rust replacement for gnu coreutils
     uutils-coreutils-noprefix
 
