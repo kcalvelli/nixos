@@ -13,7 +13,7 @@
     Terminal=false
     Type=Application
     Name=Google Drive
-    Exec=brave --profile-directory=Default --app-id=aghbiahbpaijignceidepookljebhfak
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=aghbiahbpaijignceidepookljebhfak
     Icon=brave-aghbiahbpaijignceidepookljebhfak-Default
     StartupWMClass=crx_aghbiahbpaijignceidepookljebhfak
     '';
@@ -30,18 +30,18 @@
     Terminal=false
     Type=Application
     Name=YouTube
-    Exec=brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml
     Icon=brave-agimnkijcaahngcdmfeangaknmldooml-Default
     StartupWMClass=crx_agimnkijcaahngcdmfeangaknmldooml
     Actions=Explore;Subscriptions
     
     [Desktop Action Explore]
     Name=Explore
-    Exec=brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/explore?feature=app_shortcuts"
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/explore?feature=app_shortcuts"
     
     [Desktop Action Subscriptions]
     Name=Subscriptions
-    Exec=brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions?feature=app_shortcuts"    
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions?feature=app_shortcuts"    
     '';   
   };
 
@@ -56,7 +56,7 @@
     Terminal=false
     Type=Application
     Name=Element
-    Exec=brave --profile-directory=Default --app-id=ejhkdoiecgkmdpomoahkdihbcldkgjci
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ejhkdoiecgkmdpomoahkdihbcldkgjci
     Icon=brave-ejhkdoiecgkmdpomoahkdihbcldkgjci-Default
     StartupWMClass=crx_ejhkdoiecgkmdpomoahkdihbcldkgjci    
     '';  
@@ -74,22 +74,22 @@
     Type=Application
     Name=Outlook (PWA)
     MimeType=x-scheme-handler/mailto
-    Exec=brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
     Icon=brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default
     StartupWMClass=crx_faolnafnngnfdaknnbpnkhgohbobgegn
     Actions=New-event;New-message;Open-calendar
     
     [Desktop Action New-event]
     Name=New event
-    Exec=brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/deeplink/compose
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/deeplink/compose
     
     [Desktop Action New-message]
     Name=New message
-    Exec=brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose
     
     [Desktop Action Open-calendar]
     Name=Open calendar
-    Exec=brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar   
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar   
     '';  
   };  
 
@@ -104,7 +104,7 @@
     Terminal=false
     Type=Application
     Name=Messages
-    Exec=brave --profile-directory=Default --app-id=hpfldicfbfomlpcikngkocigghgafkph
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=hpfldicfbfomlpcikngkocigghgafkph
     Icon=brave-hpfldicfbfomlpcikngkocigghgafkph-Default
     StartupWMClass=crx_hpfldicfbfomlpcikngkocigghgafkph
     '';  
@@ -121,7 +121,7 @@
     Terminal=false
     Type=Application
     Name=Google Meet
-    Exec=brave --profile-directory=Default --app-id=kjgfgldnnfoeklkmfkjfagphfepbbdan
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=kjgfgldnnfoeklkmfkjfagphfepbbdan
     Icon=brave-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default
     StartupWMClass=crx_kjgfgldnnfoeklkmfkjfagphfepbbdan
     '';  
@@ -138,7 +138,7 @@
     Terminal=false
     Type=Application
     Name=Google Chat
-    Exec=brave --profile-directory=Default --app-id=mdpkiolbdkhdjpekfbkbmhigcaggjagi
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=mdpkiolbdkhdjpekfbkbmhigcaggjagi
     Icon=brave-mdpkiolbdkhdjpekfbkbmhigcaggjagi-Default
     StartupWMClass=crx_mdpkiolbdkhdjpekfbkbmhigcaggjagi
     '';  
@@ -155,7 +155,7 @@
     Terminal=false
     Type=Application
     Name=Google Maps
-    Exec=brave --profile-directory=Default --app-id=mnhkaebcjjhencmpkapnbdaogjamfbcj
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=mnhkaebcjjhencmpkapnbdaogjamfbcj
     Icon=brave-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default
     StartupWMClass=crx_mnhkaebcjjhencmpkapnbdaogjamfbcj
     '';  
@@ -172,7 +172,7 @@
     Terminal=false
     Type=Application
     Name=Google Photos
-    Exec=brave --profile-directory=Default --app-id=ncmjhecbjeaamljdfahankockkkdmedg
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ncmjhecbjeaamljdfahankockkkdmedg
     Icon=brave-ncmjhecbjeaamljdfahankockkkdmedg-Default
     StartupWMClass=crx_ncmjhecbjeaamljdfahankockkkdmedg
     '';  
@@ -188,7 +188,7 @@
     Actions=new-empty-window
     Categories=Utility;TextEditor;Development;IDE
     Comment=Code Editing. Redefined.
-    Exec=code %F
+    Exec=/run/current-system/sw/bin/code %F
     GenericName=Text Editor
     Icon=vscode
     Keywords=vscode
@@ -200,7 +200,7 @@
     Version=1.4
     
     [Desktop Action new-empty-window]
-    Exec=code --new-window %F
+    Exec=/run/current-system/sw/bin/code --new-window %F
     Icon=vscode
     Name=New Empty Window
     '';
@@ -217,7 +217,7 @@
   Terminal=false
   Type=Application
   Name=Microsoft Teams
-  Exec=/nix/store/anwnfrhrq9yksrl87nh6cmw19yi29fis-brave-1.68.134/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm
+  Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm
   Icon=brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default
   StartupWMClass=crx_oiocllghmdadfpahmllbbhkgjfmaidmm
   '';
