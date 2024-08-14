@@ -37,32 +37,7 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
-
-    # Hypr
-    #hyprland = {
-    #  url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hyprland-plugins = {
-    #  url = "github:hyprwm/hyprland-plugins";
-    #  inputs.hyprland.follows = "hyprland";
-    #};    
-    #hyprlock = {
-    #  url = "github:hyprwm/hyprlock";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hypridle = {
-    #  url = "github:hyprwm/hypridle";
-    #  inputs.nixpkgs.follows = "hyprland";
-    #};
-    #hyprcursor = {
-    #  url = "github:hyprwm/hyprcursor";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    
-    #ags.url = "github:Aylur/ags";
-
-    #matugen.url = "github:InioX/matugen?ref=v2.2.0";    
+ 
   };
 
   outputs =
