@@ -55,9 +55,6 @@
     pciutils
     wirelesstools
     gtop
-    iw     
-
-    # That game
-    superTuxKart    
+    iw       
   ];  
 }

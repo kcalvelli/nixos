@@ -43,4 +43,9 @@
     motherboard = "amd";
     package = pkgs.openrgb-with-all-plugins;
   };
+
+  # That game I like
+  environment.systemPackages = with pkgs; [
+    superTuxKart
+  ];
 }
