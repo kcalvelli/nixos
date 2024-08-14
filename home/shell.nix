@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.vim = {
-    #enable = true;
+    enable = true;
     plugins = with pkgs.vimPlugins; [ vim-airline ];
     settings = {
       ignorecase = true;
@@ -12,7 +12,7 @@
   };
 
   programs.starship = {
-    #enable = true;
+    enable = true;
     enableFishIntegration = true;
     settings = {
       add_newline = false;
@@ -25,7 +25,7 @@
   };
 
   programs.fish = {
-    #enable = true;
+    enable = true;
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
       direnv hook fish | source
