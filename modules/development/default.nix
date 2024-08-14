@@ -1,10 +1,13 @@
-{ pkgs, inputs, ... }:
+{ lib, pkgs, ... }:
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     devenv
     nil
     zed-editor
     nixfmt-rfc-style
+    vim
+    starship
+    fish
     (vscode.override {
       commandLineArgs = [
         "--ozone-platform-hint=auto"
@@ -13,9 +16,9 @@
         "--password-store=gnome"
       ];
     })    
-  ];
+  ];  
 
   programs.direnv.enable = true;
   services.lorri.enable = true;  
-  programs.git.enable = true; 
+  programs.git.enable = true;   
 }

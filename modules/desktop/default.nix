@@ -31,7 +31,6 @@
   programs = {
     evince.enable = true;
     file-roller.enable = true;
-    geary.enable = true;
     gnome-disks.enable = true;
     seahorse.enable = true;
   };
@@ -53,4 +52,18 @@
       QT_WAYLAND_DECORATION = "adwaita";
     };
   };  
+
+  environment.systemPackages = with pkgs; [
+    gnome-calendar
+    gnome.gnome-control-center
+    gnome.gnome-weather
+    gnome-calculator
+    gnome.gnome-clocks
+    libreoffice-fresh
+    nautilus
+    baobab
+    adw-gtk3
+    qadwaitadecorations
+    qadwaitadecorations-qt6    
+  ];  
 }

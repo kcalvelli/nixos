@@ -13,6 +13,7 @@
     ++ (with inputs.self.nixosModules; [
       system
       desktop
+      development
       services
       graphics
       system76

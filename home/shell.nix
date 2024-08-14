@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.vim = {
-    enable = true;
+    #enable = true;
     plugins = with pkgs.vimPlugins; [ vim-airline ];
     settings = {
       ignorecase = true;
@@ -12,7 +12,7 @@
   };
 
   programs.starship = {
-    enable = true;
+    #enable = true;
     enableFishIntegration = true;
     settings = {
       add_newline = false;
@@ -25,17 +25,17 @@
   };
 
   programs.fish = {
-    enable = true;
+    #enable = true;
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
       direnv hook fish | source
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
-      {
-        name = "grc";
-        src = pkgs.fishPlugins.grc.src;
-      }
+      #{
+      #  name = "grc";
+      #  src = pkgs.fishPlugins.grc.src;
+      #}
       #  { name = "github-copilot-cli-fish"; src = pkgs.fishPlugins.github-copilot-cli-fish.src; }
 
       # Manually packaging and enable a plugin
@@ -49,5 +49,5 @@
     };
   };
 
-  home.packages = with pkgs; [ grc ];
+  #home.packages = with pkgs; [ grc ];
 }

@@ -41,6 +41,17 @@
     package = inputs.self.packages.${pkgs.system}.valent;
   };
 
+  environment.systemPackages = with pkgs; [
+    # Browser, email, etc ...
+    #inputs.self.packages.${pkgs.system}.brave-browser-nightly
+    brave
+    telegram-desktop 
+    openssl 
+    nextcloud-client
+    inputs.self.packages.${pkgs.system}.valent     
+  ]; 
+  programs.geary.enable = true;   
+
   # Causes switch to fail if this is not set
   systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false; 
 }
