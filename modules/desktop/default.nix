@@ -64,6 +64,6 @@
     baobab
     adw-gtk3
     qadwaitadecorations
-    qadwaitadecorations-qt6    
+    qadwaitadecorations-qt6   
   ];  
 }

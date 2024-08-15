@@ -50,7 +50,10 @@
     nextcloud-client
     inputs.self.packages.${pkgs.system}.valent     
   ]; 
-  programs.geary.enable = true;   
+  #programs.geary.enable = true;   
+  programs.evolution = {
+    enable = true;
+  };
 
   # Causes switch to fail if this is not set
   systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false; 

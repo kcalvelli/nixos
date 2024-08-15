@@ -9,9 +9,12 @@
   programs = {
     gnupg.agent = {
       enable = true;
+      pinentryPackage = pkgs.pinentry-gnome3;
     };
   };  
 
+ services.dbus.packages = [ pkgs.gcr ];
+ 
  environment.systemPackages = with pkgs; [
   ### Common apps
     ### Filesystem
@@ -55,6 +58,8 @@
     pciutils
     wirelesstools
     gtop
-    iw       
+    iw 
+
+    pinentry-gnome3    
   ];  
 }
