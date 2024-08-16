@@ -1,6 +1,8 @@
 { config, lib, inputs, pkgs, ... }:
 let 
   cfg = config.virt;
+  # The virt stuff breaks a lot on unstable - keep it on stable 
+  pkgs-stable = inputs.nixpkgs-stable.legacyPackages.${pkgs.system};
 in  
 {
 
@@ -33,7 +35,7 @@ in
          enable = true;
          qemu = {
            ovmf.enable = true;
-           ovmf.packages = [ pkgs.OVMFFull.fd ];
+           ovmf.packages = [ pkgs-stable.OVMFFull.fd ];
            swtpm.enable = true;
          };
           onBoot = "start";
@@ -47,10 +49,10 @@ in
       systemd.tmpfiles.rules =
         let
           firmware =
-            pkgs.runCommandLocal "qemu-firmware" { } ''
+            pkgs-stable.runCommandLocal "qemu-firmware" { } ''
               mkdir $out
-              cp ${pkgs.qemu}/share/qemu/firmware/*.json $out
-              substituteInPlace $out/*.json --replace ${pkgs.qemu} /run/current-system/sw
+              cp ${pkgs-stable.qemu_full}/share/qemu/firmware/*.json $out
+              substituteInPlace $out/*.json --replace ${pkgs-stable.qemu_full} /run/current-system/sw
             '';
         in
         [ "L+ /var/lib/qemu/firmware - - - - ${firmware}" ];
@@ -61,9 +63,9 @@ in
         options kvm ignore_msrs=1
       '';  
 
-      # The virt stuff breaks a lot on unstable - keep it on stable 
-      environment.systemPackages = with inputs.nixpkgs-stable.legacyPackages.${pkgs.system}; [
+      environment.systemPackages = with pkgs-stable; [
         qemu_full
+        OVMFFull
         #qemu
         quickemu
         virt-viewer
