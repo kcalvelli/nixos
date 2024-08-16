@@ -63,7 +63,7 @@ in
       environment.systemPackages = with pkgs; [
         #qemu_full
         qemu
-        quickemu
+        #quickemu
         virt-viewer
         spice-gtk
         distrobox

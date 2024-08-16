@@ -19,6 +19,6 @@
   ];  
 
   programs.direnv.enable = true;
-  services.lorri.enable = true;  
+  #services.lorri.enable = true;  
   programs.git.enable = true;   
 }

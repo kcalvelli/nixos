@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
     ./local.nix
@@ -9,7 +9,7 @@
   programs = {
     gnupg.agent = {
       enable = true;
-      pinentryPackage = pkgs.pinentry-gnome3;
+      pinentryPackage = lib.mkForce pkgs.pinentry-qt;
     };
   };  
 
@@ -60,6 +60,6 @@
     gtop
     iw 
 
-    pinentry-gnome3    
+    pinentry-qt    
   ];  
 }
