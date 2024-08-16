@@ -32,7 +32,7 @@
     uutils-coreutils-noprefix
 
     # Very Rusty
-    bandwhich
+    #bandwhich
     bat
     bottom
     broot

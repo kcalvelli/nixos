@@ -15,20 +15,22 @@
 , libadwaita
 , libpeas2
 , libportal-gtk4
+, libphonenumber
 , pipewire
 , sqlite
+, tracker
 }:
 
 stdenv.mkDerivation rec {
   pname = "valent";
-  version = "0-unstable-2024-07-13";
+  version = "0-unstable-2024-08-16";
 
   src = fetchFromGitHub {
     owner = "andyholmes";
     repo = "valent";
-    rev = "e2cd2b90b5543895e26e93af3b5b4dd0ff72d8b2";
+    rev = "2e195d61a05508f6e6b63edab6dc37244ddbd67d";
     fetchSubmodules = true;
-    hash = "sha256-6KC1Usy5hcScs1Yx1FtnZ9h+vLGPitN4LzSi9+abMME=";
+    hash = "sha256-FvQqnwev2XU8wXGFyb5hbQtFgZrqyxzRkSjyZFCV1fA=";
   };
 
   nativeBuildInputs = [
@@ -50,8 +52,10 @@ stdenv.mkDerivation rec {
     libadwaita
     libpeas2
     libportal-gtk4
+    libphonenumber
     pipewire
     sqlite
+    tracker
   ];
 
   mesonFlags = [
