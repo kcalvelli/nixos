@@ -33,6 +33,7 @@
     file-roller.enable = true;
     gnome-disks.enable = true;
     seahorse.enable = true;
+    dconf.enable = true;
   };
 
   xdg.portal = {

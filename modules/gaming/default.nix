@@ -13,6 +13,7 @@
     enable = true;
     remotePlay.openFirewall = true;
     platformOptimizations.enable = true;
+    gamescopeSession.enable = true;
   };
 
   # Enable gamemode
