@@ -2,7 +2,7 @@
 {
   imports = [
     ./keith.nix
-    ./louie.nix
+    #./louie.nix
   ];
 
   # Configure home-manager

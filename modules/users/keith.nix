@@ -16,6 +16,7 @@
         "plugdev"
         "qemu-libvirtd"
         "video"
+        "adm"
       ];
     };
   };

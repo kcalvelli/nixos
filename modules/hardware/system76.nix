@@ -51,24 +51,6 @@ in
           enableAll = true;
         };
       };
-
-      # Trying to get system76-power running without root
-      security = {
-        sudo = {
-          extraRules = [
-            {
-              groups = [ "wheel" ];
-  
-              commands = [
-                {
-                  command = "/run/current-system/sw/bin/system76-power";
-                  options = ["NOPASSWD"];
-                }
-              ];
-            }
-          ];
-        };
-      };
     
       # Touchpad support
       services.xserver.synaptics.enable = false;
