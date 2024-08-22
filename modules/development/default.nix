@@ -8,6 +8,7 @@
     vim
     starship
     fish
+    helix
     (vscode.override {
       commandLineArgs = [
         "--ozone-platform-hint=auto"

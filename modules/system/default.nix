@@ -24,15 +24,13 @@
 
     ### Utilities
     killall
-    cubicsdr
     mission-center
-    wlogout
     gnome-firmware
     # Rust replacement for gnu coreutils
     uutils-coreutils-noprefix
 
     # Very Rusty
-    #bandwhich
+    bandwhich
     bat
     bottom
     broot
@@ -40,7 +38,6 @@
     dust
     eza
     fd
-    helix
     ouch
     procs
     rm-improved

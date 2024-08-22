@@ -22,7 +22,7 @@ in
 
       boot = {
         # 6.10 kernel
-        kernelPackages = pkgs.linuxKernel.packages.linux_6_10;        
+        kernelPackages = pkgs.linuxPackages_latest;        
         kernelParams = [
           "ro"
           "quiet"
