@@ -21,5 +21,11 @@
     radeontop
     gimp
     amdgpu_top
+    clinfo
+    lact
   ];  
+  
+  # Linux AMDGPU Controller
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = ["multi-user.target"];
 }
