@@ -213,7 +213,7 @@
   ''
   #!/usr/bin/env xdg-open
   [Desktop Entry]
-  Version=1.0
+  Version=1.1
   Terminal=false
   Type=Application
   Name=Microsoft Teams

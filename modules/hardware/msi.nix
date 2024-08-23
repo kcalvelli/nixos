@@ -22,10 +22,13 @@ in
     ### MSI motherboard system
     (lib.mkIf cfg.msi.enable {
 
-       ### Logitech keyboard and mouse      
+             
        hardware = {
+         ### Logitech keyboard and mouse
          logitech.wireless.enable = true;
          logitech.wireless.enableGraphical = true;
+
+         amdgpu.initrd.enable = true;
        };
      
        boot = {
@@ -42,6 +45,7 @@ in
            "systemd.show_status=false"
            "iommu=pt"
            "psi=1"
+           "amd_iommu=force_isolation"
          ];
      
          kernelModules = [
