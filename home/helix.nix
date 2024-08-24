@@ -26,7 +26,7 @@
       keys.normal.space.u = {
         f = ":format";
         w = ":set whitespace.render all";
-        W = ":set whitespace.render none":
+        W = ":set whitespace.render none";
       };
     };
   };
