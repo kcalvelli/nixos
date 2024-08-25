@@ -8,11 +8,6 @@
       editor = {
         color-modes = true;
         cursorline = true;
-        cursor-share = {
-          insert = "bar";
-          normal = "block";
-          select = "underline";
-        };
         indent-guides.render = true;
         lsp.display-inlay-hints = true;
         statusline.center = ["position-percentage"];
@@ -21,13 +16,12 @@
           newline = "↴";
           tab = "⇥";
         };
+        file-picker.hidden = false;
       };
 
-      keys.normal.space.u = {
-        f = ":format";
-        w = ":set whitespace.render all";
-        W = ":set whitespace.render none";
-      };
+      keys.normal = {
+        
+      }
     };
   };
 }
