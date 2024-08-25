@@ -38,6 +38,8 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
  
   };
 
@@ -45,6 +47,7 @@
     inputs@{
       flake-parts,
       systems,
+      zen-browser,
       ...
     }:
 

@@ -58,5 +58,6 @@
     iw 
 
     pinentry-qt    
+    bitwarden-desktop
   ];  
 }

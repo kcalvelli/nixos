@@ -51,6 +51,7 @@
   environment = {   
     sessionVariables = {
       QT_WAYLAND_DECORATION = "adwaita";
+      MOZ_ENABLE_WAYLAND = "1";
     };
   };  
 

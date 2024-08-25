@@ -50,6 +50,7 @@
     nextcloud-client
     inputs.self.packages.${pkgs.system}.valent    
     cubicsdr 
+    inputs.zen-browser.packages."${system}".specific
   ]; 
   #programs.geary.enable = true;   
   programs.evolution = {
