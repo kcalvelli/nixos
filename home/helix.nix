@@ -18,10 +18,6 @@
         };
         file-picker.hidden = false;
       };
-
-      keys.normal = {
-        
-      }
     };
   };
 }
