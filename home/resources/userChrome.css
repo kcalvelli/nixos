@@ -1,0 +1,10 @@
+      @-moz-document url-prefix("chrome:") {
+        /* This is an auto generated color theme. */
+:root {
+    --zen-colors-primary: #E2E3E4 !important;
+    --zen-colors-secondary: #CECED0 !important;
+    --zen-colors-tertiary: #080C12 !important;
+    --zen-colors-border: #46494D !important;
+}
+
+      }

@@ -39,7 +39,7 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser.url = "github:GildedSeraphim/zen-browser-flake";
  
   };
 
