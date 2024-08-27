@@ -58,9 +58,9 @@
   environment.systemPackages = with pkgs; [
     gnome-calendar
     gnome.gnome-control-center
-    gnome.gnome-weather
+    gnome-weather
     gnome-calculator
-    gnome.gnome-clocks
+    gnome-clocks
     libreoffice-fresh
     nautilus
     baobab
