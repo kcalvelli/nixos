@@ -36,6 +36,7 @@ in
         win-virtio
         win-spice
         adwaita-icon-theme
+        quickemu
       ];
     
       # Manage the virtualisation services

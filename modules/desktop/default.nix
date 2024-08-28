@@ -21,7 +21,8 @@
       tracker-miners.enable = true;
       tracker.enable = true;
       sushi.enable = true;
-    };      
+    };
+    system76-scheduler.enable = true;      
   };
 
   programs = {
