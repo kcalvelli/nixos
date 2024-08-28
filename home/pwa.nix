@@ -206,22 +206,22 @@
     '';
   };
 
-  home.file.".local/share/applications/brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default.desktop" = {
-  enable = true;
-  force = true;
-  text = 
-  ''
-  #!/usr/bin/env xdg-open
-  [Desktop Entry]
-  Version=1.1
-  Terminal=false
-  Type=Application
-  Name=Microsoft Teams
-  Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm
-  Icon=brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default
-  StartupWMClass=crx_oiocllghmdadfpahmllbbhkgjfmaidmm
-  '';
-  };
+  #home.file.".local/share/applications/brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default.desktop" = {
+  #enable = true;
+  #force = true;
+  #text = 
+  #''
+  ##!/usr/bin/env xdg-open
+  #[Desktop Entry]
+  #Version=1.1
+  #Terminal=false
+  #Type=Application
+  #Name=Microsoft Teams
+  #Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm
+  #Icon=brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default
+  #StartupWMClass=crx_oiocllghmdadfpahmllbbhkgjfmaidmm
+  #'';
+  #};
   
   home.file.".local/share/icons/vscode.png" = {
     enable = true;

@@ -63,5 +63,6 @@
     adw-gtk3
     qadwaitadecorations
     qadwaitadecorations-qt6   
+    teams-for-linux
   ];  
 }
