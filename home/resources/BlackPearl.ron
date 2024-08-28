@@ -255,7 +255,12 @@
         blue: 0.07058824,
         alpha: 1.0,
     )),
-    primary_container_bg: None,
+    primary_container_bg: Some((
+        red: 0.031372555,
+        green: 0.047058832,
+        blue: 0.07058824,
+        alpha: 1.0,
+    )),
     secondary_container_bg: None,
     text_tint: Some((
         red: 0.80784315,
@@ -273,9 +278,5 @@
     is_frosted: false,
     gaps: (0, 8),
     active_hint: 3,
-    window_hint: Some((
-        red: 0.40000004,
-        green: 0.6039216,
-        blue: 0.9019608,
-    )),
+    window_hint: None,
 )

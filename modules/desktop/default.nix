@@ -1,13 +1,9 @@
 { inputs, lib, pkgs, ... }:
 {
   imports = [
-    #./gnome.nix
     ./cosmic.nix
-    #./hyprland.nix
   ];
   cosmic.enable = true;
-  #gnome.enable = true;
-  #hyprland.enable = true;
 
   ### Services and stuff needed by all WMs/DEs
   services = {
