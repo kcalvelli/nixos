@@ -45,7 +45,6 @@
     inputs@{
       flake-parts,
       systems,
-      zen-browser,
       ...
     }:
 
