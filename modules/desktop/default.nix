@@ -7,6 +7,7 @@
 
   ### Services and stuff needed by all WMs/DEs
   services = {
+    flatpak.enable = true;
     xserver.displayManager.startx.enable = true ; 
     gvfs.enable = true;
     devmon.enable = true;
@@ -63,7 +64,6 @@
     adw-gtk3
     qadwaitadecorations
     qadwaitadecorations-qt6   
-    teams-for-linux
     inter
     qalculate-gtk
   ];  
