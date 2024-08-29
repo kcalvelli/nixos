@@ -61,37 +61,6 @@
     StartupWMClass=crx_ejhkdoiecgkmdpomoahkdihbcldkgjci    
     '';  
   };  
-  
-  #home.file.".local/share/applications/brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default.desktop" = {
-  #  enable = true;
-  #  force = true; 
-  #  text =
-  #  ''
-  #  #!/usr/bin/env xdg-open
-  #  [Desktop Entry]
-  #  Version=1.0
-  #  Terminal=false
-  #  Type=Application
-  #  Name=Outlook (PWA)
-  #  MimeType=x-scheme-handler/mailto
-  #  Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
-  #  Icon=brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default
-  #  StartupWMClass=crx_faolnafnngnfdaknnbpnkhgohbobgegn
-  #  Actions=New-event;New-message;Open-calendar
-  #  
-  #  [Desktop Action New-event]
-  #  Name=New event
-  #  Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/deeplink/compose
-  #  
-  #  [Desktop Action New-message]
-  #  Name=New message
-  #  Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose
-  #  
-  #  [Desktop Action Open-calendar]
-  #  Name=Open calendar
-  #  Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar   
-  #  '';  
-  #};  
 
   home.file.".local/share/applications/brave-hpfldicfbfomlpcikngkocigghgafkph-Default.desktop" = {
     enable = true;
@@ -206,22 +175,6 @@
     '';
   };
 
-  #home.file.".local/share/applications/brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default.desktop" = {
-  #enable = true;
-  #force = true;
-  #text = 
-  #''
-  ##!/usr/bin/env xdg-open
-  #[Desktop Entry]
-  #Version=1.1
-  #Terminal=false
-  #Type=Application
-  #Name=Microsoft Teams
-  #Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm
-  #Icon=brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default
-  #StartupWMClass=crx_oiocllghmdadfpahmllbbhkgjfmaidmm
-  #'';
-  #};
   home.file.".local/share/applications/msedge-oiocllghmdadfpahmllbbhkgjfmaidmm-Default.desktop" = {
     enable = true;
     force = true;
@@ -233,7 +186,7 @@
     Terminal=false
     Type=Application
     Name=Microsoft Teams
-    Exec=/run/current-system/sw/bin/microsoft-edge-beta --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm "--app-url=https://teams.microsoft.com.mcas.ms/v2/?clientType=pwa"
+    Exec=/run/current-system/sw/bin/microsoft-edge --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm "--app-url=https://teams.microsoft.com.mcas.ms/v2/?clientType=pwa"
     Icon=msedge-oiocllghmdadfpahmllbbhkgjfmaidmm-Default
     StartupWMClass=crx__oiocllghmdadfpahmllbbhkgjfmaidmm    
     '';
@@ -251,25 +204,26 @@
     Type=Application
     Name=Outlook (PWA)
     MimeType=x-scheme-handler/mailto
-    Exec=/run/current-system/sw/bin/microsoft-edge-beta --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ %U
+    Exec=/run/current-system/sw/bin/microsoft-edge --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ %U
     Icon=msedge-faolnafnngnfdaknnbpnkhgohbobgegn-Default
     StartupWMClass=crx__faolnafnngnfdaknnbpnkhgohbobgegn
     Actions=New-event;New-message;Open-calendar
     
     [Desktop Action New-event]
     Name=New event
-    Exec=/run/current-system/sw/bin/microsoft-edge-beta --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/deeplink/compose
+    Exec=/run/current-system/sw/bin/microsoft-edge --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/deeplink/compose
     
     [Desktop Action New-message]
     Name=New message
-    Exec=/run/current-system/sw/bin/microsoft-edge-beta --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose
+    Exec=/run/current-system/sw/bin/microsoft-edge --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose
     
     [Desktop Action Open-calendar]
     Name=Open calendar
-    Exec=/run/current-system/sw/bin/microsoft-edge-beta --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar  
+    Exec=/run/current-system/sw/bin/microsoft-edge --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-url=https://outlook.office.com/mail/ --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar  
     '';
   };
   
+
   home.file.".local/share/icons/vscode.png" = {
     enable = true;
     force = true;
