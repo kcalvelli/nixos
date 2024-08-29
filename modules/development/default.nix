@@ -9,6 +9,7 @@
     starship
     fish
     helix
+    geany
     (vscode.override {
       commandLineArgs = [
         "--ozone-platform-hint=auto"

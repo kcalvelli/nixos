@@ -56,7 +56,6 @@
     gnome-calendar
     gnome.gnome-control-center
     gnome-weather
-    gnome-calculator
     gnome-clocks
     libreoffice-fresh
     nautilus
@@ -65,5 +64,7 @@
     qadwaitadecorations
     qadwaitadecorations-qt6   
     teams-for-linux
+    inter
+    qalculate-gtk
   ];  
 }
