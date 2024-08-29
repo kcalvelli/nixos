@@ -37,10 +37,17 @@
   # For RTL-SDR
   hardware.rtl-sdr.enable = true;
 
+  # For KDEConnect protocol
+  programs.kdeconnect = {
+    enable = true;
+    package = inputs.self.packages.${pkgs.system}.valent;
+  };
+
   environment.systemPackages = with pkgs; [
     # Browser, email, etc ...
     #inputs.self.packages.${pkgs.system}.brave-browser-nightly
     brave
+    microsoft-edge-beta
     telegram-desktop 
     openssl 
     nextcloud-client

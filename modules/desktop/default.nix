@@ -7,7 +7,7 @@
 
   ### Services and stuff needed by all WMs/DEs
   services = {
-    flatpak.enable = true;
+    #flatpak.enable = true;
     xserver.displayManager.startx.enable = true ; 
     gvfs.enable = true;
     devmon.enable = true;
@@ -64,7 +64,11 @@
     adw-gtk3
     qadwaitadecorations
     qadwaitadecorations-qt6   
-    inter
     qalculate-gtk
   ];  
+
+  fonts.packages = with pkgs; [
+    inter
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
 }

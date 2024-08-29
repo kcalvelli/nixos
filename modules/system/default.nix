@@ -56,6 +56,7 @@
     wirelesstools
     gtop
     iw 
+    
 
     pinentry-qt    
   ];  
