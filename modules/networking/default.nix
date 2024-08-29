@@ -15,9 +15,11 @@
       allowedTCPPorts = [
         5355
       ];
+      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
       allowedUDPPorts = [
         5355
       ];
+      allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
     };
   };
 
@@ -34,12 +36,6 @@
 
   # For RTL-SDR
   hardware.rtl-sdr.enable = true;
-  
-  # For KDEConnect protocol
-  programs.kdeconnect = {
-    enable = true;
-    package = inputs.self.packages.${pkgs.system}.valent;
-  };
 
   environment.systemPackages = with pkgs; [
     # Browser, email, etc ...
