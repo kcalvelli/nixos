@@ -47,7 +47,6 @@
     # Browser, email, etc ...
     #inputs.self.packages.${pkgs.system}.brave-browser-nightly
     brave
-    microsoft-edge
     telegram-desktop 
     openssl 
     nextcloud-client
