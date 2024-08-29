@@ -9,6 +9,7 @@
           brave-browser-nightly  
           quickemu
           valent
+          teams-for-linux
           ;
       };
 
@@ -28,5 +29,6 @@
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
+    teams-for-linux = prev.callPackage ./teams-for-linux { };
   };
 }
