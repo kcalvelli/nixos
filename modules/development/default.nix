@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
     devenv
@@ -9,6 +9,7 @@
     starship
     fish
     helix
+    inputs.self.packages.${pkgs.system}.cursor
     (vscode.override {
       commandLineArgs = [
         "--ozone-platform-hint=auto"
