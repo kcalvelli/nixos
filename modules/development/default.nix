@@ -9,7 +9,6 @@
     starship
     fish
     helix
-    inputs.self.packages.${pkgs.system}.cursor
     (vscode.override {
       commandLineArgs = [
         "--ozone-platform-hint=auto"

@@ -9,7 +9,6 @@
           brave-browser-nightly  
           quickemu
           valent
-          cursor
           ;
       };
 
@@ -29,6 +28,5 @@
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
-    cursor = prev.callPackage ./cursor { };
   };
 }
