@@ -192,7 +192,7 @@
   '';
   };
 
-  home.file.".local/share/applications/brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default.desktop" = {
+  home.file.".local/share/applications/brave-pkooggnaalmfkidjmlhoelhdllpphaga-Default.desktop" = {
     enable = true;
     force = true; 
     text =
@@ -203,23 +203,22 @@
     Terminal=false
     Type=Application
     Name=Outlook (PWA)
-    MimeType=x-scheme-handler/mailto
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn %U
-    Icon=brave-faolnafnngnfdaknnbpnkhgohbobgegn-Default
-    StartupWMClass=crx_faolnafnngnfdaknnbpnkhgohbobgegn
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga
+    Icon=brave-pkooggnaalmfkidjmlhoelhdllpphaga-Default
+    StartupWMClass=crx_pkooggnaalmfkidjmlhoelhdllpphaga
     Actions=New-event;New-message;Open-calendar
     
     [Desktop Action New-event]
     Name=New event
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/deeplink/compose
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/calendar/deeplink/compose
     
     [Desktop Action New-message]
     Name=New message
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/mail/deeplink/compose
     
     [Desktop Action Open-calendar]
     Name=Open calendar
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=faolnafnngnfdaknnbpnkhgohbobgegn --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar   
+    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/calendar
     '';  
   }; 
 

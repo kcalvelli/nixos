@@ -50,7 +50,6 @@
     telegram-desktop 
     openssl 
     nextcloud-client
-    #inputs.self.packages.${pkgs.system}.valent    
     cubicsdr 
   ]; 
   #programs.geary.enable = true;   
