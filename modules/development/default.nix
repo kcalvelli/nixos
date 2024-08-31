@@ -9,6 +9,8 @@
     starship
     fish
     helix
+    gcc
+    rustup
     (vscode.override {
       commandLineArgs = [
         "--ozone-platform-hint=auto"

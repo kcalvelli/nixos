@@ -29,7 +29,14 @@
       programs.git = {
         userName = "Keith Calvelli";
         userEmail = "keith@calvelli.dev";
-      };        
+      };  
+      # Locally installed binaries (non-nix) added to session PATH
+      home.sessionPath = [
+        # For zig
+        "/home/keith/zig/master/files"
+        # For cargo
+        "/home/keith/.cargo/bin"
+      ];      
     };
   };
 
