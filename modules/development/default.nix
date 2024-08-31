@@ -20,6 +20,7 @@
     #  ];
     #})
     vscode-fhs    
+    inputs.self.packages.${pkgs.system}.zigup
   ];  
 
   programs.direnv.enable = true;
