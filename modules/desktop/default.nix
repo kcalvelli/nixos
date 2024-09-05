@@ -55,7 +55,8 @@
 
   environment.systemPackages = with pkgs; [
     #gnome-calendar
-    gnome.gnome-control-center
+    #remove this when cosmic settings is more complete
+    gnome-control-center
     #gnome-weather
     #gnome-clocks
     libreoffice-fresh
