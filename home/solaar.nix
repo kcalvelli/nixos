@@ -59,25 +59,25 @@
     ---
     - MouseGesture: Mouse Right
     - KeyPress:
-      - [Super_L, Page_Down]
+      - [Super_L, Tab]
       - click
     ...
     ---
     - MouseGesture: Mouse Left
     - KeyPress:
-      - [Super_L, Page_Up]
+      - [Super_L, a]
       - click
     ...
     ---
     - MouseGesture: Mouse Up
     - KeyPress:
-      - [Super_L, Tab]
+      - [Super_L, Up]
       - click
     ...
     ---
     - MouseGesture: Mouse Down
     - KeyPress:
-      - [Super_L, r]
+      - [Super_L, Down]
       - click
     ...
     ---
