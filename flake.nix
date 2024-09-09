@@ -38,7 +38,8 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
- 
+
+    cursor.url = "github:omarcresp/cursor-flake/main";
   };
 
   outputs =

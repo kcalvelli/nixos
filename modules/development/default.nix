@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     devenv
     nil
-    zed-editor
     nixfmt-rfc-style
     vim
     starship
@@ -11,16 +10,9 @@
     helix
     gcc
     rustup
-    #(vscode-fhs.override {
-    #  commandLineArgs = [
-    #    "--ozone-platform-hint=auto"
-    #    "--ozone-platform=wayland"
-    #    "--gtk-version=4"
-    #    "--password-store=gnome"
-    #  ];
-    #})
     vscode-fhs    
     inputs.self.packages.${pkgs.system}.zigup
+    inputs.cursor.packages.${pkgs.system}.default
   ];  
 
   programs.direnv.enable = true;

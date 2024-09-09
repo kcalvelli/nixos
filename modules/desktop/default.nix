@@ -50,6 +50,7 @@
     sessionVariables = {
       QT_WAYLAND_DECORATION = "adwaita";
       MOZ_ENABLE_WAYLAND = "1";
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
     };
   };  
 
