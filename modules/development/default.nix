@@ -10,9 +10,9 @@
     helix
     gcc
     rustup
-    vscode-fhs    
+    #vscode-fhs    
     inputs.self.packages.${pkgs.system}.zigup
-    inputs.cursor.packages.${pkgs.system}.default
+    code-cursor
   ];  
 
   programs.direnv.enable = true;

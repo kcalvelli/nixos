@@ -1,230 +1,120 @@
 { config, pkgs, ... }:
 {
-  # PWA Desktop entries
-  # If you are not me, do not use this 
-  home.file.".local/share/applications/brave-aghbiahbpaijignceidepookljebhfak-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Google Drive
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=aghbiahbpaijignceidepookljebhfak
-    Icon=brave-aghbiahbpaijignceidepookljebhfak-Default
-    StartupWMClass=crx_aghbiahbpaijignceidepookljebhfak
-    '';
+  # # PWA Desktop entries
+  # # If you are not me, do not use this 
+   xdg.desktopEntries = {
+  #   "Google Drive" = {
+  #     name = "Google Drive";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=aghbiahbpaijignceidepookljebhfak";
+  #     icon = "brave-aghbiahbpaijignceidepookljebhfak-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "YouTube" = {
+  #     name = "YouTube";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml";
+  #     icon = "brave-agimnkijcaahngcdmfeangaknmldooml-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #     actions = {
+  #       "Subscriptions" = {
+  #         name = "Subscriptions";
+  #         exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml --app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions";
+  #       };
+  #       "Explore" = {
+  #         name = "Explore";
+  #         exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml --app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/explore";
+  #       };
+  #     };
+  #   };
+  #   "Element" = {
+  #     name = "Element";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ejhkdoiecgkmdpomoahkdihbcldkgjci";
+  #     icon = "brave-ejhkdoiecgkmdpomoahkdihbcldkgjci-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "Messages" = {
+  #     name = "Messages";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=hpfldicfbfomlpcikngkocigghgafkph";
+  #     icon = "brave-hpfldicfbfomlpcikngkocigghgafkph-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "Google Meet" = {
+  #     name = "Google Meet";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=kjgfgldnnfoeklkmfkjfagphfepbbdan";
+  #     icon = "brave-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "Google Chat" = {
+  #     name = "Google Chat";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=mdpkiolbdkhdjpekfbkbmhigcaggjagi";
+  #     icon = "brave-mdpkiolbdkhdjpekfbkbmhigcaggjagi-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "Google Maps" = {
+  #     name = "Google Maps";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=mnhkaebcjjhencmpkapnbdaogjamfbcj";
+  #     icon = "brave-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "Google Photos" = {
+  #     name = "Google Photos";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ncmjhecbjeaamljdfahankockkkdmedg";
+  #     icon = "brave-ncmjhecbjeaamljdfahankockkkdmedg-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "Microsoft Teams" = {
+  #     name = "Microsoft Teams";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
+  #     icon = "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #   };
+  #   "Outlook (PWA)" = {
+  #     name = "Outlook (PWA)";
+  #     exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga";
+  #     icon = "brave-pkooggnaalmfkidjmlhoelhdllpphaga-Default";
+  #     terminal = false;
+  #     type = "Application";
+  #     actions = {
+  #       "New-Message" = {
+  #         name = "New Message";
+  #         exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose";
+  #       };
+  #       "Open-Calendar" = {
+  #         name = "Open Calendar";
+  #         exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/";
+  #       };
+  #       "New-Event" = {
+  #         name = "New Event";
+  #         exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/calendar/deeplink/compose";
+  #       };
+  #     };
+  #   };
+    "Visual Studio Code" = {
+      name = "Visual Studio Code";
+      exec = "/run/current-system/sw/bin/code";
+      icon = "vscode";
+      terminal = false;
+      type = "Application";
+      actions = {
+        "New-Window" = {
+          name = "New Window";
+          exec = "/run/current-system/sw/bin/code --new-window";
+        };
+      };
+    };
   };
-
-  home.file.".local/share/applications/brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=YouTube
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml
-    Icon=brave-agimnkijcaahngcdmfeangaknmldooml-Default
-    StartupWMClass=crx_agimnkijcaahngcdmfeangaknmldooml
-    Actions=Explore;Subscriptions
-    
-    [Desktop Action Explore]
-    Name=Explore
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/explore?feature=app_shortcuts"
-    
-    [Desktop Action Subscriptions]
-    Name=Subscriptions
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml "--app-launch-url-for-shortcuts-menu-item=https://www.youtube.com/feed/subscriptions?feature=app_shortcuts"    
-    '';   
-  };
-
-  home.file.".local/share/applications/brave-ejhkdoiecgkmdpomoahkdihbcldkgjci-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Element
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ejhkdoiecgkmdpomoahkdihbcldkgjci
-    Icon=brave-ejhkdoiecgkmdpomoahkdihbcldkgjci-Default
-    StartupWMClass=crx_ejhkdoiecgkmdpomoahkdihbcldkgjci    
-    '';  
-  };  
-
-  home.file.".local/share/applications/brave-hpfldicfbfomlpcikngkocigghgafkph-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Messages
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=hpfldicfbfomlpcikngkocigghgafkph
-    Icon=brave-hpfldicfbfomlpcikngkocigghgafkph-Default
-    StartupWMClass=crx_hpfldicfbfomlpcikngkocigghgafkph
-    '';  
-  }; 
-
-  home.file.".local/share/applications/brave-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Google Meet
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=kjgfgldnnfoeklkmfkjfagphfepbbdan
-    Icon=brave-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default
-    StartupWMClass=crx_kjgfgldnnfoeklkmfkjfagphfepbbdan
-    '';  
-  };    
-
-  home.file.".local/share/applications/brave-mdpkiolbdkhdjpekfbkbmhigcaggjagi-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Google Chat
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=mdpkiolbdkhdjpekfbkbmhigcaggjagi
-    Icon=brave-mdpkiolbdkhdjpekfbkbmhigcaggjagi-Default
-    StartupWMClass=crx_mdpkiolbdkhdjpekfbkbmhigcaggjagi
-    '';  
-  };   
-
-  home.file.".local/share/applications/brave-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Google Maps
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=mnhkaebcjjhencmpkapnbdaogjamfbcj
-    Icon=brave-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default
-    StartupWMClass=crx_mnhkaebcjjhencmpkapnbdaogjamfbcj
-    '';  
-  };    
-
-  home.file.".local/share/applications/brave-ncmjhecbjeaamljdfahankockkkdmedg-Default.desktop" = {
-    enable = true;
-    force = true;
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Google Photos
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ncmjhecbjeaamljdfahankockkkdmedg
-    Icon=brave-ncmjhecbjeaamljdfahankockkkdmedg-Default
-    StartupWMClass=crx_ncmjhecbjeaamljdfahankockkkdmedg
-    '';  
-  };     
-
-  home.file.".local/share/applications/code.desktop" = {
-    enable = true;
-    force = true;
-    text = 
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Actions=new-empty-window
-    Categories=Utility;TextEditor;Development;IDE
-    Comment=Code Editing. Redefined.
-    Exec=/run/current-system/sw/bin/code %F
-    GenericName=Text Editor
-    Icon=vscode
-    Keywords=vscode
-    MimeType=text/plain;inode/directory
-    Name=Visual Studio Code
-    StartupNotify=true
-    StartupWMClass=Code
-    Type=Application
-    Version=1.4
-    
-    [Desktop Action new-empty-window]
-    Exec=/run/current-system/sw/bin/code --new-window %F
-    Icon=vscode
-    Name=New Empty Window
-    '';
-  };
-
-  home.file.".local/share/applications/brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default.desktop" = {
-  enable = true;
-  force = true;
-  text = 
-  ''
-  #!/usr/bin/env xdg-open
-  [Desktop Entry]
-  Version=1.1
-  Terminal=false
-  Type=Application
-  Name=Microsoft Teams
-  Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm
-  Icon=brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default
-  StartupWMClass=crx_oiocllghmdadfpahmllbbhkgjfmaidmm
-  '';
-  };
-
-  home.file.".local/share/applications/brave-pkooggnaalmfkidjmlhoelhdllpphaga-Default.desktop" = {
-    enable = true;
-    force = true; 
-    text =
-    ''
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=1.0
-    Terminal=false
-    Type=Application
-    Name=Outlook (PWA)
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga
-    Icon=brave-pkooggnaalmfkidjmlhoelhdllpphaga-Default
-    StartupWMClass=crx_pkooggnaalmfkidjmlhoelhdllpphaga
-    Actions=New-event;New-message;Open-calendar
-    
-    [Desktop Action New-event]
-    Name=New event
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/calendar/deeplink/compose
-    
-    [Desktop Action New-message]
-    Name=New message
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/mail/deeplink/compose
-    
-    [Desktop Action Open-calendar]
-    Name=Open calendar
-    Exec=/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/calendar
-    '';  
-  }; 
 
   home.file.".local/share/icons/vscode.png" = {
     enable = true;
     force = true;
     source = ./resources/vscode.png;
-  };  
+  };
 }

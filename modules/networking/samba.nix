@@ -4,21 +4,19 @@
   services.samba = {
     enable = true;
     package = pkgs.samba;
-    enableNmbd = false;
+    nmbd.enable = false;
 
     # You will still need to set up the user accounts to begin with:
     # $ sudo smbpasswd -a yourusername
 
-    # This adds to the [global] section:
-    extraConfig = ''
-      browseable = yes
-      smb encrypt = required
-      wins support = no
-      domain master = no
-      local master = no
-    '';
-
-    shares = {
+    settings = {
+      public = {
+        browseable = "yes";
+        "smb encrypt" = "required";
+        "wins support" = "no";
+        "domain master" = "no";
+        "local master" = "no";
+      };
       homes = {
         browseable = "no"; # note: each home will be browseable; the "homes" share will not.
         "read only" = "no";

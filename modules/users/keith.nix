@@ -40,15 +40,18 @@
     };
   };
 
-  services.samba = {
-      shares.music = {
-      path = "/home/keith/Music";
-      writable = true;
-    };
-
-    shares.pictures = {
-      path = "/home/keith/Pictures";
-      writable = true;
+  services = {
+    samba = {
+      settings = {
+        music = {
+          path = "/home/keith/Music";
+          writable = true;
+        };
+        pictures = {
+          path = "/home/keith/Pictures";
+          writable = true;
+        };
+      };
     };
   };  
 
