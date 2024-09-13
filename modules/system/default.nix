@@ -1,15 +1,15 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 {
   imports = [
     ./local.nix
     ./nix.nix
+    inputs.agenix.nixosModules.default
   ];
 
   # Privacy
   programs = {
     gnupg.agent = {
       enable = true;
-      #pinentryPackage = lib.mkForce pkgs.pinentry-qt;
     };
   };  
 
@@ -56,9 +56,6 @@
     wirelesstools
     gtop
     iw 
-    
-
-    #pinentry-qt    
   ];  
 
 }
