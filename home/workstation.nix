@@ -3,5 +3,6 @@
   imports = [
     ./common.nix
     ./solaar.nix
+    ./pwa.nix
   ];  
 }
