@@ -32,4 +32,5 @@
     valent = prev.callPackage ./valent { };
     zigup = prev.callPackage ./zigup { };
     code-cursor = prev.callPackage ./code-cursor { };
+  };
 }
