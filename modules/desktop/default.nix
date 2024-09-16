@@ -67,8 +67,6 @@
     qadwaitadecorations
     qadwaitadecorations-qt6   
     qalculate-gtk
-    cosmic-applet-emoji-selector
-    cosmic-calculator
   ];  
 
   fonts.packages = with pkgs; [
