@@ -10,7 +10,6 @@
           quickemu
           valent
           zigup
-          code-cursor
           ;
       };
 
@@ -31,6 +30,5 @@
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
     zigup = prev.callPackage ./zigup { };
-    code-cursor = prev.callPackage ./code-cursor { };
   };
 }

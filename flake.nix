@@ -2,9 +2,11 @@
   description = "AxiOS";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/release-24.05";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs-stable.url = "github:NixOS/nixpkgs/release-24.05";
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    # Make nixpkgs follow nixos-cosmic
+    nixpkgs.follows = "nixos-cosmic/nixpkgs";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
@@ -31,11 +33,12 @@
 
     lanzaboote.url = "github:nix-community/lanzaboote";
 
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
-      #url = "github:drakon64/nixos-cosmic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #nixos-cosmic = {
+    #  url = "github:lilyinstarlight/nixos-cosmic";
+    #  #url = "github:drakon64/nixos-cosmic";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+   # };
+   nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
   };

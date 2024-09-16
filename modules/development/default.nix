@@ -12,7 +12,7 @@
     rustup
     #vscode-fhs    
     inputs.self.packages.${pkgs.system}.zigup
-    inputs.self.packages.${pkgs.system}.code-cursor
+    code-cursor
   ];  
 
   programs.direnv.enable = true;
