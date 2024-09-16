@@ -104,14 +104,14 @@
         StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
       };
     };
-    "brave-pkooggnaalmfkidjmlhoelhdllpphaga-Default" = {
+    "brave-lkkahpbimdkjdjjiijflmhaeameegbcm-Default" = {
       name = "Outlook (PWA)";
-      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga";
-      icon = "brave-pkooggnaalmfkidjmlhoelhdllpphaga-Default";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=lkkahpbimdkjdjjiijflmhaeameegbcm";
+      icon = "brave-lkkahpbimdkjdjjiijflmhaeameegbcm-Default";
       terminal = false;
       type = "Application";
       settings = {
-        StartupWMClass = "crx_pkooggnaalmfkidjmlhoelhdllpphaga";
+        StartupWMClass = "crx_lkkahpbimdkjdjjiijflmhaeameegbcm";
       };
       actions = {
         "New-Message" = {

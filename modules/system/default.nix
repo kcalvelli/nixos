@@ -3,7 +3,6 @@
   imports = [
     ./local.nix
     ./nix.nix
-    inputs.agenix.nixosModules.default
   ];
 
   # Privacy
