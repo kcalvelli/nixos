@@ -67,6 +67,7 @@
     qadwaitadecorations
     qadwaitadecorations-qt6   
     qalculate-gtk
+    teams-for-linux
   ];  
 
   fonts.packages = with pkgs; [

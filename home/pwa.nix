@@ -94,16 +94,16 @@
          StartupWMClass = "crx_ncmjhecbjeaamljdfahankockkkdmedg";
        };
      };
-    "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default" = {
-      name = "Microsoft Teams";
-      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
-      icon = "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default";
-      terminal = false;
-      type = "Application";
-      settings = {
-        StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
-      };
-    };
+    #"brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default" = {
+    #  name = "Microsoft Teams";
+    #  exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
+    #  icon = "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default";
+    #  terminal = false;
+    #  type = "Application";
+    #  settings = {
+    #    StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
+    #  };
+    #};
     "brave-lkkahpbimdkjdjjiijflmhaeameegbcm-Default" = {
       name = "Outlook (PWA)";
       exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=lkkahpbimdkjdjjiijflmhaeameegbcm";
@@ -141,6 +141,16 @@
     #     };
     #   };
     # };
+  };
+  
+  systemd.user.services.clear-pwa-desktop-entries = {
+    Unit = {
+      Description = "Clear PWA Desktop Entries";
+      After = [ "multi-user.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.coreutils}/bin/rm -f ~/.local/share/applications/brave*.desktop";
+    };
   };
 
   # home.file.".local/share/icons/vscode.png" = {
