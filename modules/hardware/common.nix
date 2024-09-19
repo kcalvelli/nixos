@@ -13,4 +13,7 @@
 
   # Firmware
   services.fwupd.enable = true;
+
+  # Use kernel 6.10 for all machines
+  boot.kernelPackages = pkgs.linuxPackages_6_10;
 }

@@ -20,9 +20,7 @@ in
     ### System76 laptop (Pangolin 12)
    (lib.mkIf cfg.system76.enable {      
 
-      boot = {
-        # 6.10 kernel
-        kernelPackages = pkgs.linuxPackages_latest;        
+      boot = {      
         kernelParams = [
           "ro"
           "quiet"

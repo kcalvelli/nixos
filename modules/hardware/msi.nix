@@ -35,9 +35,6 @@ in
          # Disable systemd-boot for lanzaboote
          loader.systemd-boot.enable = lib.mkForce false;
      
-         # Kernel
-         kernelPackages = pkgs.linuxPackages_latest;
-         
          kernelParams = [
            "quiet"
            "loglevel=0"
