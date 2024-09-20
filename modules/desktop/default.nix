@@ -7,7 +7,7 @@
 
   ### Services and stuff needed by all WMs/DEs
   services = {
-    #flatpak.enable = true;
+    flatpak.enable = true;
     xserver.displayManager.startx.enable = true ; 
     gvfs.enable = true;
     devmon.enable = true;
