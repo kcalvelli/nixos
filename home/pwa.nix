@@ -128,6 +128,17 @@
         };
       };
     };
+    "brave-bejfcfglecdjgjcjdjnckkaapaocjbph-Default" = {
+      name = "Microsoft 365";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=bejfcfglecdjgjcjdjnckkaapaocjbph";
+      icon = "brave-bejfcfglecdjgjcjdjnckkaapaocjbph-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_bejfcfglecdjgjcjdjnckkaapaocjbph";
+      };
+    };
+    # "Visual Studio Code" = {
     # "Visual Studio Code" = {
     #   name = "Visual Studio Code";
     #   exec = "/run/current-system/sw/bin/code";

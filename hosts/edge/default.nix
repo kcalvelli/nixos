@@ -30,8 +30,8 @@
   virt.containers.enable = true;  
 
   # Services
-  services.caddy-proxy.enable = true;
-  services.chatbot.enable = true;
+  #services.caddy-proxy.enable = true;
+  #services.chatbot.enable = true;
 
   home-manager.sharedModules = with inputs.self.homeModules; [
     workstation
