@@ -24,7 +24,7 @@ in
         };
       };
      };
-     virtualisation.waydroid.enable = true;
+     #virtualisation.waydroid.enable = true;
     })
 
     (lib.mkIf cfg.libvirt.enable {
