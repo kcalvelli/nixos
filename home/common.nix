@@ -2,7 +2,7 @@
 {
   imports = [
     ./helix.nix
-    ./gnome-settings.nix
+    #./gnome-settings.nix
     ./pwa.nix
     ./shell.nix
     ./virtualisation.nix
