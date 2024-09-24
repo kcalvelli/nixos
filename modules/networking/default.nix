@@ -52,12 +52,7 @@
     nextcloud-client
     cubicsdr 
     thunderbird
-    birdtray
   ]; 
-  #programs.geary.enable = true;   
-  #programs.evolution = {
-  #  enable = true;
-  #};
 
   # Causes switch to fail if this is not set
   systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false; 
