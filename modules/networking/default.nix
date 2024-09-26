@@ -40,7 +40,8 @@
   # For KDEConnect protocol
   programs.kdeconnect = {
     enable = true;
-    package = inputs.self.packages.${pkgs.system}.valent;
+    #package = inputs.self.packages.${pkgs.system}.valent;
+    package = pkgs.valent;
   };
 
   environment.systemPackages = with pkgs; [

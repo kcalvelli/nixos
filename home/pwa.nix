@@ -157,10 +157,14 @@
   systemd.user.services.clear-pwa-desktop-entries = {
     Unit = {
       Description = "Clear PWA Desktop Entries";
-      After = [ "multi-user.target" ];
+      After = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${pkgs.coreutils}/bin/rm -f ~/.local/share/applications/brave*.desktop";
+      Type = "oneshot";
+      ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/rm -f $HOME/.local/share/applications/brave-*.desktop'";
+    };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 
