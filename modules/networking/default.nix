@@ -48,7 +48,6 @@
     # Browser, email, etc ...
     #inputs.self.packages.${pkgs.system}.brave-browser-nightly
     brave
-    telegram-desktop 
     openssl 
     nextcloud-client
     cubicsdr 
