@@ -138,6 +138,18 @@
         StartupWMClass = "crx_bejfcfglecdjgjcjdjnckkaapaocjbph";
       };
     };
+
+    "brave-ibblmnobmgdmpoeblocemifbpglakpoi-Default" = {
+      name = "Telegram Web";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ibblmnobmgdmpoeblocemifbpglakpoi";
+      icon = "brave-ibblmnobmgdmpoeblocemifbpglakpoi-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_ibblmnobmgdmpoeblocemifbpglakpoi";
+      };
+    };
+
     # "Visual Studio Code" = {
     # "Visual Studio Code" = {
     #   name = "Visual Studio Code";
