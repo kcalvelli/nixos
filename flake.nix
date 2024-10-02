@@ -33,12 +33,7 @@
 
     lanzaboote.url = "github:nix-community/lanzaboote";
 
-    #nixos-cosmic = {
-    #  url = "github:lilyinstarlight/nixos-cosmic";
-    #  #url = "github:drakon64/nixos-cosmic";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-   # };
-   nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
   };

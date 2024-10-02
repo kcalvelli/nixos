@@ -7,12 +7,12 @@
     vim
     starship
     fish
-    helix
     gcc
     rustup
     #vscode-fhs    
     inputs.self.packages.${pkgs.system}.zigup
     code-cursor
+    copier
   ];  
 
   programs.direnv.enable = true;

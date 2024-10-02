@@ -19,10 +19,9 @@
 
   environment.systemPackages = with pkgs; [ 
     radeontop
-    gimp
     amdgpu_top
     clinfo
-    lact
+    pinta
   ];  
   
   # Linux AMDGPU Controller

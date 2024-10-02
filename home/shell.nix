@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   programs.vim = {
     enable = true;
@@ -40,13 +40,6 @@
 
       # Manually packaging and enable a plugin
     ];
-
-    shellAliases = with pkgs; {
-      cat = "${bat}/bin/bat";
-      ls = "${eza}/bin/eza";
-      top = "${bottom}/bin/bottom";
-      du = "${du-dust}/bin/dust";
-    };
   };
 
   programs.git.enable = true;

@@ -25,26 +25,6 @@
     killall
     mission-center
     gnome-firmware
-    # Rust replacement for gnu coreutils
-    uutils-coreutils-noprefix
-
-    # Very Rusty
-    bandwhich
-    bat
-    bottom
-    broot
-    dua
-    dust
-    eza
-    fd
-    ouch
-    procs
-    rm-improved
-    ripgrep
-    skim
-    tokei
-    xcp
-    zoxide
 
     # Get stuff
     wget
@@ -54,7 +34,5 @@
     pciutils
     wirelesstools
     gtop
-    iw 
   ];  
-
 }
