@@ -2,11 +2,9 @@
 
 {
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/31ca4929-c5c0-4a5e-a4e8-d07e18806ced";
+    device = "/dev/disk/by-uuid/de03ecfb-66a5-46dd-8626-86ed2ba75f73";
     fsType = "ext4";
   };
-
-  boot.initrd.luks.devices."luks-e05489aa-0fc2-4801-a3cc-c0e8498b8fa9".device = "/dev/disk/by-uuid/e05489aa-0fc2-4801-a3cc-c0e8498b8fa9";
 
   fileSystems."/media/games" = {
     device = "/dev/disk/by-uuid/22d680fd-da6a-49fa-a2e6-3194a925f7ed";
@@ -14,11 +12,15 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/3D0B-6C4A";
+    device = "/dev/disk/by-uuid/416A-6F8B";
     fsType = "vfat";
     options = [
-      "fmask=0022"
-      "dmask=0022"
-    ];
+      "fmask=0077"
+      "dmask=0077"
+    ]
   };
+
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/d6a6574a-8d5e-492d-ad40-ca7a5718541d"; }
+  ];
 }
