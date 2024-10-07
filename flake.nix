@@ -31,8 +31,6 @@
 
     flake-utils.url = "github:numtide/flake-utils";
 
-    lanzaboote.url = "github:nix-community/lanzaboote";
-
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
     nix-gaming.url = "github:fufexan/nix-gaming";

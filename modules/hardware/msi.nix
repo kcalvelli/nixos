@@ -6,7 +6,6 @@ in
   imports = [
      inputs.nixos-hardware.nixosModules.common-cpu-amd
      inputs.nixos-hardware.nixosModules.common-pc-ssd
-     inputs.lanzaboote.nixosModules.lanzaboote  
      ./common.nix      
   ];
 
@@ -32,8 +31,6 @@ in
        };
      
        boot = {
-         # Disable systemd-boot for lanzaboote
-         loader.systemd-boot.enable = lib.mkForce false;
      
          kernelParams = [
            "quiet"
@@ -52,12 +49,6 @@ in
          extraModulePackages = [
      
          ];
-     
-         # For secureboot
-         lanzaboote = {
-           enable = true;
-           pkiBundle = "/etc/secureboot";
-         };
      
          initrd = {
            availableKernelModules = [
