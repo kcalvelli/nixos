@@ -12,12 +12,17 @@
     services.displayManager.cosmic-greeter.enable = true;   
 
     environment.systemPackages = with pkgs; [
-      cosmic-forecast
-      cosmic-applet-emoji-selector
-      cosmic-calculator
+      chronos
+      cosmic-ext-applet-clipboard-manager
+      cosmic-ext-applet-emoji-selector
+      cosmic-ext-calculator
+      cosmic-ext-examine
+      cosmic-ext-forecast
+      cosmic-ext-tasks
+      cosmic-ext-tweaks
       cosmic-player
       cosmic-reader
-      cosmic-tasks
+      stellarshot
     ];
   }; 
 }
