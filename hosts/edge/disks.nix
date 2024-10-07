@@ -1,5 +1,4 @@
 { ... }:
-
 {
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/de03ecfb-66a5-46dd-8626-86ed2ba75f73";
@@ -17,7 +16,7 @@
     options = [
       "fmask=0077"
       "dmask=0077"
-    ]
+    ];
   };
 
   swapDevices = [
