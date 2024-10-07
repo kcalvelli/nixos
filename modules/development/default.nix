@@ -13,6 +13,10 @@
     inputs.self.packages.${pkgs.system}.zigup
     code-cursor
     copier
+    nodejs_20
+    nodePackages.npm
+    nodePackages.typescript
+    nodePackages.ts-node
   ];  
 
   programs.direnv.enable = true;
