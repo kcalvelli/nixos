@@ -53,7 +53,7 @@
     cubicsdr 
     thunderbird
     # For work
-    microsoft-edge-stable
+    microsoft-edge
   ]; 
 
   # Causes switch to fail if this is not set
