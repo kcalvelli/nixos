@@ -52,6 +52,8 @@
     nextcloud-client
     cubicsdr 
     thunderbird
+    # For work
+    microsoft-edge-stable
   ]; 
 
   # Causes switch to fail if this is not set
