@@ -52,6 +52,7 @@
     nextcloud-client
     cubicsdr 
     thunderbird
+    networkmanagerapplet
     # For work
     microsoft-edge
   ]; 
