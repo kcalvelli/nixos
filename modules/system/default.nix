@@ -34,5 +34,6 @@
     pciutils
     wirelesstools
     gtop
+    htop
   ];  
 }

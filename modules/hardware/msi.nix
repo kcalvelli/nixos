@@ -41,6 +41,8 @@ in
            "iommu=pt"
            "psi=1"
            "amd_iommu=force_isolation"
+           "nohz_full=1-8"
+           "rcu_nocbs=1-8"
          ];
      
          kernelModules = [

@@ -14,6 +14,7 @@
   zramSwap = {
     enable = true;
     algorithm = "zstd";
+    memoryPercent = 30;
   };  
   services.udisks2.enable = true;    
 }

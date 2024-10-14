@@ -1,7 +1,7 @@
 { inputs, pkgs, lib, ... }:
 {
   imports = [
-    ./avahi.nix
+    #./avahi.nix
     ./samba.nix
     ./tailscale.nix
   ];
@@ -20,7 +20,7 @@
         5355
       ];
       allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
-    };
+    };   
   };
 
   services = {
@@ -52,7 +52,6 @@
     nextcloud-client
     cubicsdr 
     thunderbird
-    networkmanagerapplet
     # For work
     microsoft-edge
   ]; 

@@ -23,6 +23,8 @@
       cosmic-player
       cosmic-reader
       stellarshot
+      #Overlay of networkmanagerapplet that does not include appindicator
+      inputs.self.packages.${pkgs.system}.networkmanagerapplet
     ];
   }; 
 }

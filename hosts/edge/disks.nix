@@ -3,6 +3,13 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/de03ecfb-66a5-46dd-8626-86ed2ba75f73";
     fsType = "ext4";
+    options = [
+      "noatime"
+      "nodiratime"
+      "data=writeback"
+      "commit=60"
+      "discard"
+    ];
   };
 
   #fileSystems."/media/games" = {

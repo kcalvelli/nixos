@@ -13,7 +13,7 @@
         "flakes"
       ];
     # Need swap, until then  
-      max-jobs = 2;
+      max-jobs = 16;
       auto-optimise-store = true;
       substituters = [
         "https://devenv.cachix.org"

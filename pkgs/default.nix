@@ -10,6 +10,7 @@
           quickemu
           valent
           zigup
+          networkmanagerapplet
           ;
       };
 
@@ -30,5 +31,6 @@
     quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
     zigup = prev.callPackage ./zigup { };
+    networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
   };
 }
