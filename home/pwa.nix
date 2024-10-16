@@ -94,50 +94,6 @@
          StartupWMClass = "crx_ncmjhecbjeaamljdfahankockkkdmedg";
        };
      };
-    #"brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default" = {
-    #  name = "Microsoft Teams";
-    #  exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
-    #  icon = "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default";
-    #  terminal = false;
-    #  type = "Application";
-    #  settings = {
-    #    StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
-    #  };
-    #};
-    "brave-lkkahpbimdkjdjjiijflmhaeameegbcm-Default" = {
-      name = "Outlook (PWA)";
-      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=lkkahpbimdkjdjjiijflmhaeameegbcm";
-      icon = "brave-lkkahpbimdkjdjjiijflmhaeameegbcm-Default";
-      terminal = false;
-      type = "Application";
-      settings = {
-        StartupWMClass = "crx_lkkahpbimdkjdjjiijflmhaeameegbcm";
-      };
-      actions = {
-        "New-Message" = {
-          name = "New Message";
-          exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/mail/deeplink/compose";
-        };
-        "Open-Calendar" = {
-          name = "Open Calendar";
-          exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office.com/calendar/";
-        };
-        "New-Event" = {
-          name = "New Event";
-          exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=pkooggnaalmfkidjmlhoelhdllpphaga --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com/calendar/deeplink/compose";
-        };
-      };
-    };
-    "brave-bejfcfglecdjgjcjdjnckkaapaocjbph-Default" = {
-      name = "Microsoft 365";
-      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=bejfcfglecdjgjcjdjnckkaapaocjbph";
-      icon = "brave-bejfcfglecdjgjcjdjnckkaapaocjbph-Default";
-      terminal = false;
-      type = "Application";
-      settings = {
-        StartupWMClass = "crx_bejfcfglecdjgjcjdjnckkaapaocjbph";
-      };
-    };
 
     "brave-ibblmnobmgdmpoeblocemifbpglakpoi-Default" = {
       name = "Telegram Web";

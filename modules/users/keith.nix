@@ -57,15 +57,15 @@
 
   services.samba = {
     enable = true;
-    shares = {
-      music = {
-        path = "/home/keith/Music";
-        writable = "yes";
+    settings = {
+      "music" = {
+        "path" = "/home/keith/Music";
+        "writable" = "yes";
         "guest ok" = "no";
       };
-      pictures = {
-        path = "/home/keith/Pictures";
-        writable = "yes";
+      "pictures" = {
+        "path" = "/home/keith/Pictures";
+        "writable" = "yes";
         "guest ok" = "no";
       };
     };

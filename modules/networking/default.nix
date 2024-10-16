@@ -35,7 +35,7 @@
   programs.ssh.startAgent = true;
 
   # For RTL-SDR
-  hardware.rtl-sdr.enable = true;
+  #hardware.rtl-sdr.enable = true;
 
   # For KDEConnect protocol
   programs.kdeconnect = {
@@ -43,18 +43,6 @@
     #package = inputs.self.packages.${pkgs.system}.valent;
     package = pkgs.valent;
   };
-
-  environment.systemPackages = with pkgs; [
-    # Browser, email, etc ...
-    #inputs.self.packages.${pkgs.system}.brave-browser-nightly
-    brave
-    openssl 
-    nextcloud-client
-    cubicsdr 
-    thunderbird
-    # For work
-    microsoft-edge
-  ]; 
 
   # Causes switch to fail if this is not set
   systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false; 

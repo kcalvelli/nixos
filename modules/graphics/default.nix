@@ -17,7 +17,6 @@
     radeontop
     amdgpu_top
     clinfo
-    pinta
   ];  
   
   # Linux AMDGPU Controller

@@ -31,6 +31,7 @@
     };
   };  
 
+  # Desktop apps common to all WMs/DEs
   environment.systemPackages = with pkgs; [
     libreoffice-fresh
     baobab
@@ -38,7 +39,11 @@
     qadwaitadecorations
     qadwaitadecorations-qt6   
     qalculate-gtk
-    teams-for-linux
+    brave
+    openssl 
+    nextcloud-client
+    thunderbird
+    pinta
   ];  
 
   fonts.packages = with pkgs; [
