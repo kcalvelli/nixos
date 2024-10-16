@@ -59,7 +59,7 @@
     ---
     - MouseGesture: Mouse Right
     - KeyPress:
-      - [Super_L, Tab]
+      - [Super_L, w]
       - click
     ...
     ---
