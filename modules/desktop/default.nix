@@ -37,10 +37,11 @@
     libreoffice-fresh
     baobab
     adw-gtk3
-    qadwaitadecorations
-    qadwaitadecorations-qt6   
     qalculate-gtk
-    brave
+    # Stop trying to launch kdewallet
+    (brave.override {
+      commandLineArgs = "--password-store=basic";
+    })
     openssl 
     nextcloud-client
     thunderbird
