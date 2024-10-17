@@ -26,5 +26,9 @@
       #Overlay of networkmanagerapplet that does not include appindicator
       inputs.self.packages.${pkgs.system}.networkmanagerapplet
     ];
+
+    environment.sessionVariables = {
+      COSMIC_DATA_CONTROL_ENABLED = 1;
+    };
   }; 
 }

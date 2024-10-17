@@ -4,6 +4,7 @@
   fetchurl,
   wrapGAppsHook,
   makeWrapper,
+  adwaita-icon-theme,
   alsa-lib,
   at-spi2-atk,
   at-spi2-core,
@@ -17,7 +18,6 @@
   freetype,
   gdk-pixbuf,
   glib,
-  gnome,
   gsettings-desktop-schemas,
   gtk3,
   gtk4,
@@ -173,7 +173,7 @@ stdenv.mkDerivation {
     gtk4
 
     # needed for XDG_ICON_DIRS
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
   ];
 
   unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";

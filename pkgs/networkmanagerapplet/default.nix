@@ -1,5 +1,6 @@
 { lib, stdenv
 , fetchurl
+, adwaita-icon-theme
 , meson
 , ninja
 , gettext
@@ -52,7 +53,7 @@ stdenv.mkDerivation rec {
     glib
     glib-networking
     #libayatana-appindicator
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
   ];
 
   nativeBuildInputs = [
