@@ -36,6 +36,7 @@ in
         win-virtio
         win-spice
         quickemu
+        
       ];
     
       # Manage the virtualisation services
