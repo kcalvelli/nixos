@@ -101,11 +101,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1729171802,
-        "narHash": "sha256-Eip3uI+XeyAfBoQXpkm/F7eG3M7AgvzSyhyJdzxVt74=",
+        "lastModified": 1729174520,
+        "narHash": "sha256-QxCAdgQdeIOaCiE0Sr23s9lD0+T1b/wuz5pSiGwNrCQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "9c1a1c7df49a9b28539ccb509b36d0b81e41391c",
+        "rev": "e78cbb20276f09c1802e62d2f77fc93ec32da268",
         "type": "github"
       },
       "original": {
@@ -121,11 +121,11 @@
         "umu": "umu"
       },
       "locked": {
-        "lastModified": 1729108264,
-        "narHash": "sha256-Jj0/IfDG9VpiByg823MjaDy6LIbUPjEfqsbqhJvI1RA=",
+        "lastModified": 1729215603,
+        "narHash": "sha256-v4fB1nH+pDATpt6Jq/nk+lU2I6Zn3LRF1s4gNPAvZko=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "dd69b3d1751f0ba03711585cd0c03eae8ac93ea2",
+        "rev": "79f0e311a18bfda913093b4388b24ab380d632d6",
         "type": "github"
       },
       "original": {
@@ -142,11 +142,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1729127697,
-        "narHash": "sha256-y186Ure57VLL3bF7AbpXZjtX1XA464MNyPyJI35r0H4=",
+        "lastModified": 1729209055,
+        "narHash": "sha256-QN0W/LJzUZGFdx4dYz8L7Z7uioAc3Po+AtGUs/IyV4Y=",
         "owner": "lilyinstarlight",
         "repo": "nixos-cosmic",
-        "rev": "4bfcdcfa50521342fe308ce71172bbbc6ce72a6c",
+        "rev": "e1c81bcb1321916bc1546d3da4907f31c5a5e948",
         "type": "github"
       },
       "original": {
