@@ -23,15 +23,13 @@
 
   #Virtualisation
   virt.libvirt.enable = true;
-  virt.containers.enable = true;  
+  virt.containers.enable = true;
 
   # Services
   #services.caddy-proxy.enable = true;
   #services.chatbot.enable = true;
 
-  home-manager.sharedModules = with inputs.self.homeModules; [
-    workstation
-  ];   
+  home-manager.sharedModules = with inputs.self.homeModules; [ workstation ];
 
   networking = {
     hostName = "edge"; # Define your hostname.

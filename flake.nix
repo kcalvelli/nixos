@@ -37,20 +37,16 @@
   };
 
   outputs =
-    inputs@{
-      flake-parts,
-      systems,
-      ...
-    }:
+    inputs@{ nixpkgs, flake-parts, systems, ... }:
 
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
-
       imports = [
         ./pkgs
         ./hosts
         ./modules
         ./home
-      ];     
+      ];
+      flake.formatter = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
     };
 }

@@ -1,9 +1,14 @@
-{ config, lib, pkgs, ... }:
-let 
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
   cfg = config.services;
   domain = config.networking.hostName;
-  tailnet = "taile0fb4.ts.net";  
-in 
+  tailnet = "taile0fb4.ts.net";
+in
 {
   options = {
     services.chatbot = {
@@ -12,33 +17,33 @@ in
   };
 
   config = lib.mkMerge [
-      (lib.mkIf cfg.chatbot.enable {
-        services.ollama = {
-          enable = true;
-          acceleration = "rocm";
-          environmentVariables = {
-            HCC_AMDGPU_TARGET = "gfx1031";
-          };
-          rocmOverrideGfx = "10.3.1";
-          port = 11434;
-          host = "0.0.0.0";
-          openFirewall = true;
+    (lib.mkIf cfg.chatbot.enable {
+      services.ollama = {
+        enable = true;
+        acceleration = "rocm";
+        environmentVariables = {
+          HCC_AMDGPU_TARGET = "gfx1031";
         };
-        services.open-webui = {
-          enable = true;
-          host = "0.0.0.0";
-          port = 8080;
-          openFirewall = true;
-          environment = {
-            OLLAMA_API_BASE_URL = "http://127.0.0.1:11434";    
-          };
-        };  
-        services.caddy.virtualHosts."${domain}.${tailnet}" = {
-          extraConfig = ''
-            reverse_proxy http://localhost:8080
-            encode gzip
-          '';
+        rocmOverrideGfx = "10.3.1";
+        port = 11434;
+        host = "0.0.0.0";
+        openFirewall = true;
+      };
+      services.open-webui = {
+        enable = true;
+        host = "0.0.0.0";
+        port = 8080;
+        openFirewall = true;
+        environment = {
+          OLLAMA_API_BASE_URL = "http://127.0.0.1:11434";
         };
-      })
-  ];    
+      };
+      services.caddy.virtualHosts."${domain}.${tailnet}" = {
+        extraConfig = ''
+          reverse_proxy http://localhost:8080
+          encode gzip
+        '';
+      };
+    })
+  ];
 }

@@ -14,7 +14,7 @@
 
   #fileSystems."/media/games" = {
   #  device = "/dev/disk/by-uuid/22d680fd-da6a-49fa-a2e6-3194a925f7ed";
- #   fsType = "ext4";
+  #   fsType = "ext4";
   #};
 
   fileSystems."/boot" = {
@@ -26,7 +26,5 @@
     ];
   };
 
-  swapDevices = [
-    { device = "/dev/disk/by-uuid/d6a6574a-8d5e-492d-ad40-ca7a5718541d"; }
-  ];
+  swapDevices = [ { device = "/dev/disk/by-uuid/d6a6574a-8d5e-492d-ad40-ca7a5718541d"; } ];
 }

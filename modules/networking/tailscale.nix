@@ -1,13 +1,14 @@
-{ config, inputs, pkgs, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
 {
   networking = {
     firewall = {
-      trustedInterfaces = [
-        config.services.tailscale.interfaceName
-      ];
-      allowedUDPPorts = [
-        config.services.tailscale.port
-      ];
+      trustedInterfaces = [ config.services.tailscale.interfaceName ];
+      allowedUDPPorts = [ config.services.tailscale.port ];
     };
   };
 

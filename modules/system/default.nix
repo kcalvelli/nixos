@@ -1,4 +1,9 @@
-{ pkgs, lib, inputs, ... }:
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 {
   imports = [
     ./local.nix
@@ -10,12 +15,12 @@
     gnupg.agent = {
       enable = true;
     };
-  };  
+  };
 
- services.dbus.packages = [ pkgs.gcr ];
- 
- environment.systemPackages = with pkgs; [
-  ### Common apps
+  services.dbus.packages = [ pkgs.gcr ];
+
+  environment.systemPackages = with pkgs; [
+    ### Common apps
     ### Filesystem
     sshfs
     fuse
@@ -35,5 +40,9 @@
     wirelesstools
     gtop
     htop
-  ];  
+
+    # Secret
+    libsecret
+    lssecret
+  ];
 }

@@ -1,4 +1,9 @@
-{ self, inputs, zigpkgs, ... }:
+{
+  self,
+  inputs,
+  zigpkgs,
+  ...
+}:
 {
   perSystem =
     { system, pkgs, ... }:
@@ -6,11 +11,12 @@
 
       packages = {
         inherit (pkgs)
-          brave-browser-nightly  
+          brave-browser-nightly
           quickemu
           valent
           zigup
           networkmanagerapplet
+          system76-power
           ;
       };
 
@@ -19,9 +25,7 @@
         config = {
           allowUnfree = true;
         };
-        overlays = [ 
-          self.overlays.default           
-        ];
+        overlays = [ self.overlays.default ];
       };
     };
 
@@ -32,5 +36,6 @@
     valent = prev.callPackage ./valent { };
     zigup = prev.callPackage ./zigup { };
     networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
+    system76-power = prev.callPackage ./system76-power { };
   };
 }

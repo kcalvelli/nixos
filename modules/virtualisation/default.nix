@@ -1,7 +1,13 @@
-{ config, lib, inputs, pkgs, ... }:
-let 
+{
+  config,
+  lib,
+  inputs,
+  pkgs,
+  ...
+}:
+let
   cfg = config.virt;
-in  
+in
 {
 
   options = {
@@ -15,30 +21,31 @@ in
 
   config = lib.mkMerge [
     (lib.mkIf cfg.containers.enable {
-     virtualisation = { 
-      podman = {
-        enable = true;
-        dockerCompat = true;
-        defaultNetwork.settings = {
-          dns_enabled = true;
+      virtualisation = {
+        podman = {
+          enable = true;
+          dockerCompat = true;
+          defaultNetwork.settings = {
+            dns_enabled = true;
+          };
         };
       };
-     };
-     #virtualisation.waydroid.enable = true;
+      #virtualisation.waydroid.enable = true;
     })
 
     (lib.mkIf cfg.libvirt.enable {
       environment.systemPackages = with pkgs; [
         virt-manager
         virt-viewer
-        spice spice-gtk
+        spice
+        spice-gtk
         spice-protocol
         win-virtio
         win-spice
         quickemu
-        
+
       ];
-    
+
       # Manage the virtualisation services
       virtualisation = {
         libvirtd = {
@@ -51,7 +58,7 @@ in
         };
         spiceUSBRedirection.enable = true;
       };
-      services.spice-vdagentd.enable = true;         
+      services.spice-vdagentd.enable = true;
     })
   ];
 }

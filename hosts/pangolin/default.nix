@@ -24,9 +24,7 @@
   #virt.libvirt.enable = true;
   #virt.containers.enable = true;  
 
-  home-manager.sharedModules = with inputs.self.homeModules; [
-    laptop
-  ]; 
+  home-manager.sharedModules = with inputs.self.homeModules; [ laptop ];
 
   networking = {
     hostName = "pangolin"; # Define your hostname.

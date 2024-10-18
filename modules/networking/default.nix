@@ -1,4 +1,9 @@
-{ inputs, pkgs, lib, ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
+}:
 {
   imports = [
     #./avahi.nix
@@ -12,15 +17,21 @@
     useDHCP = false;
     firewall = {
       enable = true;
-      allowedTCPPorts = [
-        5355
+      allowedTCPPorts = [ 5355 ];
+      allowedTCPPortRanges = [
+        {
+          from = 1714;
+          to = 1764;
+        }
       ];
-      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
-      allowedUDPPorts = [
-        5355
+      allowedUDPPorts = [ 5355 ];
+      allowedUDPPortRanges = [
+        {
+          from = 1714;
+          to = 1764;
+        }
       ];
-      allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
-    };   
+    };
   };
 
   services = {
@@ -45,5 +56,5 @@
   };
 
   # Causes switch to fail if this is not set
-  systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false; 
+  systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false;
 }

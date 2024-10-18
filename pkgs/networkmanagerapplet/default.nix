@@ -1,26 +1,28 @@
-{ lib, stdenv
-, fetchurl
-, adwaita-icon-theme
-, meson
-, ninja
-, gettext
-, pkg-config
-, networkmanager
-, gnome
-, libsecret
-, polkit
-, modemmanager
-, libnma
-, glib-networking
-, gsettings-desktop-schemas
-, libgudev
-, jansson
-, wrapGAppsHook3
-, gobject-introspection
-, python3
-, gtk3
-#, libayatana-appindicator
-, glib
+{
+  lib,
+  stdenv,
+  fetchurl,
+  adwaita-icon-theme,
+  meson,
+  ninja,
+  gettext,
+  pkg-config,
+  networkmanager,
+  gnome,
+  libsecret,
+  polkit,
+  modemmanager,
+  libnma,
+  glib-networking,
+  gsettings-desktop-schemas,
+  libgudev,
+  jansson,
+  wrapGAppsHook3,
+  gobject-introspection,
+  python3,
+  gtk3,
+  #, libayatana-appindicator
+  glib,
 }:
 
 stdenv.mkDerivation rec {
@@ -38,7 +40,10 @@ stdenv.mkDerivation rec {
     "-Dappindicator=no"
   ];
 
-  outputs = [ "out" "man" ];
+  outputs = [
+    "out"
+    "man"
+  ];
 
   buildInputs = [
     libnma

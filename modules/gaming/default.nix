@@ -1,9 +1,7 @@
 { pkgs, inputs, ... }:
 {
 
-  imports = [
-    inputs.nix-gaming.nixosModules.platformOptimizations
-  ];
+  imports = [ inputs.nix-gaming.nixosModules.platformOptimizations ];
 
   hardware = {
     steam-hardware.enable = true;
@@ -30,8 +28,8 @@
         end = "notify-send -a 'Gamemode' 'Optimizations deactivated'";
       };
     };
-  };  
-  
+  };
+
   #Enable Gamescope
   programs.gamescope = {
     enable = true;
@@ -46,7 +44,5 @@
   };
 
   # That game I like
-  environment.systemPackages = with pkgs; [
-    superTuxKart
-  ];
+  environment.systemPackages = with pkgs; [ superTuxKart ];
 }

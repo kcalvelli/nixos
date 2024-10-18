@@ -1,4 +1,9 @@
-{ lib, pkgs, inputs, ... }:
+{
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   # Environment setup
   # Time Zone.
@@ -22,5 +27,5 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     #GTK_USE_PORTAL = 1;
-  }; 
+  };
 }
