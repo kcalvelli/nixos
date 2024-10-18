@@ -13,7 +13,8 @@ in
     ./common.nix
     inputs.nixos-hardware.nixosModules.common-cpu-amd
     inputs.nixos-hardware.nixosModules.common-pc-ssd
-    inputs.nixos-hardware.nixosModules.system76
+    inputs.nixos-hardware.nixosModules.common-pc-laptop
+    #inputs.nixos-hardware.nixosModules.system76
   ];
 
   options = {
