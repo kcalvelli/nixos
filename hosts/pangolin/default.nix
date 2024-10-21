@@ -15,14 +15,14 @@
       system76
       networking
       users
-      #virt
+      virt
     ]);
 
   hardware.system76.enable = true;
 
   #Virtualisation
-  #virt.libvirt.enable = true;
-  #virt.containers.enable = true;  
+  virt.libvirt.enable = true;
+  virt.containers.enable = true;  
 
   home-manager.sharedModules = with inputs.self.homeModules; [ laptop ];
 
