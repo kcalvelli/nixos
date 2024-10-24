@@ -8,6 +8,8 @@
     # Make nixpkgs follow nixos-cosmic
     nixpkgs.follows = "nixos-cosmic/nixpkgs";
 
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
+
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     flake-parts = {
@@ -37,7 +39,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, flake-parts, systems, ... }:
+    inputs@{ determinate,nixpkgs, flake-parts, systems, ... }:
 
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;

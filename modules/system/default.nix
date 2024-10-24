@@ -6,6 +6,7 @@
 }:
 {
   imports = [
+    inputs.determinate.nixosModules.default
     ./local.nix
     ./nix.nix
   ];

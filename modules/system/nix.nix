@@ -6,7 +6,7 @@
 }:
 {
   nix = {
-    package = pkgs.nixFlakes;
+    #package = pkgs.nixVersions.git;
     gc = {
       automatic = true;
       dates = "daily";
