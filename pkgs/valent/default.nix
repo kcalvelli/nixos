@@ -29,9 +29,9 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "andyholmes";
     repo = "valent";
-    rev = "68db793bbaf8a6aaa115d4ad70381f990156175e";
+    rev = "1a31e786cebd879b3540887dcf00bc28fe6509eb";
     fetchSubmodules = true;
-    hash = "sha256-pEmzqGp6EEJcHIHSzdv+NSQpTE+vpz6HQtYFIomsctk=";
+    hash = "sha256-ta96/8UNNEIJOVhxDsy8U2Hv9S92od7dYiUlhOa7orU=";
   };
 
   nativeBuildInputs = [
