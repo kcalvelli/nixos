@@ -56,6 +56,23 @@ To customize this configuration for your own use:
 - Extensive use of Home Manager for user-specific configurations
 - Gaming optimizations including Steam and GameMode
 
+## Usage as a flake
+
+[![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/kcalvelli/nixos/badge)](https://flakehub.com/flake/kcalvelli/nixos)
+
+Add nixos to your `flake.nix`:
+
+```nix
+{
+  inputs.nixos.url = "https://flakehub.com/f/kcalvelli/nixos/*.tar.gz";
+
+  outputs = { self, nixos }: {
+    # Use in your outputs
+  };
+}
+
+```
+
 ## Warning
 
 This configuration is highly personalized and will not work out-of-the-box on your system. Use it as a reference or starting point for your own NixOS configuration.
