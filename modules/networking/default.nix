@@ -12,7 +12,7 @@
   ];
 
   # Reduce wpa_supplicant CTRL-EVENT-SIGNAL-CHANGE spam
-  systemd.services.wpa_supplicant.serviceConfig.LogLevelMax = "notice";
+  systemd.services.wpa_supplicant.serviceConfig.LogLevelMax = 2;
   
   networking = {
     networkmanager.enable = true;
