@@ -12,7 +12,6 @@
       packages = {
         inherit (pkgs)
           brave-browser-nightly
-          quickemu
           valent
           zigup
           networkmanagerapplet
@@ -32,7 +31,6 @@
   flake.overlays.default = _final: prev: {
     # Custom packages
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
-    quickemu = prev.callPackage ./quickemu { };
     valent = prev.callPackage ./valent { };
     zigup = prev.callPackage ./zigup { };
     networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
