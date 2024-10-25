@@ -49,6 +49,5 @@
         ./modules
         ./home
       ];
-      flake.formatter = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
     };
 }
