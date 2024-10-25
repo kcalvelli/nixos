@@ -11,6 +11,9 @@
     ./tailscale.nix
   ];
 
+  # Reduce wpa_supplicant CTRL-EVENT-SIGNAL-CHANGE spam
+  systemd.services.wpa_supplicant.serviceConfig.LogLevelMax = "notice";
+  
   networking = {
     networkmanager.enable = true;
     useNetworkd = true;
