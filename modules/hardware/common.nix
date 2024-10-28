@@ -35,5 +35,5 @@
   # Firmware
   services.fwupd.enable = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_6_10;
+  boot.kernelPackages = pkgs.linuxPackages_latest; 
 }

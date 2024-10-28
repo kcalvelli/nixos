@@ -54,7 +54,7 @@ in
       hardware = {
         system76 = {
           #enableAll = true;
-          kernel-modules.enable = true;
+          #kernel-modules.enable = true;
           firmware-daemon.enable = true;
         };
       };
