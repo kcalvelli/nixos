@@ -45,5 +45,8 @@
     # Secret
     libsecret
     lssecret
+
+    # FlakeHub
+    inputs.fh.packages.${system}.default 
   ];
 }

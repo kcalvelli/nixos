@@ -6,9 +6,12 @@
     #nixpkgs-stable.url = "github:NixOS/nixpkgs/release-24.05";
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     # Make nixpkgs follow nixos-cosmic
-    nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    #nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    nixpkgs.url = "https://flakehub.com/f/DeterminateSystems/nixpkgs-weekly/0.1";
 
+    # FlakeHub/Determinate
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
@@ -39,7 +42,7 @@
   };
 
   outputs =
-    inputs@{ determinate,nixpkgs, flake-parts, systems, ... }:
+    inputs@{ determinate, nixpkgs, flake-parts, systems, ... }:
 
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
