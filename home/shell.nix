@@ -40,10 +40,10 @@
 
       # Manually packaging and enable a plugin
     ];
-    shellInit = ''
-      set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
-      fish_add_path "$HOME/.npm-global/bin"
-    '';
+    #shellInit = ''
+    #  set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
+    #  fish_add_path "$HOME/.npm-global/bin"
+    #'';
   };
 
   programs.git.enable = true;

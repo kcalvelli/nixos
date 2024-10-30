@@ -8,14 +8,14 @@
     starship
     fish
     gcc
-    rustup
+    #rustup
     #vscode-fhs    
-    inputs.self.packages.${pkgs.system}.zigup
+    #inputs.self.packages.${pkgs.system}.zigup
     code-cursor
-    nodejs_20
-    nodePackages.npm
-    nodePackages.typescript
-    nodePackages.ts-node
+    #nodejs_20
+    #nodePackages.npm
+    #nodePackages.typescript
+    #nodePackages.ts-node
   ];  
 
   programs.direnv.enable = true;
