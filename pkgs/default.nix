@@ -1,7 +1,6 @@
 {
   self,
   inputs,
-  #zigpkgs,
   ...
 }:
 {
@@ -13,9 +12,7 @@
         inherit (pkgs)
           brave-browser-nightly
           valent
-          #zigup
           networkmanagerapplet
-          system76-power
           ;
       };
 
@@ -32,8 +29,6 @@
     # Custom packages
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     valent = prev.callPackage ./valent { };
-    #zigup = prev.callPackage ./zigup { };
     networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
-    system76-power = prev.callPackage ./system76-power { };
   };
 }

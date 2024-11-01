@@ -14,7 +14,6 @@ in
     inputs.nixos-hardware.nixosModules.common-cpu-amd
     inputs.nixos-hardware.nixosModules.common-pc-ssd
     inputs.nixos-hardware.nixosModules.common-pc-laptop
-    #inputs.nixos-hardware.nixosModules.system76
   ];
 
   options = {
@@ -50,29 +49,11 @@ in
         '';
       };
 
-      # Enable all the system76 stuff
       hardware = {
         system76 = {
-          #enableAll = true;
-          #kernel-modules.enable = true;
           firmware-daemon.enable = true;
+          power-daemon.enable = true;
         };
-      };
-
-      # Custom build of system76-power
-      environment.systemPackages = with pkgs; [
-        inputs.self.packages.${pkgs.system}.system76-power
-      ];
-      services.dbus.packages = [ inputs.self.packages.${pkgs.system}.system76-power ];
-      systemd.services.system76-power = {
-        description = "System76 Power Daemon";
-        serviceConfig = {
-          ExecStart = "${inputs.self.packages.${pkgs.system}.system76-power}/bin/system76-power daemon";
-          Restart = "on-failure";
-          Type = "dbus";
-          BusName = "com.system76.PowerDaemon";
-      };
-        wantedBy = [ "multi-user.target" ];
       };
 
       # Touchpad support
