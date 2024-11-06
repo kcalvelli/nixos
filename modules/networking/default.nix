@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    #./avahi.nix
+    ./avahi.nix
     ./samba.nix
     ./tailscale.nix
   ];
