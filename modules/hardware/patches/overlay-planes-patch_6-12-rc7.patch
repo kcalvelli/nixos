@@ -1,7 +1,7 @@
-diff --git a/amdgpu_dm/amdgpu_dm.c b/amdgpu_dm/amdgpu_dm.c
+diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 index 97e0a1bbba..964497c613 100644
---- a/amdgpu_dm/amdgpu_dm.c
-+++ b/amdgpu_dm/amdgpu_dm.c
+--- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
++++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -11821,8 +11821,16 @@ static int amdgpu_dm_atomic_check(struct drm_device *dev,
  
  		/* Overlay cusor not subject to native cursor restrictions */
