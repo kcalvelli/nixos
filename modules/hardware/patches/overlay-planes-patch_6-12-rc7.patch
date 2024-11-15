@@ -1,0 +1,22 @@
+diff --git a/amdgpu_dm/amdgpu_dm.c b/amdgpu_dm/amdgpu_dm.c
+index 97e0a1bbba..964497c613 100644
+--- a/amdgpu_dm/amdgpu_dm.c
++++ b/amdgpu_dm/amdgpu_dm.c
+@@ -11821,8 +11821,16 @@ static int amdgpu_dm_atomic_check(struct drm_device *dev,
+ 
+ 		/* Overlay cusor not subject to native cursor restrictions */
+ 		dm_new_crtc_state = to_dm_crtc_state(new_crtc_state);
+-		if (dm_new_crtc_state->cursor_mode == DM_CURSOR_OVERLAY_MODE)
++		if (dm_new_crtc_state->cursor_mode == DM_CURSOR_OVERLAY_MODE) {
++			if (dc->current_state->stream_status->plane_count > MAX_SURFACES) {
++				drm_dbg_driver(crtc->dev,
++				       "Can't enable cursor plane with %d planes\n", MAX_SURFACES);
++				ret = -EINVAL;
++				goto fail;
++			}
++
+ 			continue;
++		}
+ 
+ 		/* Check if rotation or scaling is enabled on DCN401 */
+ 		if ((drm_plane_mask(crtc->cursor) & new_crtc_state->plane_mask) &&
