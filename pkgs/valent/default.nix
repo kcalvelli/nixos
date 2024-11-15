@@ -19,7 +19,7 @@
   libphonenumber,
   pipewire,
   sqlite,
-  tracker,
+  tinysparql,
 }:
 
 stdenv.mkDerivation rec {
@@ -56,7 +56,7 @@ stdenv.mkDerivation rec {
     libphonenumber
     pipewire
     sqlite
-    tracker
+    tinysparql
   ];
 
   mesonFlags = [
