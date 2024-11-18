@@ -5,9 +5,10 @@
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     #nixpkgs-stable.url = "github:NixOS/nixpkgs/release-24.05";
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
-    # Make nixpkgs follow nixos-cosmic
-    #nixpkgs.follows = "nixos-cosmic/nixpkgs";
-    nixpkgs.url = "https://flakehub.com/f/DeterminateSystems/nixpkgs-weekly/0.1";
+
+    # Make nixpkgs follow nixos-cosmic to avoid compiling cosmics
+    nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    #nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
 
     # FlakeHub/Determinate
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
