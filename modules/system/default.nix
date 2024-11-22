@@ -29,7 +29,7 @@
 
     ### Utilities
     killall
-    mission-center
+    #mission-center
     gnome-firmware
 
     # Get stuff
