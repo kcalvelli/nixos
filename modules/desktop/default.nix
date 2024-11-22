@@ -30,37 +30,8 @@
     };
   };
 
-  ### Uncomment to enable gnome temporarily
-  # services.xserver.desktopManager.gnome.enable = true;
-  # environment.gnome.excludePackages = with pkgs; [
-  #   baobab
-  #   epiphany
-  #   geary
-  #   gnome-text-editor
-  #   gnome-calculator
-  #   gnome-calendar
-  #   gnome-characters
-  #   gnome-clocks
-  #   gnome-console
-  #   gnome-contacts
-  #   gnome-font-viewer
-  #   gnome-logs
-  #   gnome-maps
-  #   gnome-music
-  #   gnome-system-monitor
-  #   gnome-weather
-  #   loupe
-  #   nautilus
-  #   gnome-connections
-  #   simple-scan
-  #   snapshot
-  #   totem
-  #   yelp
-  # ];
-
   # Desktop apps common to all WMs/DEs
   environment.systemPackages = with pkgs; [
-    libreoffice-fresh
     baobab
     adw-gtk3
     qalculate-gtk
