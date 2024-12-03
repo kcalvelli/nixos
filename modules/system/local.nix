@@ -24,6 +24,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Common environment variables
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     #COSMIC_DISABLE_DIRECT_SCANOUT = "1";
