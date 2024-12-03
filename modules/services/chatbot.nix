@@ -21,10 +21,7 @@ in
       services.ollama = {
         enable = true;
         acceleration = "rocm";
-        environmentVariables = {
-          HCC_AMDGPU_TARGET = "gfx1031";
-        };
-        rocmOverrideGfx = "10.3.1";
+        #rocmOverrideGfx = "10.3.1";
         port = 11434;
         host = "0.0.0.0";
         openFirewall = true;
@@ -35,7 +32,8 @@ in
         port = 8080;
         openFirewall = true;
         environment = {
-          OLLAMA_API_BASE_URL = "http://127.0.0.1:11434";
+          OLLAMA_BASE_URL = "http://127.0.0.1:11434";
+          TRANSFORMERS_CACHE = "/var/lib/open-webui/.cache/huggingface";
         };
       };
       services.caddy.virtualHosts."${domain}.${tailnet}" = {
