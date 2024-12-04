@@ -8,6 +8,7 @@
     starship
     fish
     gcc
+    github-desktop
     #rustup
     #vscode-fhs    
     #inputs.self.packages.${pkgs.system}.zigup
