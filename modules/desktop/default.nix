@@ -41,6 +41,9 @@
     nextcloud-client
     thunderbird
     pinta
+    # Office apps
+    abiword
+    gnumeric
   ];
 
   fonts.packages = with pkgs; [
