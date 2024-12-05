@@ -34,8 +34,4 @@
   networking = {
     hostName = "edge"; # Define your hostname.
   };
-
-  environment.sessionVariables = {
-    COSMIC_DISABLE_DIRECT_SCANOUT = "1";
-  };
 }
