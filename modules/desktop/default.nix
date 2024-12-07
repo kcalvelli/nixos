@@ -44,6 +44,7 @@
     # Office apps
     abiword
     gnumeric
+    shotwell
   ];
 
   fonts.packages = with pkgs; [
