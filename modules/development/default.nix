@@ -9,14 +9,10 @@
     fish
     gcc
     github-desktop
-    #rustup
-    #vscode-fhs    
-    #inputs.self.packages.${pkgs.system}.zigup
+
     code-cursor
-    #nodejs_20
-    #nodePackages.npm
-    #nodePackages.typescript
-    #nodePackages.ts-node
+
+    lunarvim
   ];  
 
   programs.direnv.enable = true;
