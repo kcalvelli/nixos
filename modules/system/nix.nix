@@ -12,7 +12,9 @@
       dates = "daily";
       options = "--delete-older-than 5d";
     };
+
     settings = {
+      download-buffer-size = 256 * 1024 * 1024;
       experimental-features = [
         "nix-command"
         "flakes"

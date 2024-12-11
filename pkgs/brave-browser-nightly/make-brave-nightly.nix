@@ -70,7 +70,7 @@
   enableVideoAcceleration ? libvaSupport,
 
   # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
-  vulkanSupport ? false,
+  vulkanSupport ? true,
   addDriverRunpath,
   enableVulkan ? vulkanSupport,
 }:
