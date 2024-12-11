@@ -25,7 +25,7 @@
       };
     };
 
-  flake.overlays.default = _final: prev: {
+  flake.overlays.default = final: prev: {
     # Custom packages
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     valent = prev.callPackage ./valent { };

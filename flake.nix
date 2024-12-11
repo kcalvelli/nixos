@@ -35,6 +35,11 @@
       url = "github:numtide/devshell";
     };
 
+    nvchad4nix = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     flake-utils.url = "github:numtide/flake-utils";
 
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";

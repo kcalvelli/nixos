@@ -12,9 +12,13 @@
 
     code-cursor
 
-    lunarvim
+    nvchad
   ];  
-
+  nixpkgs.overlays = [
+      (final: prev: {
+        nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
+      })
+  ];
   programs.direnv.enable = true;
   services.lorri.enable = true;  
   programs.git.enable = true;   

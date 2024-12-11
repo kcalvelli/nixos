@@ -2,9 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  wrapGAppsHook,
-  makeWrapper,
-  adwaita-icon-theme,
+  buildPackages,
   alsa-lib,
   at-spi2-atk,
   at-spi2-core,
@@ -18,9 +16,11 @@
   freetype,
   gdk-pixbuf,
   glib,
+  adwaita-icon-theme,
   gsettings-desktop-schemas,
   gtk3,
   gtk4,
+  qt6,
   libX11,
   libXScrnSaver,
   libXcomposite,
@@ -50,24 +50,28 @@
   xorg,
   zlib,
 
+  # Darwin dependencies
+  unzip,
+  makeWrapper,
+
   # command line arguments which are always set e.g "--disable-gpu"
-  commandLineArgs ? "",
+  commandLineArgs ? "--password-store=gnome-libsecret",
 
   # Necessary for USB audio devices.
-  pulseSupport ? stdenv.isLinux,
+  pulseSupport ? stdenv.hostPlatform.isLinux,
   libpulseaudio,
 
   # For GPU acceleration support on Wayland (without the lib it doesn't seem to work)
   libGL,
 
   # For video acceleration via VA-API (--enable-features=VaapiVideoDecoder,VaapiVideoEncoder)
-  libvaSupport ? stdenv.isLinux,
+  libvaSupport ? stdenv.hostPlatform.isLinux,
   libva,
   enableVideoAcceleration ? libvaSupport,
 
   # For Vulkan support (--enable-features=Vulkan); disabled by default as it seems to break VA-API
   vulkanSupport ? false,
-  addOpenGLRunpath,
+  addDriverRunpath,
   enableVulkan ? vulkanSupport,
 }:
 
@@ -133,6 +137,7 @@ let
     zlib
     snappy
     libkrb5
+    qt6.qtbase
   ] ++ optional pulseSupport libpulseaudio ++ optional libvaSupport libva;
 
   rpath = makeLibraryPath deps + ":" + makeSearchPathOutput "lib" "lib64" deps;
@@ -153,19 +158,28 @@ in
 stdenv.mkDerivation {
   inherit pname version;
 
-  src = fetchurl { inherit url hash; };
+  src = fetchurl { 
+    inherit url hash; 
+  };
 
   dontConfigure = true;
   dontBuild = true;
   dontPatchELF = true;
-  doInstallCheck = true;
+  doInstallCheck = stdenv.hostPlatform.isLinux;
 
-  nativeBuildInputs = [
-    dpkg
-    (wrapGAppsHook.override { inherit makeWrapper; })
-  ];
+  nativeBuildInputs =
+    lib.optionals stdenv.hostPlatform.isLinux [
+      dpkg
+      # override doesn't preserve splicing https://github.com/NixOS/nixpkgs/issues/132651
+      # Has to use `makeShellWrapper` from `buildPackages` even though `makeShellWrapper` from the inputs is spliced because `propagatedBuildInputs` would pick the wrong one because of a different offset.
+      (buildPackages.wrapGAppsHook3.override { makeWrapper = buildPackages.makeShellWrapper; })
+    ]
+    ++ lib.optionals stdenv.hostPlatform.isDarwin [
+      unzip
+      makeWrapper
+    ];
 
-  buildInputs = [
+  buildInputs = lib.optionals stdenv.hostPlatform.isLinux [
     # needed for GSETTINGS_SCHEMAS_PATH
     glib
     gsettings-desktop-schemas
@@ -176,9 +190,13 @@ stdenv.mkDerivation {
     adwaita-icon-theme
   ];
 
-  unpackPhase = "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner";
+  unpackPhase = 
+    if stdenv.hostPlatform.isLinux then 
+      "dpkg-deb --fsys-tarfile $src | tar -x --no-same-permissions --no-same-owner"
+    else "unzip $src";
 
-  installPhase = ''
+  installPhase = 
+    lib.optionalString stdenv.hostPlatform.isLinux ''
     runHook preInstall
 
     mkdir -p $out $out/bin
@@ -257,7 +275,7 @@ stdenv.mkDerivation {
       }
       --add-flags "\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+--ozone-platform-hint=auto}}"
       ${optionalString vulkanSupport ''
-        --prefix XDG_DATA_DIRS  : "${addOpenGLRunpath.driverLink}/share"
+        --prefix XDG_DATA_DIRS  : "${addDriverRunpath.driverLink}/share"
       ''}
       --add-flags ${escapeShellArg commandLineArgs}
     )
@@ -289,10 +307,13 @@ stdenv.mkDerivation {
       jefflabonte
       nasirhm
       buckley310
+      matteopacini
     ];
     platforms = [
       "aarch64-linux"
       "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
     ];
     mainProgram = "brave-browser-nightly";
   };

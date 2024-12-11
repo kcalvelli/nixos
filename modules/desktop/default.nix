@@ -35,8 +35,9 @@
     baobab
     adw-gtk3
     qalculate-gtk
-    # Stop trying to launch kdewallet
     (brave.override { commandLineArgs = "--password-store=gnome-libsecret"; })
+
+    inputs.self.packages.${pkgs.system}.brave-browser-nightly
     openssl
     nextcloud-client
     thunderbird
