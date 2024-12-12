@@ -11,7 +11,8 @@
     github-desktop
 
     code-cursor
-
+    vscode 
+    
     nvchad
   ];  
   nixpkgs.overlays = [
