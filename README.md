@@ -7,7 +7,6 @@ This repository contains my personal NixOS configuration files. It's a highly cu
 This NixOS configuration sets up a system with:
 
 - COSMIC desktop environment
-- Development tools (including Rust, Zig, and various IDEs)
 - Gaming support (Steam, GameMode)
 - Hardware-specific optimizations for AMD CPUs and GPUs
 - Custom packages and overlays
