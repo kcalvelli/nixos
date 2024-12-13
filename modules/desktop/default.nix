@@ -43,8 +43,9 @@
     thunderbird
     pinta
     # Office apps
-    abiword
-    gnumeric
+    libreoffice-fresh
+    hunspell
+    
     shotwell
   ];
 
