@@ -17,7 +17,6 @@
     enableAllFirmware = true;
   };
 
-  powerManagement.cpuFreqGovernor = "schedutil";
   # Firmware
   services.fwupd.enable = true;
 }
