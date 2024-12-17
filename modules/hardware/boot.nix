@@ -1,12 +1,12 @@
 { pkgs, config, lib, inputs, ... }:
 let 
-  amdgpu-kernel-module = pkgs.callPackage ../patches/amdgpu.nix {
+  amdgpu-kernel-module = pkgs.callPackage ./patches/amdgpu.nix {
     kernel = config.boot.kernelPackages.kernel;
   };
 in
 {
   imports = [
-    inputs.lazaboote.nixosModules.lanzaboote
+    inputs.lanzaboote.nixosModules.lanzaboote
   ];
 
   # Boot config
@@ -14,11 +14,11 @@ in
     kernelPackages = pkgs.linuxPackages_6_12;
 
     # Patch AMDGPU for overlay planes bug
-    extraModulesPackages = [
+    extraModulePackages = [
       (amdgpu-kernel-module.overrideAttrs (_: {
         patches = [
-          ../patches/test-overlay-planes-pf-fix/0001-drm-amd-display-fix-page-fault-due-to-max-surface-de.patch
-          ../patches/test-overlay-planes-pf-fix/0002-drm-amd-display-increase-MAX_SURFACES-to-the-value-s.patch
+          ./patches/test-overlay-planes-pf-fix/0001-drm-amd-display-fix-page-fault-due-to-max-surface-de.patch
+          ./patches/test-overlay-planes-pf-fix/0002-drm-amd-display-increase-MAX_SURFACES-to-the-value-s.patch
         ];
       }))
     ];
@@ -36,16 +36,16 @@ in
     "net.ipv4.tcp_congestion_control" = "bbr"; # Example: BBR congestion control
     "net.ipv6.conf.all.disable_ipv6" = 0; # Ensure IPv6 is enabled if needed
     };
-    
+
     loader = {
       systemd-boot.enable = lib.mkForce false;
-      efi.canTouchVariables = true;
+      efi.canTouchEfiVariables = true;
     };
 
     lanzaboote = {
       enable = true;
       configurationLimit = 5;
-      pkiBundle = "/etc/secureboot";
+      pkiBundle = "/var/lib/sbctl";
     };
 
     bootspec.enable = true;

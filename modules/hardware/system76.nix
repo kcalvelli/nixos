@@ -38,7 +38,6 @@ in
           "rcu_nocbs=1-8"
         ];
         blacklistedKernelModules = [ "psmouse" ];
-        loader.systemd-boot.enable = true;
         initrd.availableKernelModules = [
           "nvme"
           "xhci_pci"

@@ -35,8 +35,6 @@ in
       };
 
       boot = {
-
-        loader.systemd-boot.enable = true;
         kernelParams = [
           "quiet"
           "loglevel=0"

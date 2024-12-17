@@ -45,6 +45,11 @@
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };    
   };
 
   outputs =
