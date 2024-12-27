@@ -10,7 +10,7 @@
 
   ### Services and stuff needed by all WMs/DEs
   services = {
-    #flatpak.enable = true;
+    flatpak.enable = true;
     udisks2.enable = true;
     system76-scheduler.enable = true;
   };
@@ -49,8 +49,6 @@
     
     shotwell
 
-    # Messaging
-    briar-desktop
   ];
 
   fonts.packages = with pkgs; [
