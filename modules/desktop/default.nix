@@ -42,11 +42,15 @@
     nextcloud-client
     thunderbird
     pinta
+
     # Office apps
     libreoffice-fresh
     hunspell
     
     shotwell
+
+    # Messaging
+    briar-desktop
   ];
 
   fonts.packages = with pkgs; [
