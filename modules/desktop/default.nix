@@ -42,6 +42,7 @@
     nextcloud-client
     thunderbird
     pinta
+    discord
 
     # Office apps
     libreoffice-fresh
