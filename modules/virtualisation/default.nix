@@ -42,7 +42,7 @@ in
         spice-protocol
         win-virtio
         win-spice
-        quickemu
+        #quickemu
 
       ];
 

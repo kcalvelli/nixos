@@ -48,7 +48,6 @@
     hunspell
     
     shotwell
-
   ];
 
   fonts.packages = with pkgs; [
