@@ -104,6 +104,7 @@
       settings = {
         StartupWMClass = "crx_ibblmnobmgdmpoeblocemifbpglakpoi";
       };
+    };  
 
     "brave-dnbnnnhjocpglknpbaaajdkbapeamick-Default" = {
       name = "Outlook (PWA)";
@@ -111,7 +112,7 @@
       icon = "brave-dnbnnnhjocpglknpbaaajdkbapeamick-Default";
       terminal = false;
       type = "Application";
-      mimeType = "x-scheme-handler/mailto";
+      mimeType = [ "x-scheme-handler/mailto" ];
       settings = {
         StartupWMClass = "crx_dnbnnnhjocpglknpbaaajdkbapeamick";
         Actions = "New-event;New-message;Open-calendar";
@@ -142,21 +143,6 @@
         StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
       };
     };
-
-    # "Visual Studio Code" = {
-    # "Visual Studio Code" = {
-    #   name = "Visual Studio Code";
-    #   exec = "/run/current-system/sw/bin/code";
-    #   icon = "vscode";
-    #   terminal = false;
-    #   type = "Application";
-    #   actions = {
-    #     "New-Window" = {
-    #       name = "New Window";
-    #       exec = "/run/current-system/sw/bin/code --new-window";
-    #     };
-    #   };
-    # };
   };
 
   systemd.user.services.clear-pwa-desktop-entries = {
@@ -172,10 +158,4 @@
       WantedBy = [ "graphical-session.target" ];
     };
   };
-
-  # home.file.".local/share/icons/vscode.png" = {
-  #   enable = true;
-  #   force = true;
-  #   source = ./resources/vscode.png;
-  # };
 }
