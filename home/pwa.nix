@@ -104,6 +104,43 @@
       settings = {
         StartupWMClass = "crx_ibblmnobmgdmpoeblocemifbpglakpoi";
       };
+
+    "brave-dnbnnnhjocpglknpbaaajdkbapeamick-Default" = {
+      name = "Outlook (PWA)";
+      exec = "/nix/store/z21j53xsx1i0mrq9mx9kpmiy2y8phs9f-brave-1.73.104/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=dnbnnnhjocpglknpbaaajdkbapeamick %U";
+      icon = "brave-dnbnnnhjocpglknpbaaajdkbapeamick-Default";
+      terminal = false;
+      type = "Application";
+      mimeType = "x-scheme-handler/mailto";
+      settings = {
+        StartupWMClass = "crx_dnbnnnhjocpglknpbaaajdkbapeamick";
+        Actions = "New-event;New-message;Open-calendar";
+      };
+      actions = {
+        "New-event" = {
+          name = "New event";
+          exec = "/nix/store/z21j53xsx1i0mrq9mx9kpmiy2y8phs9f-brave-1.73.104/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=dnbnnnhjocpglknpbaaajdkbapeamick --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com.mcas.ms/calendar/deeplink/compose";
+        };
+        "New-message" = {
+          name = "New message";
+          exec = "/nix/store/z21j53xsx1i0mrq9mx9kpmiy2y8phs9f-brave-1.73.104/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=dnbnnnhjocpglknpbaaajdkbapeamick --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com.mcas.ms/mail/deeplink/compose";
+        };
+        "Open-calendar" = {
+          name = "Open calendar";
+          exec = "/nix/store/z21j53xsx1i0mrq9mx9kpmiy2y8phs9f-brave-1.73.104/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=dnbnnnhjocpglknpbaaajdkbapeamick --app-launch-url-for-shortcuts-menu-item=https://outlook.office365.com.mcas.ms/calendar";
+        };
+      };
+    };
+
+    "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default" = {
+      name = "Microsoft Teams";
+      exec = "/nix/store/z21j53xsx1i0mrq9mx9kpmiy2y8phs9f-brave-1.73.104/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
+      icon = "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
+      };
     };
 
     # "Visual Studio Code" = {
