@@ -13,6 +13,8 @@
           brave-browser-nightly
           valent
           networkmanagerapplet
+          quickemu
+          quickgui
           ;
       };
 
@@ -30,5 +32,7 @@
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     valent = prev.callPackage ./valent { };
     networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
+    quickemu = prev.callPackage ./quickemu { };
+    quickgui = prev.callPackage ./quickgui { };
   };
 }

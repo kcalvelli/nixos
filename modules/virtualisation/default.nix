@@ -35,29 +35,29 @@ in
 
     (lib.mkIf cfg.libvirt.enable {
       environment.systemPackages = with pkgs; [
-        virt-manager
-        virt-viewer
-        spice
+        #virt-manager
+        #virt-viewer
+        #spice
         spice-gtk
-        spice-protocol
-        win-virtio
-        win-spice
-        #quickemu
-
+        #spice-protocol
+        #win-virtio
+        #win-spice
+        inputs.self.packages.${pkgs.system}.quickemu
+        inputs.self.packages.${pkgs.system}.quickgui
       ];
 
       # Manage the virtualisation services
-      virtualisation = {
-        libvirtd = {
-          enable = true;
-          qemu = {
-            swtpm.enable = true;
-            ovmf.enable = true;
-            ovmf.packages = [ pkgs.OVMFFull.fd ];
-          };
-        };
-        spiceUSBRedirection.enable = true;
-      };
+      #virtualisation = {
+      #  libvirtd = {
+      #    enable = true;
+      #    qemu = {
+      #      swtpm.enable = true;
+      #      ovmf.enable = true;
+      #      ovmf.packages = [ pkgs.OVMFFull.fd ];
+      #    };
+      #  };
+      #  spiceUSBRedirection.enable = true;
+      #};
       services.spice-vdagentd.enable = true;
     })
   ];
