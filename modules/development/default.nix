@@ -1,5 +1,8 @@
 { lib, pkgs, inputs, ... }:
 {
+  imports =  [
+    inputs.vscode-server.nixosModules.default
+  ];
   environment.systemPackages = with pkgs; [
     devenv
     nil
@@ -23,6 +26,7 @@
   programs.direnv.enable = true;
   services.lorri.enable = true;  
   programs.git.enable = true;   
+  services.vscode-server.enable = true;
 
   # Launch Fish when interactive shell is detected
   programs.bash = {

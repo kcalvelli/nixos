@@ -272,6 +272,20 @@
         "type": "github"
       }
     },
+    "flake-schemas": {
+      "locked": {
+        "lastModified": 1721999734,
+        "narHash": "sha256-G5CxYeJVm4lcEtaO87LKzOsVnWeTcHGKbKxNamNWgOw=",
+        "rev": "0a5c42297d870156d9c57d8f99e476b738dcd982",
+        "revCount": 75,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/DeterminateSystems/flake-schemas/0.1.5/0190ef2f-61e0-794b-ba14-e82f225e55e6/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/DeterminateSystems/flake-schemas/%2A.tar.gz"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": [
@@ -302,6 +316,24 @@
         "owner": "numtide",
         "repo": "flake-utils",
         "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_3": {
+      "inputs": {
+        "systems": "systems_3"
+      },
+      "locked": {
+        "lastModified": 1681202837,
+        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
         "type": "github"
       },
       "original": {
@@ -719,6 +751,34 @@
         "type": "github"
       }
     },
+    "nixpkgs_7": {
+      "locked": {
+        "lastModified": 1735264675,
+        "narHash": "sha256-MgdXpeX2GuJbtlBrH9EdsUeWl/yXEubyvxM1G+yO4Ak=",
+        "rev": "d49da4c08359e3c39c4e27c74ac7ac9b70085966",
+        "revCount": 712007,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2411.712007%2Brev-d49da4c08359e3c39c4e27c74ac7ac9b70085966/01940ca0-b117-7d0e-b1ef-d579ee6d2f13/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/%2A.tar.gz"
+      }
+    },
+    "nixpkgs_8": {
+      "locked": {
+        "lastModified": 1682134069,
+        "narHash": "sha256-TnI/ZXSmRxQDt2sjRYK/8j8iha4B4zP2cnQCZZ3vp7k=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fd901ef4bf93499374c5af385b2943f5801c0833",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
     "nvchad-starter": {
       "flake": false,
       "locked": {
@@ -784,6 +844,24 @@
         "type": "github"
       }
     },
+    "quickemu": {
+      "inputs": {
+        "flake-schemas": "flake-schemas",
+        "nixpkgs": "nixpkgs_7"
+      },
+      "locked": {
+        "lastModified": 1735561406,
+        "narHash": "sha256-vDYqaMz7cEzFmmwZTptwpznHezWzjnR80yWcSgQ+Znc=",
+        "rev": "2a9d45530799837fd40495b0e720cf1ea01e4de7",
+        "revCount": 2099,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/quickemu-project/quickemu/4.9.7/0194178b-26e5-7aa4-9330-b18d2f595e4c/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz"
+      }
+    },
     "root": {
       "inputs": {
         "determinate": "determinate",
@@ -801,7 +879,9 @@
           "nixpkgs"
         ],
         "nvchad4nix": "nvchad4nix",
-        "systems": "systems_2"
+        "quickemu": "quickemu",
+        "systems": "systems_2",
+        "vscode-server": "vscode-server"
       }
     },
     "rust-analyzer-src": {
@@ -897,6 +977,21 @@
         "type": "github"
       }
     },
+    "systems_3": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "umu": {
       "inputs": {
         "nixpkgs": [
@@ -920,6 +1015,25 @@
         "submodules": true,
         "type": "git",
         "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
+      }
+    },
+    "vscode-server": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": "nixpkgs_8"
+      },
+      "locked": {
+        "lastModified": 1729422940,
+        "narHash": "sha256-DlvJv33ml5UTKgu4b0HauOfFIoDx6QXtbqUF3vWeRCY=",
+        "owner": "nix-community",
+        "repo": "nixos-vscode-server",
+        "rev": "8b6db451de46ecf9b4ab3d01ef76e59957ff549f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixos-vscode-server",
+        "type": "github"
       }
     }
   },

@@ -2,12 +2,10 @@
   description = "AxiOS";
 
   inputs = {
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    #nixpkgs-stable.url = "github:NixOS/nixpkgs/release-24.05";
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
-
-    # Make nixpkgs follow nixos-cosmic to avoid compiling cosmics
+    # Make nixpkgs follow nixos-cosmic to avoid compiling cosmic
     nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";    
     #nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
 
     # FlakeHub/Determinate
@@ -49,7 +47,11 @@
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.1";
       inputs.nixpkgs.follows = "nixpkgs";
-    };       
+    };     
+
+    quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
+
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 
   outputs =

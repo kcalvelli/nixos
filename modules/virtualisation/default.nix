@@ -38,16 +38,18 @@ in
         #virt-manager
         #virt-viewer
         #spice
-        spice-gtk
+        #spice-gtk
         #spice-protocol
         #win-virtio
         #win-spice
-        inputs.self.packages.${pkgs.system}.quickemu
-        inputs.self.packages.${pkgs.system}.quickgui
+        #inputs.self.packages.${pkgs.system}.quickemu
+        #packages.x86_64-linux.quickemu
+        #packages.x86_64-linux.quickgui
+        inputs.quickemu.packages.x86_64-linux.default
       ];
 
       # Manage the virtualisation services
-      #virtualisation = {
+      virtualisation = {
       #  libvirtd = {
       #    enable = true;
       #    qemu = {
@@ -56,8 +58,8 @@ in
       #      ovmf.packages = [ pkgs.OVMFFull.fd ];
       #    };
       #  };
-      #  spiceUSBRedirection.enable = true;
-      #};
+        spiceUSBRedirection.enable = true;
+      };
       services.spice-vdagentd.enable = true;
     })
   ];
