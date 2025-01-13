@@ -53,8 +53,9 @@ in
       systemd.enable = true;
       verbose = false;
     };
-    # Plymouth is purty
+    # Quiet, pretty startup
     plymouth.enable = true;
+    consoleLogLevel = 0;
   };
 
   # Swap config
