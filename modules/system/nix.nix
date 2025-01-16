@@ -23,7 +23,6 @@
       max-jobs = 16;
       auto-optimise-store = true;
       substituters = [
-        "https://devenv.cachix.org"
         "https://cosmic.cachix.org/"
       ];
       trusted-public-keys = [
