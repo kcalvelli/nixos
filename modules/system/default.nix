@@ -9,6 +9,9 @@
     #inputs.determinate.nixosModules.default
     ./local.nix
     ./nix.nix
+    ./boot.nix
+    ./printing.nix
+    ./sound.nix
   ];
 
   # Privacy

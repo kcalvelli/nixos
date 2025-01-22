@@ -12,7 +12,7 @@ in
   # Boot config
   boot = {
     kernelPackages = pkgs.linuxPackages_6_12;
-
+    #kernelPackages = pkgs.linuxPackages_6_13;
     # Patch AMDGPU for overlay planes bug
     extraModulePackages = [
       (amdgpu-kernel-module.overrideAttrs (_: {
