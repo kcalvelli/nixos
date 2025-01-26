@@ -18,7 +18,7 @@
     services.displayManager.cosmic-greeter.enable = true;
 
     environment.systemPackages = with pkgs; [
-      chronos
+      andromeda
       cosmic-ext-applet-clipboard-manager
       cosmic-ext-applet-emoji-selector
       cosmic-ext-calculator

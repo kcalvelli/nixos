@@ -10,7 +10,7 @@
       system
       desktop
       development
-      #services
+      services
       gaming
       graphics
       msi
