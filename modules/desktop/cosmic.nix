@@ -22,10 +22,10 @@
       cosmic-ext-applet-clipboard-manager
       cosmic-ext-applet-emoji-selector
       cosmic-ext-calculator
-      cosmic-ext-examine
-      cosmic-ext-forecast
+      examine
+      forecast
       cosmic-ext-observatory
-      cosmic-ext-tasks
+      tasks
       cosmic-ext-tweaks
       cosmic-player
       cosmic-reader
