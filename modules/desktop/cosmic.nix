@@ -24,7 +24,7 @@
       cosmic-ext-calculator
       examine
       forecast
-      cosmic-ext-observatory
+      observatory
       tasks
       cosmic-ext-tweaks
       cosmic-player
