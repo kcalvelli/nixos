@@ -108,7 +108,7 @@
 
     "brave-dnbnnnhjocpglknpbaaajdkbapeamick-Default" = {
       name = "Outlook (PWA)";
-      exec = "/nix/store/z21j53xsx1i0mrq9mx9kpmiy2y8phs9f-brave-1.73.104/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=dnbnnnhjocpglknpbaaajdkbapeamick %U";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=dnbnnnhjocpglknpbaaajdkbapeamick %U";
       icon = "brave-dnbnnnhjocpglknpbaaajdkbapeamick-Default";
       terminal = false;
       type = "Application";
@@ -135,7 +135,7 @@
 
     "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default" = {
       name = "Microsoft Teams";
-      exec = "/nix/store/z21j53xsx1i0mrq9mx9kpmiy2y8phs9f-brave-1.73.104/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
       icon = "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default";
       terminal = false;
       type = "Application";
@@ -143,8 +143,18 @@
         StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
       };
     };
-  };
 
+    "brave-cicjgplghpdkjlhjlppobdmdkjlpfpml-Default" = {
+      name = "Sonos";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=cicjgplghpdkjlhjlppobdmdkjlpfpml";
+      icon = "brave-cicjgplghpdkjlhjlppobdmdkjlpfpml-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_cicjgplghpdkjlhjlppobdmdkjlpfpml";
+      };
+    };
+  };
   systemd.user.services.clear-pwa-desktop-entries = {
     Unit = {
       Description = "Clear PWA Desktop Entries";
