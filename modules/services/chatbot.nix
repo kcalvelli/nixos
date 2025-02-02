@@ -21,7 +21,7 @@ in
       services.ollama = {
         enable = true;
         acceleration = "rocm";
-        #rocmOverrideGfx = "10.3.1";
+        rocmOverrideGfx = "10.3.1";
         port = 11434;
         host = "0.0.0.0";
         openFirewall = true;
