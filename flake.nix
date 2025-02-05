@@ -3,9 +3,9 @@
 
   inputs = {
     # Make nixpkgs follow nixos-cosmic to avoid compiling cosmic
-    #nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    nixpkgs.follows = "nixos-cosmic/nixpkgs";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";    
     #nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
