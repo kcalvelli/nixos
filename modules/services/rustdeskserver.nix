@@ -24,6 +24,7 @@ in
           relay.enable = true;
           signal.enable = true;
           openFirewall = true;
+          signal.relayHosts = [ tailnet ];
         };
       };
     })
