@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   imports = [
-    ./chatbot.nix
+    ./openwebui.nix
     ./caddy.nix
+    ./rustdeskserver.nix
   ];
 }

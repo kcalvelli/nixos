@@ -11,13 +11,13 @@ let
 in
 {
   options = {
-    services.chatbot = {
-      enable = lib.mkEnableOption "chatbot";
+    services.openwebui = {
+      enable = lib.mkEnableOption "openwebui";
     };
   };
 
   config = lib.mkMerge [
-    (lib.mkIf cfg.chatbot.enable {
+    (lib.mkIf cfg.openwebui.enable {
       services.ollama = {
         enable = true;
         acceleration = "rocm";
