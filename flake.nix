@@ -11,7 +11,7 @@
     #nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
 
     # FlakeHub/Determinate
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
+    #determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
