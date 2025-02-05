@@ -49,6 +49,8 @@
     hunspell
     
     shotwell
+
+    rustdesk-flutter
   ];
 
   fonts.packages = with pkgs; [
