@@ -5,8 +5,9 @@
   ...
 }:
 {
+  # Import necessary modules
   imports = [
-    #inputs.determinate.nixosModules.default
+    # inputs.determinate.nixosModules.default
     ./local.nix
     ./nix.nix
     ./boot.nix
@@ -14,38 +15,38 @@
     ./sound.nix
   ];
 
-  # Privacy
+  # Privacy configuration
   programs = {
     gnupg.agent = {
       enable = true;
     };
   };
 
+  # Enable dbus with gcr package
   services.dbus.packages = [ pkgs.gcr ];
 
+  # System packages
   environment.systemPackages = with pkgs; [
-    ### Common apps
-    ### Filesystem
+    # Common apps
     sshfs
     fuse
     ntfs3g
 
-    ### Utilities
+    # Utilities
     killall
-    #mission-center
     gnome-firmware
 
-    # Get stuff
+    # Network tools
     wget
     curl
 
-    # Info stuff
+    # System info tools
     pciutils
     wirelesstools
     gtop
     htop
 
-    # Secret
+    # Secret management
     libsecret
     lssecret
 

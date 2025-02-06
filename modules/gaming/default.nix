@@ -1,12 +1,14 @@
 { pkgs, inputs, ... }:
 {
-
+  # Import necessary modules
   imports = [ inputs.nix-gaming.nixosModules.platformOptimizations ];
 
+  # Enable Steam hardware support
   hardware = {
     steam-hardware.enable = true;
   };
 
+  # Steam configuration
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -30,7 +32,7 @@
     };
   };
 
-  #Enable Gamescope
+  # Enable Gamescope
   programs.gamescope = {
     enable = true;
     capSysNice = true;
@@ -43,6 +45,8 @@
     package = pkgs.openrgb-with-all-plugins;
   };
 
-  # That game I like
-  environment.systemPackages = with pkgs; [ superTuxKart ];
+  # Additional games can be added here
+  environment.systemPackages = with pkgs; [
+    superTuxKart
+  ];
 }

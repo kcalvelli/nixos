@@ -1,8 +1,11 @@
 { lib, pkgs, inputs, ... }:
 {
-  imports =  [
+  # Import necessary modules
+  imports = [
     inputs.vscode-server.nixosModules.default
   ];
+
+  # Define system packages for development
   environment.systemPackages = with pkgs; [
     devenv
     nil
@@ -12,14 +15,14 @@
     fish
     gcc
     github-desktop
-
     code-cursor
-    vscode 
+    vscode
   ];
-  
+
+  # Enable necessary programs and services
   programs.direnv.enable = true;
-  services.lorri.enable = true;  
-  programs.git.enable = true;   
+  services.lorri.enable = true;
+  programs.git.enable = true;
   services.vscode-server.enable = true;
 
   # Launch Fish when interactive shell is detected

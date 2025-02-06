@@ -1,26 +1,21 @@
+{ lib, pkgs, inputs, ... }:
 {
-  lib,
-  pkgs,
-  inputs,
-  ...
-}:
-{
+  # Nix configuration
   nix = {
-    #package = pkgs.nixVersions.git;
+    # Enable daily automatic garbage collection, delete generations older than 5 days
     gc = {
       automatic = true;
       dates = "daily";
       options = "--delete-older-than 5d";
     };
 
+    # Nix settings
     settings = {
       download-buffer-size = 256 * 1024 * 1024;
       experimental-features = [
         "nix-command"
         "flakes"
       ];
-      # Need swap, until then  
-      max-jobs = 16;
       auto-optimise-store = true;
       substituters = [
         "https://cosmic.cachix.org/"
@@ -33,7 +28,7 @@
     };
   };
 
-  # Allow unfree
+  # Allow unfree packages
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -41,5 +36,6 @@
     hostPlatform = lib.mkDefault "x86_64-linux";
   };
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  # Set system state version
+  system.stateVersion = "24.05";  # Ensure compatibility with NixOS 24.05
 }

@@ -5,6 +5,7 @@
   ...
 }:
 {
+  # Enable and configure GPG
   programs.gpg = {
     enable = true;
     settings = {
@@ -14,4 +15,6 @@
       keyserver-options = "honor-keyserver-url";
     };
   };
+
+  # Additional security configurations can be added here
 }

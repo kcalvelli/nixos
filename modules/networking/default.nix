@@ -6,9 +6,9 @@
 }:
 {
   imports = [
-    ./avahi.nix
-    ./samba.nix
-    ./tailscale.nix
+    ./avahi.nix    # Avahi service configuration
+    ./samba.nix    # Samba service configuration
+    ./tailscale.nix # Tailscale service configuration
   ];
 
   # Reduce wpa_supplicant CTRL-EVENT-SIGNAL-CHANGE spam
@@ -54,7 +54,6 @@
   # For KDEConnect protocol
   programs.kdeconnect = {
     enable = true;
-    #package = inputs.self.packages.${pkgs.system}.valent;
     package = pkgs.valent;
   };
 

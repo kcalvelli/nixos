@@ -9,7 +9,7 @@ let
   cfg = config.virt;
 in
 {
-
+  # Create options to enable containers and virtualisation
   options = {
     virt.containers = {
       enable = lib.mkEnableOption "Enable containers";
@@ -19,6 +19,7 @@ in
     };
   };
 
+  # Enable and configure containers with podman
   config = lib.mkMerge [
     (lib.mkIf cfg.containers.enable {
       virtualisation = {
@@ -30,34 +31,18 @@ in
           };
         };
       };
+      # Uncomment if you want to use waydroid
       #virtualisation.waydroid.enable = true;
     })
 
     (lib.mkIf cfg.libvirt.enable {
+      # Keep virtualization simple with quickemu
       environment.systemPackages = with pkgs; [
-        #virt-manager
-        #virt-viewer
-        #spice
-        #spice-gtk
-        #spice-protocol
-        #win-virtio
-        #win-spice
-        #inputs.self.packages.${pkgs.system}.quickemu
-        #packages.x86_64-linux.quickemu
-        #packages.x86_64-linux.quickgui
         inputs.quickemu.packages.x86_64-linux.default
       ];
 
-      # Manage the virtualisation services
+      # Allow redirection of USB devices
       virtualisation = {
-      #  libvirtd = {
-      #    enable = true;
-      #    qemu = {
-      #      swtpm.enable = true;
-      #      ovmf.enable = true;
-      #      ovmf.packages = [ pkgs.OVMFFull.fd ];
-      #    };
-      #  };
         spiceUSBRedirection.enable = true;
       };
       services.spice-vdagentd.enable = true;

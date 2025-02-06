@@ -1,14 +1,9 @@
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  ...
-}:
+{ config, lib, pkgs, inputs, ... }:
 let
   cfg = config.hardware;
 in
 {
+  # Import necessary modules
   imports = [
     ./common.nix
     inputs.nixos-hardware.nixosModules.common-cpu-amd
@@ -16,16 +11,17 @@ in
     inputs.nixos-hardware.nixosModules.common-pc-laptop
   ];
 
+  # Define options for System76 hardware
   options = {
     hardware.system76 = {
       enable = lib.mkEnableOption "System76 hardware";
     };
   };
 
+  # Configuration for System76 hardware
   config = lib.mkMerge [
-    ### System76 laptop (Pangolin 12)
+    # System76 laptop (Pangolin 12)
     (lib.mkIf cfg.system76.enable {
-
       boot = {
         kernelParams = [
           "ro"

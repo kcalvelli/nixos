@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }:
 
 {
+  # Import necessary modules
   imports =
     [
       ./disks.nix
@@ -19,19 +20,22 @@
       virt
     ]);
 
+  # Enable MSI hardware support
   hardware.msi.enable = true;
 
-  #Virtualisation
+  # Enable virtualization
   virt.libvirt.enable = true;
   virt.containers.enable = true;
 
-  # Services
+  # Enable services
   services.caddy-proxy.enable = true;
   services.openwebui.enable = true;
 
+  # Use workstation configuration for Home Manager
   home-manager.sharedModules = with inputs.self.homeModules; [ workstation ];
 
+  # Define Hostname
   networking = {
-    hostName = "edge"; # Define your hostname.
+    hostName = "edge"; 
   };
 }

@@ -1,8 +1,4 @@
-{
-  self,
-  inputs,
-  ...
-}:
+{ self, inputs, ... }:
 {
   perSystem =
     { system, pkgs, ... }:
@@ -11,7 +7,6 @@
       packages = {
         inherit (pkgs)
           brave-browser-nightly
-          valent
           networkmanagerapplet
           ;
       };
@@ -28,7 +23,6 @@
   flake.overlays.default = final: prev: {
     # Custom packages
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
-    valent = prev.callPackage ./valent { };
     networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
   };
 }

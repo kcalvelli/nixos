@@ -1,15 +1,15 @@
 { inputs, ... }:
+
 let
-  nixosSystem =
-    args:
-    inputs.nixpkgs.lib.nixosSystem (
-      {
-        specialArgs = {
-          inherit inputs;
-        };
-      }
-      // args
-    );
+  # Define a function to create a NixOS system configuration
+  nixosSystem = args: inputs.nixpkgs.lib.nixosSystem (
+    {
+      specialArgs = {
+        inherit inputs;
+      };
+    }
+    // args
+  );
 in
 {
   flake.nixosConfigurations = {

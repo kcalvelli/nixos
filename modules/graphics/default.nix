@@ -1,7 +1,9 @@
 { pkgs, inputs, ... }:
 {
+  # Import necessary modules
   imports = [ inputs.nixos-hardware.nixosModules.common-gpu-amd ];
 
+  # Hardware configuration
   hardware = {
     graphics = {
       enable32Bit = true;
@@ -9,6 +11,7 @@
     };
   };
 
+  # System packages for graphics
   environment.systemPackages = with pkgs; [
     radeontop
     amdgpu_top

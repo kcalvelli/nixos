@@ -1,12 +1,12 @@
 { pkgs, ... }:
 {
-  services = {
-    printing = {
-      enable = true;
-      drivers = [
-        pkgs.hplip
-        pkgs.hplipWithPlugin
-      ];
-    };
+  # Enable and configure printing services
+  services.printing = {
+    enable = true;
+    openFirewall = true;
+    drivers = [
+      pkgs.hplip
+      pkgs.hplipWithPlugin
+    ];
   };
 }

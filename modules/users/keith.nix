@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 
 {
-  # Define users
+  # Define the user for the system
   users.users = {
     keith = {
       isNormalUser = true;
@@ -21,6 +21,7 @@
     };
   };
 
+  # Home Manager configuration for the user
   home-manager.users = {
     keith =
       { pkgs, ... }:
@@ -37,6 +38,7 @@
       };
   };
 
+  # User specific samba configuration
   services.samba = {
     enable = true;
     settings = {
@@ -53,6 +55,7 @@
     };
   };
 
+  # Learn to trust yourself
   nix.settings = {
     trusted-users = [ "keith" ];
   };

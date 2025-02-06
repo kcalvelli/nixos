@@ -1,12 +1,10 @@
 { lib, ... }:
 {
-  # Make pipewire realtime capable
+  # Enable real-time capabilities for PipeWire
   security.rtkit.enable = true;
-  # Can't have pulse and pipewire 
-  #hardware.pulseaudio.enable = lib.mkForce false;
 
+  # Configure sound services
   services = {
-    ### Pipewire
     pipewire = {
       enable = true;
       alsa.enable = true;

@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }:
 
 {
+  # Import necessary modules  
   imports =
     [
       ./disks.nix
@@ -18,14 +19,17 @@
       virt
     ]);
 
+  # Enable system76 hardware support
   hardware.system76.enable = true;
 
-  #Virtualisation
+  # Enable virtualization
   virt.libvirt.enable = true;
   virt.containers.enable = true;  
 
+  # Use laptop configuration for Home Manager
   home-manager.sharedModules = with inputs.self.homeModules; [ laptop ];
 
+  # Define Hostname
   networking = {
     hostName = "pangolin"; # Define your hostname.
   };
