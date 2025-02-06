@@ -28,7 +28,6 @@
   # Services
   services.caddy-proxy.enable = true;
   services.openwebui.enable = true;
-  services.rustdeskserver.enable = true;
 
   home-manager.sharedModules = with inputs.self.homeModules; [ workstation ];
 

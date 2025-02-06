@@ -20,7 +20,7 @@
     useDHCP = false;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 5355 ];
+      allowedTCPPorts = [ 5355 21118];
       allowedTCPPortRanges = [
         {
           from = 1714;
