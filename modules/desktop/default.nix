@@ -36,11 +36,11 @@
     inputs.self.packages.${pkgs.system}.brave-browser-nightly
     openssl
     nextcloud-client
-    thunderbird
     pinta
     discord
     shotwell
-    rustdesk-flutter    
+    rustdesk-flutter   
+    celeste 
 
     # Office apps
     libreoffice-fresh
