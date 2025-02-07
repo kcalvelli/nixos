@@ -62,6 +62,48 @@
         - [Super_L, w]
         - click
       ...
+      ---
+      - MouseGesture: Mouse Left
+      - KeyPress:
+        - [Super_L, a]
+        - click
+      ...
+      ---
+      - MouseGesture: Mouse Up
+      - KeyPress:
+        - [Super_L, Up]
+        - click
+      ...
+      ---
+      - MouseGesture: Mouse Down
+      - KeyPress:
+        - [Super_L, Down]
+        - click
+      ...
+      ---
+      - MouseGesture: Back Button
+      - KeyPress:
+        - XF86_Back
+        - click
+      ...
+      ---
+      - Key: [Forward Button, pressed]
+      - KeyPress:
+        - XF86_Forward
+        - click
+      ...
+      ---
+      - Test: thumb_wheel_up
+      - KeyPress:
+        - XF86_AudioRaiseVolume
+        - click
+      ...
+      ---
+      - Test: thumb_wheel_down
+      - KeyPress:
+        - XF86_AudioLowerVolume
+        - click
+      ...
     '';
   };
 
