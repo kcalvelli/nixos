@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 {
-  # # PWA Desktop entries
-  # # If you are not me, do not use this 
+  # PWA Desktop entries
+  # If you are not me, do not use this 
   xdg.desktopEntries = {
-
     "brave-aghbiahbpaijignceidepookljebhfak-Default" = {
       name = "Google Drive";
       exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=aghbiahbpaijignceidepookljebhfak";
@@ -94,7 +93,6 @@
         StartupWMClass = "crx_ncmjhecbjeaamljdfahankockkkdmedg";
       };
     };
-
     "brave-ibblmnobmgdmpoeblocemifbpglakpoi-Default" = {
       name = "Telegram Web";
       exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ibblmnobmgdmpoeblocemifbpglakpoi";
@@ -105,7 +103,6 @@
         StartupWMClass = "crx_ibblmnobmgdmpoeblocemifbpglakpoi";
       };
     };  
-
     "brave-dnbnnnhjocpglknpbaaajdkbapeamick-Default" = {
       name = "Outlook (PWA)";
       exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=dnbnnnhjocpglknpbaaajdkbapeamick %U";
@@ -132,7 +129,6 @@
         };
       };
     };
-
     "brave-oiocllghmdadfpahmllbbhkgjfmaidmm-Default" = {
       name = "Microsoft Teams";
       exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=oiocllghmdadfpahmllbbhkgjfmaidmm";
@@ -143,7 +139,6 @@
         StartupWMClass = "crx_oiocllghmdadfpahmllbbhkgjfmaidmm";
       };
     };
-
     "brave-cicjgplghpdkjlhjlppobdmdkjlpfpml-Default" = {
       name = "Sonos";
       exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=cicjgplghpdkjlhjlppobdmdkjlpfpml";
@@ -152,6 +147,56 @@
       type = "Application";
       settings = {
         StartupWMClass = "crx_cicjgplghpdkjlhjlppobdmdkjlpfpml";
+      };
+    };
+    "brave-hkhckfoofhljcngmlnlojcbplgkcpcab-Default" = {
+      name = "Proton Pass Web App";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=hkhckfoofhljcngmlnlojcbplgkcpcab";
+      icon = "brave-hkhckfoofhljcngmlnlojcbplgkcpcab-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_hkhckfoofhljcngmlnlojcbplgkcpcab";
+      };
+    };
+    "brave-jnpecgipniidlgicjocehkhajgdnjekh-Default" = {
+      name = "Proton Mail";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=jnpecgipniidlgicjocehkhajgdnjekh";
+      icon = "brave-jnpecgipniidlgicjocehkhajgdnjekh-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_jnpecgipniidlgicjocehkhajgdnjekh";
+      };
+    };
+    "brave-fnnddiokljlbkmeppnclajginnfbffgb-Default" = {
+      name = "Proton Drive";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=fnnddiokljlbkmeppnclajginnfbffgb";
+      icon = "brave-fnnddiokljlbkmeppnclajginnfbffgb-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_fnnddiokljlbkmeppnclajginnfbffgb";
+      };
+    };
+    "brave-ojibjkjikcpjonjjngfkegflhmffeemk-Default" = {
+      name = "Proton Calendar";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=ojibjkjikcpjonjjngfkegflhmffeemk";
+      icon = "brave-ojibjkjikcpjonjjngfkegflhmffeemk-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_ojibjkjikcpjonjjngfkegflhmffeemk";
+      };
+    };
+    "brave-kdnccncfodjdpogfgcekohdeabddjfke-Default" = {
+      name = "Proton Wallet";
+      exec = "/run/current-system/sw/bin/brave --profile-directory=Default --app-id=kdnccncfodjdpogfgcekohdeabddjfke";
+      icon = "brave-kdnccncfodjdpogfgcekohdeabddjfke-Default";
+      terminal = false;
+      type = "Application";
+      settings = {
+        StartupWMClass = "crx_kdnccncfodjdpogfgcekohdeabddjfke";
       };
     };
   };

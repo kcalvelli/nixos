@@ -45,6 +45,10 @@
     # Office apps
     libreoffice-fresh
     hunspell
+
+    # Proton apps
+    protonvpn-gui
+    protonvpn-cli
   ];
 
   # Fonts
