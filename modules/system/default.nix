@@ -34,7 +34,6 @@
 
     # Utilities
     killall
-    gnome-firmware
 
     # Network tools
     wget
@@ -46,9 +45,10 @@
     gtop
     htop
 
-    # Secret management
+    # Secret management/encryption
     libsecret
     lssecret
+    openssl
 
     # FlakeHub
     inputs.fh.packages.${system}.default 

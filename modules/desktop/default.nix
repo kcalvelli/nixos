@@ -29,18 +29,29 @@
 
   # Desktop apps common to all WMs/DEs
   environment.systemPackages = with pkgs; [
+    # System apps
     baobab
     adw-gtk3
+    gnome-firmware
+
+    # Utilities
     qalculate-gtk
+
+    # Graphics apps
+    pinta
+    shotwell
+    
+    # Remote desktop apps
+    rustdesk-flutter  
+
+    # Browser
     (brave.override { commandLineArgs = "--password-store=gnome-libsecret"; })
     inputs.self.packages.${pkgs.system}.brave-browser-nightly
-    openssl
-    nextcloud-client
-    pinta
-    discord
-    shotwell
-    rustdesk-flutter   
+
+    # Sync clients 
     celeste 
+    rclone
+    nextcloud-client
 
     # Office apps
     libreoffice-fresh
@@ -49,6 +60,9 @@
     # Proton apps
     protonvpn-gui
     protonvpn-cli
+
+    # Social apps
+    discord
   ];
 
   # Fonts
