@@ -5,8 +5,8 @@
     enable = true;
     openFirewall = true;
     drivers = [
-      pkgs.hplip
-      pkgs.hplipWithPlugin
+      #pkgs.hplip
+      #pkgs.hplipWithPlugin
     ];
   };
 }

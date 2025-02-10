@@ -49,7 +49,6 @@
     inputs.self.packages.${pkgs.system}.brave-browser-nightly
 
     # Sync clients 
-    celeste 
     rclone
     nextcloud-client
 
