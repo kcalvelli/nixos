@@ -38,7 +38,9 @@ in
     (lib.mkIf cfg.libvirt.enable {
       # Keep virtualization simple with quickemu
       environment.systemPackages = with pkgs; [
-        inputs.quickemu.packages.x86_64-linux.default
+        #inputs.quickemu.packages.x86_64-linux.default
+        quickemu
+        quickgui
       ];
 
       # Allow redirection of USB devices

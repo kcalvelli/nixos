@@ -47,8 +47,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };     
 
-    # Quickemu is constantly breaking in nixpkgs, use the flake from flakehub
-    quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
+    # Enable when quickemu is broken in nixpkgs
+    #quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
 
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
