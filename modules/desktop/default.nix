@@ -47,7 +47,6 @@
     # Browser
     (brave.override { commandLineArgs = "--password-store=gnome-libsecret"; })
     inputs.self.packages.${pkgs.system}.brave-browser-nightly
-    inputs.zen-browser.packages."${system}".default
     
     # Sync clients 
     rclone

@@ -50,9 +50,6 @@
     # Enable when quickemu is broken in nixpkgs
     #quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
 
-    # Zen browser
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
   };
