@@ -17,6 +17,8 @@
         "qemu-libvirtd"
         "video"
         "adm"
+        "lp"
+        "scanner"
       ];
     };
   };
