@@ -8,7 +8,6 @@
         inherit (pkgs)
           brave-browser-nightly
           networkmanagerapplet
-          media-browser
           ;
       };
 
@@ -25,6 +24,5 @@
     # Custom packages
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
-    media-browser = prev.callPackage ./media-browser { };
   };
 }
