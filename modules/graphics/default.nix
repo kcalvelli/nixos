@@ -16,6 +16,10 @@
     radeontop
     amdgpu_top
     clinfo
+    vulkan-tools
+    mesa-demos
+    wayland-utils
+    lact
   ];
 
   # Linux AMDGPU Controller
