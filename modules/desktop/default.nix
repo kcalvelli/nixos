@@ -51,7 +51,9 @@
     rustdesk-flutter  
 
     # Browser
-    (brave.override { commandLineArgs = "--password-store=gnome-libsecret"; })
+    (brave.override { 
+      commandLineArgs = "--password-store=gnome-libsecret"; 
+    })
     inputs.self.packages.${pkgs.system}.brave-browser-nightly
     
     # Sync clients 

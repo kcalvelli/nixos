@@ -7,20 +7,51 @@
   hardware = {
     graphics = {
       enable32Bit = true;
-      extraPackages = with pkgs; [ rocmPackages.clr.icd ];
+      extraPackages = with pkgs; [ 
+        amdvlk
+        mesa
+        libva
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
     };
+    amdgpu = {
+      opencl.enable = true;
+      initrd.enable = true;
+    };
+  };
+
+  # Boot parameters for optimal AMD GPU performance
+  boot = {
+    kernelParams = [
+      "amdgpu.dc=1"          # Enable Display Core
+      "amdgpu.gpu_recovery=1" # Better stability
+      "amdgpu.vm_update_mode=0" # Performance optimization
+    ];
   };
 
   # System packages for graphics
   environment.systemPackages = with pkgs; [
+    # GPU monitoring and management
     radeontop
+    corectrl
+    lact
     amdgpu_top
-    clinfo
+    clinfo    
+
     vulkan-tools
+    vulkan-loader
+    vulkan-validation-layers
     mesa-demos
     wayland-utils
-    lact
+
+    rocmPackages.clr
+    rocmPackages.rocminfo
   ];
+
+  environment.variables = {
+    HIP_PLATFORM = "amd";
+  };
 
   # Linux AMDGPU Controller
   systemd.packages = with pkgs; [ lact ];

@@ -24,8 +24,11 @@ in
         ### Logitech keyboard and mouse
         logitech.wireless.enable = true;
         logitech.wireless.enableGraphical = true;
+      };
 
-        amdgpu.initrd.enable = true;
+      powerManagement = {
+        enable = true;
+        cpuFreqGovernor = "performance";
       };
 
       boot = {
