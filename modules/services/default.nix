@@ -4,5 +4,6 @@
   imports = [
     ./openwebui.nix
     ./caddy.nix
+    ./ntopng.nix
   ];
 }

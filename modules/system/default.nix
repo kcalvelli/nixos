@@ -7,7 +7,7 @@
 {
   # Import necessary modules
   imports = [
-    # inputs.determinate.nixosModules.default
+    #inputs.determinate.nixosModules.default
     ./local.nix
     ./nix.nix
     ./boot.nix

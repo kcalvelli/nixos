@@ -31,7 +31,7 @@ in
           TRANSFORMERS_CACHE = "/var/lib/open-webui/.cache/huggingface";
         };
       };
-      services.caddy.virtualHosts."${domain}.${tailnet}" = {
+      services.caddy.virtualHosts."chat.${domain}.${tailnet}" = {
         extraConfig = ''
           reverse_proxy http://localhost:8080
           encode gzip
