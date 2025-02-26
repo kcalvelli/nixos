@@ -1,32 +1,28 @@
 { config, lib, pkgs, ... }:
 let 
-  cfg = config.services.ntopng;
+  cfg = config.services;
+  domain = config.networking.hostName;
+  tailnet = "taile0fb4.ts.net";
 in
 {
   options = {
-    services.ntopng = {
-      enable = lib.mkEnableOption "ntopng";
-      port = lib.mkOption {
-        type = lib.types.int;
-        default = 3000;
-        description = "The port on which ntopng will listen";
-      };
+    services.ntop = {
+      enable = lib.mkEnableOption "ntop";
     };
   };
 
   config = lib.mkMerge [
-    (lib.mkIf cfg.enable {
+    (lib.mkIf cfg.ntop.enable {
       services.ntopng = {
         enable = true;
-        port = cfg.port;
+      };
+
+      services.caddy.virtualHosts."ntop.${domain}.${tailnet}" = {
+        extraConfig = ''
+          reverse_proxy http://localhost:3000
+          encode gzip
+        '';
       };
     })
   ];
-
-  services.caddy.virtualHosts."ntopng.${domain}.${tailnet}" = {
-    extraConfig = ''
-      reverse_proxy http://localhost:3000
-      encode gzip
-    '';
-  };
 }
