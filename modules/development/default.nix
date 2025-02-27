@@ -21,7 +21,7 @@
     starship
     fish
     bat # Better cat
-    exa # Better ls
+    eza # Better ls
     ripgrep # Fast search
     fd # Better find
     jq # JSON processor
