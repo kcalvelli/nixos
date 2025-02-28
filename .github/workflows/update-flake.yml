@@ -9,6 +9,10 @@ on:
 jobs:
   update-flake:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -16,28 +20,17 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
 
-      - name: Update Flake
-        run: |
-          # Update the flake.lock file
-          nix flake update
-
-      - name: Create Pull Request
-        id: create_pr
-        uses: peter-evans/create-pull-request@v6
+      - name: Update flake.lock
+        id: update-flake-lock
+        uses: DeterminateSystems/update-flake-lock@v24
         with:
-          commit-message: 'chore: update flake.lock'
-          title: 'chore: update flake dependencies'
-          body: |
-            Automated flake update
-            
-            This PR updates the flake.lock file with the latest dependency versions.
-          branch: automated/flake-update
-          delete-branch: true
-          labels: 'Update inputs'
+          commit-message: 'flake: update inputs'
+          pr-title: 'flake: update inputs'
+          pr-labels: automated
 
-      - name: Merge Pull Request
-        if: steps.create_pr.outputs.pull-request-url != ''
-        uses: peter-evans/merge-pull-request@v2
+      - uses: mdarocha/comment-flake-lock-changelog@main
         with:
-          pull-request: ${{ steps.create_pr.outputs.pull-request-number }}
-          merge-method: squash
+          pull-request-number: ${{ steps.update-flake-lock.outputs.pull-request-number }}
+          
+          
+
