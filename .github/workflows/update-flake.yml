@@ -24,7 +24,6 @@ jobs:
         id: update-flake-lock
         uses: DeterminateSystems/update-flake-lock@v24
         with:
-          commit-message: 'flake: update inputs'
           pr-title: 'flake: update inputs'
           pr-labels: automated
 
