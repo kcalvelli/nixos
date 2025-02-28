@@ -43,5 +43,5 @@ jobs:
           df -h  
 
       - name: Build It
-        run: nix build .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel -L     
+        run: nix build .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel --dry-run     
 
