@@ -12,8 +12,6 @@ jobs:
     permissions:
       actions: write
       contents: write
-      id-tokens: write
-      contents: read
       pull-requests: write
 
     steps:
@@ -21,9 +19,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
-      - name: Cache Nix store
-        uses: DeterminateSystems/flakehub-cache-action@main        
-      - name: Check flake
+        with:
+          determinate: true
         uses: DeterminateSystems/flake-checker-action@v9  
       - name: Update flake.lock
         id: update-flake-lock
