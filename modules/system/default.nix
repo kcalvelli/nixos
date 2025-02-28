@@ -1,13 +1,8 @@
-{
-  pkgs,
-  lib,
-  inputs,
-  ...
-}:
+{ pkgs, lib, inputs, ... }:
 {
   # Import necessary modules
   imports = [
-    #inputs.determinate.nixosModules.default
+    inputs.determinate.nixosModules.default
     ./local.nix
     ./nix.nix
     ./boot.nix

@@ -1,24 +1,26 @@
-name: Update Flake Daily
+name: Update Daily
 
 on:
   schedule:
     # Runs at 5am UTC every day
     - cron: '0 5 * * *'
   workflow_dispatch: # Allows manual triggering
-  repository_dispatch: # Allows manual triggering
 
 jobs:
-  update-flake:
+  update:
     runs-on: ubuntu-latest
     permissions:
       actions: write
       contents: write
       pull-requests: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
+      - name: Cache Nix store
+        uses: DeterminateSystems/flakehub-cache-action@main        
       - name: Check flake
         uses: DeterminateSystems/flake-checker-action@v9  
       - name: Update flake.lock
