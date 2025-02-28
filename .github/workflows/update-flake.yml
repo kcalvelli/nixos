@@ -5,6 +5,7 @@ on:
     # Runs at 5am UTC every day
     - cron: '0 5 * * *'
   workflow_dispatch: # Allows manual triggering
+  repository_dispatch: # Allows manual triggering
 
 jobs:
   update-flake:
@@ -16,21 +17,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
-
+      - name: Check flake
+        uses: DeterminateSystems/flake-checker-action@v9  
       - name: Update flake.lock
         id: update-flake-lock
         uses: DeterminateSystems/update-flake-lock@v24
         with:
           pr-title: 'flake: update inputs'
-          pr-labels: automated
+          pr-labels: |
+            dependencies  
+            automated
 
-      - uses: mdarocha/comment-flake-lock-changelog@main
-        if: ${{ steps.update-flake-lock.outputs.pull-request-number != 0 }}
-        with:
-          pull-request-number: ${{ steps.update-flake-lock.outputs.pull-request-number }}
           
           
 
