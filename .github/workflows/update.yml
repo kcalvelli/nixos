@@ -21,6 +21,7 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
         with:
           determinate: true
+      - name: Check flake
         uses: DeterminateSystems/flake-checker-action@v9  
       - name: Update flake.lock
         id: update-flake-lock
