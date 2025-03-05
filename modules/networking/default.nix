@@ -21,6 +21,7 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [ 5355 21118];
+      # Open ports for kdeconnect protocol.  Currently using valent nightly from flatpak.
       allowedTCPPortRanges = [
         {
           from = 1714;
@@ -50,12 +51,6 @@
 
   # For RTL-SDR
   #hardware.rtl-sdr.enable = true;
-
-  # For KDEConnect protocol
-  programs.kdeconnect = {
-    enable = true;
-    package = inputs.self.packages.${pkgs.system}.valent;
-  };
 
   # Causes switch to fail if this is not set
   systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false;
