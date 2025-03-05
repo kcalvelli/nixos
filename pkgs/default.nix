@@ -8,6 +8,7 @@
         inherit (pkgs)
           brave-browser-nightly
           networkmanagerapplet
+          valent
           ;
       };
 
@@ -24,5 +25,6 @@
     # Custom packages
     brave-browser-nightly = prev.callPackage ./brave-browser-nightly { };
     networkmanagerapplet = prev.callPackage ./networkmanagerapplet { };
+    valent = prev.callPackage ./valent { };
   };
 }

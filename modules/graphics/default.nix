@@ -8,7 +8,6 @@
     graphics = {
       enable32Bit = true;
       extraPackages = with pkgs; [ 
-        #amdvlk
         mesa
         libva
         vaapiVdpau
@@ -39,9 +38,9 @@
     amdgpu_top
     clinfo    
 
-    #vulkan-tools
-    #vulkan-loader
-    #vulkan-validation-layers
+    vulkan-tools
+    vulkan-loader
+    vulkan-validation-layers
     mesa-demos
     wayland-utils
 

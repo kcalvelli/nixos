@@ -54,7 +54,7 @@
   # For KDEConnect protocol
   programs.kdeconnect = {
     enable = true;
-    package = pkgs.valent;
+    package = inputs.self.packages.${pkgs.system}.valent;
   };
 
   # Causes switch to fail if this is not set
